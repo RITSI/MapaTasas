@@ -1,0 +1,78 @@
+<div class="row user-row">
+    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
+        <img class="img-circle foto-uni" src="img/uni/uni_{{siglas}}.jpg" alt="Foto de la {{nombre}}">
+    </div>
+    <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
+        <strong>{{nombre}}</strong>
+        <br>
+        <span class="text-muted">{{campus}}</span>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".drop-{{siglas}}">
+        <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+    </div>
+</div>
+<div class="row user-infos drop-{{siglas}}">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{nombre}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+                        <dl>
+                            <dt>Campus:</dt>
+                            <dd>{{campus}}</dd>
+                            <dt>Centro:</dt>
+                            <dd>{{centro}}</dd>
+                            <dt>URL:</dt>
+                            <dd><a href="{{url}}">{{url}}</a></dd>
+                            <dt>Crédito en primera matrícula</dt>
+                            <dd>{{tasas1}}</dd>
+                            <dt>Crédito en segunda matrícula</dt>
+                            <dd>{{tasas2}}</dd>
+                            <dt>Crédito en tercera matrícula</dt>
+                            <dd>{{tasas3}}</dd>
+                            <dt>Crédito en cuarta matrícula</dt>
+                            <dd>{{tasas4}}</dd>
+                        </dl>
+                    </div>
+                    <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Campus:</td>
+                                    <td>{{campus}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro:</td>
+                                    <td>{{centro}}</td>
+                                </tr>
+                                <tr>
+                                    <td>URL:</td>
+                                    <td><a href="{{url}}">{{url}}</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Crédito en primera matrícula</td>
+                                    <td>{{tasas1}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Crédito en segunda matrícula</td>
+                                    <td>{{tasas2}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Crédito en tercera matrícula</td>
+                                    <td>{{tasas3}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Crédito en cuarta matrícula</td>
+                                    <td>{{tasas4}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

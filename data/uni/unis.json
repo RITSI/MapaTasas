@@ -1,0 +1,288 @@
+{
+    "unis": [{
+        "siglas": "ucav",
+        "nombre": "Universidad Católica de Santa Teresa de Jesús",
+        "centro": "Campus de Ávila",
+        "provincia": "Avila",
+        "url": "",
+        "convenios": [
+            "usal",
+            "uva",
+            "ucav"
+        ]
+    }, {
+        "siglas": "usal-salamanca",
+        "nombre": "Universidad de Salamanca (Campus de Salamanca)",
+        "centro": "Facultad de Ciencias",
+        "provincia": "Salamanca",
+        "url": "",
+        "convenios": [
+            "uva",
+            "ua",
+            "ual",
+            "ubu",
+            "uclm-albacete",
+            "ucm",
+            "uco",
+            "uex-caceres",
+            "umu",
+            "ehu-ss",
+            "urjc",
+            "unizar"
+        ],
+        "tasas1": "27.72",
+        "tasas2": "41.59",
+        "tasas3": "90.10",
+        "tasas4": "124.76"
+    }, {
+        "siglas": "usal-zamora",
+        "nombre": "Universidad de Salamanca (Campus de Zamora)",
+        "centro": "Escuela Politécnica Superior de Zamora",
+        "provincia": "Zamora",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "ua",
+        "nombre": "Universidad de Alicante",
+        "centro": "Escuela Politécnica Superior",
+        "provincia": "Alicante",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "ual",
+        "nombre": "Universidad de Almería",
+        "centro": "Escuela Politécnica Superior",
+        "provincia": "Almería",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uva",
+        "nombre": "Universidad de Valladolid",
+        "centro": "Escuela de Ingeniería Informática",
+        "provincia": "Valladolid",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uab",
+        "nombre": "Universidad Autónoma de Barcelona",
+        "centro": "Facultad de Informática",
+        "provincia": "Barcelona",
+        "url": "",
+        "convenios": [
+            "usal"
+        ]
+    }, {
+        "siglas": "ubu",
+        "nombre": "Universidad de Burgos",
+        "centro": "Facultad de Informática",
+        "provincia": "Burgos",
+        "url": "",
+        "convenios": [
+            "usal",
+            "uam",
+            "uclm-albacete",
+            "uclm-ciudadreal",
+            "uex-caceres",
+            "uja",
+            "ulpgc",
+            "us",
+            "uva",
+            "unizar",
+            "upv",
+            "upna",
+            "urjc",
+            "udc",
+            "uji"
+        ]
+    }, {
+        "siglas": "us",
+        "nombre": "Universidad de Sevilla",
+        "centro": "Escuela Técnica Superior de Ingeniería Informática",
+        "provincia": "Sevilla",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "upv",
+        "nombre": "Universidad Politécnica de Valencia",
+        "centro": "Escuela Técnica Superior de Ingeniería Informática",
+        "provincia": "Valencia",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "upna",
+        "nombre": "Universidad Pública de Navarra",
+        "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
+        "provincia": "Navarra",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uji",
+        "nombre": "Universitat Jaume I",
+        "centro": "Escuela Superior de Tecnología y Ciencias Experimentales",
+        "provincia": "Castellon",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "udc",
+        "nombre": "Universidade da Coruña",
+        "centro": "Facultade de Informática",
+        "provincia": "A Coruña",
+        "url": "",
+        "convenios": [],
+        "tasas1": "13.93",
+        "tasas2": "19.3",
+        "tasas3": "31.21",
+        "tasas4": "39.79"
+    }, {
+        "siglas": "uclm-albacete",
+        "nombre": "Universidad de Castilla-La Mancha (Campus de Albacete)",
+        "centro": "Escuela Superior de Informática",
+        "provincia": "Albacete",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uclm-ciudadreal",
+        "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
+        "centro": "Escuela Superior de Informática",
+        "provincia": "Ciudad_Real",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "ucm",
+        "nombre": "Universidad Complutense de Madrid",
+        "centro": "Facultad de Informática",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uco",
+        "nombre": "Universidad de Córdoba",
+        "centro": "Escuela Politécnica Superior",
+        "provincia": "Cordoba",
+        "url": "",
+        "convenios": [],
+        "tasas1": "12.62",
+        "tasas2": "2525",
+        "tasas3": "54.71",
+        "tasas4": "75.75"
+    }, {
+        "siglas": "uex-caceres",
+        "nombre": "Universidad de Extremadura",
+        "centro": "Escuela Politécnica de Cáceres",
+        "provincia": "Caceres",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "umu",
+        "nombre": "Universidad de Murcia",
+        "centro": "Facultad de Informática",
+        "provincia": "Murcia",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "ehu-ss",
+        "nombre": "Universidad del País Vasco (Campus de San Sebastián)",
+        "centro": "Facultad de Informática",
+        "provincia": "San Sebastian",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uja",
+        "nombre": "Universidad de Jaén",
+        "centro": "Escuela Politécnica Superior de Jaén",
+        "provincia": "Jaen",
+        "url": "",
+        "convenios": [],
+        "tasas1": "12.62",
+        "tasas2": "2525",
+        "tasas3": "54.71",
+        "tasas4": "75.75"
+    }, {
+        "siglas": "urjc",
+        "nombre": "Universidad Rey Juan Carlos",
+        "centro": "Escuela Técnica Superior de Ingeniería Informática",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "unizar",
+        "nombre": "Universidad de Zaragoza",
+        "centro": "Escuela de Ingeniería y Arquitectura",
+        "provincia": "Zaragoza",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "ulpgc",
+        "nombre": "Universidad de las Palmas de Gran Canaria",
+        "centro": "Escuela de Ingeniería Informática",
+        "provincia": "Las Palmas de Gran Canaria",
+        "url": "",
+        "convenios": []
+    }, {
+        "siglas": "uc3m",
+        "nombre": "Universidad Carlos III",
+        "centro": "Escuela Universitaria de Informática",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": [],
+        "tasas1": "31",
+        "tasas2": "57.13",
+        "tasas3": "107.14",
+        "tasas4": "142.82"
+    }, {
+        "siglas": "uca",
+        "nombre": "Universidad de Cádiz",
+        "centro": "Escuela Superior de Ingeniería",
+        "provincia": "Cádiz",
+        "url": "",
+        "convenios": [],
+        "tasas1": "12.62",
+        "tasas2": "2525",
+        "tasas3": "54.71",
+        "tasas4": "75.75"
+    }, {
+        "siglas": "unirioja",
+        "nombre": "Universidad de La Rioja",
+        "centro": "Facultad de Ciencias, Estudios Agroalimentarios e Informática",
+        "provincia": "La Rioja",
+        "url": "",
+        "convenios": [],
+        "tasas1": "21.21",
+        "tasas2": "47",
+        "tasas3": "101,85",
+        "tasas4": "141.02"
+    }, {
+        "siglas": "ule",
+        "nombre": "Universidad de León",
+        "centro": "Escuela de Ingenierías Industrial e Informática",
+        "provincia": "Leon",
+        "url": "",
+        "convenios": [],
+        "tasas1": "27.72",
+        "tasas2": "41.59",
+        "tasas3": "90.10",
+        "tasas4": "124.76"
+    }, {
+        "siglas": "usc",
+        "nombre": "Universidad de Santiago de Compostela",
+        "centro": "Escola Técnica Superior de Enxeñaría",
+        "provincia": "Coruna",
+        "url": "",
+        "convenios": [],
+        "tasas1": "13.93",
+        "tasas2": "19.3",
+        "tasas3": "31.21",
+        "tasas4": "39.79"
+    }, {
+        "siglas": "uvigo",
+        "nombre": "Universidad de Vigo",
+        "centro": "Escuela Superior de Ingeniería Informática",
+        "provincia": "Vigo",
+        "url": "",
+        "convenios": [],
+        "tasas1": "13.93",
+        "tasas2": "19.3",
+        "tasas3": "31.21",
+        "tasas4": "39.79"
+    }]
+}

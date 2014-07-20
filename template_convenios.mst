@@ -1,0 +1,47 @@
+<div class="row user-infos drop-{{siglas_uni}}">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{nombre}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 hidden-xs hidden-sm">
+                        <img class="img-circle foto-uni" src="img/uni/uni_{{siglas}}.jpg" alt="Foto universidad">
+                    </div>
+                    <div class="col-xs-2 col-sm-2 hidden-md hidden-lg">
+                        <img class="img-circle foto-uni" src="img/uni/uni_{{siglas}}.jpg" alt="Foto universidad">
+                    </div>
+                    <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+                        <dl>
+                            <dt>Campus:</dt>
+                            <dd>{{campus}}</dd>
+                            <dt>Centro:</dt>
+                            <dd>{{centro}}</dd>
+                            <dt>URL:</dt>
+                            <dd><a href="{{url}}">{{url}}</a></dd>
+                        </dl>
+                    </div>
+                    <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                        <table class="table table-user-information">
+                            <tbody>
+                                <tr>
+                                    <td>Campus:</td>
+                                    <td>{{campus}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro:</td>
+                                    <td>{{centro}}</td>
+                                </tr>
+                                <tr>
+                                    <td>URL:</td>
+                                    <td><a href="{{url}}">{{url}}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
