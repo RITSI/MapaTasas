@@ -48,21 +48,33 @@
         "centro": "Escuela Politécnica Superior",
         "provincia": "Alicante",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "23,85",
+        "tasas2": "41,73",
+        "tasas3": "88,55",
+        "tasas4": "118,07"
     }, {
         "siglas": "ual",
         "nombre": "Universidad de Almería",
         "centro": "Escuela Politécnica Superior",
         "provincia": "Almería",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "12,62",
+        "tasas2": "25,25",
+        "tasas3": "54,71",
+        "tasas4": "75,75"
     }, {
         "siglas": "uva",
         "nombre": "Universidad de Valladolid",
         "centro": "Escuela de Ingeniería Informática",
         "provincia": "Valladolid",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "22,72",
+        "tasas2": "41,59",
+        "tasas3": "90,1",
+        "tasas4": "124,76"
     }, {
         "siglas": "uab",
         "nombre": "Universidad Autónoma de Barcelona",
@@ -94,21 +106,33 @@
             "urjc",
             "udc",
             "uji"
-        ]
+        ],
+        "tasas1": "22,72",
+        "tasas2": "41,59",
+        "tasas3": "90,1",
+        "tasas4": "124,76"
     }, {
         "siglas": "us",
         "nombre": "Universidad de Sevilla",
         "centro": "Escuela Técnica Superior de Ingeniería Informática",
         "provincia": "Sevilla",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "12.62",
+        "tasas2": "25.25",
+        "tasas3": "54.71",
+        "tasas4": "75.75"
     }, {
         "siglas": "upv",
         "nombre": "Universidad Politécnica de Valencia",
         "centro": "Escuela Técnica Superior de Ingeniería Informática",
         "provincia": "Valencia",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "16,15",
+        "tasas2": "28,26",
+        "tasas3": "60,55",
+        "tasas4": "80,73"
     }, {
         "siglas": "upna",
         "nombre": "Universidad Pública de Navarra",
@@ -154,7 +178,11 @@
         "centro": "Facultad de Informática",
         "provincia": "Madrid",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "31",
+        "tasas2": "57,13",
+        "tasas3": "107,14",
+        "tasas4": "142,82"
     }, {
         "siglas": "uco",
         "nombre": "Universidad de Córdoba",
@@ -163,7 +191,7 @@
         "url": "",
         "convenios": [],
         "tasas1": "12.62",
-        "tasas2": "2525",
+        "tasas2": "25.25",
         "tasas3": "54.71",
         "tasas4": "75.75"
     }, {
@@ -179,14 +207,22 @@
         "centro": "Facultad de Informática",
         "provincia": "Murcia",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "16,78",
+        "tasas2": "33,55",
+        "tasas3": "72,71",
+        "tasas4": "100,68"
     }, {
         "siglas": "ehu-ss",
         "nombre": "Universidad del País Vasco (Campus de San Sebastián)",
         "centro": "Facultad de Informática",
         "provincia": "San Sebastian",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "19,39",
+        "tasas2": "27,63",
+        "tasas3": "41,59",
+        "tasas4": "41,59"
     }, {
         "siglas": "uja",
         "nombre": "Universidad de Jaén",
@@ -195,7 +231,7 @@
         "url": "",
         "convenios": [],
         "tasas1": "12.62",
-        "tasas2": "2525",
+        "tasas2": "25.25",
         "tasas3": "54.71",
         "tasas4": "75.75"
     }, {
@@ -211,14 +247,22 @@
         "centro": "Escuela de Ingeniería y Arquitectura",
         "provincia": "Zaragoza",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "22,48",
+        "tasas2": "33,41",
+        "tasas3": "72,41",
+        "tasas4": "100,24"
     }, {
         "siglas": "ulpgc",
         "nombre": "Universidad de las Palmas de Gran Canaria",
         "centro": "Escuela de Ingeniería Informática",
         "provincia": "Las Palmas de Gran Canaria",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas1": "13,7",
+        "tasas2": "27,4",
+        "tasas3": "59,37",
+        "tasas4": "82,2"
     }, {
         "siglas": "uc3m",
         "nombre": "Universidad Carlos III",
@@ -238,7 +282,7 @@
         "url": "",
         "convenios": [],
         "tasas1": "12.62",
-        "tasas2": "2525",
+        "tasas2": "25.25",
         "tasas3": "54.71",
         "tasas4": "75.75"
     }, {
@@ -318,5 +362,319 @@
         "tasas2": "57,13",
         "tasas3": "107,14",
         "tasas4": "142,85"
+    }, {
+        "siglas": "udima",
+        "nombre": "Universidad a Distancia de Madrid",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "http://www.udima.es/es/precios.html",
+        "convenios": [],
+        "tasas1": "75",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": "",
+        "observaciones": ""
+    }, {
+        "siglas": "uoc",
+        "nombre": "Universidad Abierta de Cataluña",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "",
+        "url": "",
+        "tasas1": "22,8",
+        "tasas2": "27,36",
+        "tasas3": "27,36",
+        "tasas4": "27,36"
+    }, {
+        "siglas": "uax",
+        "nombre": "Universidad Alfonso X El Sabio",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uan",
+        "nombre": "Universidad Antonio de Nebrija",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uch-ceu",
+        "nombre": "Universidad Cardenal Herrera",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": "",
+        "observaciones": ""
+    }, {
+        "siglas": "ucam",
+        "nombre:": "Universidad Católica San Antonio de Murcia",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Murcia",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": "",
+        "observaciones": ""
+    }, {
+        "siglas": "ub",
+        "nombre": "Universidad de Barcelona",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Barcelona",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": "",
+        "observaciones": ""
+    }, {
+        "siglas": "uc",
+        "nombre": "Universidad de Cantabria",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Cantabria",
+        "url": "",
+        "tasas1": "15,86",
+        "tasas2": "31,12",
+        "tasas3": "67,42",
+        "tasas4": "93,36"
+    }, {
+        "siglas": "",
+        "nombre": "Universidad de Deusto",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Vizcaya",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "udg",
+        "nombre": "Universidad de Gerona",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Gerona",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "ugr",
+        "nombre": "Universidad de Granada",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Granada",
+        "url": "",
+        "tasas1": "12,62",
+        "tasas2": "25,25",
+        "tasas3": "54,71",
+        "tasas4": "75,75"
+    }, {
+        "siglas": "uhu",
+        "nombre": "Universidad de Huelva",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Huelva",
+        "url": "",
+        "tasas1": "12,62",
+        "tasas2": "25,25",
+        "tasas3": "54,71",
+        "tasas4": "75,75"
+    }, {
+        "siglas": "uib",
+        "nombre": "Universidad de las Islas Baleares",
+        "tipo": "pública",
+        "centro": "",
+        "provicia": "Baleares",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "udl",
+        "nombre": "Universidad de Lérida",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Lerida",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uma",
+        "nombre": "Universidad de Málaga",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Malaga",
+        "url": "",
+        "tasas1": "12,62",
+        "tasas2": "25,25",
+        "tasas3": "54,71",
+        "tasas4": "75,75"
+    }, {
+        "siglas": "mu",
+        "nombre": "Universidad de Mondragón",
+        "tipo": "privada",
+        "centro": "",
+        "provincia": "Gipuzkoa",
+        "url": "",
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uo",
+        "nombre": "Universidad de Oviedo",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Asturias",
+        "url": "",
+        "tasas1": "17,26",
+        "tasas2": "28,26",
+        "tasas3": "41,48",
+        "tasas4": "48,72"
+    }, {
+        "siglas": "uv",
+        "nombre": "Universidad de Valencia",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Valencia",
+        "url": "",
+        "tasas1": "16,15",
+        "tasas2": "28,26",
+        "tasas3": "60,55",
+        "tasas4": "80,73"
+    }, {
+        "siglas": "ehu-bilbao",
+        "nombre": "Universidad del País Vasco (Campus de Bilbao)",
+        "centro": "",
+        "provincia": "Vizcaya",
+        "url": "",
+        "convenios": [],
+        "tasas1": "19,39",
+        "tasas2": "27,63",
+        "tasas3": "41,59",
+        "tasas4": "41,59"
+    }, {
+        "siglas": "uem",
+        "nombre": "Universidad Europea de Madrid",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uemc",
+        "nombre": "Universidad Europea Miguel de Cervantes",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "ufv",
+        "nombre": "Universidad Francisco de Vitoria",
+        "centro": "",
+        "provincia": "",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "uji",
+        "nombre": "Universidad Jaime I de Castellón",
+        "centro": "",
+        "provincia": "Castellon",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "umh",
+        "nombre": "Universidad Miguel Hernández de Elche",
+        "centro": "",
+        "provincia": "Alicante",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+
+    }, {
+        "siglas": "uned",
+        "nombre": "Universidad Nacional de Educación a Distancia",
+        "centro": "",
+        "provincia": "",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "upo",
+        "nombre": "Universidad Pablo de Olavide",
+        "centro": "",
+        "provincia": "Sevilla",
+        "url": "",
+        "convenios": [],
+        "tasas1": "12.62",
+        "tasas2": "25.25",
+        "tasas3": "54.71",
+        "tasas4": "75.75"
+    }, {
+        "siglas": "upc",
+        "nombre": "Universidad Politécnica de Cataluña",
+        "centro": "",
+        "provincia": "",
+        "url": "",
+        "convenios": [],
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
+    }, {
+        "siglas": "ull",
+        "nombre": "Universidad de La Laguna",
+        "centro": "",
+        "provincia": "",
+        "url": "",
+        "convenios": [],
+        "tasas1": "13,7",
+        "tasas2": "27,4",
+        "tasas3": "59,37",
+        "tasas4": "82,2"
     }]
 }
