@@ -9,7 +9,8 @@
             "usal",
             "uva",
             "ucav"
-        ]
+        ],
+        "tipo": "privada"
     }, {
         "siglas": "usal-salamanca",
         "nombre": "Universidad de Salamanca (Campus de Salamanca)",
@@ -284,5 +285,38 @@
         "tasas2": "19.3",
         "tasas3": "31.21",
         "tasas4": "39.79"
+    }, {
+        "siglas": "uam",
+        "nombre": "Universidad Autónoma de Madrid",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "",
+        "convenios": [],
+        "tasas1": "31,00",
+        "tasas2": "57,13",
+        "tasas3": "107,14",
+        "tasas4": "142,85"
+    }, {
+        "siglas": "ucm",
+        "nombre": "Universidad Complutense de Madrid",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "http://informatica.ucm.es/",
+        "convenios": [],
+        "tasas1": "31,00",
+        "tasas2": "57,13",
+        "tasas3": "107,14",
+        "tasas4": "142,85"
+    }, {
+        "siglas": "uah",
+        "nombre": "Universidad de Alcalá",
+        "centro": "",
+        "provincia": "Madrid",
+        "url": "http://informatica.ucm.es/",
+        "convenios": [],
+        "tasas1": "31,00",
+        "tasas2": "57,13",
+        "tasas3": "107,14",
+        "tasas4": "142,85"
     }]
 }
