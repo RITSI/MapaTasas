@@ -12,32 +12,38 @@
     </div>
 </div>
 <div class="row user-infos drop-{{siglas}}">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">{{nombre}}</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-xs-10 col-sm-10 hidden-md hidden-lg">
+                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
                         <dl>
                             <dt>Campus:</dt>
                             <dd>{{campus}}</dd>
+                            
                             <dt>Centro:</dt>
                             <dd>{{centro}}</dd>
+                            
                             <dt>URL:</dt>
                             <dd><a href="{{url}}">{{url}}</a></dd>
+                            
                             <dt>Crédito en primera matrícula</dt>
                             <dd>{{tasas1}}</dd>
+                            
                             <dt>Crédito en segunda matrícula</dt>
                             <dd>{{tasas2}}</dd>
+                            
                             <dt>Crédito en tercera matrícula</dt>
                             <dd>{{tasas3}}</dd>
+                            
                             <dt>Crédito en cuarta matrícula</dt>
                             <dd>{{tasas4}}</dd>
                         </dl>
                     </div>
-                    <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm">
+                    <div class=" col-md-12 col-lg-12 hidden-xs hidden-sm">
                         <table class="table table-user-information">
                             <tbody>
                                 <tr>
@@ -53,20 +59,24 @@
                                     <td><a href="{{url}}">{{url}}</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Crédito en primera matrícula</td>
-                                    <td>{{tasas1}}</td>
+                                    <th>Precio por crédito</th>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Crédito en segunda matrícula</td>
-                                    <td>{{tasas2}}</td>
+                                    <td>Primera matrícula</td>
+                                    <td>{{tasas1}} €</td>
                                 </tr>
                                 <tr>
-                                    <td>Crédito en tercera matrícula</td>
-                                    <td>{{tasas3}}</td>
+                                    <td>Segunda matrícula</td>
+                                    <td>{{tasas2}} €</td>
                                 </tr>
                                 <tr>
-                                    <td>Crédito en cuarta matrícula</td>
-                                    <td>{{tasas4}}</td>
+                                    <td>Tercera matrícula</td>
+                                    <td>{{tasas3}} €</td>
+                                </tr>
+                                <tr>
+                                    <td>Cuarta matrícula</td>
+                                    <td>{{tasas4}} €</td>
                                 </tr>
                             </tbody>
                         </table>
