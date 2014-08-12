@@ -121,7 +121,6 @@ $(document).ready(function() {
 
         d3.json("data/uni/unis.json", function(error, unis) {
             var universidades = unis.unis;
-            console.log(universidades);
             $.each(universidades, function(index, value) {
                 if (value.provincia === d.id) {
                     resultados.push(value);
@@ -132,6 +131,7 @@ $(document).ready(function() {
                 $.each(resultados, function(index, value) {
                     universidades_provincia.push(resultados[index]);
                     for (var i = universidades.length - 1; i >= 0; i--) {
+                        console.log(universidades[i].siglas);
                         if (resultados[index].convenios.indexOf(universidades[i].siglas) > -1) {
                             convenios_filter.push(universidades[i]);
                         }
