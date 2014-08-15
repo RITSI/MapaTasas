@@ -83,7 +83,8 @@
                     </div>
                 </div>
             </div>
-            <div id="chart"></div>
+            <div class="row" id="chart"></div>
+            <div class="row" id="urls"></div>
         </div>
     </div>
 </div>

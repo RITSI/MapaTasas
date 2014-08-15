@@ -71,6 +71,7 @@
         "url": "",
         "convenios": [],
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -83,7 +84,29 @@
         "provincia": "Alicante",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "23,85",
             "tasas2": "41,73",
             "tasas3": "88,55",
@@ -96,7 +119,29 @@
         "provincia": "Almería",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12,62",
             "tasas2": "25,25",
             "tasas3": "54,71",
@@ -150,7 +195,34 @@
         "convenios": [
             "usal"
         ],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ubu",
         "nombre": "Universidad de Burgos",
@@ -213,7 +285,29 @@
         "provincia": "Sevilla",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12.62",
             "tasas2": "25.25",
             "tasas3": "54.71",
@@ -226,7 +320,29 @@
         "provincia": "Valencia",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "16,15",
             "tasas2": "28,26",
             "tasas3": "60,55",
@@ -239,7 +355,34 @@
         "provincia": "Navarra",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uji",
         "nombre": "Universitat Jaume I",
@@ -247,7 +390,34 @@
         "provincia": "Castellon",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "udc",
         "nombre": "Universidade da Coruña",
@@ -255,7 +425,29 @@
         "provincia": "La Coruna",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "13.93",
             "tasas2": "19.3",
             "tasas3": "31.21",
@@ -268,7 +460,34 @@
         "provincia": "Albacete",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uclm-ciudadreal",
         "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
@@ -276,7 +495,34 @@
         "provincia": "Ciudad_Real",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ucm",
         "nombre": "Universidad Complutense de Madrid",
@@ -284,7 +530,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "31",
             "tasas2": "57,13",
             "tasas3": "107,14",
@@ -297,7 +565,29 @@
         "provincia": "Cordoba",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12.62",
             "tasas2": "25.25",
             "tasas3": "54.71",
@@ -310,7 +600,34 @@
         "provincia": "Caceres",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "umu",
         "nombre": "Universidad de Murcia",
@@ -318,7 +635,29 @@
         "provincia": "Murcia",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "16,78",
             "tasas2": "33,55",
             "tasas3": "72,71",
@@ -331,7 +670,29 @@
         "provincia": "San Sebastian",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "19,39",
             "tasas2": "27,63",
             "tasas3": "41,59",
@@ -344,7 +705,29 @@
         "provincia": "Jaen",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12.62",
             "tasas2": "25.25",
             "tasas3": "54.71",
@@ -357,7 +740,34 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas_2014": {}
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "unizar",
         "nombre": "Universidad de Zaragoza",
@@ -365,7 +775,29 @@
         "provincia": "Zaragoza",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "22,48",
             "tasas2": "33,41",
             "tasas3": "72,41",
@@ -375,10 +807,32 @@
         "siglas": "ulpgc",
         "nombre": "Universidad de las Palmas de Gran Canaria",
         "centro": "Escuela de Ingeniería Informática",
-        "provincia": "Las Palmas de Gran Canaria",
+        "provincia": "Las Palmas",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "13,7",
             "tasas2": "27,4",
             "tasas3": "59,37",
@@ -391,7 +845,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "31",
             "tasas2": "57.13",
             "tasas3": "107.14",
@@ -404,7 +880,29 @@
         "provincia": "Cádiz",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12.62",
             "tasas2": "25.25",
             "tasas3": "54.71",
@@ -417,7 +915,29 @@
         "provincia": "La Rioja",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "21.21",
             "tasas2": "47",
             "tasas3": "101,85",
@@ -469,7 +989,29 @@
         "provincia": "La Coruna",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "13.93",
             "tasas2": "19.3",
             "tasas3": "31.21",
@@ -482,7 +1024,29 @@
         "provincia": "Pontevedra",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "13.93",
             "tasas2": "19.3",
             "tasas3": "31.21",
@@ -495,7 +1059,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "31,00",
             "tasas2": "57,13",
             "tasas3": "107,14",
@@ -508,7 +1094,29 @@
         "provincia": "Madrid",
         "url": "http://informatica.ucm.es/",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "31,00",
             "tasas2": "57,13",
             "tasas3": "107,14",
@@ -521,7 +1129,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "31,00",
             "tasas2": "57,13",
             "tasas3": "107,14",
@@ -535,7 +1165,29 @@
         "provincia": "Madrid",
         "url": "http://www.udima.es/es/precios.html",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "75",
             "tasas2": "",
             "tasas3": "",
@@ -550,7 +1202,29 @@
         "provincia": "",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "22,8",
             "tasas2": "27,36",
             "tasas3": "27,36",
@@ -564,7 +1238,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -578,7 +1274,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -592,7 +1310,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -607,7 +1347,29 @@
         "provincia": "Murcia",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -622,7 +1384,29 @@
         "provincia": "Barcelona",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -637,7 +1421,29 @@
         "provincia": "Cantabria",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "15,86",
             "tasas2": "31,12",
             "tasas3": "67,42",
@@ -651,7 +1457,29 @@
         "provincia": "Vizcaya",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -665,7 +1493,29 @@
         "provincia": "Gerona",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -679,7 +1529,29 @@
         "provincia": "Granada",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12,62",
             "tasas2": "25,25",
             "tasas3": "54,71",
@@ -693,7 +1565,29 @@
         "provincia": "Huelva",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12,62",
             "tasas2": "25,25",
             "tasas3": "54,71",
@@ -707,7 +1601,29 @@
         "provicia": "Baleares",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -721,7 +1637,29 @@
         "provincia": "Lerida",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -735,7 +1673,29 @@
         "provincia": "Malaga",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12,62",
             "tasas2": "25,25",
             "tasas3": "54,71",
@@ -749,7 +1709,29 @@
         "provincia": "Gipuzkoa",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -763,7 +1745,29 @@
         "provincia": "Asturias",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "17,26",
             "tasas2": "28,26",
             "tasas3": "41,48",
@@ -777,7 +1781,29 @@
         "provincia": "Valencia",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "16,15",
             "tasas2": "28,26",
             "tasas3": "60,55",
@@ -790,7 +1816,29 @@
         "provincia": "Vizcaya",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "19,39",
             "tasas2": "27,63",
             "tasas3": "41,59",
@@ -803,7 +1851,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -816,7 +1886,29 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -829,7 +1921,29 @@
         "provincia": "",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -842,7 +1956,29 @@
         "provincia": "Castellon",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -855,7 +1991,29 @@
         "provincia": "Alicante",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -869,7 +2027,29 @@
         "provincia": "",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -882,7 +2062,29 @@
         "provincia": "Sevilla",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "12.62",
             "tasas2": "25.25",
             "tasas3": "54.71",
@@ -895,7 +2097,29 @@
         "provincia": "",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "",
             "tasas2": "",
             "tasas3": "",
@@ -908,7 +2132,29 @@
         "provincia": "",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "tasas_2014": {
+            "url": "",
             "tasas1": "13,7",
             "tasas2": "27,4",
             "tasas3": "59,37",

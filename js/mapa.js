@@ -23,15 +23,18 @@ $(document).ready(function() {
         .scale(1200 * 2.3)
         .translate([width / 2.5, height / 2]);
 
+    /*Creacion de un path según los ajustes de proyección*/
     var path = d3.geo.path()
         .projection(projection);
 
+    /*Se añade un svg al div que contendrá el mapa*/
     var svg = d3.select("#map")
         .append("svg")
         .append("g")
         .attr("width", width)
         .attr("height", height);
 
+    /*Se añaden una a una las provincias descritas en el json*/
     d3.json("maps/esp-ascii.json", function(error, esp) {
         svg.selectAll(".subunit")
             .data(topojson.feature(esp, esp.objects.subunits).features)
@@ -41,8 +44,7 @@ $(document).ready(function() {
             })
             .attr("d", path)
             .on("mouseover", provincia_hover)
-        //.on("mouseout", provincia_hover_out)
-        .on("click", provincia_click);
+            .on("click", provincia_click);
 
         svg.append("path")
             .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
@@ -65,10 +67,10 @@ $(document).ready(function() {
     width_canary = $("#map-canarias").width();
     height_canary = $("#map-canarias").height();
     var canarias = d3.select("#map-canarias")
-            .append("svg")
-            .append("g")
-            .attr("width", width_canary)
-            .attr("height", height_canary);
+        .append("svg")
+        .append("g")
+        .attr("width", width_canary)
+        .attr("height", height_canary);
 
     d3.json("maps/canary.json", function(error, esp) {
         canarias.selectAll(".subunit")
@@ -109,7 +111,6 @@ $(document).ready(function() {
         d3.select("#map-canarias>svg>g").attr("transform", "scale(" + $("#map-canarias").width() / 200 + ")");
         $("#map-canarias>svg").height($("#map-canarias").width() * 0.518);
         $("#map-canarias>svg").width($("#map-canarias").width());
-        console.log($("#map-canarias>svg>g"));
     }
 
     function provincia_hover(d) {
@@ -207,11 +208,17 @@ $(document).ready(function() {
                     tasas2: value.tasas_2014.tasas2,
                     tasas3: value.tasas_2014.tasas3,
                     tasas4: value.tasas_2014.tasas4
+                    urls:{
+                        url_2011:value.tasas_2011.url,
+                        url_2012:value.tasas_2012.url,
+                        url_2013:value.tasas_2013.url,
+                        url_2014:value.tasas_2014.url
+                    }
                 });
                 //console.log(value.tasas4);
 
                 $('#bootstrap_lista_units').append(render_resultados);
-                console.log(value);
+                //console.log(value);
                 if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
                     var chart = c3.generate({
                         bindto: "#chart",
