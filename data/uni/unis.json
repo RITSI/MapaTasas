@@ -39,14 +39,14 @@
             "tasas4": "48.96"
         },
         "tasas_2012": {
-            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
             "tasas1": "27.07",
             "tasas2": "40.61",
             "tasas3": "87.98",
             "tasas4": "121.82"
         },
         "tasas_2013": {
-            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
             "tasas1": "27.45",
             "tasas2": "41.17",
             "tasas3": "89.21",
@@ -70,10 +70,12 @@
         "provincia": "Zamora",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ua",
         "nombre": "Universidad de Alicante",
@@ -81,10 +83,12 @@
         "provincia": "Alicante",
         "url": "",
         "convenios": [],
-        "tasas1": "23,85",
-        "tasas2": "41,73",
-        "tasas3": "88,55",
-        "tasas4": "118,07"
+        "tasas_2014": {
+            "tasas1": "23,85",
+            "tasas2": "41,73",
+            "tasas3": "88,55",
+            "tasas4": "118,07"
+        }
     }, {
         "siglas": "ual",
         "nombre": "Universidad de Almería",
@@ -92,10 +96,12 @@
         "provincia": "Almería",
         "url": "",
         "convenios": [],
-        "tasas1": "12,62",
-        "tasas2": "25,25",
-        "tasas3": "54,71",
-        "tasas4": "75,75"
+        "tasas_2014": {
+            "tasas1": "12,62",
+            "tasas2": "25,25",
+            "tasas3": "54,71",
+            "tasas4": "75,75"
+        }
     }, {
         "siglas": "uva",
         "nombre": "Universidad de Valladolid",
@@ -111,14 +117,14 @@
             "tasas4": "48.96"
         },
         "tasas_2012": {
-            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
             "tasas1": "27.07",
             "tasas2": "40.61",
             "tasas3": "87.98",
             "tasas4": "121.82"
         },
         "tasas_2013": {
-            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
             "tasas1": "27.45",
             "tasas2": "41.17",
             "tasas3": "89.21",
@@ -143,7 +149,8 @@
         "url": "",
         "convenios": [
             "usal"
-        ]
+        ],
+        "tasas_2014": {}
     }, {
         "siglas": "ubu",
         "nombre": "Universidad de Burgos",
@@ -166,7 +173,8 @@
             "urjc",
             "udc",
             "uji"
-        ],"tasas_2011": {
+        ],
+        "tasas_2011": {
             "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
             "tasas1": "20.40",
             "tasas2": "30.60",
@@ -174,14 +182,14 @@
             "tasas4": "48.96"
         },
         "tasas_2012": {
-            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
             "tasas1": "27.07",
             "tasas2": "40.61",
             "tasas3": "87.98",
             "tasas4": "121.82"
         },
         "tasas_2013": {
-            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
             "tasas1": "27.45",
             "tasas2": "41.17",
             "tasas3": "89.21",
@@ -205,10 +213,12 @@
         "provincia": "Sevilla",
         "url": "",
         "convenios": [],
-        "tasas1": "12.62",
-        "tasas2": "25.25",
-        "tasas3": "54.71",
-        "tasas4": "75.75"
+        "tasas_2014": {
+            "tasas1": "12.62",
+            "tasas2": "25.25",
+            "tasas3": "54.71",
+            "tasas4": "75.75"
+        }
     }, {
         "siglas": "upv",
         "nombre": "Universidad Politécnica de Valencia",
@@ -216,24 +226,28 @@
         "provincia": "Valencia",
         "url": "",
         "convenios": [],
-        "tasas1": "16,15",
-        "tasas2": "28,26",
-        "tasas3": "60,55",
-        "tasas4": "80,73"
+        "tasas_2014": {
+            "tasas1": "16,15",
+            "tasas2": "28,26",
+            "tasas3": "60,55",
+            "tasas4": "80,73"
+        }
     }, {
         "siglas": "upna",
         "nombre": "Universidad Pública de Navarra",
         "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
         "provincia": "Navarra",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "uji",
         "nombre": "Universitat Jaume I",
         "centro": "Escuela Superior de Tecnología y Ciencias Experimentales",
         "provincia": "Castellon",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "udc",
         "nombre": "Universidade da Coruña",
@@ -241,24 +255,28 @@
         "provincia": "La Coruna",
         "url": "",
         "convenios": [],
-        "tasas1": "13.93",
-        "tasas2": "19.3",
-        "tasas3": "31.21",
-        "tasas4": "39.79"
+        "tasas_2014": {
+            "tasas1": "13.93",
+            "tasas2": "19.3",
+            "tasas3": "31.21",
+            "tasas4": "39.79"
+        }
     }, {
         "siglas": "uclm-albacete",
         "nombre": "Universidad de Castilla-La Mancha (Campus de Albacete)",
         "centro": "Escuela Superior de Informática",
         "provincia": "Albacete",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "uclm-ciudadreal",
         "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
         "centro": "Escuela Superior de Informática",
         "provincia": "Ciudad_Real",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "ucm",
         "nombre": "Universidad Complutense de Madrid",
@@ -266,10 +284,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "31",
-        "tasas2": "57,13",
-        "tasas3": "107,14",
-        "tasas4": "142,82"
+        "tasas_2014": {
+            "tasas1": "31",
+            "tasas2": "57,13",
+            "tasas3": "107,14",
+            "tasas4": "142,82"
+        }
     }, {
         "siglas": "uco",
         "nombre": "Universidad de Córdoba",
@@ -277,17 +297,20 @@
         "provincia": "Cordoba",
         "url": "",
         "convenios": [],
-        "tasas1": "12.62",
-        "tasas2": "25.25",
-        "tasas3": "54.71",
-        "tasas4": "75.75"
+        "tasas_2014": {
+            "tasas1": "12.62",
+            "tasas2": "25.25",
+            "tasas3": "54.71",
+            "tasas4": "75.75"
+        }
     }, {
         "siglas": "uex-caceres",
         "nombre": "Universidad de Extremadura",
         "centro": "Escuela Politécnica de Cáceres",
         "provincia": "Caceres",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "umu",
         "nombre": "Universidad de Murcia",
@@ -295,10 +318,12 @@
         "provincia": "Murcia",
         "url": "",
         "convenios": [],
-        "tasas1": "16,78",
-        "tasas2": "33,55",
-        "tasas3": "72,71",
-        "tasas4": "100,68"
+        "tasas_2014": {
+            "tasas1": "16,78",
+            "tasas2": "33,55",
+            "tasas3": "72,71",
+            "tasas4": "100,68"
+        }
     }, {
         "siglas": "ehu-ss",
         "nombre": "Universidad del País Vasco (Campus de San Sebastián)",
@@ -306,10 +331,12 @@
         "provincia": "San Sebastian",
         "url": "",
         "convenios": [],
-        "tasas1": "19,39",
-        "tasas2": "27,63",
-        "tasas3": "41,59",
-        "tasas4": "41,59"
+        "tasas_2014": {
+            "tasas1": "19,39",
+            "tasas2": "27,63",
+            "tasas3": "41,59",
+            "tasas4": "41,59"
+        }
     }, {
         "siglas": "uja",
         "nombre": "Universidad de Jaén",
@@ -317,17 +344,20 @@
         "provincia": "Jaen",
         "url": "",
         "convenios": [],
-        "tasas1": "12.62",
-        "tasas2": "25.25",
-        "tasas3": "54.71",
-        "tasas4": "75.75"
+        "tasas_2014": {
+            "tasas1": "12.62",
+            "tasas2": "25.25",
+            "tasas3": "54.71",
+            "tasas4": "75.75"
+        }
     }, {
         "siglas": "urjc",
         "nombre": "Universidad Rey Juan Carlos",
         "centro": "Escuela Técnica Superior de Ingeniería Informática",
         "provincia": "Madrid",
         "url": "",
-        "convenios": []
+        "convenios": [],
+        "tasas_2014": {}
     }, {
         "siglas": "unizar",
         "nombre": "Universidad de Zaragoza",
@@ -335,10 +365,12 @@
         "provincia": "Zaragoza",
         "url": "",
         "convenios": [],
-        "tasas1": "22,48",
-        "tasas2": "33,41",
-        "tasas3": "72,41",
-        "tasas4": "100,24"
+        "tasas_2014": {
+            "tasas1": "22,48",
+            "tasas2": "33,41",
+            "tasas3": "72,41",
+            "tasas4": "100,24"
+        }
     }, {
         "siglas": "ulpgc",
         "nombre": "Universidad de las Palmas de Gran Canaria",
@@ -346,10 +378,12 @@
         "provincia": "Las Palmas de Gran Canaria",
         "url": "",
         "convenios": [],
-        "tasas1": "13,7",
-        "tasas2": "27,4",
-        "tasas3": "59,37",
-        "tasas4": "82,2"
+        "tasas_2014": {
+            "tasas1": "13,7",
+            "tasas2": "27,4",
+            "tasas3": "59,37",
+            "tasas4": "82,2"
+        }
     }, {
         "siglas": "uc3m",
         "nombre": "Universidad Carlos III",
@@ -357,10 +391,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "31",
-        "tasas2": "57.13",
-        "tasas3": "107.14",
-        "tasas4": "142.82"
+        "tasas_2014": {
+            "tasas1": "31",
+            "tasas2": "57.13",
+            "tasas3": "107.14",
+            "tasas4": "142.82"
+        }
     }, {
         "siglas": "uca",
         "nombre": "Universidad de Cádiz",
@@ -368,10 +404,12 @@
         "provincia": "Cádiz",
         "url": "",
         "convenios": [],
-        "tasas1": "12.62",
-        "tasas2": "25.25",
-        "tasas3": "54.71",
-        "tasas4": "75.75"
+        "tasas_2014": {
+            "tasas1": "12.62",
+            "tasas2": "25.25",
+            "tasas3": "54.71",
+            "tasas4": "75.75"
+        }
     }, {
         "siglas": "unirioja",
         "nombre": "Universidad de La Rioja",
@@ -379,10 +417,12 @@
         "provincia": "La Rioja",
         "url": "",
         "convenios": [],
-        "tasas1": "21.21",
-        "tasas2": "47",
-        "tasas3": "101,85",
-        "tasas4": "141.02"
+        "tasas_2014": {
+            "tasas1": "21.21",
+            "tasas2": "47",
+            "tasas3": "101,85",
+            "tasas4": "141.02"
+        }
     }, {
         "siglas": "ule",
         "nombre": "Universidad de León",
@@ -398,14 +438,14 @@
             "tasas4": "48.96"
         },
         "tasas_2012": {
-            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
             "tasas1": "27.07",
             "tasas2": "40.61",
             "tasas3": "87.98",
             "tasas4": "121.82"
         },
         "tasas_2013": {
-            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
             "tasas1": "27.45",
             "tasas2": "41.17",
             "tasas3": "89.21",
@@ -429,10 +469,12 @@
         "provincia": "La Coruna",
         "url": "",
         "convenios": [],
-        "tasas1": "13.93",
-        "tasas2": "19.3",
-        "tasas3": "31.21",
-        "tasas4": "39.79"
+        "tasas_2014": {
+            "tasas1": "13.93",
+            "tasas2": "19.3",
+            "tasas3": "31.21",
+            "tasas4": "39.79"
+        }
     }, {
         "siglas": "uvigo",
         "nombre": "Universidad de Vigo",
@@ -440,10 +482,12 @@
         "provincia": "Pontevedra",
         "url": "",
         "convenios": [],
-        "tasas1": "13.93",
-        "tasas2": "19.3",
-        "tasas3": "31.21",
-        "tasas4": "39.79"
+        "tasas_2014": {
+            "tasas1": "13.93",
+            "tasas2": "19.3",
+            "tasas3": "31.21",
+            "tasas4": "39.79"
+        }
     }, {
         "siglas": "uam",
         "nombre": "Universidad Autónoma de Madrid",
@@ -451,10 +495,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "31,00",
-        "tasas2": "57,13",
-        "tasas3": "107,14",
-        "tasas4": "142,85"
+        "tasas_2014": {
+            "tasas1": "31,00",
+            "tasas2": "57,13",
+            "tasas3": "107,14",
+            "tasas4": "142,85"
+        }
     }, {
         "siglas": "ucm",
         "nombre": "Universidad Complutense de Madrid",
@@ -462,21 +508,25 @@
         "provincia": "Madrid",
         "url": "http://informatica.ucm.es/",
         "convenios": [],
-        "tasas1": "31,00",
-        "tasas2": "57,13",
-        "tasas3": "107,14",
-        "tasas4": "142,85"
+        "tasas_2014": {
+            "tasas1": "31,00",
+            "tasas2": "57,13",
+            "tasas3": "107,14",
+            "tasas4": "142,85"
+        }
     }, {
         "siglas": "uah",
         "nombre": "Universidad de Alcalá",
         "centro": "",
         "provincia": "Madrid",
-        "url": "http://informatica.ucm.es/",
+        "url": "",
         "convenios": [],
-        "tasas1": "31,00",
-        "tasas2": "57,13",
-        "tasas3": "107,14",
-        "tasas4": "142,85"
+        "tasas_2014": {
+            "tasas1": "31,00",
+            "tasas2": "57,13",
+            "tasas3": "107,14",
+            "tasas4": "142,85"
+        }
     }, {
         "siglas": "udima",
         "nombre": "Universidad a Distancia de Madrid",
@@ -485,10 +535,12 @@
         "provincia": "Madrid",
         "url": "http://www.udima.es/es/precios.html",
         "convenios": [],
-        "tasas1": "75",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": "",
+        "tasas_2014": {
+            "tasas1": "75",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "observaciones": ""
     }, {
         "siglas": "uoc",
@@ -498,10 +550,12 @@
         "provincia": "",
         "url": "",
         "convenios": [],
-        "tasas1": "22,8",
-        "tasas2": "27,36",
-        "tasas3": "27,36",
-        "tasas4": "27,36"
+        "tasas_2014": {
+            "tasas1": "22,8",
+            "tasas2": "27,36",
+            "tasas3": "27,36",
+            "tasas4": "27,36"
+        }
     }, {
         "siglas": "uax",
         "nombre": "Universidad Alfonso X El Sabio",
@@ -510,10 +564,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uan",
         "nombre": "Universidad Antonio de Nebrija",
@@ -522,10 +578,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uch-ceu",
         "nombre": "Universidad Cardenal Herrera",
@@ -534,10 +592,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": "",
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "observaciones": ""
     }, {
         "siglas": "ucam",
@@ -547,10 +607,12 @@
         "provincia": "Murcia",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": "",
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "observaciones": ""
     }, {
         "siglas": "ub",
@@ -560,10 +622,12 @@
         "provincia": "Barcelona",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": "",
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
         "observaciones": ""
     }, {
         "siglas": "uc",
@@ -573,10 +637,12 @@
         "provincia": "Cantabria",
         "url": "",
         "convenios": [],
-        "tasas1": "15,86",
-        "tasas2": "31,12",
-        "tasas3": "67,42",
-        "tasas4": "93,36"
+        "tasas_2014": {
+            "tasas1": "15,86",
+            "tasas2": "31,12",
+            "tasas3": "67,42",
+            "tasas4": "93,36"
+        }
     }, {
         "siglas": "",
         "nombre": "Universidad de Deusto",
@@ -585,10 +651,12 @@
         "provincia": "Vizcaya",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "udg",
         "nombre": "Universidad de Gerona",
@@ -597,10 +665,12 @@
         "provincia": "Gerona",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ugr",
         "nombre": "Universidad de Granada",
@@ -609,10 +679,12 @@
         "provincia": "Granada",
         "url": "",
         "convenios": [],
-        "tasas1": "12,62",
-        "tasas2": "25,25",
-        "tasas3": "54,71",
-        "tasas4": "75,75"
+        "tasas_2014": {
+            "tasas1": "12,62",
+            "tasas2": "25,25",
+            "tasas3": "54,71",
+            "tasas4": "75,75"
+        }
     }, {
         "siglas": "uhu",
         "nombre": "Universidad de Huelva",
@@ -621,10 +693,12 @@
         "provincia": "Huelva",
         "url": "",
         "convenios": [],
-        "tasas1": "12,62",
-        "tasas2": "25,25",
-        "tasas3": "54,71",
-        "tasas4": "75,75"
+        "tasas_2014": {
+            "tasas1": "12,62",
+            "tasas2": "25,25",
+            "tasas3": "54,71",
+            "tasas4": "75,75"
+        }
     }, {
         "siglas": "uib",
         "nombre": "Universidad de las Islas Baleares",
@@ -633,10 +707,12 @@
         "provicia": "Baleares",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "udl",
         "nombre": "Universidad de Lérida",
@@ -645,10 +721,12 @@
         "provincia": "Lerida",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uma",
         "nombre": "Universidad de Málaga",
@@ -657,10 +735,12 @@
         "provincia": "Malaga",
         "url": "",
         "convenios": [],
-        "tasas1": "12,62",
-        "tasas2": "25,25",
-        "tasas3": "54,71",
-        "tasas4": "75,75"
+        "tasas_2014": {
+            "tasas1": "12,62",
+            "tasas2": "25,25",
+            "tasas3": "54,71",
+            "tasas4": "75,75"
+        }
     }, {
         "siglas": "mu",
         "nombre": "Universidad de Mondragón",
@@ -669,10 +749,12 @@
         "provincia": "Gipuzkoa",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uo",
         "nombre": "Universidad de Oviedo",
@@ -681,10 +763,12 @@
         "provincia": "Asturias",
         "url": "",
         "convenios": [],
-        "tasas1": "17,26",
-        "tasas2": "28,26",
-        "tasas3": "41,48",
-        "tasas4": "48,72"
+        "tasas_2014": {
+            "tasas1": "17,26",
+            "tasas2": "28,26",
+            "tasas3": "41,48",
+            "tasas4": "48,72"
+        }
     }, {
         "siglas": "uv",
         "nombre": "Universidad de Valencia",
@@ -693,10 +777,12 @@
         "provincia": "Valencia",
         "url": "",
         "convenios": [],
-        "tasas1": "16,15",
-        "tasas2": "28,26",
-        "tasas3": "60,55",
-        "tasas4": "80,73"
+        "tasas_2014": {
+            "tasas1": "16,15",
+            "tasas2": "28,26",
+            "tasas3": "60,55",
+            "tasas4": "80,73"
+        }
     }, {
         "siglas": "ehu-bilbao",
         "nombre": "Universidad del País Vasco (Campus de Bilbao)",
@@ -704,10 +790,12 @@
         "provincia": "Vizcaya",
         "url": "",
         "convenios": [],
-        "tasas1": "19,39",
-        "tasas2": "27,63",
-        "tasas3": "41,59",
-        "tasas4": "41,59"
+        "tasas_2014": {
+            "tasas1": "19,39",
+            "tasas2": "27,63",
+            "tasas3": "41,59",
+            "tasas4": "41,59"
+        }
     }, {
         "siglas": "uem",
         "nombre": "Universidad Europea de Madrid",
@@ -715,10 +803,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uemc",
         "nombre": "Universidad Europea Miguel de Cervantes",
@@ -726,10 +816,12 @@
         "provincia": "Madrid",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ufv",
         "nombre": "Universidad Francisco de Vitoria",
@@ -737,10 +829,12 @@
         "provincia": "",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "uji",
         "nombre": "Universidad Jaime I de Castellón",
@@ -748,10 +842,12 @@
         "provincia": "Castellon",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "umh",
         "nombre": "Universidad Miguel Hernández de Elche",
@@ -759,10 +855,12 @@
         "provincia": "Alicante",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
 
     }, {
         "siglas": "uned",
@@ -771,10 +869,12 @@
         "provincia": "",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "upo",
         "nombre": "Universidad Pablo de Olavide",
@@ -782,10 +882,12 @@
         "provincia": "Sevilla",
         "url": "",
         "convenios": [],
-        "tasas1": "12.62",
-        "tasas2": "25.25",
-        "tasas3": "54.71",
-        "tasas4": "75.75"
+        "tasas_2014": {
+            "tasas1": "12.62",
+            "tasas2": "25.25",
+            "tasas3": "54.71",
+            "tasas4": "75.75"
+        }
     }, {
         "siglas": "upc",
         "nombre": "Universidad Politécnica de Cataluña",
@@ -793,10 +895,12 @@
         "provincia": "",
         "url": "",
         "convenios": [],
-        "tasas1": "",
-        "tasas2": "",
-        "tasas3": "",
-        "tasas4": ""
+        "tasas_2014": {
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        }
     }, {
         "siglas": "ull",
         "nombre": "Universidad de La Laguna",
@@ -804,9 +908,11 @@
         "provincia": "",
         "url": "",
         "convenios": [],
-        "tasas1": "13,7",
-        "tasas2": "27,4",
-        "tasas3": "59,37",
-        "tasas4": "82,2"
+        "tasas_2014": {
+            "tasas1": "13,7",
+            "tasas2": "27,4",
+            "tasas3": "59,37",
+            "tasas4": "82,2"
+        }
     }]
 }
