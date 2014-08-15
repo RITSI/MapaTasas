@@ -131,7 +131,7 @@ $(document).ready(function() {
                 $.each(resultados, function(index, value) {
                     universidades_provincia.push(resultados[index]);
                     for (var i = universidades.length - 1; i >= 0; i--) {
-                        console.log(universidades[i].siglas);
+                        //console.log(universidades[i].siglas);
                         if (resultados[index].convenios.indexOf(universidades[i].siglas) > -1) {
                             convenios_filter.push(universidades[i]);
                         }
@@ -152,7 +152,7 @@ $(document).ready(function() {
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
             var render_convenios;
-            console.log(value);
+            //console.log(value);
 
             $.get('template_universidad_provincia.mst', function(template_universidad_provincia) {
                 var render_resultados = Mustache.render(template_universidad_provincia, {
@@ -166,9 +166,35 @@ $(document).ready(function() {
                     tasas3: value.tasas3,
                     tasas4: value.tasas4
                 });
-                console.log(value.tasas4);
+                //console.log(value.tasas4);
 
                 $('#bootstrap_lista_units').append(render_resultados);
+                console.log(value);
+                var chart = c3.generate({
+                    bindto: "#chart",
+                    data: {
+                        x: 'x',
+                        x_format: '%Y',
+                        columns: [
+                            ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014')],
+                            ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1],
+                            ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2],
+                            ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3],
+                            ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4],
+                            ['Media nacional', 0, 0, 0, 0, 0, 0]
+                        ]
+                    },
+                    axis: {
+                        x: {
+                            type: 'timeseries',
+                            tick: {
+                                //              format : "%m/%d" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                                format: "%Y" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                            }
+                        }
+                    }
+                });
+
                 var panels = $('.user-infos');
                 var panelsButton = $('.dropdown-user');
                 panels.hide();

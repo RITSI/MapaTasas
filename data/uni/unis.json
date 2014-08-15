@@ -31,6 +31,34 @@
             "urjc",
             "unizar"
         ],
+        "tasas_2011": {
+            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+            "tasas1": "20.40",
+            "tasas2": "30.60",
+            "tasas3": "48.96",
+            "tasas4": "48.96"
+        },
+        "tasas_2012": {
+            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "tasas1": "27.07",
+            "tasas2": "40.61",
+            "tasas3": "87.98",
+            "tasas4": "121.82"
+        },
+        "tasas_2013": {
+            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "tasas1": "27.45",
+            "tasas2": "41.17",
+            "tasas3": "89.21",
+            "tasas4": "123.52"
+        },
+        "tasas_2014": {
+            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+            "tasas1": "27.72",
+            "tasas2": "41.59",
+            "tasas3": "90.10",
+            "tasas4": "124.76"
+        },
         "tasas1": "27.72",
         "tasas2": "41.59",
         "tasas3": "90.10",
@@ -42,10 +70,10 @@
         "provincia": "Zamora",
         "url": "",
         "convenios": [],
-        "tasas1":"",
-        "tasas2":"",
-        "tasas3":"",
-        "tasas4":""
+        "tasas1": "",
+        "tasas2": "",
+        "tasas3": "",
+        "tasas4": ""
     }, {
         "siglas": "ua",
         "nombre": "Universidad de Alicante",
@@ -75,6 +103,34 @@
         "provincia": "Valladolid",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+            "tasas1": "20.40",
+            "tasas2": "30.60",
+            "tasas3": "48.96",
+            "tasas4": "48.96"
+        },
+        "tasas_2012": {
+            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "tasas1": "27.07",
+            "tasas2": "40.61",
+            "tasas3": "87.98",
+            "tasas4": "121.82"
+        },
+        "tasas_2013": {
+            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "tasas1": "27.45",
+            "tasas2": "41.17",
+            "tasas3": "89.21",
+            "tasas4": "123.52"
+        },
+        "tasas_2014": {
+            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+            "tasas1": "27.72",
+            "tasas2": "41.59",
+            "tasas3": "90.10",
+            "tasas4": "124.76"
+        },
         "tasas1": "22,72",
         "tasas2": "41,59",
         "tasas3": "90,1",
@@ -110,7 +166,34 @@
             "urjc",
             "udc",
             "uji"
-        ],
+        ],"tasas_2011": {
+            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+            "tasas1": "20.40",
+            "tasas2": "30.60",
+            "tasas3": "48.96",
+            "tasas4": "48.96"
+        },
+        "tasas_2012": {
+            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "tasas1": "27.07",
+            "tasas2": "40.61",
+            "tasas3": "87.98",
+            "tasas4": "121.82"
+        },
+        "tasas_2013": {
+            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "tasas1": "27.45",
+            "tasas2": "41.17",
+            "tasas3": "89.21",
+            "tasas4": "123.52"
+        },
+        "tasas_2014": {
+            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+            "tasas1": "27.72",
+            "tasas2": "41.59",
+            "tasas3": "90.10",
+            "tasas4": "124.76"
+        },
         "tasas1": "22,72",
         "tasas2": "41,59",
         "tasas3": "90,1",
@@ -307,6 +390,34 @@
         "provincia": "Leon",
         "url": "",
         "convenios": [],
+        "tasas_2011": {
+            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+            "tasas1": "20.40",
+            "tasas2": "30.60",
+            "tasas3": "48.96",
+            "tasas4": "48.96"
+        },
+        "tasas_2012": {
+            "url":"http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+            "tasas1": "27.07",
+            "tasas2": "40.61",
+            "tasas3": "87.98",
+            "tasas4": "121.82"
+        },
+        "tasas_2013": {
+            "url":"http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+            "tasas1": "27.45",
+            "tasas2": "41.17",
+            "tasas3": "89.21",
+            "tasas4": "123.52"
+        },
+        "tasas_2014": {
+            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+            "tasas1": "27.72",
+            "tasas2": "41.59",
+            "tasas3": "90.10",
+            "tasas4": "124.76"
+        },
         "tasas1": "27.72",
         "tasas2": "41.59",
         "tasas3": "90.10",
