@@ -207,13 +207,13 @@ $(document).ready(function() {
                     tasas1: value.tasas_2014.tasas1,
                     tasas2: value.tasas_2014.tasas2,
                     tasas3: value.tasas_2014.tasas3,
-                    tasas4: value.tasas_2014.tasas4
-                    urls:{
-                        url_2011:value.tasas_2011.url,
-                        url_2012:value.tasas_2012.url,
-                        url_2013:value.tasas_2013.url,
-                        url_2014:value.tasas_2014.url
-                    }
+                    tasas4: value.tasas_2014.tasas4,
+                    urls:[
+                        {"url":value.tasas_2011.url,"fecha":2011},
+                        {"url":value.tasas_2012.url,"fecha":2012},
+                        {"url":value.tasas_2013.url,"fecha":2013},
+                        {"url":value.tasas_2014.url,"fecha":2014}
+                    ]
                 });
                 //console.log(value.tasas4);
 

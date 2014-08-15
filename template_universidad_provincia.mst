@@ -82,9 +82,14 @@
                         </table>
                     </div>
                 </div>
+                <div class="row" id="chart"></div>
+                <div class="row" style="word-wrap: break-word;"id="urls">
+                    <strong>Referencias<strong><br/>
+                    {{#urls}}
+                        <a class="referencia" href="{{url}}" title="{{url}}">Datos de {{fecha}}</a><br/>
+                    {{/urls}}
+                </div>
             </div>
-            <div class="row" id="chart"></div>
-            <div class="row" id="urls"></div>
         </div>
     </div>
 </div>

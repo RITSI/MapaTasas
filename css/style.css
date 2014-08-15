@@ -245,3 +245,16 @@ body {
   border-bottom: 1px solid #da2724;*/
   border-left: 1px solid #da2724;
 }
+#urls{
+    margin-right: 3px;
+    margin-left: 3px;
+}
+#urls>p{
+    color: #da2724;
+}
+.referencia{
+    color:#da2724;
+}
+.referencia:hover{
+    color:#da2724;
+}
