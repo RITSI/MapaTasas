@@ -53,22 +53,22 @@ $(document).ready(function() {
     });
 
     var projection_canary = d3.geo.albers()
-        .center([-3, 21.5])
+        .center([-6.5, 24])
         .rotate([3.4, 0])
         .parallels([50, 51])
-        .scale(1200 * 1.3)
+        .scale(1200 * 1.9)
         .translate([width / 2.5, height / 2]);
 
     var path_canary = d3.geo.path().projection(projection_canary);
 
 
+    width_canary = $("#map-canarias").width();
+    height_canary = $("#map-canarias").height();
     var canarias = d3.select("#map-canarias")
             .append("svg")
-            .attr("width", 150)
-            .attr("height", 100);
-            canarias.append("g")
-            .attr("width", 100)
-            .attr("height", 100)
+            .append("g")
+            .attr("width", width_canary)
+            .attr("height", height_canary);
 
     d3.json("maps/canary.json", function(error, esp) {
         canarias.selectAll(".subunit")
@@ -105,6 +105,11 @@ $(document).ready(function() {
         d3.select("#map>svg>g").attr("transform", "scale(" + $("#map").width() / 700 + ")");
         $("#map>svg").height($("#map").width() * 0.618);
         $("#map>svg").width($("#map").width());
+
+        d3.select("#map-canarias>svg>g").attr("transform", "scale(" + $("#map-canarias").width() / 200 + ")");
+        $("#map-canarias>svg").height($("#map-canarias").width() * 0.518);
+        $("#map-canarias>svg").width($("#map-canarias").width());
+        console.log($("#map-canarias>svg>g"));
     }
 
     function provincia_hover(d) {

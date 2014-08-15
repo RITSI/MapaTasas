@@ -238,3 +238,10 @@ body {
     min-width: 40px;
     width: 100%;
 }
+
+#map-canarias{
+  border-top: 1px solid #da2724;/*
+  border-right: 1px solid #da2724;
+  border-bottom: 1px solid #da2724;*/
+  border-left: 1px solid #da2724;
+}
