@@ -124,6 +124,7 @@ $(document).ready(function() {
                 return m.id;
             }
         });
+    }
 
     function provincia_click(d) {
         var resultados = [];
