@@ -28,7 +28,7 @@
                             <dd>{{centro}}</dd>
                             
                             <dt>URL:</dt>
-                            <dd><a href="{{url}}">{{url}}</a></dd>
+                            <dd><a href="{{url}}">Visitar centro</a></dd>
                             
                             <dt>Crédito en primera matrícula</dt>
                             <dd>{{tasas1}}</dd>
@@ -56,7 +56,7 @@
                                 </tr>
                                 <tr>
                                     <td>URL:</td>
-                                    <td><a href="{{url}}">{{url}}</a></td>
+                                    <td><a href="{{url}}" >Visitar sitio</a></td>
                                 </tr>
                                 <tr>
                                     <th>Precio por crédito</th>
