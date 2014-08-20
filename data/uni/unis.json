@@ -363,6 +363,125 @@
             "tasas4": "75.75"
         }
     }, {
+        "siglas": "unizar",
+        "nombre": "Universidad de Zaragoza",
+        "centro": "Escuela de Ingeniería y Arquitectura",
+        "provincia": "Zaragoza",
+        "url": "http://titulaciones.unizar.es/ing-informatica/",
+        "campus":"Campus de Zaragoza",
+        "convenios": [],
+        "tasas_2011": {
+            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto11.pdf",
+            "tasas1": "16.45",
+            "tasas2": "24.53",
+            "tasas3": "36.23",
+            "tasas4": "36.32"
+        },
+        "tasas_2012": {
+            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto12.pdf",
+            "tasas1": "21.70",
+            "tasas2": "32.25",
+            "tasas3": "69.89",
+            "tasas4": "69.89"
+        },
+        "tasas_2013": {
+            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto13.pdf",
+            "tasas1": "22.48",
+            "tasas2": "33.41",
+            "tasas3": "72.46",
+            "tasas4": "100.24"
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "22.48",
+            "tasas2": "33.41",
+            "tasas3": "72.41",
+            "tasas4": "100.24"
+        }
+    },{
+        "siglas": "uo",
+        "nombre": "Universidad de Oviedo",
+        "tipo": "pública",
+        "centro": "",
+        "provincia": "Asturias",
+        "url": "",
+        "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2013": {
+            "url": "",
+            "tasas1": "",
+            "tasas2": "",
+            "tasas3": "",
+            "tasas4": ""
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "17.26",
+            "tasas2": "28.26",
+            "tasas3": "41.48",
+            "tasas4": "48.72"
+        }
+    },{
+        "siglas": "usj",
+        "nombre": "Universidad de San Jorge",
+        "centro": "Escuela Politécnica Superior",
+        "provincia": "Zaragoza",
+        "url": "http://www.usj.es/estudios/grados/ingenieriainformatica",
+        "campus":"Campus de Zaragoza",
+        "convenios": [],
+        "tasas_2011": {
+            "url": "",
+            "tasas1": "8.820",
+            "tasas2": "8.820",
+            "tasas3": "8.820",
+            "tasas4": "8.820"
+        },
+        "tasas_2012": {
+            "url": "",
+            "tasas1": "8.820",
+            "tasas2": "8.820",
+            "tasas3": "8.820",
+            "tasas4": "8.820"
+        },
+        "tasas_2013": {
+            "url": "http://www.usj.es/sites/default/files/IMPORTES%20GRADOS%20GENERALES%202013-14.pdf",
+            "tasas1": "8.820",
+            "tasas2": "8.820",
+            "tasas3": "8.820",
+            "tasas4": "8.820"
+        },
+        "tasas_2014": {
+            "url": "",
+            "tasas1": "8.820",
+            "tasas2": "8.820",
+            "tasas3": "8.820",
+            "tasas4": "8.820"
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+    {
         "siglas": "ucav",
         "nombre": "Universidad Católica de Santa Teresa de Jesús",
         "centro": "Campus de Ávila",
@@ -991,42 +1110,7 @@
             "tasas3": "",
             "tasas4": ""
         }
-    }, {
-        "siglas": "unizar",
-        "nombre": "Universidad de Zaragoza",
-        "centro": "Escuela de Ingeniería y Arquitectura",
-        "provincia": "Zaragoza",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "22.48",
-            "tasas2": "33.41",
-            "tasas3": "72.41",
-            "tasas4": "100.24"
-        }
-    }, {
+    },  {
         "siglas": "ulpgc",
         "nombre": "Universidad de las Palmas de Gran Canaria",
         "centro": "Escuela de Ingeniería Informática",
@@ -1817,43 +1901,7 @@
             "tasas3": "",
             "tasas4": ""
         }
-    }, {
-        "siglas": "uo",
-        "nombre": "Universidad de Oviedo",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Asturias",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "17.26",
-            "tasas2": "28.26",
-            "tasas3": "41.48",
-            "tasas4": "48.72"
-        }
-    }, {
+    },  {
         "siglas": "uv",
         "nombre": "Universidad de Valencia",
         "tipo": "pública",

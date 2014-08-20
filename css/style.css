@@ -31,16 +31,19 @@ body {
 /*Mapa*/
 .subunit {
     fill: #da2724;
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition: all 0.7s ease-in-out;
-    -ms-transition: all 0.7s ease-in-out;
-    -o-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 /*Try with cubic bezier: cubic-bezier(n,n,n,n);*/
 .subunit:hover {
     fill: #fff;
+    stroke: #da2724;
+    /*stroke-dasharray: 2,2;
+    stroke-linejoin: round;*/
 }
 .subunit-boundary {
     fill: none;
