@@ -1,476 +1,1021 @@
 {
     "unis": [{
-        "siglas": "ual",
-        "nombre": "Universidad de Almería",
-        "centro": "Escuela Politécnica Superior",
-        "provincia": "Almeria",
-        "campus": "Campus de Almería",
-        "url": "http://cms.ual.es/UAL/estudios/grados/GRADO4010",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
+            "siglas": "ual",
+            "nombre": "Universidad de Almería",
+            "centro": "Escuela Politécnica Superior",
+            "provincia": "Almeria",
+            "campus": "Campus de Almería",
+            "url": "http://cms.ual.es/UAL/estudios/grados/GRADO4010",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "ugr-granada",
+            "nombre": "Universidad de Granada",
+            "tipo": "pública",
+            "centro": "Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación",
+            "campus": "Campus de Granada",
+            "provincia": "Granada",
+            "url": "http://etsiit.ugr.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "ugr-ceuta",
+            "nombre": "Universidad de Granada",
+            "tipo": "pública",
+            "campus": "Campus de Ceuta",
+            "centro": "Facultad de Educación, Economía y Tecnología de Ceuta",
+            "provincia": "Ceuta",
+            "url": "http://etsiit.ugr.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "uma",
+            "nombre": "Universidad de Málaga",
+            "tipo": "pública",
+            "centro": "Escuela Técnica Superior de Ingeniería Informática",
+            "provincia": "Malaga",
+            "campus": "Campus de Málaga",
+            "url": "http://www.informatica.uma.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "us",
+            "nombre": "Universidad de Sevilla",
+            "centro": "Escuela Técnica Superior de Ingeniería Informática",
+            "campus": "Campus de Sevilla",
+            "provincia": "Sevilla",
+            "url": "https://www.informatica.us.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "upo",
+            "nombre": "Universidad Pablo de Olavide",
+            "centro": "",
+            "provincia": "Sevilla",
+            "campus": "Campus de Sevilla",
+            "url": "http://www.upo.es/portal/impe/web/contenido/a71c7736-752e-11df-a821-3fe5a96f4a88?channel=d3563863-2f47-11de-b088-3fe5a96f4a88",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "uca",
+            "nombre": "Universidad de Cádiz",
+            "centro": "Escuela Superior de Ingeniería",
+            "provincia": "Cadiz",
+            "campus": "Campus de Cádiz",
+            "url": "http://asignaturas.uca.es/wuca_fichasig_asignaturas_xtitulacion?titul=21714",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "uco",
+            "nombre": "Universidad de Córdoba",
+            "centro": "Escuela Politécnica Superior",
+            "campus": "Campus de Córdoba",
+            "provincia": "Cordoba",
+            "url": "http://www.uco.es/eps/nodeorder/term/29",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "uja",
+            "nombre": "Universidad de Jaén",
+            "centro": "Escuela Politécnica Superior de Jaén",
+            "provincia": "Jaen",
+            "url": "http://grados.ujaen.es/node/11/presentacion",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "uhu",
+            "nombre": "Universidad de Huelva",
+            "tipo": "pública",
+            "campus": "Campus de Huelva",
+            "centro": "Escuela Politécnica Superior",
+            "provincia": "Huelva",
+            "url": "http://www.uhu.es/estudios/ofertaacademica/informacion/informatica.pdf",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
+                "tasas1": "12.20",
+                "tasas2": "14.10",
+                "tasas3": "18.30",
+                "tasas4": "18.30"
+            },
+            "tasas_2012": {
+                "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
+                "tasas1": "12.49",
+                "tasas2": "24.97",
+                "tasas3": "54.10",
+                "tasas4": "74.91"
+            },
+            "tasas_2013": {
+                "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2014": {
+                "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            }
+        }, {
+            "siglas": "unizar",
+            "nombre": "Universidad de Zaragoza",
+            "centro": "Escuela de Ingeniería y Arquitectura",
+            "provincia": "Zaragoza",
+            "url": "http://titulaciones.unizar.es/ing-informatica/",
+            "campus": "Campus de Zaragoza",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto11.pdf",
+                "tasas1": "16.45",
+                "tasas2": "24.53",
+                "tasas3": "36.23",
+                "tasas4": "36.32"
+            },
+            "tasas_2012": {
+                "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto12.pdf",
+                "tasas1": "21.70",
+                "tasas2": "32.25",
+                "tasas3": "69.89",
+                "tasas4": "69.89"
+            },
+            "tasas_2013": {
+                "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto13.pdf",
+                "tasas1": "22.48",
+                "tasas2": "33.41",
+                "tasas3": "72.46",
+                "tasas4": "100.24"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "22.48",
+                "tasas2": "33.41",
+                "tasas3": "72.41",
+                "tasas4": "100.24"
+            }
+        }, {
+            "incomplete": ""
+        }, {
+            "siglas": "usj",
+            "nombre": "Universidad de San Jorge",
+            "centro": "Escuela Politécnica Superior",
+            "provincia": "Zaragoza",
+            "url": "http://www.usj.es/estudios/grados/ingenieriainformatica",
+            "campus": "Campus de Zaragoza",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "8.820",
+                "tasas2": "8.820",
+                "tasas3": "8.820",
+                "tasas4": "8.820"
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "8.820",
+                "tasas2": "8.820",
+                "tasas3": "8.820",
+                "tasas4": "8.820"
+            },
+            "tasas_2013": {
+                "url": "http://www.usj.es/sites/default/files/IMPORTES%20GRADOS%20GENERALES%202013-14.pdf",
+                "tasas1": "8.820",
+                "tasas2": "8.820",
+                "tasas3": "8.820",
+                "tasas4": "8.820"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "8.820",
+                "tasas2": "8.820",
+                "tasas3": "8.820",
+                "tasas4": "8.820"
+            }
+        }, {
+            "siglas": "uo",
+            "nombre": "Universidad de Oviedo",
+            "tipo": "pública",
+            "campus": "Campus de Oviedo",
+            "centro": "Escuela de Ingeniería Informática",
+            "provincia": "Asturias",
+            "url": "http://www.ingenieriainformatica.uniovi.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.asturias.es/bopa/2011/06/22/2011-12319.pdf",
+                "tasas1": "17.26",
+                "tasas2": "25.03",
+                "tasas3": "27.62",
+                "tasas4": "26.62"
+            },
+            "tasas_2012": {
+                "url": "https://sede.asturias.es/bopa/2012/07/05/2012-12528.pdf",
+                "tasas1": "17.26",
+                "tasas2": "26.28",
+                "tasas3": "35.91",
+                "tasas4": "38.67"
+            },
+            "tasas_2013": {
+                "url": "https://sede.asturias.es/bopa/2013/06/27/2013-12421.pdf",
+                "tasas1": "17.26",
+                "tasas2": "26.91",
+                "tasas3": "37.71",
+                "tasas4": "40.60"
+            },
+            "tasas_2014": {
+                "url": "https://sede.asturias.es/bopa/2014/06/26/2014-11288.pdf",
+                "tasas1": "17.26",
+                "tasas2": "28.26",
+                "tasas3": "41.48",
+                "tasas4": "48.72"
+            }
+        }, {
+            "siglas": "uib",
+            "nombre": "Universidad de las Islas Baleares",
+            "tipo": "pública",
+            "centro": "Escuela Politécnica Superior",
+            "provicia": "Baleares",
+            "url": "http://estudis.uib.es/es/grau/informatica/GEIN-P/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://boib.caib.es/pdf/2011087/mp51.pdf",
+                "tasas1": "17.85",
+                "tasas2": "26.78",
+                "tasas3": "35.70",
+                "tasas4": "53.55"
+            },
+            "tasas_2012": {
+                "url": "http://boib.caib.es/pdf/2012101/mp41.pdf",
+                "tasas1": "19.58",
+                "tasas2": "39.16",
+                "tasas3": "84.78",
+                "tasas4": "117.48"
+            },
+            "tasas_2013": {
+                "url": "http://www.caib.es/eboibfront/es/2013/8164/520500/decreto-37-2013-de-12-de-julio-por-el-que-se-actua",
+                "tasas1": "20.56",
+                "tasas2": "41.12",
+                "tasas3": "89.02",
+                "tasas4": "123.35"
+            },
+            "tasas_2014": {
+                "url": "http://www.caib.es/eboibfront/es/2014/8344/543737/decreto-29-2014-de-11-de-julio-por-el-que-se-aprue",
+                "tasas1": "20.56",
+                "tasas2": "41.12",
+                "tasas3": "89.02",
+                "tasas4": "123.35"
+            }
         },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
+
+
+        {
+            "siglas": "ulpgc",
+            "nombre": "Universidad de las Palmas de Gran Canaria",
+            "centro": "Escuela de Ingeniería Informática",
+            "campus": "Campus de Gran Canaria",
+            "provincia": "Las Palmas",
+            "url": "http://www.eii.ulpgc.es/tb_university_ex/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://sede.gobcan.es/boc/boc-a-2011-146-4209.pdf",
+                "tasas1": "13.44",
+                "tasas2": "19.49",
+                "tasas3": "22.85",
+                "tasas4": "24.86"
+            },
+            "tasas_2012": {
+                "url": "http://www.gobcan.es/boc/2012/141/001.html",
+                "tasas1": "18.95",
+                "tasas2": "37.90",
+                "tasas3": "82.12",
+                "tasas4": "113.70"
+            },
+            "tasas_2013": {
+                "url": "http://sede.gobcan.es/boc/boc-a-2013-132-3738.pdf",
+                "tasas1": "18.95",
+                "tasas2": "37.90",
+                "tasas3": "82.12",
+                "tasas4": "113.70"
+            },
+            "tasas_2014": {
+                "url": "http://www.gobcan.es/boc/2014/132/001.html",
+                "tasas1": "18.95",
+                "tasas2": "34.11",
+                "tasas3": "65.70",
+                "tasas4": "85.28"
+            }
+        }, {
+            "siglas": "ull",
+            "nombre": "Universidad de La Laguna",
+            "centro": "Escuela Técnica Superior de Ingeniería en Informática",
+            "campus": "Campus de Santa Cruz de Tenerife",
+            "provincia": "Santa Cruz de Tenerife",
+            "url": "http://www.ull.es/view/centros/etsii/Inicio/es",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://sede.gobcan.es/boc/boc-a-2011-146-4209.pdf",
+                "tasas1": "13.44",
+                "tasas2": "19.49",
+                "tasas3": "22.85",
+                "tasas4": "24.86"
+            },
+            "tasas_2012": {
+                "url": "http://www.gobcan.es/boc/2012/141/001.html",
+                "tasas1": "18.95",
+                "tasas2": "37.90",
+                "tasas3": "82.12",
+                "tasas4": "113.70"
+            },
+            "tasas_2013": {
+                "url": "http://sede.gobcan.es/boc/boc-a-2013-132-3738.pdf",
+                "tasas1": "18.95",
+                "tasas2": "37.90",
+                "tasas3": "82.12",
+                "tasas4": "113.70"
+            },
+            "tasas_2014": {
+                "url": "http://www.gobcan.es/boc/2014/132/001.html",
+                "tasas1": "18.95",
+                "tasas2": "34.11",
+                "tasas3": "65.70",
+                "tasas4": "85.28"
+            }
+        },{
+            "siglas": "usal-salamanca",
+            "nombre": "Universidad de Salamanca (Campus de Salamanca)",
+            "centro": "Facultad de Ciencias",
+            "provincia": "Salamanca",
+            "url": "http://www.usal.es/webusal/node/4558",
+            "convenios": [
+                "uva",
+                "ua",
+                "ual",
+                "ubu",
+                "uclm-albacete",
+                "ucm",
+                "uco",
+                "uex-caceres",
+                "umu",
+                "ehu-ss",
+                "urjc",
+                "unizar"
+            ],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
+        }, {
+            "siglas": "usal-zamora",
+            "nombre": "Universidad de Salamanca (Campus de Zamora)",
+            "centro": "Escuela Politécnica Superior de Zamora",
+            "provincia": "Zamora",
+            "url": "http://www.usal.es/webusal/node/4540",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
+        }, {
+            "siglas": "uva-valladolid",
+            "nombre": "Universidad de Valladolid",
+            "centro": "Escuela de Ingeniería Informática",
+            "campus":"Campus de Valladolid",
+            "provincia": "Valladolid",
+            "url": "http://www.uva.es/export/sites/uva/2.docencia/2.01.grados/2.01.02.ofertaformativagrados/2.01.02.01.alfabetica/Grado-en-Ingenieria-Informatica-00001/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
+        },{
+            "siglas": "uva-segovia",
+            "nombre": "Universidad de Valladolid",
+            "centro": "Escuela Universitaria de Informática",
+            "campus":"Campus de Segovia",
+            "provincia": "Segovia",
+            "url": "http://www.uva.es/export/sites/uva/2.docencia/2.01.grados/2.01.02.ofertaformativagrados/2.01.02.01.alfabetica/Grado-en-Ingenieria-Informatica-de-Servicios-y-Aplicaciones/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
+        },{
+            "siglas": "ule",
+            "nombre": "Universidad de León",
+            "centro": "Escuela de Ingenierías Industrial e Informática",
+            "provincia": "Leon",
+            "campus": "Campus de León",
+            "url": "http://www.unileon.es/estudiantes/estudiantes-grado/oferta-de-estudios/grado-en-ingenieria-informatica",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
+        },{
+            "siglas": "ubu",
+            "nombre": "Universidad de Burgos",
+            "centro": "Escuela Politécnica Superior",
+            "provincia": "Burgos",
+            "campus": "Campus de Burgos",
+            "url": "http://www.ubu.es/titulaciones/es/grado_informatica",
+            "convenios": [
+                "usal",
+                "uam",
+                "uclm-albacete",
+                "uclm-ciudadreal",
+                "uex-caceres",
+                "uja",
+                "ulpgc",
+                "us",
+                "uva",
+                "unizar",
+                "upv",
+                "upna",
+                "urjc",
+                "udc",
+                "uji"
+            ],
+            "tasas_2011": {
+                "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
+                "tasas1": "20.40",
+                "tasas2": "30.60",
+                "tasas3": "48.96",
+                "tasas4": "48.96"
+            },
+            "tasas_2012": {
+                "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
+                "tasas1": "27.07",
+                "tasas2": "40.61",
+                "tasas3": "87.98",
+                "tasas4": "121.82"
+            },
+            "tasas_2013": {
+                "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
+                "tasas1": "27.45",
+                "tasas2": "41.17",
+                "tasas3": "89.21",
+                "tasas4": "123.52"
+            },
+            "tasas_2014": {
+                "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            }
         },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
+        {
+            "siglas": "uc",
+            "nombre": "Universidad de Cantabria",
+            "tipo": "pública",
+            "centro": "Facultad de Ciencias",
+            "provincia": "Cantabria",
+            "url": "http://www.unican.es/WebUC/catalogo/planes/detalle_od.asp?id=98",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=212694",
+                "tasas1": "14.54",
+                "tasas2": "21.07",
+                "tasas3": "30.72",
+                "tasas4": "30.72"
+            },
+            "tasas_2012": {
+                "url": "http://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=232759",
+                "tasas1": "16.12",
+                "tasas2": "32.24",
+                "tasas3": "69.85",
+                "tasas4": "96.72"
+            },
+            "tasas_2013": {
+                "url": "https://www.unican.es/NR/rdonlyres/0001623e/pasasttgychmdinfiszmpmueuibjyykj/BOCPRECIOSP%C3%9ABLICOS26JUL13.pdf",
+                "tasas1": "15.56",
+                "tasas2": "31.12",
+                "tasas3": "67.42",
+                "tasas4": "93.36"
+            },
+            "tasas_2014": {
+                "url": "http://www.cantabrialiberal.com/noticia.php?id=246282&noticia=Catalu%F1a%20mantendr%E1%20congeladas%20las%20tasas%20universitarias%20%22durante%20un%20tiempo%20largo%22",
+                "tasas1": "15.56",
+                "tasas2": "31.12",
+                "tasas3": "67.42",
+                "tasas4": "93.36"
+            }
         },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "ugr-granada",
-        "nombre": "Universidad de Granada",
-        "tipo": "pública",
-        "centro": "Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación",
-        "campus":"Campus de Granada",
-        "provincia": "Granada",
-        "url": "http://etsiit.ugr.es/",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
+
+
+
+
+        {
+            "siglas": "uclm-albacete",
+            "nombre": "Universidad de Castilla-La Mancha",
+            "centro": "Escuela Superior de Ingeniería Informática",
+            "provincia": "Albacete",
+            "campus": "Campus de Albacete",
+            "url": "http://www.esiiab.uclm.es/grado/datos.php?curso=2014-15&idmenup=datosgrado",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",
+                "tasas1": "15.57", 
+                "tasas2": "35.14",
+                "tasas3": "76.15",
+                "tasas4": "105.43"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uclm-ciudadreal",
+            "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
+            "centro": "Escuela Superior de Informática",
+            "campus": "Campus de Ciudad Real",
+            "provincia": "Ciudad Real",
+            "url": "http://webpub.esi.uclm.es/paginas/formacion-grado-en-ing-informatica-1",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",
+                "tasas1": "15.57", 
+                "tasas2": "35.14",
+                "tasas3": "76.15",
+                "tasas4": "105.43"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
         },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
+
+        {
+            "siglas": "uex-caceres",
+            "nombre": "Universidad de Extremadura",
+            "centro": "Escuela Politécnica de Cáceres",
+            "provincia": "Caceres",
+            "campus": "Campus de Cáceres",
+            "url": "http://www.unex.es/conoce-la-uex/estructura-academica/centros/epcc",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2011/1250o/11040114.pdf",
+                "tasas1": "16.13",
+                "tasas2": "19.84",
+                "tasas3": "28.57",
+                "tasas4": "28.57"
+            },
+            "tasas_2012": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2012/1440o/12040157.pdf",
+                "tasas1": "16.44",
+                "tasas2": "32.87",
+                "tasas3": "71.22",
+                "tasas4": "98.62"
+            },
+            "tasas_2013": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2013/1410o/13040141.pdf",
+                "tasas1": "16.83    ",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },{
+            "siglas": "uex-merida",
+            "nombre": "Universidad de Extremadura",
+            "centro": "Escuela Politécnica de Cáceres",
+            "campus": "Campus de Mérida",
+            "provincia": "Badajoz",
+            "url": "http://www.unex.es/conoce-la-uex/estructura-academica/centros/cum/titulaciones/grado/info_titulacion?idTitulacion=G55&idPlan=1514&idCentro=15",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2011/1250o/11040114.pdf",
+                "tasas1": "16.13",
+                "tasas2": "19.84",
+                "tasas3": "28.57",
+                "tasas4": "28.57"
+            },
+            "tasas_2012": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2012/1440o/12040157.pdf",
+                "tasas1": "16.44",
+                "tasas2": "32.87",
+                "tasas3": "71.22",
+                "tasas4": "98.62"
+            },
+            "tasas_2013": {
+                "url": "http://doe.juntaex.es/pdfs/doe/2013/1410o/13040141.pdf",
+                "tasas1": "16.83    ",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
         },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "ugr-ceuta",
-        "nombre": "Universidad de Granada",
-        "tipo": "pública",
-        "campus":"Campus de Ceuta",
-        "centro": "Facultad de Educación, Economía y Tecnología de Ceuta",
-        "provincia": "Ceuta",
-        "url": "http://etsiit.ugr.es/",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "uma",
-        "nombre": "Universidad de Málaga",
-        "tipo": "pública",
-        "centro": "Escuela Técnica Superior de Ingeniería Informática",
-        "provincia": "Malaga",
-        "campus": "Campus de Málaga",
-        "url": "http://www.informatica.uma.es/",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "us",
-        "nombre": "Universidad de Sevilla",
-        "centro": "Escuela Técnica Superior de Ingeniería Informática",
-        "campus": "Campus de Sevilla",
-        "provincia": "Sevilla",
-        "url": "https://www.informatica.us.es/",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "upo",
-        "nombre": "Universidad Pablo de Olavide",
-        "centro": "",
-        "provincia": "Sevilla",
-        "campus": "Campus de Sevilla",
-        "url": "http://www.upo.es/portal/impe/web/contenido/a71c7736-752e-11df-a821-3fe5a96f4a88?channel=d3563863-2f47-11de-b088-3fe5a96f4a88",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "uca",
-        "nombre": "Universidad de Cádiz",
-        "centro": "Escuela Superior de Ingeniería",
-        "provincia": "Cadiz",
-        "campus": "Campus de Cádiz",
-        "url": "http://asignaturas.uca.es/wuca_fichasig_asignaturas_xtitulacion?titul=21714",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "uco",
-        "nombre": "Universidad de Córdoba",
-        "centro": "Escuela Politécnica Superior",
-        "campus": "Campus de Córdoba",
-        "provincia": "Cordoba",
-        "url": "http://www.uco.es/eps/nodeorder/term/29",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "uja",
-        "nombre": "Universidad de Jaén",
-        "centro": "Escuela Politécnica Superior de Jaén",
-        "provincia": "Jaen",
-        "url": "http://grados.ujaen.es/node/11/presentacion",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "uhu",
-        "nombre": "Universidad de Huelva",
-        "tipo": "pública",
-        "campus": "Campus de Huelva",
-        "centro": "Escuela Politécnica Superior",
-        "provincia": "Huelva",
-        "url": "http://www.uhu.es/estudios/ofertaacademica/informacion/informatica.pdf",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://www.juntadeandalucia.es/boja/boletines/2011/148/d/updf/d1.pdf",
-            "tasas1": "12.20",
-            "tasas2": "14.10",
-            "tasas3": "18.30",
-            "tasas4": "18.30"
-        },
-        "tasas_2012": {
-            "url": "http://www.juntadeandalucia.es/boja/2012/142/BOJA12-142-00393.pdf",
-            "tasas1": "12.49",
-            "tasas2": "24.97",
-            "tasas3": "54.10",
-            "tasas4": "74.91"
-        },
-        "tasas_2013": {
-            "url": "http://www.juntadeandalucia.es/boja/2013/139/BOJA13-139-00268.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        },
-        "tasas_2014": {
-            "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
-            "tasas1": "12.62",
-            "tasas2": "25.25",
-            "tasas3": "54.71",
-            "tasas4": "75.75"
-        }
-    }, {
-        "siglas": "unizar",
-        "nombre": "Universidad de Zaragoza",
-        "centro": "Escuela de Ingeniería y Arquitectura",
-        "provincia": "Zaragoza",
-        "url": "http://titulaciones.unizar.es/ing-informatica/",
-        "campus":"Campus de Zaragoza",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto11.pdf",
-            "tasas1": "16.45",
-            "tasas2": "24.53",
-            "tasas3": "36.23",
-            "tasas4": "36.32"
-        },
-        "tasas_2012": {
-            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto12.pdf",
-            "tasas1": "21.70",
-            "tasas2": "32.25",
-            "tasas3": "69.89",
-            "tasas4": "69.89"
-        },
-        "tasas_2013": {
-            "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto13.pdf",
-            "tasas1": "22.48",
-            "tasas2": "33.41",
-            "tasas3": "72.46",
-            "tasas4": "100.24"
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "22.48",
-            "tasas2": "33.41",
-            "tasas3": "72.41",
-            "tasas4": "100.24"
-        }
-    },{
-        "siglas": "uo",
-        "nombre": "Universidad de Oviedo",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Asturias",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "17.26",
-            "tasas2": "28.26",
-            "tasas3": "41.48",
-            "tasas4": "48.72"
-        }
-    },{
-        "siglas": "usj",
-        "nombre": "Universidad de San Jorge",
-        "centro": "Escuela Politécnica Superior",
-        "provincia": "Zaragoza",
-        "url": "http://www.usj.es/estudios/grados/ingenieriainformatica",
-        "campus":"Campus de Zaragoza",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "8.820",
-            "tasas2": "8.820",
-            "tasas3": "8.820",
-            "tasas4": "8.820"
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "8.820",
-            "tasas2": "8.820",
-            "tasas3": "8.820",
-            "tasas4": "8.820"
-        },
-        "tasas_2013": {
-            "url": "http://www.usj.es/sites/default/files/IMPORTES%20GRADOS%20GENERALES%202013-14.pdf",
-            "tasas1": "8.820",
-            "tasas2": "8.820",
-            "tasas3": "8.820",
-            "tasas4": "8.820"
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "8.820",
-            "tasas2": "8.820",
-            "tasas3": "8.820",
-            "tasas4": "8.820"
-        }
-    },
 
 
 
@@ -481,1777 +1026,1335 @@
 
 
 
-    {
-        "siglas": "ucav",
-        "nombre": "Universidad Católica de Santa Teresa de Jesús",
-        "centro": "Campus de Ávila",
-        "provincia": "Avila",
-        "url": "",
-        "convenios": [
-            "usal",
-            "uva",
-            "ucav"
-        ],
-        "tipo": "privada"
-    }, {
-        "siglas": "usal-salamanca",
-        "nombre": "Universidad de Salamanca (Campus de Salamanca)",
-        "centro": "Facultad de Ciencias",
-        "provincia": "Salamanca",
-        "url": "",
-        "convenios": [
-            "uva",
-            "ua",
-            "ual",
-            "ubu",
-            "uclm-albacete",
-            "ucm",
-            "uco",
-            "uex-caceres",
-            "umu",
-            "ehu-ss",
-            "urjc",
-            "unizar"
-        ],
-        "tasas_2011": {
-            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
-            "tasas1": "20.40",
-            "tasas2": "30.60",
-            "tasas3": "48.96",
-            "tasas4": "48.96"
-        },
-        "tasas_2012": {
-            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
-            "tasas1": "27.07",
-            "tasas2": "40.61",
-            "tasas3": "87.98",
-            "tasas4": "121.82"
-        },
-        "tasas_2013": {
-            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
-            "tasas1": "27.45",
-            "tasas2": "41.17",
-            "tasas3": "89.21",
-            "tasas4": "123.52"
-        },
-        "tasas_2014": {
-            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
-            "tasas1": "27.72",
-            "tasas2": "41.59",
-            "tasas3": "90.10",
-            "tasas4": "124.76"
-        },
-        "tasas1": "27.72",
-        "tasas2": "41.59",
-        "tasas3": "90.10",
-        "tasas4": "124.76"
-    }, {
-        "siglas": "usal-zamora",
-        "nombre": "Universidad de Salamanca (Campus de Zamora)",
-        "centro": "Escuela Politécnica Superior de Zamora",
-        "provincia": "Zamora",
-        "url": "",
-        "convenios": [],
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "ua",
-        "nombre": "Universidad de Alicante",
-        "centro": "Escuela Politécnica Superior",
-        "provincia": "Alicante",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "23.85",
-            "tasas2": "41.73",
-            "tasas3": "88.55",
-            "tasas4": "118.07"
-        }
-    }, {
-        "siglas": "uva",
-        "nombre": "Universidad de Valladolid",
-        "centro": "Escuela de Ingeniería Informática",
-        "provincia": "Valladolid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
-            "tasas1": "20.40",
-            "tasas2": "30.60",
-            "tasas3": "48.96",
-            "tasas4": "48.96"
-        },
-        "tasas_2012": {
-            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
-            "tasas1": "27.07",
-            "tasas2": "40.61",
-            "tasas3": "87.98",
-            "tasas4": "121.82"
-        },
-        "tasas_2013": {
-            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
-            "tasas1": "27.45",
-            "tasas2": "41.17",
-            "tasas3": "89.21",
-            "tasas4": "123.52"
-        },
-        "tasas_2014": {
-            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
-            "tasas1": "27.72",
-            "tasas2": "41.59",
-            "tasas3": "90.10",
-            "tasas4": "124.76"
-        },
-        "tasas1": "22.72",
-        "tasas2": "41.59",
-        "tasas3": "90.1",
-        "tasas4": "124.76"
-    }, {
-        "siglas": "uab",
-        "nombre": "Universidad Autónoma de Barcelona",
-        "centro": "Facultad de Informática",
-        "provincia": "Barcelona",
-        "url": "",
-        "convenios": [
-            "usal"
-        ],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "ubu",
-        "nombre": "Universidad de Burgos",
-        "centro": "Facultad de Informática",
-        "provincia": "Burgos",
-        "url": "",
-        "convenios": [
-            "usal",
-            "uam",
-            "uclm-albacete",
-            "uclm-ciudadreal",
-            "uex-caceres",
-            "uja",
-            "ulpgc",
-            "us",
-            "uva",
-            "unizar",
-            "upv",
-            "upna",
-            "urjc",
-            "udc",
-            "uji"
-        ],
-        "tasas_2011": {
-            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
-            "tasas1": "20.40",
-            "tasas2": "30.60",
-            "tasas3": "48.96",
-            "tasas4": "48.96"
-        },
-        "tasas_2012": {
-            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
-            "tasas1": "27.07",
-            "tasas2": "40.61",
-            "tasas3": "87.98",
-            "tasas4": "121.82"
-        },
-        "tasas_2013": {
-            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
-            "tasas1": "27.45",
-            "tasas2": "41.17",
-            "tasas3": "89.21",
-            "tasas4": "123.52"
-        },
-        "tasas_2014": {
-            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
-            "tasas1": "27.72",
-            "tasas2": "41.59",
-            "tasas3": "90.10",
-            "tasas4": "124.76"
-        },
-        "tasas1": "22.72",
-        "tasas2": "41.59",
-        "tasas3": "90.1",
-        "tasas4": "124.76"
-    }, {
-        "siglas": "upv",
-        "nombre": "Universidad Politécnica de Valencia",
-        "centro": "Escuela Técnica Superior de Ingeniería Informática",
-        "provincia": "Valencia",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "16.15",
-            "tasas2": "28.26",
-            "tasas3": "60.55",
-            "tasas4": "80.73"
-        }
-    }, {
-        "siglas": "upna",
-        "nombre": "Universidad Pública de Navarra",
-        "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
-        "provincia": "Navarra",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uji",
-        "nombre": "Universitat Jaume I",
-        "centro": "Escuela Superior de Tecnología y Ciencias Experimentales",
-        "provincia": "Castellon",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "udc",
-        "nombre": "Universidade da Coruña",
-        "centro": "Facultade de Informática",
-        "provincia": "La Coruna",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "13.93",
-            "tasas2": "19.3",
-            "tasas3": "31.21",
-            "tasas4": "39.79"
-        }
-    }, {
-        "siglas": "uclm-albacete",
-        "nombre": "Universidad de Castilla-La Mancha (Campus de Albacete)",
-        "centro": "Escuela Superior de Informática",
-        "provincia": "Albacete",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uclm-ciudadreal",
-        "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
-        "centro": "Escuela Superior de Informática",
-        "provincia": "Ciudad_Real",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "ucm",
-        "nombre": "Universidad Complutense de Madrid",
-        "centro": "Facultad de Informática",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "31",
-            "tasas2": "57.13",
-            "tasas3": "107.14",
-            "tasas4": "142.82"
-        }
-    }, {
-        "siglas": "uex-caceres",
-        "nombre": "Universidad de Extremadura",
-        "centro": "Escuela Politécnica de Cáceres",
-        "provincia": "Caceres",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "umu",
-        "nombre": "Universidad de Murcia",
-        "centro": "Facultad de Informática",
-        "provincia": "Murcia",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "16.78",
-            "tasas2": "33.55",
-            "tasas3": "72.71",
-            "tasas4": "100.68"
-        }
-    }, {
-        "siglas": "ehu-ss",
-        "nombre": "Universidad del País Vasco (Campus de San Sebastián)",
-        "centro": "Facultad de Informática",
-        "provincia": "San Sebastian",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "19.39",
-            "tasas2": "27.63",
-            "tasas3": "41.59",
-            "tasas4": "41.59"
-        }
-    }, {
-        "siglas": "urjc",
-        "nombre": "Universidad Rey Juan Carlos",
-        "centro": "Escuela Técnica Superior de Ingeniería Informática",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    },  {
-        "siglas": "ulpgc",
-        "nombre": "Universidad de las Palmas de Gran Canaria",
-        "centro": "Escuela de Ingeniería Informática",
-        "provincia": "Las Palmas",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "13.7",
-            "tasas2": "27.4",
-            "tasas3": "59.37",
-            "tasas4": "82.2"
-        }
-    }, {
-        "siglas": "uc3m",
-        "nombre": "Universidad Carlos III",
-        "centro": "Escuela Universitaria de Informática",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "31",
-            "tasas2": "57.13",
-            "tasas3": "107.14",
-            "tasas4": "142.82"
-        }
-    }, {
-        "siglas": "unirioja",
-        "nombre": "Universidad de La Rioja",
-        "centro": "Facultad de Ciencias, Estudios Agroalimentarios e Informática",
-        "provincia": "La Rioja",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "21.21",
-            "tasas2": "47",
-            "tasas3": "101.85",
-            "tasas4": "141.02"
-        }
-    }, {
-        "siglas": "ule",
-        "nombre": "Universidad de León",
-        "centro": "Escuela de Ingenierías Industrial e Informática",
-        "provincia": "Leon",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "http://bocyl.jcyl.es/boletines/2011/07/15/pdf/BOCYL-D-15072011-1.pdf",
-            "tasas1": "20.40",
-            "tasas2": "30.60",
-            "tasas3": "48.96",
-            "tasas4": "48.96"
-        },
-        "tasas_2012": {
-            "url": "http://bocyl.jcyl.es/boletines/2012/07/09/pdf/BOCYL-D-09072012-2.pdf",
-            "tasas1": "27.07",
-            "tasas2": "40.61",
-            "tasas3": "87.98",
-            "tasas4": "121.82"
-        },
-        "tasas_2013": {
-            "url": "http://bocyl.jcyl.es/boletines/2013/07/05/pdf/BOCYL-D-05072013-3.pdf",
-            "tasas1": "27.45",
-            "tasas2": "41.17",
-            "tasas3": "89.21",
-            "tasas4": "123.52"
-        },
-        "tasas_2014": {
-            "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
-            "tasas1": "27.72",
-            "tasas2": "41.59",
-            "tasas3": "90.10",
-            "tasas4": "124.76"
-        },
-        "tasas1": "27.72",
-        "tasas2": "41.59",
-        "tasas3": "90.10",
-        "tasas4": "124.76"
-    }, {
-        "siglas": "usc",
-        "nombre": "Universidad de Santiago de Compostela",
-        "centro": "Escola Técnica Superior de Enxeñaría",
-        "provincia": "La Coruna",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "13.93",
-            "tasas2": "19.3",
-            "tasas3": "31.21",
-            "tasas4": "39.79"
-        }
-    }, {
-        "siglas": "uvigo",
-        "nombre": "Universidad de Vigo",
-        "centro": "Escuela Superior de Ingeniería Informática",
-        "provincia": "Pontevedra",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "13.93",
-            "tasas2": "19.3",
-            "tasas3": "31.21",
-            "tasas4": "39.79"
-        }
-    }, {
-        "siglas": "uam",
-        "nombre": "Universidad Autónoma de Madrid",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "31.00",
-            "tasas2": "57.13",
-            "tasas3": "107.14",
-            "tasas4": "142.85"
-        }
-    }, {
-        "siglas": "ucm",
-        "nombre": "Universidad Complutense de Madrid",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "http://informatica.ucm.es/",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "31.00",
-            "tasas2": "57.13",
-            "tasas3": "107.14",
-            "tasas4": "142.85"
-        }
-    }, {
-        "siglas": "uah",
-        "nombre": "Universidad de Alcalá",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "31.00",
-            "tasas2": "57.13",
-            "tasas3": "107.14",
-            "tasas4": "142.85"
-        }
-    }, {
-        "siglas": "udima",
-        "nombre": "Universidad a Distancia de Madrid",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "http://www.udima.es/es/precios.html",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "75",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "observaciones": ""
-    }, {
-        "siglas": "uoc",
-        "nombre": "Universidad Abierta de Cataluña",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "22.8",
-            "tasas2": "27.36",
-            "tasas3": "27.36",
-            "tasas4": "27.36"
-        }
-    }, {
-        "siglas": "uax",
-        "nombre": "Universidad Alfonso X El Sabio",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uan",
-        "nombre": "Universidad Antonio de Nebrija",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uch-ceu",
-        "nombre": "Universidad Cardenal Herrera",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "observaciones": ""
-    }, {
-        "siglas": "ucam",
-        "nombre:": "Universidad Católica San Antonio de Murcia",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Murcia",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "observaciones": ""
-    }, {
-        "siglas": "ub",
-        "nombre": "Universidad de Barcelona",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Barcelona",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "observaciones": ""
-    }, {
-        "siglas": "uc",
-        "nombre": "Universidad de Cantabria",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Cantabria",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "15.86",
-            "tasas2": "31.12",
-            "tasas3": "67.42",
-            "tasas4": "93.36"
-        }
-    }, {
-        "siglas": "",
-        "nombre": "Universidad de Deusto",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Vizcaya",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "udg",
-        "nombre": "Universidad de Gerona",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Gerona",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uib",
-        "nombre": "Universidad de las Islas Baleares",
-        "tipo": "pública",
-        "centro": "",
-        "provicia": "Baleares",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "udl",
-        "nombre": "Universidad de Lérida",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Lerida",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "mu",
-        "nombre": "Universidad de Mondragón",
-        "tipo": "privada",
-        "centro": "",
-        "provincia": "Gipuzkoa",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    },  {
-        "siglas": "uv",
-        "nombre": "Universidad de Valencia",
-        "tipo": "pública",
-        "centro": "",
-        "provincia": "Valencia",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "16.15",
-            "tasas2": "28.26",
-            "tasas3": "60.55",
-            "tasas4": "80.73"
-        }
-    }, {
-        "siglas": "ehu-bilbao",
-        "nombre": "Universidad del País Vasco (Campus de Bilbao)",
-        "centro": "",
-        "provincia": "Vizcaya",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "19.39",
-            "tasas2": "27.63",
-            "tasas3": "41.59",
-            "tasas4": "41.59"
-        }
-    }, {
-        "siglas": "uem",
-        "nombre": "Universidad Europea de Madrid",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uemc",
-        "nombre": "Universidad Europea Miguel de Cervantes",
-        "centro": "",
-        "provincia": "Madrid",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "ufv",
-        "nombre": "Universidad Francisco de Vitoria",
-        "centro": "",
-        "provincia": "",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "uji",
-        "nombre": "Universidad Jaime I de Castellón",
-        "centro": "",
-        "provincia": "Castellon",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "umh",
-        "nombre": "Universidad Miguel Hernández de Elche",
-        "centro": "",
-        "provincia": "Alicante",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
 
-    }, {
-        "siglas": "uned",
-        "nombre": "Universidad Nacional de Educación a Distancia",
-        "centro": "",
-        "provincia": "",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
+
+
+        {
+            "siglas": "ucav",
+            "nombre": "Universidad Católica de Santa Teresa de Jesús",
+            "centro": "Campus de Ávila",
+            "provincia": "Avila",
             "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
+            "convenios": [
+                "usal",
+                "uva",
+                "ucav"
+            ],
+            "tipo": "privada"
+        }, {
+            "siglas": "ua",
+            "nombre": "Universidad de Alicante",
+            "centro": "Escuela Politécnica Superior",
+            "provincia": "Alicante",
             "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "88.55",
+                "tasas4": "118.07"
+            }
+        },  {
+            "siglas": "uab",
+            "nombre": "Universidad Autónoma de Barcelona",
+            "centro": "Facultad de Informática",
+            "provincia": "Barcelona",
             "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
+            "convenios": [
+                "usal"
+            ],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },  {
+            "siglas": "upv",
+            "nombre": "Universidad Politécnica de Valencia",
+            "centro": "Escuela Técnica Superior de Ingeniería Informática",
+            "provincia": "Valencia",
             "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "16.15",
+                "tasas2": "28.26",
+                "tasas3": "60.55",
+                "tasas4": "80.73"
+            }
+        }, {
+            "siglas": "upna",
+            "nombre": "Universidad Pública de Navarra",
+            "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
+            "provincia": "Navarra",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uji",
+            "nombre": "Universitat Jaume I",
+            "centro": "Escuela Superior de Tecnología y Ciencias Experimentales",
+            "provincia": "Castellon",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "udc",
+            "nombre": "Universidade da Coruña",
+            "centro": "Facultade de Informática",
+            "provincia": "La Coruna",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "13.93",
+                "tasas2": "19.3",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
+            }
+        },  {
+            "siglas": "ucm",
+            "nombre": "Universidad Complutense de Madrid",
+            "centro": "Facultad de Informática",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "31",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.82"
+            }
+        },  {
+            "siglas": "umu",
+            "nombre": "Universidad de Murcia",
+            "centro": "Facultad de Informática",
+            "provincia": "Murcia",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "16.78",
+                "tasas2": "33.55",
+                "tasas3": "72.71",
+                "tasas4": "100.68"
+            }
+        }, {
+            "siglas": "ehu-ss",
+            "nombre": "Universidad del País Vasco (Campus de San Sebastián)",
+            "centro": "Facultad de Informática",
+            "provincia": "San Sebastian",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "19.39",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
+            }
+        }, {
+            "siglas": "urjc",
+            "nombre": "Universidad Rey Juan Carlos",
+            "centro": "Escuela Técnica Superior de Ingeniería Informática",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uc3m",
+            "nombre": "Universidad Carlos III",
+            "centro": "Escuela Universitaria de Informática",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "31",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.82"
+            }
+        }, {
+            "siglas": "unirioja",
+            "nombre": "Universidad de La Rioja",
+            "centro": "Facultad de Ciencias, Estudios Agroalimentarios e Informática",
+            "provincia": "La Rioja",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "21.21",
+                "tasas2": "47",
+                "tasas3": "101.85",
+                "tasas4": "141.02"
+            }
+        },  {
+            "siglas": "usc",
+            "nombre": "Universidad de Santiago de Compostela",
+            "centro": "Escola Técnica Superior de Enxeñaría",
+            "provincia": "La Coruna",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "13.93",
+                "tasas2": "19.3",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
+            }
+        }, {
+            "siglas": "uvigo",
+            "nombre": "Universidad de Vigo",
+            "centro": "Escuela Superior de Ingeniería Informática",
+            "provincia": "Pontevedra",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "13.93",
+                "tasas2": "19.3",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
+            }
+        }, {
+            "siglas": "uam",
+            "nombre": "Universidad Autónoma de Madrid",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "31.00",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.85"
+            }
+        }, {
+            "siglas": "ucm",
+            "nombre": "Universidad Complutense de Madrid",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "http://informatica.ucm.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "31.00",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.85"
+            }
+        }, {
+            "siglas": "uah",
+            "nombre": "Universidad de Alcalá",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "31.00",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.85"
+            }
+        }, {
+            "siglas": "udima",
+            "nombre": "Universidad a Distancia de Madrid",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "http://www.udima.es/es/precios.html",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "75",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "observaciones": ""
+        }, {
+            "siglas": "uoc",
+            "nombre": "Universidad Abierta de Cataluña",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "22.8",
+                "tasas2": "27.36",
+                "tasas3": "27.36",
+                "tasas4": "27.36"
+            }
+        }, {
+            "siglas": "uax",
+            "nombre": "Universidad Alfonso X El Sabio",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uan",
+            "nombre": "Universidad Antonio de Nebrija",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uch-ceu",
+            "nombre": "Universidad Cardenal Herrera",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "observaciones": ""
+        }, {
+            "siglas": "ucam",
+            "nombre:": "Universidad Católica San Antonio de Murcia",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Murcia",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "observaciones": ""
+        }, {
+            "siglas": "ub",
+            "nombre": "Universidad de Barcelona",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "Barcelona",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "observaciones": ""
+        },  {
+            "siglas": "",
+            "nombre": "Universidad de Deusto",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Vizcaya",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "udg",
+            "nombre": "Universidad de Gerona",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "Gerona",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "udl",
+            "nombre": "Universidad de Lérida",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "Lerida",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "mu",
+            "nombre": "Universidad de Mondragón",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Gipuzkoa",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uv",
+            "nombre": "Universidad de Valencia",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "Valencia",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "16.15",
+                "tasas2": "28.26",
+                "tasas3": "60.55",
+                "tasas4": "80.73"
+            }
+        }, {
+            "siglas": "ehu-bilbao",
+            "nombre": "Universidad del País Vasco (Campus de Bilbao)",
+            "centro": "",
+            "provincia": "Vizcaya",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "19.39",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
+            }
+        }, {
+            "siglas": "uem",
+            "nombre": "Universidad Europea de Madrid",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uemc",
+            "nombre": "Universidad Europea Miguel de Cervantes",
+            "centro": "",
+            "provincia": "Madrid",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "ufv",
+            "nombre": "Universidad Francisco de Vitoria",
+            "centro": "",
+            "provincia": "",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "uji",
+            "nombre": "Universidad Jaime I de Castellón",
+            "centro": "",
+            "provincia": "Castellon",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "umh",
+            "nombre": "Universidad Miguel Hernández de Elche",
+            "centro": "",
+            "provincia": "Alicante",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+
+        }, {
+            "siglas": "uned",
+            "nombre": "Universidad Nacional de Educación a Distancia",
+            "centro": "",
+            "provincia": "",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "upc",
+            "nombre": "Universidad Politécnica de Cataluña",
+            "centro": "",
+            "provincia": "",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
         }
-    }, {
-        "siglas": "upc",
-        "nombre": "Universidad Politécnica de Cataluña",
-        "centro": "",
-        "provincia": "",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        }
-    }, {
-        "siglas": "ull",
-        "nombre": "Universidad de La Laguna",
-        "centro": "",
-        "provincia": "",
-        "url": "",
-        "convenios": [],
-        "tasas_2011": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2012": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2013": {
-            "url": "",
-            "tasas1": "",
-            "tasas2": "",
-            "tasas3": "",
-            "tasas4": ""
-        },
-        "tasas_2014": {
-            "url": "",
-            "tasas1": "13.7",
-            "tasas2": "27.4",
-            "tasas3": "59.37",
-            "tasas4": "82.2"
-        }
-    }]
+    ]
 }
