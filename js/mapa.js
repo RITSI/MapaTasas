@@ -1,117 +1,183 @@
 $(document).ready(function() {
-        //Diseño responsive
+    //Diseño responsive
+    if ($(window).width() < 480) {
+        $("#content").attr('class', "row");
+        $("#map").attr("class", "well well-lg");
+        $("#bootstrap_lista_units").attr("class", "well");
+    } else {
+        $("#content").attr('class', "");
+        $("#map").attr("class", "well well-lg col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1");
+        $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
+    }
+
+    /*Creación del mapa*/
+
+    var width = 760;
+    var height = 470;
+
+    //Proyección Albers de los datos con ajustes para la Península
+    var projection = d3.geo.albers()
+        .center([0, 39.23])
+        .rotate([3.4, 0])
+        .parallels([50, 90])
+        .scale(1200 * 2.3)
+        .translate([width / 2.5, height / 2]);
+
+    /*Creacion de un path según los ajustes de proyección*/
+    var path = d3.geo.path()
+        .projection(projection);
+
+    /*Se añade un svg al div que contendrá el mapa*/
+    var svg = d3.select("#map")
+        .append("svg")
+        .append("g")
+        .attr("width", width)
+        .attr("height", height);
+
+    /*Se añaden una a una las provincias descritas en el json*/
+    d3.json("maps/esp-ascii.json", function(error, esp) {
+        svg.selectAll(".subunit")
+            .data(topojson.feature(esp, esp.objects.subunits).features)
+            .enter().append("path")
+            .attr("class", function(d) {
+                return "subunit " + d.id;
+            })
+            .attr("d", path)
+            .on("mouseover", provincia_hover)
+            .on("click", provincia_click);
+
+        svg.append("path")
+            .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
+                return a !== b
+            }))
+            .attr("d", path)
+            .attr("class", "subunit-boundary");
+    });
+
+    var projection_canary = d3.geo.albers()
+        .center([-6.5, 24])
+        .rotate([3.4, 0])
+        .parallels([50, 51])
+        .scale(1200 * 1.9)
+        .translate([width / 2.5, height / 2]);
+
+    var path_canary = d3.geo.path().projection(projection_canary);
+
+
+    width_canary = $("#map-canarias").width();
+    height_canary = $("#map-canarias").height();
+    var canarias = d3.select("#map-canarias")
+        .append("svg")
+        .append("g")
+        .attr("width", width_canary)
+        .attr("height", height_canary);
+
+    d3.json("maps/canary.json", function(error, esp) {
+        canarias.selectAll(".subunit")
+            .data(topojson.feature(esp, esp.objects.subunits).features)
+            .enter().append("path")
+            .attr("class", function(d) {
+                return "subunit " + d.id;
+            })
+            .attr("d", path_canary)
+            .on("mouseover", provincia_hover)
+            .on("click", provincia_click);
+
+        canarias.append("path")
+            .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
+                return a !== b
+            }))
+            .attr("d", path)
+            .attr("class", "subunit-boundary");
+    });
+    var tounicode;
+    /*$.getJSON("maps/converter/converter.json", function(data){
+        tounicode = data;
+    });*/
+    $.ajax({
+        url: "maps/converter/converter.json",
+        dataType: 'json',
+        async: false,
+        data: tounicode,
+        success: function(data) {
+            tounicode = data;
+        }
+    });
+
+    d3.select(window).on('resize', sizeChange);
+    sizeChange();
+
+    function sizeChange() {
         if ($(window).width() < 480) {
             $("#content").attr('class', "row");
             $("#map").attr("class", "well well-lg");
             $("#bootstrap_lista_units").attr("class", "well");
         } else {
-            $("#content").attr('class', "");
             $("#map").attr("class", "well well-lg col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1");
             $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
         }
 
-        /*Creación del mapa*/
+        d3.select("#map>svg>g").attr("transform", "scale(" + $("#map").width() / 700 + ")");
+        $("#map>svg").height($("#map").width() * 0.618);
+        $("#map>svg").width($("#map").width());
 
-        var width = 760;
-        var height = 470;
+        d3.select("#map-canarias>svg>g").attr("transform", "scale(" + $("#map-canarias").width() / 200 + ")");
+        $("#map-canarias>svg").height($("#map-canarias").width() * 0.518);
+        $("#map-canarias>svg").width($("#map-canarias").width());
+    }
 
-        //Proyección Albers de los datos con ajustes para la Península
-        var projection = d3.geo.albers()
-            .center([0, 39.23])
-            .rotate([3.4, 0])
-            .parallels([50, 90])
-            .scale(1200 * 2.3)
-            .translate([width / 2.5, height / 2]);
+    function get_json(url, fn) {
+        http.get(url, function(res) {
+            var body = '';
+            res.on('data', function(chunk) {
+                body += chunk;
+            });
 
-        /*Creacion de un path según los ajustes de proyección*/
-        var path = d3.geo.path()
-            .projection(projection);
-
-        /*Se añade un svg al div que contendrá el mapa*/
-        var svg = d3.select("#map")
-            .append("svg")
-            .append("g")
-            .attr("width", width)
-            .attr("height", height);
-
-        /*Se añaden una a una las provincias descritas en el json*/
-        d3.json("maps/esp-ascii.json", function(error, esp) {
-            svg.selectAll(".subunit")
-                .data(topojson.feature(esp, esp.objects.subunits).features)
-                .enter().append("path")
-                .attr("class", function(d) {
-                    return "subunit " + d.id;
-                })
-                .attr("d", path)
-                .on("mouseover", provincia_hover)
-                .on("click", provincia_click);
-
-            svg.append("path")
-                .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
-                    return a !== b
-                }))
-                .attr("d", path)
-                .attr("class", "subunit-boundary");
+            res.on('end', function() {
+                var response = JSON.parse(body);
+                fn(response);
+            });
         });
+    };
 
-        var projection_canary = d3.geo.albers()
-            .center([-6.5, 24])
-            .rotate([3.4, 0])
-            .parallels([50, 51])
-            .scale(1200 * 1.9)
-            .translate([width / 2.5, height / 2]);
+    function getJSON(url) {
+        var resp ;
+        var xmlHttp ;
 
-        var path_canary = d3.geo.path().projection(projection_canary);
+        resp  = '' ;
+        xmlHttp = new XMLHttpRequest();
 
-
-        width_canary = $("#map-canarias").width();
-        height_canary = $("#map-canarias").height();
-        var canarias = d3.select("#map-canarias")
-            .append("svg")
-            .append("g")
-            .attr("width", width_canary)
-            .attr("height", height_canary);
-
-        d3.json("maps/canary.json", function(error, esp) {
-            canarias.selectAll(".subunit")
-                .data(topojson.feature(esp, esp.objects.subunits).features)
-                .enter().append("path")
-                .attr("class", function(d) {
-                    return "subunit " + d.id;
-                })
-                .attr("d", path_canary)
-                .on("mouseover", provincia_hover)
-                .on("click", provincia_click);
-
-            canarias.append("path")
-                .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
-                    return a !== b
-                }))
-                .attr("d", path)
-                .attr("class", "subunit-boundary");
-        });
-
-        d3.select(window).on('resize', sizeChange);
-        sizeChange();
-
-        function sizeChange() {
-            if ($(window).width() < 480) {
-                $("#content").attr('class', "row");
-                $("#map").attr("class", "well well-lg");
-                $("#bootstrap_lista_units").attr("class", "well");
-            } else {
-                $("#map").attr("class", "well well-lg col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1");
-                $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
-            }
-
-            d3.select("#map>svg>g").attr("transform", "scale(" + $("#map").width() / 700 + ")");
-            $("#map>svg").height($("#map").width() * 0.618);
-            $("#map>svg").width($("#map").width());
-
-            d3.select("#map-canarias>svg>g").attr("transform", "scale(" + $("#map-canarias").width() / 200 + ")");
-            $("#map-canarias>svg").height($("#map-canarias").width() * 0.518);
-            $("#map-canarias>svg").width($("#map-canarias").width());
+        if(xmlHttp != null)
+        {
+            xmlHttp.open( "GET", url, false );
+            xmlHttp.send( null );
+            resp = xmlHttp.responseText;
         }
+
+        return resp ;
+    }
+    var retorno3;
+    function toUnicode(query) {
+        var retorno2;
+        $.getJSON("maps/converter/converter.json", function(data) {
+            var retorno;
+            $.each(data, function(key, value){
+                if(key == query){
+                    retorno = value;
+                    return value;
+                }
+            });
+            console.log(retorno);
+            retorno3 = retorno;
+            retorno2 = retorno;
+            return retorno;
+        });
+        return retorno2;
+    }
+
+
+   
+    
 
     function provincia_hover(d) {
 
@@ -119,9 +185,12 @@ $(document).ready(function() {
             gravity: 's',
             html: true,
             title: function() {
-                var m = this.__data__;
 
+                var m = this.__data__;
+                console.log("Returning tounicode");
+                return tounicode[m.id];
                 return m.id;
+
             }
         });
     }
@@ -154,6 +223,8 @@ $(document).ready(function() {
             }
         });
     }
+
+
 
     function create_dropdown(universidades_provincia, universidades) {
         var dropdown = [];
