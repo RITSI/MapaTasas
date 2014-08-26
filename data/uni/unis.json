@@ -295,7 +295,7 @@
             "nombre": "Universidad de Jaén",
             "centro": "Escuela Politécnica Superior de Jaén",
             "provincia": "Jaen",
-            "campus":"Campus de Jaén",
+            "campus": "Campus de Jaén",
             "url": "http://grados.ujaen.es/node/11/presentacion",
             "convenios": [],
             "tasas_2011": {
@@ -1777,7 +1777,7 @@
             "nombre": "Universidad Pública de Navarra",
             "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
             "provincia": "Navarra",
-            "campus":"Campus de Navarra",
+            "campus": "Campus de Navarra",
             "url": "http://www.unavarra.es/ets-industrialesytelecos/estudios/grado/grado-en-ingenieria-informatica/presentacion?submenu=yes",
             "convenios": [],
             "tasas_2011": {
@@ -1913,10 +1913,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         },
 
@@ -1951,10 +1951,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
 
         }, {
@@ -1988,10 +1988,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         },
 
@@ -2027,10 +2027,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         }, {
             "siglas": "upv-valencia",
@@ -2063,10 +2063,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         }, {
             "siglas": "uv",
@@ -2100,10 +2100,10 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
-                "tasas1": "16.15",
-                "tasas2": "28.26",
-                "tasas3": "60.55",
-                "tasas4": "80.73"
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         },
 
@@ -2390,7 +2390,7 @@
                 "tasas3": "",
                 "tasas4": ""
             }
-        },{
+        }, {
             "siglas": "udl-derecho",
             "nombre": "Universidad de Lérida",
             "tipo": "pública",
