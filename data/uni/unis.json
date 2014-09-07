@@ -972,11 +972,11 @@
                 "tasas4": "100.99"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "No se conocen datos",
-                "tasas2": "No se conocen datos",
-                "tasas3": "No se conocen datos",
-                "tasas4": "No se conocen datos"
+                "url": "http://doe.gobex.es/pdfs/doe/2014/1390o/14040183.pdf",
+                "tasas1": "16.83",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
             }
         }, {
             "siglas": "uex-merida",
@@ -1008,11 +1008,11 @@
                 "tasas4": "100.99"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "No se conocen datos",
-                "tasas2": "No se conocen datos",
-                "tasas3": "No se conocen datos",
-                "tasas4": "No se conocen datos"
+                "url": "http://doe.gobex.es/pdfs/doe/2014/1390o/14040183.pdf",
+                "tasas1": "16.83",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
             }
         },
 
@@ -1673,25 +1673,25 @@
             "url": "",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2011/07/1103564a.pdf",
+                "tasas1": "18.29",
+                "tasas2": "21.59",
+                "tasas3": "21.59",
+                "tasas4": "21.59"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2012/07/1203198a.pdf",
+                "tasas1": "18.66",
+                "tasas2": "22.67",
+                "tasas3": "28.56",
+                "tasas4": "28.56"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "19.39",
-                "tasas2": "27.63",
-                "tasas3": "41.59",
-                "tasas4": "41.59"
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2013/07/1303184a.pdf",
+                "tasas1": "19.11",
+                "tasas2": "24.03",
+                "tasas3": "31.99",
+                "tasas4": "31.99"
             },
             "tasas_2014": {
                 "url": "https://www.euskadi.net/r48-bopv2/es/bopv2/datos/2014/07/1403173a.pdf",
@@ -1709,25 +1709,25 @@
             "url": "",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2011/07/1103564a.pdf",
+                "tasas1": "18.29",
+                "tasas2": "21.59",
+                "tasas3": "21.59",
+                "tasas4": "21.59"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2012/07/1203198a.pdf",
+                "tasas1": "18.66",
+                "tasas2": "22.67",
+                "tasas3": "28.56",
+                "tasas4": "28.56"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "19.39",
-                "tasas2": "27.63",
-                "tasas3": "41.59",
-                "tasas4": "41.59"
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2013/07/1303184a.pdf",
+                "tasas1": "19.11",
+                "tasas2": "24.03",
+                "tasas3": "31.99",
+                "tasas4": "31.99"
             },
             "tasas_2014": {
                 "url": "https://www.euskadi.net/r48-bopv2/es/bopv2/datos/2014/07/1403173a.pdf",
@@ -1745,25 +1745,25 @@
             "url": "",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2011/07/1103564a.pdf",
+                "tasas1": "18.29",
+                "tasas2": "21.59",
+                "tasas3": "21.59",
+                "tasas4": "21.59"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2012/07/1203198a.pdf",
+                "tasas1": "18.66",
+                "tasas2": "22.67",
+                "tasas3": "28.56",
+                "tasas4": "28.56"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "19.39",
-                "tasas2": "27.63",
-                "tasas3": "41.59",
-                "tasas4": "41.59"
+                "url": "http://www.lehendakaritza.ejgv.euskadi.net/r48-vacia/es/bopv2/datos/2013/07/1303184a.pdf",
+                "tasas1": "19.11",
+                "tasas2": "24.03",
+                "tasas3": "31.99",
+                "tasas4": "31.99"
             },
             "tasas_2014": {
                 "url": "https://www.euskadi.net/r48-bopv2/es/bopv2/datos/2014/07/1403173a.pdf",
@@ -2122,21 +2122,21 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "",
-                "tasas1": "",
+                "tasas1": "21.46",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
+                "url": "https://www.upc.edu/sga/matricula-e/fitxers-de-matricula/decreto-de-precios-2012-2013",
+                "tasas1": "35.77",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
             },
             "tasas_2013": {
                 "url": "",
-                "tasas1": "",
+                "tasas1": "35.77",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
