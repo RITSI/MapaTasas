@@ -197,6 +197,7 @@ body {
     margin-top: 20px;
 }
 
+/*Intento de diseño responsive*/
 @media (min-device-width: 480px) {
     #content {
         display: inline;
@@ -243,9 +244,7 @@ body {
 }
 
 #map-canarias{
-  border-top: 1px solid #da2724;/*
-  border-right: 1px solid #da2724;
-  border-bottom: 1px solid #da2724;*/
+  border-top: 1px solid #da2724;
   border-left: 1px solid #da2724;
 }
 #urls{

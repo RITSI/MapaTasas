@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //Diseño responsive
+    //Intento de diseño responsive
     if ($(window).width() < 480) {
         $("#content").attr('class', "row");
         $("#map").attr("class", "well well-lg");
@@ -10,7 +10,8 @@ $(document).ready(function() {
         $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
     }
 
-    /*Creación del mapa*/
+
+    /*Creación del mapa programáticamente*/
 
     var width = 760;
     var height = 470;
@@ -34,8 +35,12 @@ $(document).ready(function() {
         .attr("width", width)
         .attr("height", height);
 
-    /*Se añaden una a una las provincias descritas en el json*/
+    
+    /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
+    Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
+    no ASCII, no funcionaría*/
     d3.json("maps/esp-ascii.json", function(error, esp) {
+        /*Se añaden una a una las provincias descritas en el json*/
         svg.selectAll(".subunit")
             .data(topojson.feature(esp, esp.objects.subunits).features)
             .enter().append("path")
@@ -43,6 +48,7 @@ $(document).ready(function() {
                 return "subunit " + d.id;
             })
             .attr("d", path)
+            //Se asignan handlers a los eventos de interes
             .on("mouseover", provincia_hover)
             .on("click", provincia_click);
 
@@ -54,6 +60,8 @@ $(document).ready(function() {
             .attr("class", "subunit-boundary");
     });
 
+    /*Las Canarias aparecerían en el lugar donde se encuentran geográficamente
+    para evitar perder tanto espacio, se crea un segundo mapa, solo con estas islas*/
     var projection_canary = d3.geo.albers()
         .center([-6.5, 24])
         .rotate([3.4, 0])
@@ -64,8 +72,11 @@ $(document).ready(function() {
     var path_canary = d3.geo.path().projection(projection_canary);
 
 
+    //El tamaño del mapa viene condicionado por el anterior
     width_canary = $("#map-canarias").width();
     height_canary = $("#map-canarias").height();
+
+
     var canarias = d3.select("#map-canarias")
         .append("svg")
         .append("g")
@@ -90,10 +101,9 @@ $(document).ready(function() {
             .attr("d", path)
             .attr("class", "subunit-boundary");
     });
+
+    //Se obtienen por AJAX los nombres de las provincias con tilde, en un JSON que mapea nombre con tilde y nombre sin tilde
     var tounicode;
-    /*$.getJSON("maps/converter/converter.json", function(data){
-        tounicode = data;
-    });*/
     $.ajax({
         url: "maps/converter/converter.json",
         dataType: 'json',
@@ -104,10 +114,13 @@ $(document).ready(function() {
         }
     });
 
+    /*El diseño responsive del mapa no funciona con propiedades CSS, 
+    debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
     d3.select(window).on('resize', sizeChange);
     sizeChange();
 
     function sizeChange() {
+        //Intento de diseño para móviles
         if ($(window).width() < 480) {
             $("#content").attr('class', "row");
             $("#map").attr("class", "well well-lg");
@@ -117,6 +130,7 @@ $(document).ready(function() {
             $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
         }
 
+        //Redimensionado en función del tamaño de la ventana
         d3.select("#map>svg>g").attr("transform", "scale(" + $("#map").width() / 700 + ")");
         $("#map>svg").height($("#map").width() * 0.618);
         $("#map>svg").width($("#map").width());
@@ -126,87 +140,39 @@ $(document).ready(function() {
         $("#map-canarias>svg").width($("#map-canarias").width());
     }
 
-    function get_json(url, fn) {
-        http.get(url, function(res) {
-            var body = '';
-            res.on('data', function(chunk) {
-                body += chunk;
-            });
-
-            res.on('end', function() {
-                var response = JSON.parse(body);
-                fn(response);
-            });
-        });
-    };
-
-    function getJSON(url) {
-        var resp ;
-        var xmlHttp ;
-
-        resp  = '' ;
-        xmlHttp = new XMLHttpRequest();
-
-        if(xmlHttp != null)
-        {
-            xmlHttp.open( "GET", url, false );
-            xmlHttp.send( null );
-            resp = xmlHttp.responseText;
-        }
-
-        return resp ;
-    }
-    var retorno3;
-    function toUnicode(query) {
-        var retorno2;
-        $.getJSON("maps/converter/converter.json", function(data) {
-            var retorno;
-            $.each(data, function(key, value){
-                if(key == query){
-                    retorno = value;
-                    return value;
-                }
-            });
-            console.log(retorno);
-            retorno3 = retorno;
-            retorno2 = retorno;
-            return retorno;
-        });
-        return retorno2;
-    }
-
-
-   
-    
-
     function provincia_hover(d) {
-
+        //Se crea el marcador con el nombre
         $('.subunit').tipsy({
             gravity: 's',
             html: true,
             title: function() {
-
                 var m = this.__data__;
-                console.log("Returning tounicode");
+                //Se retorna el valor Unicode del nombre ASCII
                 return tounicode[m.id];
-                return m.id;
 
             }
         });
     }
 
+    //Al dispararse este evento, se cargan los valores
     function provincia_click(d) {
         var resultados = [];
         var convenios_filter = [];
+
+        //Vaciado de los datos
         $('#bootstrap_lista_units').html('');
 
+        //Filtrado de las universidades presentes en la provincia
         d3.json("data/uni/unis.json", function(error, unis) {
             var universidades = unis.unis;
+            /*Se recorren todas las universidades presentes, y si alguna tiene como provincia la seleccionada por el cursor, 
+            se incluye en el array*/
             $.each(universidades, function(index, value) {
-                if (value.provincia === d.id) {
+                if (value.provincia === d.id) 
                     resultados.push(value);
-                }
             });
+
+            //Esta funcion busca los convenios que tiene una universidad con otra, y lo añade a otra lista
             var universidades_provincia = [];
             if (resultados.length > 0) {
                 $.each(resultados, function(index, value) {
@@ -219,23 +185,26 @@ $(document).ready(function() {
                 });
                 create_dropdown(universidades_provincia, convenios_filter);
             } else {
-                $('#bootstrap_lista_units').html('<p>No se han encontrado resultados</p>');
+                //Si no hay universidades
+                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id]+ ' que oferten estudios de Ingeniería Informática.</p>');
             }
         });
     }
 
 
-
+    //Función de creación del dropdown con los datos. Utiliza la biblioteca mustache.js http://mustache.github.io/
     function create_dropdown(universidades_provincia, universidades) {
         var dropdown = [];
         $.each(universidades_provincia, function(index, value) {
             /*Los campus siguen  la regla {{universidad}}-{{nombre campus}}, 
-             * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen
+             * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
             var render_convenios;
 
+            //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('template_universidad_provincia.mst', function(template_universidad_provincia) {
+                //Se añaden los datos del curso actual, y los datos generales
                 var render_resultados = Mustache.render(template_universidad_provincia, {
                     nombre: value.nombre,
                     campus: value.campus,
@@ -262,6 +231,8 @@ $(document).ready(function() {
                 });
 
                 $('#bootstrap_lista_units').append(render_resultados);
+
+                //Si existen los datos de años anteriores, se crea un gráfico comparativo utilizando c3.js
                 if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
                     var chart = c3.generate({
                         bindto: "#chart",
@@ -298,14 +269,13 @@ $(document).ready(function() {
                 panelsButton = $('.dropdown-user');
                 panels.hide();
 
-                //Se desactivan todos los eventos, dado que en caso contrario origina problemas al añadir y eliminar (se superponen eventos)
+                //Se desactivan todos los eventos, dado que en caso contrario origina problemas al añadir y eliminar un panel de información (se superponen eventos)
                 panelsButton.off();
+                //Se reañade el evento
                 panelsButton.click(function() {
                     //Se obtiene el atributo data-for
                     var dataFor = $(this).attr('data-for');
                     var idFor = $(dataFor);
-
-
                     var currentButton = $(this);
                     idFor.slideToggle(400, function() {
 

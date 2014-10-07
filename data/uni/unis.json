@@ -585,8 +585,9 @@
             }
         }, {
             "siglas": "usal-salamanca",
-            "nombre": "Universidad de Salamanca (Campus de Salamanca)",
+            "nombre": "Universidad de Salamanca",
             "centro": "Facultad de Ciencias",
+            "campus": "Campus de Salamanca",
             "provincia": "Salamanca",
             "url": "http://www.usal.es/webusal/node/4558",
             "convenios": [
@@ -633,8 +634,9 @@
             }
         }, {
             "siglas": "usal-zamora",
-            "nombre": "Universidad de Salamanca (Campus de Zamora)",
+            "nombre": "Universidad de Salamanca",
             "centro": "Escuela Politécnica Superior de Zamora",
+            "campus": "Campus de Zamora",
             "provincia": "Zamora",
             "url": "http://www.usal.es/webusal/node/4540",
             "convenios": [],
@@ -1014,9 +1016,7 @@
                 "tasas3": "72.93",
                 "tasas4": "100.99"
             }
-        },
-
-        {
+        }, {
             "siglas": "udc",
             "nombre": "Universidade da Coruña",
             "centro": "Facultade de Informática",
@@ -1130,6 +1130,7 @@
             "siglas": "ucm",
             "nombre": "Universidad Complutense de Madrid",
             "centro": "Facultad de Informática",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.ucm.es/estudios/2014-15/grado-ingenieriainformatica",
             "convenios": [],
@@ -1165,6 +1166,7 @@
             "siglas": "urjc",
             "nombre": "Universidad Rey Juan Carlos",
             "centro": "Escuela Técnica Superior de Ingeniería Informática",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.etsii.urjc.es/",
             "convenios": [],
@@ -1200,6 +1202,7 @@
             "siglas": "uc3m",
             "nombre": "Universidad Carlos III",
             "centro": "Escuela Universitaria de Informática",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.uc3m.es/ss/Satellite/UC3MInstitucional/es/Detalle/Estudio_C/1371206697201/1371206607588/Grado_en_Ingenieria_Informatica",
             "convenios": [],
@@ -1271,6 +1274,7 @@
             "siglas": "uah",
             "nombre": "Universidad de Alcalá",
             "centro": "Escuela Politécnica Superior",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.uah.es/estudios/grados/planes.asp?cd=210&plan=G780",
             "convenios": [],
@@ -1306,6 +1310,7 @@
             "siglas": "upm",
             "nombre": "Universidad Politécnica de Madrid",
             "centro": "Escuela Técnica Superior de Ingenieros Informáticos",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.upm.es/institucional/Estudiantes/Estudios_Titulaciones/EstudiosOficialesGrado/ArticulosRelacionados/b4fa8093d2320210VgnVCM10000009c7648aRCRD",
             "convenios": [],
@@ -1416,6 +1421,7 @@
             "siglas": "uan",
             "nombre": "Universidad Antonio de Nebrija",
             "tipo": "privada",
+            "campus": "Campus de Madrid",
             "centro": "",
             "provincia": "Madrid",
             "url": "",
@@ -1449,7 +1455,7 @@
                 "tasas4": ""
             }
         }, {
-            "siglas": "uch-ceu",
+            "siglas": "ceu-uch",
             "nombre": "Universidad Cardenal Herrera",
             "tipo": "privada",
             "centro": "",
@@ -1993,10 +1999,7 @@
                 "tasas3": "85.55",
                 "tasas4": "118.07"
             }
-        },
-
-
-        {
+        }, {
             "siglas": "upv-alcoy",
             "nombre": "Universidad Politécnica de Valencia",
             "centro": "Escuela Politécnica Superior de Alcoy",
@@ -2148,17 +2151,7 @@
                 "tasas3": "",
                 "tasas4": ""
             }
-        },
-
-
-
-
-
-
-
-
-
-        {
+        }, {
             "siglas": "ucav",
             "nombre": "Universidad Católica de Santa Teresa de Jesús",
             "centro": "Campus de Ávila",
@@ -2169,7 +2162,35 @@
                 "uva",
                 "ucav"
             ],
-            "tipo": "privada"
+            "tipo": "privada",
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
         }, {
             "siglas": "uab",
             "nombre": "Universidad Autónoma de Barcelona",
@@ -2390,85 +2411,12 @@
                 "tasas3": "",
                 "tasas4": ""
             }
-        }, {
-            "siglas": "udl-derecho",
-            "nombre": "Universidad de Lérida",
-            "tipo": "pública",
-            "centro": "Facultad de Derecho y Economía",
-            "campus": "Campus de Lérida",
-            "provincia": "Lerida",
-            "url": "http://www.grauinformatica.udl.cat/es",
-            "convenios": [],
-            "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            }
-        }, {
-            "siglas": "udl-ade",
-            "nombre": "Universidad de Lérida",
-            "tipo": "pública",
-            "centro": "Escuela Politécnica Superior",
-            "campus": "Campus de Lérida",
-            "provincia": "Lerida",
-            "url": "http://www.doblegrauinformaticaiade.udl.cat/es",
-            "convenios": [],
-            "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            },
-            "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
-            }
-        }, {
+        },  {
             "siglas": "mu",
             "nombre": "Universidad de Mondragón",
             "tipo": "privada",
             "centro": "Campus de Gipuzkoa",
+            "campus": "Campus de Gipuzkoa",
             "provincia": "Gipuzkoa",
             "url": "",
             "convenios": [],

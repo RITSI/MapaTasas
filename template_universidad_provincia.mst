@@ -82,7 +82,9 @@
                         </table>
                     </div>
                 </div>
-                <div class="row" id="chart"></div>
+                <div class="row" id="chart">
+                    <!--<img src="img/ajax_loader_red_512.gif"/>-->
+                </div>
                 <div class="row" style="word-wrap: break-word;"id="urls">
                     <strong>Referencias<strong><br/>
                     {{#urls}}
