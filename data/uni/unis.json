@@ -438,13 +438,50 @@
                 "tasas4": "8.820"
             }
         }, {
-            "siglas": "uo",
+            "siglas": "uo-oviedo",
             "nombre": "Universidad de Oviedo",
             "tipo": "pública",
             "campus": "Campus de Oviedo",
             "centro": "Escuela de Ingeniería Informática",
             "provincia": "Asturias",
             "url": "http://www.ingenieriainformatica.uniovi.es/",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.asturias.es/bopa/2011/06/22/2011-12319.pdf",
+                "tasas1": "17.26",
+                "tasas2": "25.03",
+                "tasas3": "27.62",
+                "tasas4": "26.62"
+            },
+            "tasas_2012": {
+                "url": "https://sede.asturias.es/bopa/2012/07/05/2012-12528.pdf",
+                "tasas1": "17.26",
+                "tasas2": "26.28",
+                "tasas3": "35.91",
+                "tasas4": "38.67"
+            },
+            "tasas_2013": {
+                "url": "https://sede.asturias.es/bopa/2013/06/27/2013-12421.pdf",
+                "tasas1": "17.26",
+                "tasas2": "26.91",
+                "tasas3": "37.71",
+                "tasas4": "40.60"
+            },
+            "tasas_2014": {
+                "url": "https://sede.asturias.es/bopa/2014/06/26/2014-11288.pdf",
+                "tasas1": "17.26",
+                "tasas2": "28.26",
+                "tasas3": "41.48",
+                "tasas4": "48.72"
+            }
+        }, {
+            "siglas": "uo-gijon",
+            "nombre": "Universidad de Oviedo",
+            "tipo": "pública",
+            "campus": "Campus de Gijón",
+            "centro": "Escuela Politécnica de Ingeniería de Gijón",
+            "provincia": "Asturias",
+            "url": "http://www.epigijon.uniovi.es/index.php/ingenieria-informatica",
             "convenios": [],
             "tasas_2011": {
                 "url": "http://www.asturias.es/bopa/2011/06/22/2011-12319.pdf",
@@ -1020,7 +1057,7 @@
             "siglas": "udc",
             "nombre": "Universidade da Coruña",
             "centro": "Facultade de Informática",
-            "campus": "Campus de la Coruña",
+            "campus": "Campus de Elviña",
             "provincia": "La Coruna",
             "url": "http://www.fic.udc.es/MainPage.do",
             "convenios": [],
@@ -1056,7 +1093,7 @@
             "siglas": "usc",
             "nombre": "Universidad de Santiago de Compostela",
             "centro": "Escola Técnica Superior de Enxeñaría",
-            "campus": "Campus de Santiago de Compostela",
+            "campus": "Campus Vida",
             "provincia": "La Coruna",
             "url": "http://www.usc.es/etse/grii",
             "convenios": [],
@@ -1092,8 +1129,8 @@
             "siglas": "uvigo",
             "nombre": "Universidad de Vigo",
             "centro": "Escuela Superior de Ingeniería Informática",
-            "campus": "Campus de Vigo",
-            "provincia": "Pontevedra",
+            "campus": "Campus de Orense",
+            "provincia": "Orense",
             "url": "http://www.esei.uvigo.es/",
             "convenios": [],
             "tasas_2011": {
@@ -1859,32 +1896,32 @@
             "url": "http://www.unirioja.es/estudios/grados/ing_informatica/",
             "convenios": [],
             "tasas_2011": {
-                "url": "http://www.larioja.org/npRioja/default/defaultpage.jsp?idtab=724659&tipo=2&fecha=2011/08/31&referencia=897312-1-HTML-437659-X",
-                "tasas1": "23.13",
-                "tasas2": "33.55",
-                "tasas3": "50.32",
-                "tasas4": "50.32"
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             },
             "tasas_2012": {
-                "url": "http://www.larioja.org/npRioja/default/defaultpage.jsp?idtab=724659&tipo=2&fecha=2012/09/07&referencia=957080-3-HTML-453897-X",
-                "tasas1": "20.90",
-                "tasas2": "41.80",
-                "tasas3": "90.57",
-                "tasas4": "125.40"
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             },
             "tasas_2013": {
-                "url": "http://www.unirioja.es/estudiantes/matricula/precios.shtml",
-                "tasas1": "21.21",
-                "tasas2": "42.43",
-                "tasas3": "91.93",
-                "tasas4": "127.28"
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             },
             "tasas_2014": {
-                "url": "http://www.unirioja.es/estudiantes/matricula/precios.shtml",
-                "tasas1": "21.21",
-                "tasas2": "42.43",
-                "tasas3": "91.93",
-                "tasas4": "127.28"
+                "url": "http://www.unir.net/como-matricularse.aspx#g3",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         },
 
@@ -2303,12 +2340,12 @@
             },
             "observaciones": ""
         }, {
-            "siglas": "",
+            "siglas": "deusto",
             "nombre": "Universidad de Deusto",
             "tipo": "privada",
-            "centro": "",
+            "centro": "Facultad de Ingeniería",
             "provincia": "Vizcaya",
-            "url": "",
+            "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/estudios-0/grados-area-tic/programa-en-ingenieria-informatica",
             "convenios": [],
             "tasas_2011": {
                 "url": "",
@@ -2332,7 +2369,7 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
+                "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/ingenieria-informatica/ingenieria-informatica/programa?idPest=1340018657941",
                 "tasas1": "",
                 "tasas2": "",
                 "tasas3": "",
@@ -2417,7 +2454,7 @@
             "nombre": "Universidad de Mondragón",
             "tipo": "privada",
             "centro": "Campus de Gipuzkoa",
-            "campus": "Campus de Gipuzkoa",
+            "campus": "Campus de Mondragón",
             "provincia": "Gipuzkoa",
             "url": "",
             "convenios": [],
@@ -2443,7 +2480,7 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
+                "url": "http://www.mondragon.edu/es/estudios/grados/grado-en-ingenieria-en-informatica/",
                 "tasas1": "",
                 "tasas2": "",
                 "tasas3": "",
