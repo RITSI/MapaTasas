@@ -432,7 +432,7 @@
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "8.820",
+                "tasas1": "147",
                 "tasas2": "8.820",
                 "tasas3": "8.820",
                 "tasas4": "8.820"
@@ -879,11 +879,11 @@
             "url": "http://www.esiiab.uclm.es/grado/datos.php?curso=2014-15&idmenup=datosgrado",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
+                "tasas1": "14.4",
+                "tasas2": "18.7",
+                "tasas3": "26.2",
+                "tasas4": "39.2"
             },
             "tasas_2012": {
                 "url": "",
@@ -900,11 +900,11 @@
                 "tasas4": "105.43"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2014/07/14/pdf/2014_9138.pdf&tipo=rutaDocm",
+                "tasas1": "17.64",
+                "tasas2": "35.28",
+                "tasas3": "76.45",
+                "tasas4": "105.85"
             }
         }, {
             "siglas": "uclm-ciudadreal",
@@ -915,11 +915,11 @@
             "url": "http://webpub.esi.uclm.es/paginas/formacion-grado-en-ing-informatica-1",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
+                "tasas1": "14.4",
+                "tasas2": "18.7",
+                "tasas3": "26.2",
+                "tasas4": "39.2"
             },
             "tasas_2012": {
                 "url": "",
@@ -936,11 +936,11 @@
                 "tasas4": "105.43"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2014/07/14/pdf/2014_9138.pdf&tipo=rutaDocm",
+                "tasas1": "17.64",
+                "tasas2": "35.28",
+                "tasas3": "76.45",
+                "tasas4": "105.85"
             }
         },
 
@@ -1157,7 +1157,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1193,7 +1193,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1229,7 +1229,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1265,7 +1265,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1301,7 +1301,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1337,7 +1337,7 @@
             },
             "tasas_2014": {
                 "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
-                "tasas1": "31",
+                "tasas1": "31.00",
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
@@ -1626,11 +1626,11 @@
                 "tasas4": "100.68"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "No se conocen datos",
-                "tasas2": "No se conocen datos",
-                "tasas3": "No se conocen datos",
-                "tasas4": "No se conocen datos"
+                "url": "http://www.borm.es/borm/documento?obj=anu&id=710621",
+                "tasas1": "17.77",
+                "tasas2": "35.55",
+                "tasas3": "77.02",
+                "tasas4": "106.64"
             }
         }, {
             "siglas": "ucam",
@@ -2145,8 +2145,8 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
+                "url": "https://www.upc.edu/sga/matricula/preus",
+                "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -2223,15 +2223,15 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.uab.cat/web/estudiar/grau/matricula/resum-dels-preus-1345662202164.html",
+                "tasas1": "27.85",
+                "tasas2": "34.39",
+                "tasas3": "74.52",
+                "tasas4": "103.18"
             }
         }, {
             "siglas": "uoc",
-            "nombre": "Universidad Abierta de Cataluña",
+            "nombre": "Universidad Obierta de Cataluña",
             "tipo": "pública",
             "centro": "",
             "provincia": "",
@@ -2295,11 +2295,11 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.ub.edu/acad/es/matricula/precios.html",
+                "tasas1": "27.85",
+                "tasas2": "34.39",
+                "tasas3": "74.52",
+                "tasas4": "103.18"
             },
             "observaciones": ""
         }, {
@@ -2458,31 +2458,31 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
+                "tasas1": "20.29",
+                "tasas2": "26.38",
+                "tasas3": "30.44",
                 "tasas4": ""
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "tasas1": "20.89",
+                "tasas2": "28.90",
+                "tasas3": "54.32",
+                "tasas4": "75.21"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "21.24",
+                "tasas2": "29.74",
+                "tasas3": "55.24",
+                "tasas4": "76.48"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "22.00",
+                "tasas2": "30.00",
+                "tasas3": "65.00",
+                "tasas4": "90.00"
             }
         }
     ]
