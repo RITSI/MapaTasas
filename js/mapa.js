@@ -203,7 +203,7 @@ $(document).ready(function() {
             var render_convenios;
 
             //El archivo .mst contiene la plantilla compatible con Mustache
-            $.get('template_universidad_provincia.mst', function(template_universidad_provincia) {
+            $.get('templates/template_universidad_provincia.mst', function(template_universidad_provincia) {
                 //Se añaden los datos del curso actual, y los datos generales
                 var render_resultados = Mustache.render(template_universidad_provincia, {
                     nombre: value.nombre,
