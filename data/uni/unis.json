@@ -917,17 +917,17 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
-                "tasas1": "14.4",
-                "tasas2": "18.7",
-                "tasas3": "26.2",
-                "tasas4": "39.2"
+                "tasas1": "14.40",
+                "tasas2": "18.70",
+                "tasas3": "26.20",
+                "tasas4": "39.20"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2012/07/17/pdf/2012_10376.pdf&tipo=rutaDocm",
+                "tasas1": "17.33",
+                "tasas2": "34.66",
+                "tasas3": "75.09",
+                "tasas4": "103.98"
             },
             "tasas_2013": {
                 "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",
@@ -953,10 +953,10 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
-                "tasas1": "14.4",
-                "tasas2": "18.7",
-                "tasas3": "26.2",
-                "tasas4": "39.2"
+                "tasas1": "14.40",
+                "tasas2": "18.70",
+                "tasas3": "26.20",
+                "tasas4": "39.20"
             },
             "tasas_2012": {
                 "url": "",
@@ -2297,7 +2297,7 @@
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "22.8",
+                "tasas1": "22.80",
                 "tasas2": "27.36",
                 "tasas3": "27.36",
                 "tasas4": "27.36"
@@ -2456,7 +2456,7 @@
             "centro": "Campus de Gipuzkoa",
             "campus": "Campus de Mondragón",
             "provincia": "Gipuzkoa",
-            "url": "",
+            "url": "http://www.mondragon.edu/es/estudios/grados/grado-en-ingenieria-en-informatica/",
             "convenios": [],
             "tasas_2011": {
                 "url": "",
@@ -2480,11 +2480,11 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "http://www.mondragon.edu/es/estudios/grados/grado-en-ingenieria-en-informatica/",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://www.mondragon.edu/bin/tit/normativa-grado/normativaacademica.pdf",
+                "tasas1": "99.50",
+                "tasas2": "109.45",
+                "tasas3": "119.40",
+                "tasas4": "119.40"
             }
         }, {
             "siglas": "uned",
