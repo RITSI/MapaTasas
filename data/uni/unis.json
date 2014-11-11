@@ -1274,7 +1274,7 @@
             "siglas": "uah",
             "nombre": "Universidad de Alcalá",
             "centro": "Escuela Politécnica Superior",
-            "campus": "Campus de Madrid",
+            "campus": "Campus externo de Alcalá",
             "provincia": "Madrid",
             "url": "http://www.uah.es/estudios/grados/planes.asp?cd=210&plan=G780",
             "convenios": [],
@@ -1710,7 +1710,7 @@
             "siglas": "ehu-bilbao",
             "nombre": "Universidad del País Vasco (Campus de Bilbao)",
             "centro": "",
-            "campus": "Campus de Bilbao",
+            "campus": "Campus de Bizkaia",
             "provincia": "Bizkaia",
             "url": "",
             "convenios": [],
@@ -1783,7 +1783,7 @@
             "nombre": "Universidad Pública de Navarra",
             "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
             "provincia": "Navarra",
-            "campus": "Campus de Navarra",
+            "campus": "Campus de Arrosadía",
             "url": "http://www.unavarra.es/ets-industrialesytelecos/estudios/grado/grado-en-ingenieria-informatica/presentacion?submenu=yes",
             "convenios": [],
             "tasas_2011": {
@@ -2412,7 +2412,7 @@
                 "tasas3": "",
                 "tasas4": ""
             }
-        },  {
+        }, {
             "siglas": "mu",
             "nombre": "Universidad de Mondragón",
             "tipo": "privada",
