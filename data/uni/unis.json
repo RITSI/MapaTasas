@@ -959,11 +959,11 @@
                 "tasas4": "39.20"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2012/07/17/pdf/2012_10376.pdf&tipo=rutaDocm",
+                "tasas1": "17.33",
+                "tasas2": "34.66",
+                "tasas3": "75.09",
+                "tasas4": "103.98"
             },
             "tasas_2013": {
                 "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",

@@ -211,6 +211,7 @@ $(document).ready(function() {
                     centro: value.centro,
                     url: value.url,
                     siglas: value.siglas.replace(/-.*/, ''),
+                    clase: 'chart-'+value.siglas,
                     tasas1: value.tasas_2014.tasas1,
                     tasas2: value.tasas_2014.tasas2,
                     tasas3: value.tasas_2014.tasas3,
@@ -235,7 +236,7 @@ $(document).ready(function() {
                 //Si existen los datos de años anteriores, se crea un gráfico comparativo utilizando c3.js
                 if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
                     var chart = c3.generate({
-                        bindto: "#chart",
+                        bindto: "#chart-"+value.siglas,
                         data: {
                             x: 'x',
                             x_format: '%Y',
