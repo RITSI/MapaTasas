@@ -7,11 +7,11 @@
         <br>
         <span class="text-muted">{{campus}}</span>
     </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".drop-{{siglas}}">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".drop-{{siglas_completas}}">
         <i class="glyphicon glyphicon-chevron-down text-muted"></i>
     </div>
 </div>
-<div class="row user-infos drop-{{siglas}}">
+<div class="row user-infos drop-{{siglas_completas}}">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
         <div class="panel panel-primary">
             <div class="panel-heading">

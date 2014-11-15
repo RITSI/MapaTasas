@@ -211,6 +211,7 @@ $(document).ready(function() {
                     centro: value.centro,
                     url: value.url,
                     siglas: value.siglas.replace(/-.*/, ''),
+                    siglas_completas: value.siglas,
                     clase: 'chart-'+value.siglas,
                     tasas1: value.tasas_2014.tasas1,
                     tasas2: value.tasas_2014.tasas2,
