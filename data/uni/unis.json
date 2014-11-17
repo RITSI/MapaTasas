@@ -917,31 +917,31 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
-                "tasas1": "14.40",
-                "tasas2": "18.70",
-                "tasas3": "26.20",
-                "tasas4": "39.20"
+                "tasas1": "15.40",
+                "tasas2": "20.00",
+                "tasas3": "28.00",
+                "tasas4": "42.00"
             },
             "tasas_2012": {
                 "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2012/07/17/pdf/2012_10376.pdf&tipo=rutaDocm",
-                "tasas1": "17.33",
-                "tasas2": "34.66",
-                "tasas3": "75.09",
-                "tasas4": "103.98"
+                "tasas1": "18.53",
+                "tasas2": "37.07",
+                "tasas3": "80.31",
+                "tasas4": "111.20"
             },
             "tasas_2013": {
                 "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",
-                "tasas1": "15.57",
-                "tasas2": "35.14",
-                "tasas3": "76.15",
-                "tasas4": "105.43"
+                "tasas1": "18.79",
+                "tasas2": "37.58",
+                "tasas3": "81.43",
+                "tasas4": "112.75"
             },
             "tasas_2014": {
                 "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2014/07/14/pdf/2014_9138.pdf&tipo=rutaDocm",
-                "tasas1": "17.64",
-                "tasas2": "35.28",
-                "tasas3": "76.45",
-                "tasas4": "105.85"
+                "tasas1": "18.87",
+                "tasas2": "37.73",
+                "tasas3": "81.76",
+                "tasas4": "113.20"
             }
         }, {
             "siglas": "uclm-ciudadreal",
@@ -953,31 +953,31 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "http://www.uclm.es/organos/vic_docencia/masteres/pdf/normativa/orden_10-06-2011.pdf",
-                "tasas1": "14.40",
-                "tasas2": "18.70",
-                "tasas3": "26.20",
-                "tasas4": "39.20"
+                "tasas1": "15.40",
+                "tasas2": "20.00",
+                "tasas3": "28.00",
+                "tasas4": "42.00"
             },
             "tasas_2012": {
                 "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2012/07/17/pdf/2012_10376.pdf&tipo=rutaDocm",
-                "tasas1": "17.33",
-                "tasas2": "34.66",
-                "tasas3": "75.09",
-                "tasas4": "103.98"
+                "tasas1": "18.53",
+                "tasas2": "37.07",
+                "tasas3": "80.31",
+                "tasas4": "111.20"
             },
             "tasas_2013": {
                 "url": "http://www.uclm.es/doc/?id=UCLMDOCID-12-732",
-                "tasas1": "15.57",
-                "tasas2": "35.14",
-                "tasas3": "76.15",
-                "tasas4": "105.43"
+                "tasas1": "18.79",
+                "tasas2": "37.58",
+                "tasas3": "81.43",
+                "tasas4": "112.75"
             },
             "tasas_2014": {
                 "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2014/07/14/pdf/2014_9138.pdf&tipo=rutaDocm",
-                "tasas1": "17.64",
-                "tasas2": "35.28",
-                "tasas3": "76.45",
-                "tasas4": "105.85"
+                "tasas1": "18.87",
+                "tasas2": "37.73",
+                "tasas3": "81.76",
+                "tasas4": "113.20"
             }
         },
 
