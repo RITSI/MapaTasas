@@ -2349,24 +2349,22 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
+                "aportacion": "1526.40",
+                "matricula": "6105.60",
                 "tasas3": "",
                 "tasas4": ""
             },
             "tasas_2012": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "coste_por_credito": "128.95",
+                "aportacion": "1545.00",
+                "mensualidad": "774.00"
             },
             "tasas_2013": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "coste_por_credito": "133.40",
+                "aportacion": "1600.80",
+                "mensualidad": "800.40"
             },
             "tasas_2014": {
                 "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/ingenieria-informatica/ingenieria-informatica/programa?idPest=1340018657941",
