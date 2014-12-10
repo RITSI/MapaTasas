@@ -200,7 +200,6 @@ $(document).ready(function() {
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
-            var render_convenios;
 
             //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('templates/template_universidad_provincia.mst', function(template_universidad_provincia) {
