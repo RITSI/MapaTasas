@@ -119,6 +119,41 @@ $(document).ready(function() {
     d3.select(window).on('resize', sizeChange);
     sizeChange();
 
+    // Cómputo de la media nacional con los datos disponibles:
+    var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014'];
+    var average = {},
+        avCount = {};
+
+    indexes.forEach(function(index) {
+        average[index] = 0;
+        avCount[index] = 0;
+    });
+
+    // Si se pone a true, faltan datos de tasas de algún centro
+    var avError = false;
+    
+    d3.json("data/uni/unis.json", function(error, file) {
+        file.unis.forEach(function(uni) {
+            // Para cada centro
+            indexes.forEach(function(index) {
+                // Para cada año
+                if(uni[index] && uni[index]['tasas1']) {
+                    average[index] += parseInt(uni[index]['tasas1']);
+                    avCount[index]++;
+                }
+                else
+                    avError = true;
+            });
+        });
+
+        indexes.forEach(function(index) {
+            if(avCount[index])
+                average[index] /= avCount[index];
+            else
+                average[index] = 0;
+        });
+    });
+
     function sizeChange() {
         //Intento de diseño para móviles
         if ($(window).width() < 480) {
@@ -200,7 +235,6 @@ $(document).ready(function() {
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
-            var render_convenios;
 
             //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('templates/template_universidad_provincia.mst', function(template_universidad_provincia) {
@@ -236,6 +270,16 @@ $(document).ready(function() {
 
                 //Si existen los datos de años anteriores, se crea un gráfico comparativo utilizando c3.js
                 if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
+                    var averageErrorFlag = "",
+                        averageErrorText = "";
+                    
+                    if(avError) {
+                        averageErrorFlag = "*";
+                        averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+                    }
+                    
+                    averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
+                    
                     var chart = c3.generate({
                         bindto: "#chart-"+value.siglas,
                         data: {
@@ -247,7 +291,7 @@ $(document).ready(function() {
                                 ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2],
                                 ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3],
                                 ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4],
-                                ['Media nacional', 0, 0, 0, 0, 0, 0]
+                                ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2)]
                             ]
                         },
                         axis: {
@@ -260,6 +304,8 @@ $(document).ready(function() {
                             }
                         }
                     });
+
+                    $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
                 }
 
                 var panels = $('.user-infos');
