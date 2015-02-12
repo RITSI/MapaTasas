@@ -217,10 +217,6 @@ $(document).ready(function() {
                     };
                 });
                 create_dropdown(universidades_provincia, convenios_filter);
-                /*setTimeout(function(){
-                    var panels = $('.user-infos');//$('.drop-'+value.siglas.replace('/-./',''));
-                    panels.hide();
-                }, 5000);*/
             } else {
                 //Si no hay universidades
                 $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
@@ -332,13 +328,13 @@ $(document).ready(function() {
                         } else {
                             currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
                         }
+
+                        d3.json("data/uni/unis.json", function(error, unis) {
+                            var value = $.grep(unis.unis, function(e,i){return e.siglas === dataFor.replace('\.drop-','')});
+                            create_graph(value[0]);
+                        });
                     });
-                     d3.json("data/uni/unis.json", function(error, unis) {
-                        //console.log(dataFor.replace('\.drop-',''));
-                        var value = $.grep(unis.unis, function(e,i){return e.siglas === dataFor.replace('\.drop-','')});
-                        //console.log(value[0].siglas);
-                        create_graph(value[0]);
-                     });
+
                 });
                 $('[data-toggle="tooltip"]').tooltip();
             });
