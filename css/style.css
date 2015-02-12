@@ -18,8 +18,6 @@ body {
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
-    margin-left: auto;
-    margin-right: auto;
     width: 65%;
 }
 
@@ -68,17 +66,17 @@ body {
 /* Rounded corners */
 
 .tipsy-inner {
-    border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 /* Uncomment for shadow */
 
 .tipsy-inner {
-    box-shadow: 0 0 5px #000000;
     -webkit-box-shadow: 0 0 5px #000000;
     -moz-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
 }
 .tipsy-arrow {
     position: absolute;
@@ -103,7 +101,7 @@ body {
     border-right-color: #000;
 }
 .tipsy-n .tipsy-arrow {
-    top: 0px;
+    top: 0;
     left: 50%;
     margin-left: -5px;
     border-bottom-style: solid;
