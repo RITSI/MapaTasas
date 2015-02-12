@@ -35,12 +35,12 @@ $(document).ready(function() {
         .attr("width", width)
         .attr("height", height);
 
-    
+
     /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
     Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
     no ASCII, no funcionaría*/
     d3.json("maps/esp-ascii.json", function(error, esp) {
-        /*Se añaden una a una las provincias descritas en el json*/
+        //Se añaden una a una las provincias descritas en el JSON
         svg.selectAll(".subunit")
             .data(topojson.feature(esp, esp.objects.subunits).features)
             .enter().append("path")
@@ -61,7 +61,8 @@ $(document).ready(function() {
     });
 
     /*Las Canarias aparecerían en el lugar donde se encuentran geográficamente
-    para evitar perder tanto espacio, se crea un segundo mapa, solo con estas islas*/
+    para evitar perder tanto espacio, se crea un segundo mapa, que contiene 
+    únicamente las islas*/
     var projection_canary = d3.geo.albers()
         .center([-6.5, 24])
         .rotate([3.4, 0])
@@ -71,11 +72,8 @@ $(document).ready(function() {
 
     var path_canary = d3.geo.path().projection(projection_canary);
 
-
-    //El tamaño del mapa viene condicionado por el anterior
     width_canary = $("#map-canarias").width();
     height_canary = $("#map-canarias").height();
-
 
     var canarias = d3.select("#map-canarias")
         .append("svg")
@@ -95,9 +93,10 @@ $(document).ready(function() {
             .on("click", provincia_click);
 
         canarias.append("path")
-            .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
-                return a !== b
-            }))
+            .datum(topojson.mesh(esp, esp.objects.subunits,
+                function(a, b) {
+                    return a !== b
+                }))
             .attr("d", path)
             .attr("class", "subunit-boundary");
     });
@@ -131,23 +130,22 @@ $(document).ready(function() {
 
     // Si se pone a true, faltan datos de tasas de algún centro
     var avError = false;
-    
+
     d3.json("data/uni/unis.json", function(error, file) {
         file.unis.forEach(function(uni) {
             // Para cada centro
             indexes.forEach(function(index) {
                 // Para cada año
-                if(uni[index] && uni[index]['tasas1']) {
+                if (uni[index] && uni[index]['tasas1']) {
                     average[index] += parseInt(uni[index]['tasas1']);
-                    avCount[index]++;
-                }
-                else
+                    avCount[index] ++;
+                } else
                     avError = true;
             });
         });
 
         indexes.forEach(function(index) {
-            if(avCount[index])
+            if (avCount[index])
                 average[index] /= avCount[index];
             else
                 average[index] = 0;
@@ -200,14 +198,14 @@ $(document).ready(function() {
         //Filtrado de las universidades presentes en la provincia
         d3.json("data/uni/unis.json", function(error, unis) {
             var universidades = unis.unis;
-            /*Se recorren todas las universidades presentes, y si alguna tiene como provincia la seleccionada por el cursor, 
+            /*Se recorren todas las universidades presentes, 
+            y si alguna tiene como provincia la seleccionada por el cursor, 
             se incluye en el array*/
             $.each(universidades, function(index, value) {
-                if (value.provincia === d.id) 
+                if (value.provincia === d.id)
                     resultados.push(value);
             });
 
-            //Esta funcion busca los convenios que tiene una universidad con otra, y lo añade a otra lista
             var universidades_provincia = [];
             if (resultados.length > 0) {
                 $.each(resultados, function(index, value) {
@@ -219,17 +217,63 @@ $(document).ready(function() {
                     };
                 });
                 create_dropdown(universidades_provincia, convenios_filter);
+                /*setTimeout(function(){
+                    var panels = $('.user-infos');//$('.drop-'+value.siglas.replace('/-./',''));
+                    panels.hide();
+                }, 5000);*/
             } else {
                 //Si no hay universidades
-                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id]+ ' que oferten estudios de Ingeniería Informática.</p>');
+                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
             }
         });
     }
 
+    function create_graph(value) {
+        if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
+            var averageErrorFlag = "",
+                averageErrorText = "";
+
+            if (avError) {
+                averageErrorFlag = "*";
+                averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+            }
+
+            averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
+
+            var chart = c3.generate({
+                bindto: "#chart-" + value.siglas,
+                data: {
+                    x: 'x',
+                    x_format: '%Y',
+                    columns: [
+                        ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014')],
+                        ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1],
+                        ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2],
+                        ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3],
+                        ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4],
+                        ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2)]
+                    ]
+                },
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            //              format : "%m/%d" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                            format: "%Y" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                        }
+                    }
+                }
+            });
+    
+            $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
+        }
+
+    }
 
     //Función de creación del dropdown con los datos. Utiliza la biblioteca mustache.js http://mustache.github.io/
     function create_dropdown(universidades_provincia, universidades) {
         var dropdown = [];
+        var graph_data = {};
         $.each(universidades_provincia, function(index, value) {
             /*Los campus siguen  la regla {{universidad}}-{{nombre campus}}, 
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
@@ -246,7 +290,7 @@ $(document).ready(function() {
                     url: value.url,
                     siglas: value.siglas.replace(/-.*/, ''),
                     siglas_completas: value.siglas,
-                    clase: 'chart-'+value.siglas,
+                    clase: 'chart-' + value.siglas,
                     tasas1: value.tasas_2014.tasas1,
                     tasas2: value.tasas_2014.tasas2,
                     tasas3: value.tasas_2014.tasas3,
@@ -266,55 +310,11 @@ $(document).ready(function() {
                     }]
                 });
 
-                $('#bootstrap_lista_units').append(render_resultados);
-
-                //Si existen los datos de años anteriores, se crea un gráfico comparativo utilizando c3.js
-                if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
-                    var averageErrorFlag = "",
-                        averageErrorText = "";
-                    
-                    if(avError) {
-                        averageErrorFlag = "*";
-                        averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
-                    }
-                    
-                    averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
-                    
-                    var chart = c3.generate({
-                        bindto: "#chart-"+value.siglas,
-                        data: {
-                            x: 'x',
-                            x_format: '%Y',
-                            columns: [
-                                ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014')],
-                                ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1],
-                                ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2],
-                                ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3],
-                                ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4],
-                                ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2)]
-                            ]
-                        },
-                        axis: {
-                            x: {
-                                type: 'timeseries',
-                                tick: {
-                                    //              format : "%m/%d" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
-                                    format: "%Y" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
-                                }
-                            }
-                        }
-                    });
-
-                    $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
-                }
-
-                var panels = $('.user-infos');
+                $('#bootstrap_lista_units').append(render_resultados); //.create_graph(value);
+                //create_graph(value);
+                 
                 var panelsButton = $('.dropdown-user');
-                panels.hide();
-
-
-                panels = $('.user-infos');
-                panelsButton = $('.dropdown-user');
+                var panels = $('.drop-'+value.siglas.replace('/-.*/',''));
                 panels.hide();
 
                 //Se desactivan todos los eventos, dado que en caso contrario origina problemas al añadir y eliminar un panel de información (se superponen eventos)
@@ -332,11 +332,18 @@ $(document).ready(function() {
                         } else {
                             currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
                         }
-                    })
+                    });
+                     d3.json("data/uni/unis.json", function(error, unis) {
+                        //console.log(dataFor.replace('\.drop-',''));
+                        var value = $.grep(unis.unis, function(e,i){return e.siglas === dataFor.replace('\.drop-','')});
+                        //console.log(value[0].siglas);
+                        create_graph(value[0]);
+                     });
                 });
                 $('[data-toggle="tooltip"]').tooltip();
             });
-
         });
+
+        
     }
 });
