@@ -189,6 +189,19 @@ $(document).ready(function() {
 
     //Al dispararse este evento, se cargan los valores
     function provincia_click(d) {
+        switch($('.current').attr('data')){
+            case "master":
+                cargar_master(d);
+                break;
+            default:
+            case "grado":
+                cargar_grado(d);
+                break;
+        }
+        
+    }
+
+    function cargar_grado(d){
         var resultados = [];
         var convenios_filter = [];
 
@@ -216,10 +229,30 @@ $(document).ready(function() {
                         }
                     };
                 });
-                create_dropdown(universidades_provincia, convenios_filter);
+                create_dropdown_grado(universidades_provincia, convenios_filter);
             } else {
                 //Si no hay universidades
                 $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
+            }
+        });
+    }
+
+    function cargar_master(d){
+        var resultados = [];
+        //Vaciado de los datos
+        $('#bootstrap_lista_units').html('');
+
+        d3.json("data/uni/unis-master.json", function(error, unis){
+            var universidades = unis.unis;
+             $.each(universidades, function(index, value) {
+                if (value.provincia === d.id)
+                    resultados.push(value);
+            });
+            if(resultados.length < 1){
+                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
+            }else{
+
+                create_dropdown_grado(resultados, undefined);
             }
         });
     }
@@ -267,7 +300,7 @@ $(document).ready(function() {
     }
 
     //Función de creación del dropdown con los datos. Utiliza la biblioteca mustache.js http://mustache.github.io/
-    function create_dropdown(universidades_provincia, universidades) {
+    function create_dropdown_grado(universidades_provincia, universidades) {
         var dropdown = [];
         var graph_data = {};
         $.each(universidades_provincia, function(index, value) {
@@ -340,4 +373,18 @@ $(document).ready(function() {
             });
         }); 
     }
+    $('.tab-link').click(function(){
+        $link = $(this);
+        if(!($link.hasClass('current'))){
+            $('.current').removeClass('current');
+            $link.addClass('current');
+            datos = $link.attr('data');
+            
+            $('#bootstrap_lista_units').html('<p>Haz click en una provincia para conocer la oferta de estudios de '+(datos == "grado" ? datos : "máster")+'.</p>');
+        }
+    });
+
 });
+/*$(document).ready(function(){
+    
+});*/
