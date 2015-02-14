@@ -1,5 +1,5 @@
 html , body{
-    background-color: #da2724;
+    background-color: #5c4c4c;
 }
 body {
     font-family: 'Play';
@@ -9,7 +9,6 @@ body {
 }
 
 #logo {
-    background-color: #da2724;
     vertical-align: middle;
     width: 15%;
 }
