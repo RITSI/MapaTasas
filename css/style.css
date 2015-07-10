@@ -263,10 +263,10 @@ body {
     min-height: 104px;
 }
 .tabs-content{
+    clear: both;
     width: fit-content;
     display: table;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 ul{
     border: 2px solid;
