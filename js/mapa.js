@@ -39,7 +39,7 @@ $(document).ready(function() {
     /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
     Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
     no ASCII, no funcionaría*/
-    d3.json("maps/esp-ascii.json", function(error, esp) {
+    d3.json("maps/esp.json", function(error, esp) {
         //Se añaden una a una las provincias descritas en el JSON
         svg.selectAll(".subunit")
             .data(topojson.feature(esp, esp.objects.subunits).features)
@@ -60,58 +60,6 @@ $(document).ready(function() {
             .attr("class", "subunit-boundary");
     });
 
-    /*Las Canarias aparecerían en el lugar donde se encuentran geográficamente
-    para evitar perder tanto espacio, se crea un segundo mapa, que contiene 
-    únicamente las islas*/
-    var projection_canary = d3.geo.albers()
-        .center([-6.5, 24])
-        .rotate([3.4, 0])
-        .parallels([50, 51])
-        .scale(1200 * 1.9)
-        .translate([width / 2.5, height / 2]);
-
-    var path_canary = d3.geo.path().projection(projection_canary);
-
-    width_canary = $("#map-canarias").width();
-    height_canary = $("#map-canarias").height();
-
-    var canarias = d3.select("#map-canarias")
-        .append("svg")
-        .append("g")
-        .attr("width", width_canary)
-        .attr("height", height_canary);
-
-    d3.json("maps/canary.json", function(error, esp) {
-        canarias.selectAll(".subunit")
-            .data(topojson.feature(esp, esp.objects.subunits).features)
-            .enter().append("path")
-            .attr("class", function(d) {
-                return "subunit " + d.id;
-            })
-            .attr("d", path_canary)
-            .on("mouseover", provincia_hover)
-            .on("click", provincia_click);
-
-        canarias.append("path")
-            .datum(topojson.mesh(esp, esp.objects.subunits,
-                function(a, b) {
-                    return a !== b
-                }))
-            .attr("d", path)
-            .attr("class", "subunit-boundary");
-    });
-
-    //Se obtienen por AJAX los nombres de las provincias con tilde, en un JSON que mapea nombre con tilde y nombre sin tilde
-    var tounicode;
-    $.ajax({
-        url: "maps/converter/converter.json",
-        dataType: 'json',
-        async: false,
-        data: tounicode,
-        success: function(data) {
-            tounicode = data;
-        }
-    });
 
     /*El diseño responsive del mapa no funciona con propiedades CSS, 
     debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
@@ -181,8 +129,7 @@ $(document).ready(function() {
             title: function() {
                 var m = this.__data__;
                 //Se retorna el valor Unicode del nombre ASCII
-                return tounicode[m.id];
-
+                return m.properties.name;
             }
         });
     }
@@ -232,7 +179,7 @@ $(document).ready(function() {
                 create_dropdown_grado(universidades_provincia, convenios_filter);
             } else {
                 //Si no hay universidades
-                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
+                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
             }
         });
     }
@@ -249,7 +196,7 @@ $(document).ready(function() {
                     resultados.push(value);
             });
             if(resultados.length < 1){
-                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + tounicode[d.id] + ' que oferten estudios de Ingeniería Informática.</p>');
+                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
             }else{
 
                 create_dropdown_grado(resultados, undefined);
@@ -385,6 +332,3 @@ $(document).ready(function() {
     });
 
 });
-/*$(document).ready(function(){
-    
-});*/
