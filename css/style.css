@@ -269,6 +269,14 @@ body {
     display: table;
     margin: 0 auto;
 }
+
+#lista_unis{
+    max-width: 100%;
+}
+#maps{
+    max-width: 100%;
+}
+
 ul{
     border: 2px solid;
     border-color: white;
