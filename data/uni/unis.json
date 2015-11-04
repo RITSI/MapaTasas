@@ -3,7 +3,7 @@
             "siglas": "ual",
             "nombre": "Universidad de Almería",
             "tipo": "pública",
-            "centro": "Escuela Politécnica Superior",
+            "centro": "Escuela Superior de Ingeniería",
             "provincia": "Almeria",
             "campus": "Campus de Almería",
             "url": "http://cms.ual.es/UAL/estudios/grados/GRADO4010",
@@ -31,6 +31,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
                 "tasas1": "12.62",
                 "tasas2": "25.25",
                 "tasas3": "54.71",
@@ -72,13 +79,20 @@
                 "tasas2": "25.25",
                 "tasas3": "54.71",
                 "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
             }
         }, {
             "siglas": "ugr-ceuta",
             "nombre": "Universidad de Granada",
             "tipo": "pública",
             "campus": "Campus de Ceuta",
-            "centro": "Facultad de Educación, Economía y Tecnología de Ceuta",
+            "centro": "Facultad de Educación y Humanidades de Ceuta",
             "provincia": "Ceuta",
             "url": "http://etsiit.ugr.es/",
             "convenios": [],
@@ -105,6 +119,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
                 "tasas1": "12.62",
                 "tasas2": "25.25",
                 "tasas3": "54.71",
@@ -146,6 +167,13 @@
                 "tasas2": "25.25",
                 "tasas3": "54.71",
                 "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
             }
         }, {
             "siglas": "us",
@@ -183,12 +211,19 @@
                 "tasas2": "25.25",
                 "tasas3": "54.71",
                 "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
             }
         }, {
             "siglas": "upo",
             "nombre": "Universidad Pablo de Olavide",
             "tipo": "pública",
-            "centro": "",
+            "centro": "Escuela Politécnica Superior",
             "provincia": "Sevilla",
             "campus": "Campus de Sevilla",
             "url": "http://www.upo.es/portal/impe/web/contenido/a71c7736-752e-11df-a821-3fe5a96f4a88?channel=d3563863-2f47-11de-b088-3fe5a96f4a88",
@@ -216,6 +251,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
                 "tasas1": "12.62",
                 "tasas2": "25.25",
                 "tasas3": "54.71",
@@ -257,6 +299,13 @@
                 "tasas2": "25.25",
                 "tasas3": "54.71",
                 "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
             }
         }, {
             "siglas": "uco",
@@ -290,6 +339,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
                 "tasas1": "12.62",
                 "tasas2": "25.25",
                 "tasas3": "54.71",
@@ -331,13 +387,20 @@
                 "tasas2": "25.25",
                 "tasas3": "54.71",
                 "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
             }
         }, {
             "siglas": "uhu",
             "nombre": "Universidad de Huelva",
             "tipo": "pública",
             "campus": "Campus de Huelva",
-            "centro": "Escuela Politécnica Superior",
+            "centro": "Escuela Técnica Superior de Ingeniería",
             "provincia": "Huelva",
             "url": "http://www.uhu.es/estudios/ofertaacademica/informacion/informatica.pdf",
             "convenios": [],
@@ -364,6 +427,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.juntadeandalucia.es/boja/2014/138/BOJA14-138-00294.pdf",
+                "tasas1": "12.62",
+                "tasas2": "25.25",
+                "tasas3": "54.71",
+                "tasas4": "75.75"
+            },
+            "tasas_2015": {
+                "url": "http://www.juntadeandalucia.es/boja/2015/137/BOJA15-137-00121-12543-01_00073590.pdf",
                 "tasas1": "12.62",
                 "tasas2": "25.25",
                 "tasas3": "54.71",
@@ -481,6 +551,13 @@
                 "tasas2": "28.26",
                 "tasas3": "41.48",
                 "tasas4": "48.72"
+            },
+            "tasas_2015": {
+                "url": "https://sede.asturias.es/bopa/2015/06/13/2015-10350.pdf",
+                "tasas1": "17.26",
+                "tasas2": "29.67",
+                "tasas3": "45.63",
+                "tasas4": "58.46"
             }
         }, {
             "siglas": "uo-gijon",
@@ -518,6 +595,13 @@
                 "tasas2": "28.26",
                 "tasas3": "41.48",
                 "tasas4": "48.72"
+            },
+            "tasas_2015": {
+                "url": "https://sede.asturias.es/bopa/2015/06/13/2015-10350.pdf",
+                "tasas1": "17.26",
+                "tasas2": "29.67",
+                "tasas3": "45.63",
+                "tasas4": "58.46"
             }
         }, {
             "siglas": "uib",
@@ -551,6 +635,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.caib.es/eboibfront/es/2014/8344/543737/decreto-29-2014-de-11-de-julio-por-el-que-se-aprue",
+                "tasas1": "20.56",
+                "tasas2": "41.12",
+                "tasas3": "89.02",
+                "tasas4": "123.35"
+            },
+            "tasas_2015": {
+                "url": "http://www.caib.es/eboibfront/es/2015/10338/567815/decreto-65-2015-de-10-de-julio-por-el-que-se-aprue",
                 "tasas1": "20.56",
                 "tasas2": "41.12",
                 "tasas3": "89.02",
@@ -954,6 +1045,13 @@
                 "tasas2": "31.12",
                 "tasas3": "67.42",
                 "tasas4": "93.36"
+            },
+            "tasas_2015": {
+                "url": "http://web.unican.es/admision/Documents/Precios%20y%20tasas/Precios%20Grado%20%202015-2016.pdf",
+                "tasas1": "15.56",
+                "tasas2": "31.12",
+                "tasas3": "67.42",
+                "tasas4": "93.36"
             }
         },
 
@@ -996,6 +1094,13 @@
                 "tasas2": "37.73",
                 "tasas3": "81.76",
                 "tasas4": "113.20"
+            },
+            "tasas_2015": {
+                "url": "http://www.uclm.es/estudiantes/guiamatricula/pdf/ExtractoPreciosPublicos.pdf",
+                "tasas1": "18.87",
+                "tasas2": "37.73",
+                "tasas3": "81.76",
+                "tasas4": "113.20"
             }
         }, {
             "siglas": "uclm-ciudadreal",
@@ -1029,6 +1134,13 @@
             },
             "tasas_2014": {
                 "url": "http://docm.jccm.es/portaldocm/descargarArchivo.do?ruta=2014/07/14/pdf/2014_9138.pdf&tipo=rutaDocm",
+                "tasas1": "18.87",
+                "tasas2": "37.73",
+                "tasas3": "81.76",
+                "tasas4": "113.20"
+            },
+            "tasas_2015": {
+                "url": "http://www.uclm.es/estudiantes/guiamatricula/pdf/ExtractoPreciosPublicos.pdf",
                 "tasas1": "18.87",
                 "tasas2": "37.73",
                 "tasas3": "81.76",
@@ -1146,6 +1258,13 @@
                 "tasas2": "19.30",
                 "tasas3": "31.21",
                 "tasas4": "39.79"
+            },
+            "tasas_2015": {
+                "url": "http://www.xunta.es/dog/Publicados/2015/20150702/AnuncioG0164-260615-0004_gl.html",
+                "tasas1": "13.93",
+                "tasas2": "19.30",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
             }
         }, {
             "siglas": "usc",
@@ -1183,6 +1302,13 @@
                 "tasas2": "19.30",
                 "tasas3": "31.21",
                 "tasas4": "39.79"
+            },
+            "tasas_2015": {
+                "url": "http://www.xunta.es/dog/Publicados/2015/20150702/AnuncioG0164-260615-0004_gl.html",
+                "tasas1": "13.93",
+                "tasas2": "19.30",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
             }
         }, {
             "siglas": "uvigo",
@@ -1216,6 +1342,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.usc.es/export/sites/default/gl/servizos/oiu/descargas/taxc.pdf",
+                "tasas1": "13.93",
+                "tasas2": "19.30",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
+            },
+            "tasas_2015": {
+                "url": "http://www.xunta.es/dog/Publicados/2015/20150702/AnuncioG0164-260615-0004_gl.html",
                 "tasas1": "13.93",
                 "tasas2": "19.30",
                 "tasas3": "31.21",
@@ -1701,12 +1834,19 @@
                 "tasas2": "35.55",
                 "tasas3": "77.02",
                 "tasas4": "106.64"
+            },
+            "tasas_2015": {
+                "url": "http://www.borm.es/borm/documento?obj=anu&id=734649",
+                "tasas1": "17.77",
+                "tasas2": "35.55",
+                "tasas3": "77.02",
+                "tasas4": "106.64"
             }
         }, {
             "siglas": "ucam",
             "nombre": "Universidad Católica San Antonio de Murcia",
             "tipo": "privada",
-            "centro": "",
+            "centro": "Escuela Superior Politécnica",
             "campus": "Campus de Murcia",
             "provincia": "Murcia",
             "url": "http://www.ucam.edu/estudios/grados/informatica-presencial",
@@ -1739,12 +1879,19 @@
                 "tasas3": "",
                 "tasas4": ""
             },
+            "tasas_2015": {
+                "url": "http://www.borm.es/borm/documento?obj=anu&id=734649",
+                "tasas1": "17.77",
+                "tasas2": "35.55",
+                "tasas3": "77.02",
+                "tasas4": "106.64"
+            },
             "observaciones": "3.996€ por curso para UE y 5.194,8€ para No-UE"
         }, {
             "siglas": "ehu-alava",
             "nombre": "Universidad del País Vasco",
             "tipo": "pública",
-            "centro": "Facultad de Informática",
+            "centro": "Escuela Universitaria de Ingeniería de Vitoria ",
             "campus": "Campus de Álava",
             "provincia": "Alava",
             "url": "",
@@ -1776,12 +1923,19 @@
                 "tasas2": "27.63",
                 "tasas3": "41.59",
                 "tasas4": "41.59"
+            },
+            "tasas_2015": {
+                "url": "http://www.jusap.ejgv.euskadi.eus/r47-bopvapps/es/bopv2/datos/2015/07/1503138a.pdf",
+                "tasas1": "19.19",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
             }
         }, {
             "siglas": "ehu-bilbao",
             "nombre": "Universidad del País Vasco (Campus de Bilbao)",
             "tipo": "pública",
-            "centro": "",
+            "centro": "Escuela Universitaria de Ingeniería Técnica Industrial de Bilbao",
             "campus": "Campus de Bizkaia",
             "provincia": "Bizkaia",
             "url": "",
@@ -1809,6 +1963,13 @@
             },
             "tasas_2014": {
                 "url": "https://www.euskadi.net/r48-bopv2/es/bopv2/datos/2014/07/1403173a.pdf",
+                "tasas1": "19.19",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
+            },
+            "tasas_2015": {
+                "url": "http://www.jusap.ejgv.euskadi.eus/r47-bopvapps/es/bopv2/datos/2015/07/1503138a.pdf",
                 "tasas1": "19.19",
                 "tasas2": "27.63",
                 "tasas3": "41.59",
@@ -1850,6 +2011,13 @@
                 "tasas2": "27.63",
                 "tasas3": "41.59",
                 "tasas4": "41.59"
+            },
+            "tasas_2015": {
+                "url": "http://www.jusap.ejgv.euskadi.eus/r47-bopvapps/es/bopv2/datos/2015/07/1503138a.pdf",
+                "tasas1": "19.19",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
             }
         }, {
             "siglas": "upna",
@@ -1883,6 +2051,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.lexnavarra.navarra.es/detalle.asp?r=34077",
+                "tasas1": "22.53",
+                "tasas2": "45.05",
+                "tasas3": "97.60",
+                "tasas4": "135.14"
+            },
+            "tasas_2015": {
+                "url": "http://www.navarra.es/home_es/Actualidad/BON/Boletines/2015/102/Anuncio-9/",
                 "tasas1": "22.53",
                 "tasas2": "45.05",
                 "tasas3": "97.60",
@@ -1924,12 +2099,19 @@
                 "tasas2": "42.43",
                 "tasas3": "91.93",
                 "tasas4": "127.28"
+            },
+            "tasas_2015": {
+                "url": "http://ias1.larioja.org/boletin/Bor_Boletin_visor_Servlet?referencia=2542287-1-PDF-495971",
+                "tasas1": "21.21",
+                "tasas2": "42.43",
+                "tasas3": "91.93",
+                "tasas4": "127.28"
             }
         }, {
             "siglas": "unir",
             "nombre": "Universidad Internacional de La Rioja",
             "tipo": "privada",
-            "centro": "",
+            "centro": "Escuela de Ingeniería",
             "campus": "Campus de La Rioja",
             "provincia": "La Rioja",
             "url": "http://www.unirioja.es/estudios/grados/ing_informatica/",
@@ -2000,6 +2182,13 @@
                 "tasas2": "41.73",
                 "tasas3": "85.55",
                 "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         },
 
@@ -2035,6 +2224,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
                 "tasas1": "23.85",
                 "tasas2": "41.73",
                 "tasas3": "85.55",
@@ -2077,6 +2273,13 @@
                 "tasas2": "41.73",
                 "tasas3": "85.55",
                 "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         }, {
             "siglas": "upv-alcoy",
@@ -2110,6 +2313,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.docv.gva.es/datos/2014/07/14/pdf/2014_6579.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
                 "tasas1": "23.85",
                 "tasas2": "41.73",
                 "tasas3": "85.55",
@@ -2151,6 +2361,13 @@
                 "tasas2": "41.73",
                 "tasas3": "85.55",
                 "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         }, {
             "siglas": "uv",
@@ -2188,6 +2405,13 @@
                 "tasas2": "41.73",
                 "tasas3": "85.55",
                 "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.docv.gva.es/datos/2015/09/14/pdf/2015_7531.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "85.55",
+                "tasas4": "118.07"
             }
         }, {
             "siglas": "upc",
@@ -2220,6 +2444,13 @@
             },
             "tasas_2014": {
                 "url": "https://www.upc.edu/sga/matricula/preus",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "http://www.ub.edu/acad/matricula/decreto.pdf",
                 "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
@@ -2270,7 +2501,7 @@
             "siglas": "uab",
             "nombre": "Universidad Autónoma de Barcelona",
             "tipo": "pública",
-            "centro": "Facultad de Informática",
+            "centro": "Escuela de Ingeniería",
             "provincia": "Barcelona",
             "url": "",
             "convenios": [
@@ -2344,7 +2575,7 @@
             "siglas": "ub",
             "nombre": "Universidad de Barcelona",
             "tipo": "pública",
-            "centro": "",
+            "centro": "Facultad de Matemáticas",
             "provincia": "Barcelona",
             "url": "",
             "convenios": [],
@@ -2489,7 +2720,7 @@
             "siglas": "mu",
             "nombre": "Universidad de Mondragón",
             "tipo": "privada",
-            "centro": "Campus de Gipuzkoa",
+            "centro": "Escuela Politécnica Superior",
             "campus": "Campus de Mondragón",
             "provincia": "Gipuzkoa",
             "url": "http://www.mondragon.edu/es/estudios/grados/grado-en-ingenieria-en-informatica/",
