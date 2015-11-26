@@ -470,11 +470,18 @@
                 "tasas4": "100.24"
             },
             "tasas_2014": {
-                "url": "",
+                "url": "http://wzar.unizar.es/servicios/primer/2matricula/economica/decreto14.pdf",
                 "tasas1": "22.48",
                 "tasas2": "33.41",
                 "tasas3": "72.41",
                 "tasas4": "100.24"
+            },
+            "tasas_2015": {
+            	"url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
+            	"tasas1": "22.93",
+            	"tasas2": "34.08",
+            	"tasas3": "73.86",
+            	"tasas4": "102.24"
             }
         }, {
             "incomplete": ""
@@ -510,10 +517,17 @@
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "147",
+                "tasas1": "8.820",
                 "tasas2": "8.820",
                 "tasas3": "8.820",
                 "tasas4": "8.820"
+            },
+            "tasas_2015": {
+            	"url": "",
+            	"tasas1": "8.820",
+            	"tasas2": "8.820",
+            	"tasas3": "8.820",
+            	"tasas4": "8.820"
             }
         }, {
             "siglas": "uo-oviedo",
@@ -683,6 +697,13 @@
                 "tasas2": "34.11",
                 "tasas3": "65.70",
                 "tasas4": "85.28"
+            },
+            "tasas_2015": {
+                "url": "https://www2.ulpgc.es/hege/almacen/download/7105/7105049/decreto_precios_publicos.pdf",
+                "tasas1": "18.95",
+                "tasas2": "34.11",
+                "tasas3": "65.70",
+                "tasas4": "85.28"
             }
         }, {
             "siglas": "ull",
@@ -720,6 +741,13 @@
                 "tasas2": "34.11",
                 "tasas3": "65.70",
                 "tasas4": "85.28"
+            },
+            "tasas_2015": {
+                "url": "https://www2.ulpgc.es/hege/almacen/download/7105/7105049/decreto_precios_publicos.pdf",
+                "tasas1": "18.95",
+                "tasas2": "34.11",
+                "tasas3": "65.70",
+                "tasas4": "85.28"
             }
         }, {
             "siglas": "upsa",
@@ -752,6 +780,13 @@
                 "tasas4": ""
             },
             "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
@@ -807,6 +842,13 @@
                 "tasas2": "41.59",
                 "tasas3": "90.10",
                 "tasas4": "124.76"
+            },
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
             }
         }, {
             "siglas": "usal-zamora",
@@ -840,6 +882,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            },
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
                 "tasas1": "27.72",
                 "tasas2": "41.59",
                 "tasas3": "90.10",
@@ -881,6 +930,13 @@
                 "tasas2": "41.59",
                 "tasas3": "90.10",
                 "tasas4": "124.76"
+            },
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
             }
         }, {
             "siglas": "uva-segovia",
@@ -918,6 +974,13 @@
                 "tasas2": "41.59",
                 "tasas3": "90.10",
                 "tasas4": "124.76"
+            },
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
             }
         }, {
             "siglas": "ule",
@@ -951,6 +1014,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
+                "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            },
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
                 "tasas1": "27.72",
                 "tasas2": "41.59",
                 "tasas3": "90.10",
@@ -1005,6 +1075,13 @@
             "tasas_2014": {
                 "url": "http://www.tributos.jcyl.es/web/jcyl/binarios/449/965/VERSION%20IMPRIMIBLE%20Decreto%2025-2012.pdf?blobheader=application/pdf;charset=UTF-8",
                 "tasas1": "27.72",
+                "tasas2": "41.59",
+                "tasas3": "90.10",
+                "tasas4": "124.76"
+            },
+            "tasas_2015":{
+            	"url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
+            	"tasas1": "27.72",
                 "tasas2": "41.59",
                 "tasas3": "90.10",
                 "tasas4": "124.76"
@@ -1184,6 +1261,13 @@
                 "tasas2": "33.66",
                 "tasas3": "72.93",
                 "tasas4": "100.99"
+            },
+            "tasas_2015": {
+                "url": "http://doe.gobex.es/pdfs/doe/2015/1280o/15040149.pdf",
+                "tasas1": "16.83",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
             }
         }, {
             "siglas": "uex-merida",
@@ -1217,6 +1301,13 @@
             },
             "tasas_2014": {
                 "url": "http://doe.gobex.es/pdfs/doe/2014/1390o/14040183.pdf",
+                "tasas1": "16.83",
+                "tasas2": "33.66",
+                "tasas3": "72.93",
+                "tasas4": "100.99"
+            },
+            "tasas_2015": {
+                "url": "http://doe.gobex.es/pdfs/doe/2015/1280o/15040149.pdf",
                 "tasas1": "16.83",
                 "tasas2": "33.66",
                 "tasas3": "72.93",
@@ -1392,6 +1483,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "siglas": "urjc",
@@ -1429,6 +1527,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "siglas": "uc3m",
@@ -1466,6 +1571,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "siglas": "uam",
@@ -1503,6 +1615,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "siglas": "uah",
@@ -1540,6 +1659,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "siglas": "upm",
@@ -1577,6 +1703,13 @@
                 "tasas2": "57.13",
                 "tasas3": "107.14",
                 "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
         }, {
             "_comment": "privadas Madrid"
@@ -1610,6 +1743,13 @@
                 "tasas4": ""
             },
             "tasas_2014": {
+                "url": "",
+                "tasas1": "75",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
                 "url": "",
                 "tasas1": "75",
                 "tasas2": "",
@@ -1652,6 +1792,13 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "75",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "ceu-uch",
@@ -1685,6 +1832,13 @@
             "tasas_2014": {
                 "url": "",
                 "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "75",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -1725,6 +1879,13 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "75",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "uemc",
@@ -1761,6 +1922,20 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "75",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "ufv",
@@ -1794,6 +1969,13 @@
             "tasas_2014": {
                 "url": "",
                 "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "75",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -2491,6 +2673,13 @@
                 "tasas4": ""
             },
             "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
