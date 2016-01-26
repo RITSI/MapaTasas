@@ -496,38 +496,38 @@
             "convenios": [],
             "tasas_2011": {
                 "url": "",
-                "tasas1": "8.820",
-                "tasas2": "8.820",
-                "tasas3": "8.820",
-                "tasas4": "8.820"
+                "tasas1": "16.45",
+                "tasas2": "24.53",
+                "tasas3": "36.23",
+                "tasas4": "36.32"
             },
             "tasas_2012": {
                 "url": "",
-                "tasas1": "8.820",
-                "tasas2": "8.820",
-                "tasas3": "8.820",
-                "tasas4": "8.820"
+                "tasas1": "21.70",
+                "tasas2": "32.25",
+                "tasas3": "69.89",
+                "tasas4": "69.89"
             },
             "tasas_2013": {
-                "url": "http://www.usj.es/sites/default/files/IMPORTES%20GRADOS%20GENERALES%202013-14.pdf",
-                "tasas1": "8.820",
-                "tasas2": "8.820",
-                "tasas3": "8.820",
-                "tasas4": "8.820"
+                "url": "",
+                "tasas1": "22.48",
+                "tasas2": "33.41",
+                "tasas3": "72.46",
+                "tasas4": "100.24"
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "8.820",
-                "tasas2": "8.820",
-                "tasas3": "8.820",
-                "tasas4": "8.820"
+                "tasas1": "22.48",
+                "tasas2": "33.41",
+                "tasas3": "72.41",
+                "tasas4": "100.24"
             },
             "tasas_2015": {
-            	"url": "",
-            	"tasas1": "8.820",
-            	"tasas2": "8.820",
-            	"tasas3": "8.820",
-            	"tasas4": "8.820"
+            	"url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
+            	"tasas1": "22.93",
+            	"tasas2": "34.08",
+            	"tasas3": "73.86",
+            	"tasas4": "102.24"
             }
         }, {
             "siglas": "uo-oviedo",
@@ -750,12 +750,56 @@
                 "tasas4": "85.28"
             }
         }, {
-            "siglas": "upsa",
+            "siglas": "upsa-salamanca",
             "nombre": "Universidad Pontificia de Salamanca",
             "tipo": "privada",
             "centro": "",
             "campus": "",
             "provincia": "Salamanca",
+            "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
+            "convenios": [],
+                        "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        }, {
+            "siglas": "upsa-madrid",
+            "nombre": "Universidad Pontificia de Salamanca",
+            "tipo": "privada",
+            "centro": "",
+            "campus": "Campus de Madrid",
+            "provincia": "Madrid",
             "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
             "convenios": [],
                         "tasas_2011": {
@@ -1668,11 +1712,11 @@
             	"tasas4": "128.57"
             }
         }, {
-            "siglas": "upm",
+            "siglas": "upm-montegarcedo",
             "nombre": "Universidad Politécnica de Madrid",
             "tipo": "pública",
             "centro": "Escuela Técnica Superior de Ingenieros Informáticos",
-            "campus": "Campus de Madrid",
+            "campus": "Campus de Montegarcedo",
             "provincia": "Madrid",
             "url": "http://www.upm.es/institucional/Estudiantes/Estudios_Titulaciones/EstudiosOficialesGrado/ArticulosRelacionados/b4fa8093d2320210VgnVCM10000009c7648aRCRD",
             "convenios": [],
@@ -1712,7 +1756,95 @@
             	"tasas4": "128.57"
             }
         }, {
+            "siglas": "upm-campus sur",
+            "nombre": "Universidad Politécnica de Madrid",
+            "tipo": "pública",
+            "centro": "Escuela Técnica Superior de Ingeniería de Sistemas Informáticos",
+            "campus": "Campus de Montegarcedo",
+            "provincia": "Madrid",
+            "url": "http://www.upm.es/institucional/UPM/Centros/CampusSur/ETSISistemasInformaticos",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "http://www.emes.es/linkclick.aspx?fileticket=YaVrLQAAmHk%3D&tabid=46&mid=355&forcedownload=true&name=d_95-2011.pdf",
+                "tasas1": "17.01",
+                "tasas2": "21.26",
+                "tasas3": "28.91",
+                "tasas4": "34.02"
+            },
+            "tasas_2012": {
+                "url": "http://www.madrid.org/wleg/servlet/Servidor?opcion=VerHtml&nmnorma=7758&cdestado=P",
+                "tasas1": "26.81",
+                "tasas2": "47.61",
+                "tasas3": "89.28",
+                "tasas4": "119.04"
+            },
+            "tasas_2013": {
+                "url": "http://www.madrid.org/wleg/servlet/Servidor?opcion=VerHtml&nmnorma=8216&cdestado=P",
+                "tasas1": "31.00",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.85"
+            },
+            "tasas_2014": {
+                "url": "http://w3.bocm.es/boletin/CM_Orden_BOCM/2014/07/21/BOCM-20140721-5.PDF",
+                "tasas1": "31.00",
+                "tasas2": "57.13",
+                "tasas3": "107.14",
+                "tasas4": "142.82"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
+            }
+        }, {
             "_comment": "privadas Madrid"
+        }, {
+            "siglas": "ups-ceu",
+            "nombre": "Universidad CEU San Pablo",
+            "tipo": "privada",
+            "centro": "",
+            "campus": "",
+            "provincia": "Madrid",
+            "url": "http://www.uspceu.com/es/estudios/grado/escuela-politecnica-superior/index.php",
+            "convenios": [],
+                        "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
         }, {
             "siglas": "udima",
             "nombre": "Universidad a Distancia de Madrid",
@@ -2977,7 +3109,53 @@
                 "tasas2": "30.00",
                 "tasas3": "65.00",
                 "tasas4": "90.00"
+            },
+            "tasas_2015": {
+            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+            	"tasas1": "27.90",
+            	"tasas2": "51.42",
+            	"tasas3": "96.43",
+            	"tasas4": "128.57"
             }
+
+        }, {
+            "siglas": "UI1",
+            "nombre": "Universidad Isabel I de Castilla",
+            "tipo": "privada",
+            "centro": "",
+            "campus": "",
+            "provincia": "",
+            "url": "http://www.ui1.es/oferta-academica/grado-en-ingenieria-informatica",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "http://www.unir.net/como-matricularse.aspx#g3",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },
         }
     ]
 }
