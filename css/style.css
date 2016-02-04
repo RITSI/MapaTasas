@@ -56,6 +56,15 @@ body {
     padding: 5px;
     z-index: 100000;
 }
+
+.universidad-tipo {
+    border-radius: 5px;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.12);
+    font-size: 79%;
+    padding: 2px 5px;
+}
+
 .tipsy-inner {
     background-color: #000;
     color: #FFF;
@@ -195,7 +204,7 @@ body {
     margin-top: 20px;
 }
 
-/*Intento de diseño responsive*/
+/*Intento de diseÃƒÆ’Ã‚Â±o responsive*/
 @media (min-device-width: 480px) {
     #content {
         display: inline;

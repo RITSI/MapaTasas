@@ -2,7 +2,7 @@
     "unis": [{
             "siglas": "ual",
             "nombre": "Universidad de Almería",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Ingeniería",
             "provincia": "Almeria",
             "campus": "Campus de Almería",
@@ -46,7 +46,7 @@
         }, {
             "siglas": "ugr-granada",
             "nombre": "Universidad de Granada",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación",
             "campus": "Campus de Granada",
             "provincia": "Granada",
@@ -90,7 +90,7 @@
         }, {
             "siglas": "ugr-ceuta",
             "nombre": "Universidad de Granada",
-            "tipo": "pública",
+            "tipo": "Pública",
             "campus": "Campus de Ceuta",
             "centro": "Facultad de Educación y Humanidades de Ceuta",
             "provincia": "Ceuta",
@@ -134,7 +134,7 @@
         }, {
             "siglas": "uma",
             "nombre": "Universidad de Málaga",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingeniería Informática",
             "provincia": "Malaga",
             "campus": "Campus de Málaga",
@@ -178,7 +178,7 @@
         }, {
             "siglas": "us",
             "nombre": "Universidad de Sevilla",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingeniería Informática",
             "campus": "Campus de Sevilla",
             "provincia": "Sevilla",
@@ -222,7 +222,7 @@
         }, {
             "siglas": "upo",
             "nombre": "Universidad Pablo de Olavide",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Sevilla",
             "campus": "Campus de Sevilla",
@@ -266,7 +266,7 @@
         }, {
             "siglas": "uca",
             "nombre": "Universidad de Cádiz",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Ingeniería",
             "provincia": "Cadiz",
             "campus": "Campus de Cádiz",
@@ -310,7 +310,7 @@
         }, {
             "siglas": "uco",
             "nombre": "Universidad de Córdoba",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "campus": "Campus de Córdoba",
             "provincia": "Cordoba",
@@ -354,7 +354,7 @@
         }, {
             "siglas": "uja",
             "nombre": "Universidad de Jaén",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior de Jaén",
             "provincia": "Jaen",
             "campus": "Campus de Jaén",
@@ -398,7 +398,7 @@
         }, {
             "siglas": "uhu",
             "nombre": "Universidad de Huelva",
-            "tipo": "pública",
+            "tipo": "Pública",
             "campus": "Campus de Huelva",
             "centro": "Escuela Técnica Superior de Ingeniería",
             "provincia": "Huelva",
@@ -442,7 +442,7 @@
         }, {
             "siglas": "unizar",
             "nombre": "Universidad de Zaragoza",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela de Ingeniería y Arquitectura",
             "provincia": "Zaragoza",
             "url": "http://titulaciones.unizar.es/ing-informatica/",
@@ -488,7 +488,7 @@
         }, {
             "siglas": "usj",
             "nombre": "Universidad de San Jorge",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Zaragoza",
             "url": "http://www.usj.es/estudios/grados/ingenieriainformatica",
@@ -532,7 +532,7 @@
         }, {
             "siglas": "uo-oviedo",
             "nombre": "Universidad de Oviedo",
-            "tipo": "pública",
+            "tipo": "Pública",
             "campus": "Campus de Oviedo",
             "centro": "Escuela de Ingeniería Informática",
             "provincia": "Asturias",
@@ -576,7 +576,7 @@
         }, {
             "siglas": "uo-gijon",
             "nombre": "Universidad de Oviedo",
-            "tipo": "pública",
+            "tipo": "Pública",
             "campus": "Campus de Gijón",
             "centro": "Escuela Politécnica de Ingeniería de Gijón",
             "provincia": "Asturias",
@@ -620,7 +620,7 @@
         }, {
             "siglas": "uib",
             "nombre": "Universidad de las Islas Baleares",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Baleares",
             "campus": "Campus de Palma de Mallorca",
@@ -664,7 +664,7 @@
         }, {
             "siglas": "ulpgc",
             "nombre": "Universidad de las Palmas de Gran Canaria",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela de Ingeniería Informática",
             "campus": "Campus de Gran Canaria",
             "provincia": "Las Palmas",
@@ -708,7 +708,7 @@
         }, {
             "siglas": "ull",
             "nombre": "Universidad de La Laguna",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingeniería en Informática",
             "campus": "Campus de Santa Cruz de Tenerife",
             "provincia": "Santa Cruz de Tenerife",
@@ -752,7 +752,7 @@
         }, {
             "siglas": "upsa",
             "nombre": "Universidad Pontificia de Salamanca",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "campus": "",
             "provincia": "Salamanca",
@@ -796,7 +796,7 @@
         }, {
             "siglas": "usal-salamanca",
             "nombre": "Universidad de Salamanca",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Ciencias",
             "campus": "Campus de Salamanca",
             "provincia": "Salamanca",
@@ -853,7 +853,7 @@
         }, {
             "siglas": "usal-zamora",
             "nombre": "Universidad de Salamanca",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior de Zamora",
             "campus": "Campus de Zamora",
             "provincia": "Zamora",
@@ -897,7 +897,7 @@
         }, {
             "siglas": "uva-valladolid",
             "nombre": "Universidad de Valladolid",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela de Ingeniería Informática",
             "campus": "Campus de Valladolid",
             "provincia": "Valladolid",
@@ -941,7 +941,7 @@
         }, {
             "siglas": "uva-segovia",
             "nombre": "Universidad de Valladolid",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Universitaria de Informática",
             "campus": "Campus de Segovia",
             "provincia": "Segovia",
@@ -985,7 +985,7 @@
         }, {
             "siglas": "ule",
             "nombre": "Universidad de León",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela de Ingenierías Industrial e Informática",
             "provincia": "Leon",
             "campus": "Campus de León",
@@ -1029,7 +1029,7 @@
         }, {
             "siglas": "ubu",
             "nombre": "Universidad de Burgos",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Burgos",
             "campus": "Campus de Burgos",
@@ -1089,7 +1089,7 @@
         }, {
             "siglas": "uc",
             "nombre": "Universidad de Cantabria",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Ciencias",
             "campus": "Campus de Cantabria",
             "provincia": "Cantabria",
@@ -1134,7 +1134,7 @@
         {
             "siglas": "uclm-albacete",
             "nombre": "Universidad de Castilla-La Mancha",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Ingeniería Informática",
             "provincia": "Albacete",
             "campus": "Campus de Albacete",
@@ -1178,7 +1178,7 @@
         }, {
             "siglas": "uclm-ciudadreal",
             "nombre": "Universidad de Castilla-La Mancha (Campus de Ciudad Real)",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Informática",
             "campus": "Campus de Ciudad Real",
             "provincia": "Ciudad Real",
@@ -1223,7 +1223,7 @@
         {
             "siglas": "uex-caceres",
             "nombre": "Universidad de Extremadura",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica de Cáceres",
             "provincia": "Caceres",
             "campus": "Campus de Cáceres",
@@ -1267,7 +1267,7 @@
         }, {
             "siglas": "uex-merida",
             "nombre": "Universidad de Extremadura",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica de Cáceres",
             "campus": "Campus de Mérida",
             "provincia": "Badajoz",
@@ -1311,7 +1311,7 @@
         }, {
             "siglas": "udc",
             "nombre": "Universidade da Coruña",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultade de Informática",
             "campus": "Campus de Elviña",
             "provincia": "La Coruna",
@@ -1355,7 +1355,7 @@
         }, {
             "siglas": "usc",
             "nombre": "Universidad de Santiago de Compostela",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escola Técnica Superior de Enxeñaría",
             "campus": "Campus Vida",
             "provincia": "La Coruna",
@@ -1399,7 +1399,7 @@
         }, {
             "siglas": "uvigo",
             "nombre": "Universidad de Vigo",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Ingeniería Informática",
             "campus": "Campus de Orense",
             "provincia": "Orense",
@@ -1445,7 +1445,7 @@
         }, {
             "siglas": "ucm",
             "nombre": "Universidad Complutense de Madrid",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Informática",
             "campus": "Campus de Madrid",
             "provincia": "Madrid",
@@ -1489,7 +1489,7 @@
         }, {
             "siglas": "urjc",
             "nombre": "Universidad Rey Juan Carlos",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingeniería Informática",
             "campus": "Campus de Móstoles",
             "provincia": "Madrid",
@@ -1533,7 +1533,7 @@
         }, {
             "siglas": "uc3m",
             "nombre": "Universidad Carlos III",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Universitaria de Informática",
             "campus": "Campus de Leganés",
             "provincia": "Madrid",
@@ -1577,7 +1577,7 @@
         }, {
             "siglas": "uam",
             "nombre": "Universidad Autónoma de Madrid",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Madrid",
             "campus": "Campus de Madrid",
@@ -1621,7 +1621,7 @@
         }, {
             "siglas": "uah",
             "nombre": "Universidad de Alcalá",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "campus": "Campus externo de Alcalá",
             "provincia": "Madrid",
@@ -1665,7 +1665,7 @@
         }, {
             "siglas": "upm",
             "nombre": "Universidad Politécnica de Madrid",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingenieros Informáticos",
             "campus": "Campus de Madrid",
             "provincia": "Madrid",
@@ -1707,11 +1707,11 @@
                 "tasas4": "128.57"
             }
         }, {
-            "_comment": "privadas Madrid"
+            "_comment": "Privadas Madrid"
         }, {
             "siglas": "udima",
             "nombre": "Universidad a Distancia de Madrid",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "http://www.udima.es/es/precios.html",
@@ -1755,7 +1755,7 @@
         }, {
             "siglas": "uax",
             "nombre": "Universidad Alfonso X El Sabio",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "http://www.uax.es/grado-en-ingenieria-informatica.html",
@@ -1798,7 +1798,7 @@
         }, {
             "siglas": "ceu-uch",
             "nombre": "Universidad Cardenal Herrera",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "https://www.uchceu.es/estudios/grado/ingenieria-sistemas-informacion-semipresencial",
@@ -1842,7 +1842,7 @@
         }, {
             "siglas": "uem",
             "nombre": "Universidad Europea de Madrid",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "http://madrid.universidadeuropea.es/estudios-universitarios/grado-en-ingenieria-informatica",
@@ -1885,7 +1885,7 @@
         }, {
             "siglas": "uemc",
             "nombre": "Universidad Europea Miguel de Cervantes",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "http://www.uemc.es/grados/grado-en-ingenieria-informatica",
@@ -1935,7 +1935,7 @@
         }, {
             "siglas": "ufv",
             "nombre": "Universidad Francisco de Vitoria",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Madrid",
             "url": "http://www.ufv.es/grado-en-ingenieria-informatica",
@@ -1978,7 +1978,7 @@
         }, {
             "siglas": "um",
             "nombre": "Universidad de Murcia",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Informática",
             "provincia": "Murcia",
             "campus": "Campus de Murcia",
@@ -2022,7 +2022,7 @@
         }, {
             "siglas": "ucam",
             "nombre": "Universidad Católica San Antonio de Murcia",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "Escuela Superior Politécnica",
             "campus": "Campus de Murcia",
             "provincia": "Murcia",
@@ -2067,7 +2067,7 @@
         }, {
             "siglas": "ehu-alava",
             "nombre": "Universidad del País Vasco",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Universitaria de Ingeniería de Vitoria ",
             "campus": "Campus de Álava",
             "provincia": "Alava",
@@ -2111,7 +2111,7 @@
         }, {
             "siglas": "ehu-bilbao",
             "nombre": "Universidad del País Vasco (Campus de Bilbao)",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Universitaria de Ingeniería Técnica Industrial de Bilbao",
             "campus": "Campus de Bizkaia",
             "provincia": "Bizkaia",
@@ -2155,7 +2155,7 @@
         }, {
             "siglas": "upv-ehu",
             "nombre": "Universidad del País Vasco",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Informática",
             "provincia": "Gipuzkoa",
             "campus": "Campus de Gipuzkoa",
@@ -2199,7 +2199,7 @@
         }, {
             "siglas": "upna",
             "nombre": "Universidad Pública de Navarra",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingenieros Industriales y de Telecomunicación",
             "provincia": "Navarra",
             "campus": "Campus de Arrosadia",
@@ -2243,7 +2243,7 @@
         }, {
             "siglas": "ur",
             "nombre": "Universidad de La Rioja",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Ciencias, Estudios Agroalimentarios e Informática",
             "campus": "Campus de La Rioja",
             "provincia": "La Rioja",
@@ -2287,7 +2287,7 @@
         }, {
             "siglas": "unir",
             "nombre": "Universidad Internacional de La Rioja",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "Escuela de Ingeniería",
             "campus": "Campus de La Rioja",
             "provincia": "La Rioja",
@@ -2325,7 +2325,7 @@
         {
             "siglas": "ua",
             "nombre": "Universidad de Alicante",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "provincia": "Alicante",
             "campus": "Campus de Alicante",
@@ -2370,7 +2370,7 @@
         {
             "siglas": "umh",
             "nombre": "Universidad Miguel Hernández de Elche",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior de Elche",
             "provincia": "Alicante",
             "campus": "Campus de Elche",
@@ -2415,7 +2415,7 @@
         }, {
             "siglas": "uji",
             "nombre": "Universitat Jaume I",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Superior de Tecnología y Ciencias Experimentales",
             "provincia": "Castellon",
             "campus": "Campus de Castellón",
@@ -2459,7 +2459,7 @@
         }, {
             "siglas": "upv-alcoy",
             "nombre": "Universidad Politécnica de Valencia",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior de Alcoy",
             "campus": "Campus de Alcoy",
             "provincia": "Valencia",
@@ -2503,7 +2503,7 @@
         }, {
             "siglas": "upv-valencia",
             "nombre": "Universidad Politécnica de Valencia",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Técnica Superior de Ingeniería Informática",
             "campus": "Campus de Valencia",
             "provincia": "Valencia",
@@ -2547,7 +2547,7 @@
         }, {
             "siglas": "uv",
             "nombre": "Universidad de Valencia",
-            "tipo": "pública",
+            "tipo": "Pública",
             "campus": "Campus de Valencia",
             "centro": "Escuela Técnica Superior de Ingeniería",
             "provincia": "Valencia",
@@ -2591,7 +2591,7 @@
         }, {
             "siglas": "upc",
             "nombre": "Universidad Politécnica de Cataluña",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "",
             "provincia": "",
             "url": "",
@@ -2634,7 +2634,7 @@
         }, {
             "siglas": "ucav",
             "nombre": "Universidad Católica de Santa Teresa de Jesús",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "Campus de Ávila",
             "campus": "Campus de Ávila",
             "provincia": "Avila",
@@ -2682,7 +2682,7 @@
         }, {
             "siglas": "uab",
             "nombre": "Universidad Autónoma de Barcelona",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela de Ingeniería",
             "provincia": "Barcelona",
             "url": "",
@@ -2727,7 +2727,7 @@
         }, {
             "siglas": "uoc",
             "nombre": "Universidad Obierta de Cataluña",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "",
             "provincia": "",
             "url": "",
@@ -2770,7 +2770,7 @@
         }, {
             "siglas": "ub",
             "nombre": "Universidad de Barcelona",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Facultad de Matemáticas",
             "provincia": "Barcelona",
             "url": "",
@@ -2814,7 +2814,7 @@
         }, {
             "siglas": "ud",
             "nombre": "Universidad de Deusto",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "Facultad de Ingeniería",
             "provincia": "Vizcaya",
             "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/estudios-0/grados-area-tic/programa-en-ingenieria-informatica",
@@ -2855,7 +2855,7 @@
         }, {
             "siglas": "udg",
             "nombre": "Universidad de Gerona",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "campus": "Campus de Gerona",
             "provincia": "Gerona",
@@ -2899,7 +2899,7 @@
         }, {
             "siglas": "udl-politecnica",
             "nombre": "Universidad de Lérida",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "Escuela Politécnica Superior",
             "campus": "Campus de Lérida",
             "provincia": "Lerida",
@@ -2943,7 +2943,7 @@
         }, {
             "siglas": "mu",
             "nombre": "Universidad de Mondragón",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "Escuela Politécnica Superior",
             "campus": "Campus de Mondragón",
             "provincia": "Gipuzkoa",
@@ -2987,7 +2987,7 @@
         }, {
             "siglas": "uned",
             "nombre": "Universidad Nacional de Educación a Distancia",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "",
             "provincia": "",
             "url": "",
@@ -3024,7 +3024,7 @@
         {
             "siglas": "urv",
             "nombre": "Universidad Rovira i Virgili",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3068,7 +3068,7 @@
         {
             "siglas": "url",
             "nombre": "Universidad Ramón Llull",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3112,7 +3112,7 @@
         {
             "siglas": "upf",
             "nombre": "Universidad Pompeu Fabra",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3156,7 +3156,7 @@
         {
             "siglas": "ue-v",
             "nombre": "Universidad Europea de Valencia",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Valencia",
             "url": "",

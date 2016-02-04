@@ -266,6 +266,7 @@ $(document).ready(function () {
                     nombre: value.nombre,
                     campus: value.campus,
                     centro: value.centro,
+                    tipo: value.tipo,
                     url: value.url,
                     siglas: value.siglas.replace(/-.*/, ''),
                     siglas_completas: value.siglas,
