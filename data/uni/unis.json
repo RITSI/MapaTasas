@@ -2029,41 +2029,41 @@
             "url": "http://www.ucam.edu/estudios/grados/informatica-presencial",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20110905061616/http://www.ucam.edu/admision/matricula",
+                "tasas1": "66.60",
+                "tasas2": "66.60",
+                "tasas3": "66.60",
+                "tasas4": "66.60"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20120926233922/http://www.ucam.edu/admision_old/matricula",
+                "tasas1": "66.60",
+                "tasas2": "66.60",
+                "tasas3": "66.60",
+                "tasas4": "66.60"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20130924114938/http://www.ucam.edu/admision/matricula",
+                "tasas1": "66.60",
+                "tasas2": "66.60",
+                "tasas3": "66.60",
+                "tasas4": "66.60"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "16.78",
-                "tasas2": "33.56",
-                "tasas3": "72.71",
-                "tasas4": "100.68"
+                "url": "https://web.archive.org/web/20140924073923/http://www.ucam.edu/admision/matricula",
+                "tasas1": "66.60",
+                "tasas2": "66.60",
+                "tasas3": "66.60",
+                "tasas4": "66.60"
             },
             "tasas_2015": {
-                "url": "http://www.borm.es/borm/documento?obj=anu&id=734649",
-                "tasas1": "16.78",
-                "tasas2": "33.56",
-                "tasas3": "72.71",
-                "tasas4": "100.68"
+                "url": "http://www.ucam.edu/admision/matricula",
+                "tasas1": "66.60",
+                "tasas2": "66.60",
+                "tasas3": "66.60",
+                "tasas4": "66.60"
             },
-            "observaciones": "3.996€ por curso para UE y 5.194,8€ para No-UE"
+            "observaciones": "Alumnos de nuevo ingreso tienen cuotas extras"
         }, {
             "siglas": "ehu-alava",
             "nombre": "Universidad del País Vasco",
