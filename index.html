@@ -15,12 +15,17 @@
 
     <script type="text/javascript" src="js/jquery.tipsy.js"></script>
     <script type="text/javascript" src="js/mapa.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen">
 
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <title>Mapa de tasas</title>
+	
+	<script>
+	  gaTrack();
+	</script>
 </head>
 
 <body>
@@ -35,8 +40,7 @@
     <div id="content">
         <div class="tabs-content">
           <ul class="tabs">
-            <li class="tab-link current" data="grado">Grado</li>
-            <li class="tab-link" data="master">Máster</li>
+            <li class="tab-link current" data="grado">Tasas de Grado</li>
           </ul>
         </div>
         <div id="maps">
