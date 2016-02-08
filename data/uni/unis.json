@@ -2454,6 +2454,13 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         },
         {
@@ -2850,6 +2857,13 @@
                 "tasas2": "34.39",
                 "tasas3": "74.52",
                 "tasas4": "103.18"
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "uoc",
@@ -2886,6 +2900,13 @@
                 "tasas2": "27.36",
                 "tasas3": "27.36",
                 "tasas4": "27.36"
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "ub",
@@ -2923,6 +2944,13 @@
                 "tasas3": "74.52",
                 "tasas4": "103.18"
             },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
             "observaciones": ""
         }, {
             "siglas": "deusto",
@@ -2953,6 +2981,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/ingenieria-informatica/ingenieria-informatica/programa?idPest=1340018657941",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
                 "tasas1": "",
                 "tasas2": "",
                 "tasas3": "",
@@ -2989,6 +3024,13 @@
                 "tasas4": ""
             },
             "tasas_2014": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
@@ -3031,6 +3073,13 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "mu",
@@ -3068,6 +3117,13 @@
                 "tasas2": "109.45",
                 "tasas3": "119.40",
                 "tasas4": "119.40"
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
             }
         }, {
             "siglas": "uned",
@@ -3145,6 +3201,13 @@
             },
             "tasas_2014": {
                 "url": "http://www.unir.net/como-matricularse.aspx#g3",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
                 "tasas1": "",
                 "tasas2": "",
                 "tasas3": "",
