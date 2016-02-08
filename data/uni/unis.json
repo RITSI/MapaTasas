@@ -477,11 +477,11 @@
                 "tasas4": "100.24"
             },
             "tasas_2015": {
-            	"url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
-            	"tasas1": "22.93",
-            	"tasas2": "34.08",
-            	"tasas3": "73.86",
-            	"tasas4": "102.24"
+                "url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
+                "tasas1": "22.93",
+                "tasas2": "34.08",
+                "tasas3": "73.86",
+                "tasas4": "102.24"
             }
         }, {
             "incomplete": ""
@@ -523,11 +523,11 @@
                 "tasas4": "100.24"
             },
             "tasas_2015": {
-            	"url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
-            	"tasas1": "22.93",
-            	"tasas2": "34.08",
-            	"tasas3": "73.86",
-            	"tasas4": "102.24"
+                "url": "http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=861195945757",
+                "tasas1": "22.93",
+                "tasas2": "34.08",
+                "tasas3": "73.86",
+                "tasas4": "102.24"
 
             }
         }, {
@@ -759,7 +759,7 @@
             "provincia": "Salamanca",
             "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
             "convenios": [],
-                        "tasas_2011": {
+            "tasas_2011": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
@@ -804,7 +804,7 @@
             "provincia": "Madrid",
             "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
             "convenios": [],
-                        "tasas_2011": {
+            "tasas_2011": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
@@ -1125,9 +1125,9 @@
                 "tasas3": "90.10",
                 "tasas4": "124.76"
             },
-            "tasas_2015":{
-            	"url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
-            	"tasas1": "27.72",
+            "tasas_2015": {
+                "url": "http://campus.usal.es/~gesacad/coordinacion/normativaproce/tasasbocyl.PDF",
+                "tasas1": "27.72",
                 "tasas2": "41.59",
                 "tasas3": "90.10",
                 "tasas4": "124.76"
@@ -1177,10 +1177,6 @@
                 "tasas4": "93.36"
             }
         },
-
-
-
-
         {
             "siglas": "uclm-albacete",
             "nombre": "Universidad de Castilla-La Mancha",
@@ -1270,7 +1266,6 @@
                 "tasas4": "113.20"
             }
         },
-
         {
             "siglas": "uex-caceres",
             "nombre": "Universidad de Extremadura",
@@ -1531,11 +1526,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "urjc",
@@ -1575,11 +1570,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "uc3m",
@@ -1619,11 +1614,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "uam",
@@ -1663,11 +1658,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "uah",
@@ -1707,11 +1702,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "upm-montegarcedo",
@@ -1751,11 +1746,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "siglas": "upm-campus sur",
@@ -1795,11 +1790,11 @@
                 "tasas4": "142.82"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
         }, {
             "_comment": "privadas Madrid"
@@ -1812,7 +1807,7 @@
             "provincia": "Madrid",
             "url": "http://www.uspceu.com/es/estudios/grado/escuela-politecnica-superior/index.php",
             "convenios": [],
-                        "tasas_2011": {
+            "tasas_2011": {
                 "url": "",
                 "tasas1": "",
                 "tasas2": "",
@@ -2461,7 +2456,6 @@
                 "tasas4": ""
             }
         },
-
         {
             "siglas": "ua",
             "nombre": "Universidad de Alicante",
@@ -2507,7 +2501,6 @@
                 "tasas4": "118.07"
             }
         },
-
         {
             "siglas": "umh",
             "nombre": "Universidad Miguel Hernández de Elche",
@@ -3113,11 +3106,11 @@
                 "tasas4": "90.00"
             },
             "tasas_2015": {
-            	"url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
-            	"tasas1": "27.90",
-            	"tasas2": "51.42",
-            	"tasas3": "96.43",
-            	"tasas4": "128.57"
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             }
 
         }, {

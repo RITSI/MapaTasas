@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //Intento de diseño responsive
     if ($(window).width() < 480) {
         $("#content").attr('class', "row");
@@ -18,60 +18,60 @@ $(document).ready(function() {
 
     //Proyección Albers de los datos con ajustes para la Península
     var projection = d3.geo.albers()
-        .center([0, 39.23])
-        .rotate([3.4, 0])
-        .parallels([50, 90])
-        .scale(1200 * 2.3)
-        .translate([width / 2.5, height / 2]);
+            .center([0, 39.23])
+            .rotate([3.4, 0])
+            .parallels([50, 90])
+            .scale(1200 * 2.3)
+            .translate([width / 2.5, height / 2]);
 
     /*Creacion de un path según los ajustes de proyección*/
     var path = d3.geo.path()
-        .projection(projection);
+            .projection(projection);
 
     /*Se añade un svg al div que contendrá el mapa*/
     var svg = d3.select("#map")
-        .append("svg")
-        .append("g")
-        .attr("width", width)
-        .attr("height", height);
+            .append("svg")
+            .append("g")
+            .attr("width", width)
+            .attr("height", height);
 
 
     /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
-    Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
-    no ASCII, no funcionaría*/
-    d3.json("maps/esp.json", function(error, esp) {
+     Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
+     no ASCII, no funcionaría*/
+    d3.json("maps/esp.json", function (error, esp) {
         //Se añaden una a una las provincias descritas en el JSON
         svg.selectAll(".subunit")
-            .data(topojson.feature(esp, esp.objects.subunits).features)
-            .enter().append("path")
-            .attr("class", function(d) {
-                return "subunit " + d.id;
-            })
-            .attr("d", path)
-            //Se asignan handlers a los eventos de interes
-            .on("mouseover", provincia_hover)
-            .on("click", provincia_click);
+                .data(topojson.feature(esp, esp.objects.subunits).features)
+                .enter().append("path")
+                .attr("class", function (d) {
+                    return "subunit " + d.id;
+                })
+                .attr("d", path)
+                //Se asignan handlers a los eventos de interes
+                .on("mouseover", provincia_hover)
+                .on("click", provincia_click);
 
         svg.append("path")
-            .datum(topojson.mesh(esp, esp.objects.subunits, function(a, b) {
-                return a !== b
-            }))
-            .attr("d", path)
-            .attr("class", "subunit-boundary");
+                .datum(topojson.mesh(esp, esp.objects.subunits, function (a, b) {
+                    return a !== b
+                }))
+                .attr("d", path)
+                .attr("class", "subunit-boundary");
     });
 
 
     /*El diseño responsive del mapa no funciona con propiedades CSS, 
-    debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
+     debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
     d3.select(window).on('resize', sizeChange);
     sizeChange();
 
     // Cómputo de la media nacional con los datos disponibles:
     var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014'];
     var average = {},
-        avCount = {};
+            avCount = {};
 
-    indexes.forEach(function(index) {
+    indexes.forEach(function (index) {
         average[index] = 0;
         avCount[index] = 0;
     });
@@ -79,20 +79,20 @@ $(document).ready(function() {
     // Si se pone a true, faltan datos de tasas de algún centro
     var avError = false;
 
-    d3.json("data/uni/unis.json", function(error, file) {
-        file.unis.forEach(function(uni) {
+    d3.json("data/uni/unis.json", function (error, file) {
+        file.unis.forEach(function (uni) {
             // Para cada centro
-            indexes.forEach(function(index) {
+            indexes.forEach(function (index) {
                 // Para cada año
                 if (uni[index] && uni[index]['tasas1']) {
                     average[index] += parseInt(uni[index]['tasas1']);
-                    avCount[index] ++;
+                    avCount[index]++;
                 } else
                     avError = true;
             });
         });
 
-        indexes.forEach(function(index) {
+        indexes.forEach(function (index) {
             if (avCount[index])
                 average[index] /= avCount[index];
             else
@@ -126,7 +126,7 @@ $(document).ready(function() {
         $('.subunit').tipsy({
             gravity: 's',
             html: true,
-            title: function() {
+            title: function () {
                 var m = this.__data__;
                 //Se retorna el valor Unicode del nombre ASCII
                 return m.properties.name;
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
     //Al dispararse este evento, se cargan los valores
     function provincia_click(d) {
-        switch($('.current').attr('data')){
+        switch ($('.current').attr('data')) {
             case "master":
                 cargar_master(d);
                 break;
@@ -145,10 +145,10 @@ $(document).ready(function() {
                 cargar_grado(d);
                 break;
         }
-        
+
     }
 
-    function cargar_grado(d){
+    function cargar_grado(d) {
         var resultados = [];
         var convenios_filter = [];
 
@@ -156,25 +156,26 @@ $(document).ready(function() {
         $('#bootstrap_lista_units').html('');
 
         //Filtrado de las universidades presentes en la provincia
-        d3.json("data/uni/unis.json", function(error, unis) {
+        d3.json("data/uni/unis.json", function (error, unis) {
             var universidades = unis.unis;
             /*Se recorren todas las universidades presentes, 
-            y si alguna tiene como provincia la seleccionada por el cursor, 
-            se incluye en el array*/
-            $.each(universidades, function(index, value) {
+             y si alguna tiene como provincia la seleccionada por el cursor, 
+             se incluye en el array*/
+            $.each(universidades, function (index, value) {
                 if (value.provincia === d.id)
                     resultados.push(value);
             });
 
             var universidades_provincia = [];
             if (resultados.length > 0) {
-                $.each(resultados, function(index, value) {
+                $.each(resultados, function (index, value) {
                     universidades_provincia.push(resultados[index]);
                     for (var i = universidades.length - 1; i >= 0; i--) {
                         if (resultados[index].convenios.indexOf(universidades[i].siglas) > -1) {
                             convenios_filter.push(universidades[i]);
                         }
-                    };
+                    }
+                    ;
                 });
                 create_dropdown_grado(universidades_provincia, convenios_filter);
             } else {
@@ -184,20 +185,20 @@ $(document).ready(function() {
         });
     }
 
-    function cargar_master(d){
+    function cargar_master(d) {
         var resultados = [];
         //Vaciado de los datos
         $('#bootstrap_lista_units').html('');
 
-        d3.json("data/uni/unis-master.json", function(error, unis){
+        d3.json("data/uni/unis-master.json", function (error, unis) {
             var universidades = unis.unis;
-             $.each(universidades, function(index, value) {
+            $.each(universidades, function (index, value) {
                 if (value.provincia === d.id)
                     resultados.push(value);
             });
-            if(resultados.length < 1){
+            if (resultados.length < 1) {
                 $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
-            }else{
+            } else {
 
                 create_dropdown_grado(resultados, undefined);
             }
@@ -207,7 +208,7 @@ $(document).ready(function() {
     function create_graph(value) {
         if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
             var averageErrorFlag = "",
-                averageErrorText = "";
+                    averageErrorText = "";
 
             if (avError) {
                 averageErrorFlag = "*";
@@ -240,7 +241,7 @@ $(document).ready(function() {
                     }
                 }
             });
-    
+
             $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
         }
 
@@ -250,14 +251,14 @@ $(document).ready(function() {
     function create_dropdown_grado(universidades_provincia, universidades) {
         var dropdown = [];
         var graph_data = {};
-        $.each(universidades_provincia, function(index, value) {
+        $.each(universidades_provincia, function (index, value) {
             /*Los campus siguen  la regla {{universidad}}-{{nombre campus}}, 
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
 
             //El archivo .mst contiene la plantilla compatible con Mustache
-            $.get('templates/template_universidad_provincia.mst', function(template_universidad_provincia) {
+            $.get('templates/template_universidad_provincia.mst', function (template_universidad_provincia) {
                 //Se añaden los datos del curso actual, y los datos generales
                 var render_resultados = Mustache.render(template_universidad_provincia, {
                     nombre: value.nombre,
@@ -272,36 +273,36 @@ $(document).ready(function() {
                     tasas3: value.tasas_2014.tasas3,
                     tasas4: value.tasas_2014.tasas4,
                     urls: [{
-                        "url": value.tasas_2011.url,
-                        "fecha": 2011
-                    }, {
-                        "url": value.tasas_2012.url,
-                        "fecha": 2012
-                    }, {
-                        "url": value.tasas_2013.url,
-                        "fecha": 2013
-                    }, {
-                        "url": value.tasas_2014.url,
-                        "fecha": 2014
-                    }]
+                            "url": value.tasas_2011.url,
+                            "fecha": 2011
+                        }, {
+                            "url": value.tasas_2012.url,
+                            "fecha": 2012
+                        }, {
+                            "url": value.tasas_2013.url,
+                            "fecha": 2013
+                        }, {
+                            "url": value.tasas_2014.url,
+                            "fecha": 2014
+                        }]
                 });
 
                 $('#bootstrap_lista_units').append(render_resultados); //.create_graph(value);
                 //create_graph(value);
-                 
+
                 var panelsButton = $('.dropdown-user');
-                var panels = $('.drop-'+value.siglas.replace('/-.*/',''));
+                var panels = $('.drop-' + value.siglas.replace('/-.*/', ''));
                 panels.hide();
 
                 //Se desactivan todos los eventos, dado que en caso contrario origina problemas al añadir y eliminar un panel de información (se superponen eventos)
                 panelsButton.off();
                 //Se reañade el evento
-                panelsButton.click(function() {
+                panelsButton.click(function () {
                     //Se obtiene el atributo data-for
                     var dataFor = $(this).attr('data-for');
                     var idFor = $(dataFor);
                     var currentButton = $(this);
-                    idFor.slideToggle(400, function() {
+                    idFor.slideToggle(400, function () {
 
                         if (idFor.is(':visible')) {
                             currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
@@ -309,8 +310,10 @@ $(document).ready(function() {
                             currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
                         }
 
-                        d3.json("data/uni/unis.json", function(error, unis) {
-                            var value = $.grep(unis.unis, function(e,i){return e.siglas === dataFor.replace('\.drop-','')});
+                        d3.json("data/uni/unis.json", function (error, unis) {
+                            var value = $.grep(unis.unis, function (e, i) {
+                                return e.siglas === dataFor.replace('\.drop-', '')
+                            });
                             create_graph(value[0]);
                         });
                     });
@@ -318,16 +321,16 @@ $(document).ready(function() {
                 });
                 $('[data-toggle="tooltip"]').tooltip();
             });
-        }); 
+        });
     }
-    $('.tab-link').click(function(){
+    $('.tab-link').click(function () {
         $link = $(this);
-        if(!($link.hasClass('current'))){
+        if (!($link.hasClass('current'))) {
             $('.current').removeClass('current');
             $link.addClass('current');
             datos = $link.attr('data');
-            
-            $('#bootstrap_lista_units').html('<p>Haz click en una provincia para conocer la oferta de estudios de '+(datos == "grado" ? datos : "máster")+'.</p>');
+
+            $('#bootstrap_lista_units').html('<p>Haz click en una provincia para conocer la oferta de estudios de ' + (datos == "grado" ? datos : "máster") + '.</p>');
         }
     });
 
