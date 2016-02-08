@@ -67,7 +67,7 @@ $(document).ready(function () {
     sizeChange();
 
     // Cómputo de la media nacional con los datos disponibles:
-    var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014'];
+    var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014', 'tasas_2015'];
     var average = {},
             avCount = {};
 
@@ -206,7 +206,7 @@ $(document).ready(function () {
     }
 
     function create_graph(value) {
-        if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013) {
+        if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013 && value.tasas_2014 && value.tasas_2015) {
             var averageErrorFlag = "",
                     averageErrorText = "";
 
@@ -223,12 +223,12 @@ $(document).ready(function () {
                     x: 'x',
                     x_format: '%Y',
                     columns: [
-                        ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014')],
-                        ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1],
-                        ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2],
-                        ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3],
-                        ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4],
-                        ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2)]
+                        ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014'), new Date('2015')],
+                        ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1, value.tasas_2015.tasas1],
+                        ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2, value.tasas_2015.tasas2],
+                        ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3, value.tasas_2015.tasas3],
+                        ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4, value.tasas_2015.tasas4],
+                        ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2), average['tasas_2015'].toFixed(2)]
                     ]
                 },
                 axis: {
@@ -241,7 +241,9 @@ $(document).ready(function () {
                     }
                 }
             });
-
+            if (value.observaciones) {
+                $('#chart-' + value.siglas).append('<p class="alert alert-info">' + value.observaciones + '</p>');
+            }
             $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
         }
 
@@ -267,11 +269,13 @@ $(document).ready(function () {
                     url: value.url,
                     siglas: value.siglas.replace(/-.*/, ''),
                     siglas_completas: value.siglas,
+                    observaciones: value.observaciones,
                     clase: 'chart-' + value.siglas,
                     tasas1: value.tasas_2014.tasas1,
                     tasas2: value.tasas_2014.tasas2,
                     tasas3: value.tasas_2014.tasas3,
                     tasas4: value.tasas_2014.tasas4,
+                    tasas5: value.tasas_2015.tasas5,
                     urls: [{
                             "url": value.tasas_2011.url,
                             "fecha": 2011
@@ -284,6 +288,9 @@ $(document).ready(function () {
                         }, {
                             "url": value.tasas_2014.url,
                             "fecha": 2014
+                        }, {
+                            "url": value.tasas_2015.url,
+                            "fecha": 2015
                         }]
                 });
 
