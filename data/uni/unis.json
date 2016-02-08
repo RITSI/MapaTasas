@@ -1753,7 +1753,7 @@
                 "tasas4": "128.57"
             }
         }, {
-            "siglas": "upm-campus sur",
+            "siglas": "upm-campus-sur",
             "nombre": "Universidad Politécnica de Madrid",
             "tipo": "pública",
             "centro": "Escuela Técnica Superior de Ingeniería de Sistemas Informáticos",
@@ -1799,7 +1799,7 @@
         }, {
             "_comment": "privadas Madrid"
         }, {
-            "siglas": "ups-ceu",
+            "siglas": "ceu",
             "nombre": "Universidad CEU San Pablo",
             "tipo": "privada",
             "centro": "",
