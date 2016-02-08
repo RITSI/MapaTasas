@@ -259,40 +259,48 @@ $(document).ready(function () {
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
 
+            var estructura = {
+                nombre: value.nombre,
+                campus: value.campus,
+                centro: value.centro,
+                url: value.url,
+                siglas: value.siglas.replace(/-.*/, ''),
+                siglas_completas: value.siglas,
+                observaciones: value.observaciones,
+                clase: 'chart-' + value.siglas,
+                tasas1: value.tasas_2014.tasas1,
+                tasas2: value.tasas_2014.tasas2,
+                tasas3: value.tasas_2014.tasas3,
+                tasas4: value.tasas_2014.tasas4,
+                urls: [{
+                        "url": value.tasas_2011.url,
+                        "fecha": 2011
+                    }, {
+                        "url": value.tasas_2012.url,
+                        "fecha": 2012
+                    }, {
+                        "url": value.tasas_2013.url,
+                        "fecha": 2013
+                    }, {
+                        "url": value.tasas_2014.url,
+                        "fecha": 2014
+                    }, {
+                        "url": value.tasas_2015.url,
+                        "fecha": 2015
+                    }]
+            }
+
+            for (x = 0; x < estructura.urls.length; x++) {
+                if (!estructura.urls[x].url) {
+                    estructura.urls.splice(x, 1);
+                    x--;
+                }
+            }
+
             //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('templates/template_universidad_provincia.mst', function (template_universidad_provincia) {
                 //Se añaden los datos del curso actual, y los datos generales
-                var render_resultados = Mustache.render(template_universidad_provincia, {
-                    nombre: value.nombre,
-                    campus: value.campus,
-                    centro: value.centro,
-                    url: value.url,
-                    siglas: value.siglas.replace(/-.*/, ''),
-                    siglas_completas: value.siglas,
-                    observaciones: value.observaciones,
-                    clase: 'chart-' + value.siglas,
-                    tasas1: value.tasas_2014.tasas1,
-                    tasas2: value.tasas_2014.tasas2,
-                    tasas3: value.tasas_2014.tasas3,
-                    tasas4: value.tasas_2014.tasas4,
-                    tasas5: value.tasas_2015.tasas5,
-                    urls: [{
-                            "url": value.tasas_2011.url,
-                            "fecha": 2011
-                        }, {
-                            "url": value.tasas_2012.url,
-                            "fecha": 2012
-                        }, {
-                            "url": value.tasas_2013.url,
-                            "fecha": 2013
-                        }, {
-                            "url": value.tasas_2014.url,
-                            "fecha": 2014
-                        }, {
-                            "url": value.tasas_2015.url,
-                            "fecha": 2015
-                        }]
-                });
+                var render_resultados = Mustache.render(template_universidad_provincia, estructura);
 
                 $('#bootstrap_lista_units').append(render_resultados); //.create_graph(value);
                 //create_graph(value);
