@@ -755,44 +755,44 @@
             "nombre": "Universidad Pontificia de Salamanca",
             "tipo": "Privada",
             "centro": "",
-            "campus": "",
+            "campus": "Campus de Salamanca",
             "provincia": "Salamanca",
             "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20110723163515/http://www.upsa.es/estudios/grados/informatica/ficha.php",
+                "tasas1": "97",
+                "tasas2": "116",
+                "tasas3": "45",
+                "tasas4": "45"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20121017155312/http://www.upsa.es/estudios/grados/pdf/TasasUPSA_2012-2013.pdf",
+                "tasas1": "97",
+                "tasas2": "116.40",
+                "tasas3": "46",
+                "tasas4": "46"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://www.upsa.es/admision/admision-y-matricula/pdf/tasas_grados_2013-14.pdf",
+                "tasas1": "97",
+                "tasas2": "116.40",
+                "tasas3": "47",
+                "tasas4": "47"
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://www.upsa.es/admision/admision-y-matricula/pdf/tasas_grado_14_15.pdf",
+                "tasas1": "97",
+                "tasas2": "116.40",
+                "tasas3": "48",
+                "tasas4": "48"
             },
             "tasas_2015": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://www.upsa.es/admision/admision-y-matricula/pdf/tasas_grado_15_16.pdf",
+                "tasas1": "97",
+                "tasas2": "116.40",
+                "tasas3": "50",
+                "tasas4": "50"
 
             }
         }, {
@@ -805,18 +805,18 @@
             "url": "http://www.upsa.es/estudiar/estudios/titulacion/ficha.php?idTit=1005",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20110806155612/http://www.upsam.com/index.php?option=com_content&view=article&id=104&Itemid=232",
+                "tasas1": "69.8",
+                "tasas2": "50",
+                "tasas3": "50",
+                "tasas4": "50"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20120620155941/http://www.upsam.com/index.php?option=com_content&view=article&id=104&Itemid=232",
+                "tasas1": "76.83",
+                "tasas2": "52",
+                "tasas3": "50",
+                "tasas4": "50"
             },
             "tasas_2013": {
                 "url": "",
@@ -826,11 +826,11 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "https://web.archive.org/web/20150426144207/http://www.upsam.com/index.php?option=com_content&view=article&id=104&Itemid=232",
+                "tasas1": "78.13",
+                "tasas2": "53",
+                "tasas3": "53",
+                "tasas4": "53"
             },
             "tasas_2015": {
                 "url": "",
@@ -1803,7 +1803,7 @@
             "nombre": "Universidad CEU San Pablo",
             "tipo": "Privada",
             "centro": "",
-            "campus": "",
+            "campus": "Campus de Madrid",
             "provincia": "Madrid",
             "url": "http://www.uspceu.com/es/estudios/grado/escuela-politecnica-superior/index.php",
             "convenios": [],
@@ -1829,61 +1829,62 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20140702194618/http://www.uspceu.com/es/estudios/admision-y-matricula/honorarios-y-precios/eps.php",
+                "tasas1": "148",
+                "tasas2": "148",
+                "tasas3": "148",
+                "tasas4": "148"
             },
             "tasas_2015": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20150723070806/http://www.uspceu.com/es/estudios/admision-y-matricula-grado/honorarios-y-precios/eps.php",
+                "tasas1": "148",
+                "tasas2": "148",
+                "tasas3": "148",
+                "tasas4": "148"
             }
         }, {
             "siglas": "udima",
             "nombre": "Universidad a Distancia de Madrid",
             "tipo": "Privada",
             "centro": "",
+            "campus": "Campus de Collado Villalba",
             "provincia": "Madrid",
             "url": "http://www.udima.es/es/precios.html",
             "convenios": [],
             "tasas_2011": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20110721204729/http://www.udima.es/es/precios.html",
+                "tasas1": "71",
+                "tasas2": "35.5",
+                "tasas3": "35.5",
+                "tasas4": "35.5"
             },
             "tasas_2012": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20120701003645/http://www.udima.es/es/precios.html",
+                "tasas1": "73",
+                "tasas2": "36.5",
+                "tasas3": "36.5",
+                "tasas4": "36.5"
             },
             "tasas_2013": {
-                "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20130701144713/http://www.udima.es/es/precios.html",
+                "tasas1": "74",
+                "tasas2": "37",
+                "tasas3": "37",
+                "tasas4": "37"
             },
             "tasas_2014": {
-                "url": "",
+                "url": "http://web.archive.org/web/20140625054404/http://udima.es/es/grado-ingenieria-informatica.html#precios-calendario-matriculacion",
                 "tasas1": "75",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas2": "37.5",
+                "tasas3": "37.5",
+                "tasas4": "37.5"
             },
             "tasas_2015": {
-                "url": "",
-                "tasas1": "75",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "url": "http://web.archive.org/web/20150729155117/http://www.udima.es/es/grado-ingenieria-informatica.html#precios-calendario-matriculacion",
+                "tasas1": "76",
+                "tasas2": "38",
+                "tasas3": "38",
+                "tasas4": "38"
             },
             "observaciones": ""
         }, {
