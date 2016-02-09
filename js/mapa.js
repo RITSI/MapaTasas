@@ -242,7 +242,7 @@ $(document).ready(function () {
                 }
             });
             if (value.observaciones) {
-                $('#chart-' + value.siglas).append('<p class="alert alert-info">' + value.observaciones + '</p>');
+                $('#chart-' + value.siglas).prepend('<p class="alert alert-info">' + value.observaciones + '</p>');
             }
             $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
         }
@@ -258,7 +258,10 @@ $(document).ready(function () {
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
             var siglas = value.siglas.replace(/\-.*/g, '');
-
+            
+            /*
+             * creamos la estructura
+             */ 
             var estructura = {
                 nombre: value.nombre,
                 campus: value.campus,
@@ -289,11 +292,12 @@ $(document).ready(function () {
                         "fecha": 2015
                     }]
             }
-
+            
+            //Recorremos todas las urls
             for (x = 0; x < estructura.urls.length; x++) {
-                if (!estructura.urls[x].url) {
+                if (!estructura.urls[x].url) { //si la url no tiene datos
                     estructura.urls.splice(x, 1);
-                    x--;
+                    x--; //al eliminar un elemento, todos los demas cambian de índice
                 }
             }
 
