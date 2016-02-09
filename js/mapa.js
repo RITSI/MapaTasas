@@ -135,7 +135,7 @@ $(document).ready(function () {
     }
 
     //Al dispararse este evento, se cargan los valores
-    function provincia_click(d) {
+    function provincia_click(d) {        
         switch ($('.current').attr('data')) {
             case "master":
                 cargar_master(d);
@@ -266,6 +266,7 @@ $(document).ready(function () {
                 nombre: value.nombre,
                 campus: value.campus,
                 centro: value.centro,
+                tipo: value.tipo,
                 url: value.url,
                 siglas: value.siglas.replace(/-.*/, ''),
                 siglas_completas: value.siglas,
@@ -300,7 +301,7 @@ $(document).ready(function () {
                     x--; //al eliminar un elemento, todos los demas cambian de índice
                 }
             }
-
+            
             //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('templates/template_universidad_provincia.mst', function (template_universidad_provincia) {
                 //Se añaden los datos del curso actual, y los datos generales
