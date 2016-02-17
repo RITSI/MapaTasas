@@ -272,10 +272,10 @@ $(document).ready(function () {
                 siglas_completas: value.siglas,
                 observaciones: value.observaciones,
                 clase: 'chart-' + value.siglas,
-                tasas1: value.tasas_2014.tasas1,
-                tasas2: value.tasas_2014.tasas2,
-                tasas3: value.tasas_2014.tasas3,
-                tasas4: value.tasas_2014.tasas4,
+                tasas1: value.tasas_2015.tasas1,
+                tasas2: value.tasas_2015.tasas2,
+                tasas3: value.tasas_2015.tasas3,
+                tasas4: value.tasas_2015.tasas4,
                 urls: [{
                         "url": value.tasas_2011.url,
                         "fecha": 2011
