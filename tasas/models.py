@@ -17,10 +17,14 @@ class Universidad(models.Model):
     tipo = models.IntegerField(choices=TIPO_UNIVERSIDAD_CHOICES, null=False, blank=False,
                                help_text=ugettext_lazy("Tipo de centro (público/privado)"))
     centro = models.CharField(max_length=200, null=False, blank=False, help_text=ugettext_lazy("Nombre del centro"))
-    provincia = models.CharField(max_length=50, choices=provincias, help_text=ugettext_lazy("Provincia"))
+    provincia = models.CharField(max_length=50, choices=provincias, blank=False, null=False,
+                                 help_text=ugettext_lazy("Provincia"))
     logo = models.ImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
                              help_text=ugettext_lazy("Escudo de la universidad"))
-    url = models.URLField(max_length=300, null=False, blank=True,
+
+    campus = models.CharField(max_length=200, null=True, blank=True,
+                              help_text=ugettext_lazy("Nombre del campus")) # TODO: Hacer obligatorio?
+    url = models.URLField(max_length=300, null=True, blank=True,
                           help_text=ugettext_lazy("URL del centro"))
 
     def __str__(self):
