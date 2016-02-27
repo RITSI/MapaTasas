@@ -44,6 +44,9 @@ class Universidad(models.Model):
         """
         return re.sub(r'\-.*', '', siglas)
 
+    def get_provincia_unicode(self):
+        return dict(provincias).get(self.provincia)
+
     def __str__(self):
         return self.nombre
 

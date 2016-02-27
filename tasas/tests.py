@@ -12,9 +12,11 @@ from .models import Universidad
 
 
 class TestImportarCommand(TestCase):
+
     def setUp(self):
         self.args = {'file':'tasas/unis.json', 'img-dir': 'img'}
         self.command = importar.Command()
+
     def test_invalid_data(self):
 
         with self.assertRaises(CommandError):
@@ -23,6 +25,7 @@ class TestImportarCommand(TestCase):
 
     #@patch.object(ImageField, 'save')
     def test_null_keys(self):
+
         invalid_data ={'unis':
                            [{"siglas": "ual",
                             "nombre": "Universidad de Almería",
@@ -71,3 +74,10 @@ class TestUniversidadModel(TestCase):
 
         for data in valid_data:
             self.assertEqual(data[1], Universidad.get_siglas_no_centro(data[0]))
+
+    def test_provincia_unicode(self):
+
+        uni = Universidad()
+        uni.provincia = 'Avila'
+
+        self.assertEqual(uni.get_provincia_unicode(), "Ávila")
