@@ -5,8 +5,13 @@ from django.utils.translation import ugettext_lazy
 from tasasrest import settings
 from .provincias import PROVINCIAS as provincias
 
+import re
 
 class Universidad(models.Model):
+
+    def __init__(self, *args, **kwargs):
+        self.get_siglas_no_centro = self._get_siglas_no_centro
+        super(Universidad, self).__init__(*args, **kwargs)
 
     TIPO_UNIVERSIDAD_CHOICES = ((0, 'Pública'), (1, 'Privada'))
 
@@ -16,7 +21,7 @@ class Universidad(models.Model):
                               help_text=ugettext_lazy("Nombre de la universidad"))
     tipo = models.IntegerField(choices=TIPO_UNIVERSIDAD_CHOICES, null=False, blank=False,
                                help_text=ugettext_lazy("Tipo de centro (público/privado)"))
-    centro = models.CharField(max_length=200, null=False, blank=False, help_text=ugettext_lazy("Nombre del centro"))
+    centro = models.CharField(max_length=200, null=True, blank=True, help_text=ugettext_lazy("Nombre del centro"))
     provincia = models.CharField(max_length=50, choices=provincias, blank=False, null=False,
                                  help_text=ugettext_lazy("Provincia"))
     logo = models.ImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
@@ -26,6 +31,18 @@ class Universidad(models.Model):
                               help_text=ugettext_lazy("Nombre del campus")) # TODO: Hacer obligatorio?
     url = models.URLField(max_length=300, null=True, blank=True,
                           help_text=ugettext_lazy("URL del centro"))
+
+    def _get_siglas_no_centro(self):
+        return self.get_siglas_no_centro(self.siglas)
+
+    @staticmethod
+    def get_siglas_no_centro(siglas):
+        """
+        Elimina el sufijo del centro, útil para procesar imágenes
+        Returns:
+
+        """
+        return re.sub(r'\-.*', '', siglas)
 
     def __str__(self):
         return self.nombre

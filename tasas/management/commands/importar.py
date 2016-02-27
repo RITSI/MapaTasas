@@ -1,8 +1,12 @@
 from django.utils.translation import gettext as _
 from django.core.management.base import BaseCommand, CommandError
 from django.core.validators import ValidationError
+from django.core.files import File
+from django.db import models
 
 import json
+import os
+import warnings
 
 from tasas.models import Universidad, Tasa
 
@@ -19,21 +23,23 @@ class Command(BaseCommand):
             None
         """
         parser.add_argument('file', type=str, help=_("Archivo json"))
-        #parser.add_argument('img-dir', nargs=1, type=str, default='img',
-        #                    help=_("Directorio con los logos de la universidad"))
+        parser.add_argument('img-dir', type=str, default='img/uni/',
+                            help=_("Directorio con los logos de la universidad"))
+        parser.add_argument('--overwrite', action='store_true',
+                            help=_("Sobreescribe la información"), dest='overwrite')
         # TODO: Add help parameter
     def handle(self, *args, **options):
         try:
-            with open(options.get('file', None), 'r') as f:
+            with open(options.get('file', ''), 'r') as f:
                 data = json.load(f)
         except IOError:
             print(_("Archivo no encontrado"))
             return
 
-        self.parse_file(data)
+        self.parse_file(data, options.get('img-dir'), options.get('overwrite', False))
 
 
-    def parse_file(self, data, img_dir='img'):
+    def parse_file(self, data, img_path='img/uni', overwrite=False):
         unis = data.get('unis', None)
 
         if unis is None or type(unis) is not list:
@@ -41,15 +47,11 @@ class Command(BaseCommand):
 
         for uni in unis:
             try:
-                self.add_uni(uni)
+                self.add_uni(uni, img_path, overwrite)
             except ValidationError as v:
-                print("Error en clave: %s: %s" % (uni.get('nombre'), v))
-        """
-            logo = models.ImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
-                                     help_text=ugettext_lazy("Escudo de la universidad"))
-        """
+                warnings.warn("Error en clave: %s: %s" % (uni.get('siglas'), v), UserWarning)
 
-    def add_uni(self, uni):
+    def add_uni(self, uni, img_path, overwrite=False):
         """
         Añade la universidad a la base de datos
         Args:
@@ -58,7 +60,11 @@ class Command(BaseCommand):
         Returns:
 
         """
-        universidad = Universidad()
+        try:
+            universidad = Universidad.objects.get(siglas=uni.get('siglas'))
+            if not overwrite: return
+        except Universidad.DoesNotExist:
+            universidad = Universidad()
         universidad.siglas = uni.get('siglas')
         universidad.nombre = uni.get('nombre')
 
@@ -67,14 +73,31 @@ class Command(BaseCommand):
         universidad.provincia = uni.get('provincia')
         universidad.campus = uni.get('campus')
         universidad.url = uni.get('url')
-        universidad.logo = self.add_logo(uni)
+
+        if self.validate_logo(uni, img_path) is True:
+            try:
+                with open(os.path.join(img_path, 'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))), 'rb') as f:
+                    logo = File(f)
+                    universidad.logo.save('uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas')), logo, save=True)
+            except IOError:
+                warnings.warn("Error al abrir imagen %s" % uni+'.jpg')
+
         # TODO: Añadir convenios?
         universidad.clean_fields()
         universidad.save()
 
-    def add_logo(self, uni):
-        pass
-    
+    def validate_logo(self, uni, img_path):
+        if uni.get('siglas', None) is None:
+            raise ValidationError("Siglas no válidas")
+
+        if not os.path.isdir(img_path):
+            warnings.warn("Directorio %s no válido" % img_path, UserWarning)
+            return False
+
+        return os.path.isfile(os.path.join(img_path, 'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))))
+
+
+
     def get_tipo_uni(self, tipo):
         """
         Retorna el valor asociado al tipo de universidad en la base de datos
