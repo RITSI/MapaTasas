@@ -7,6 +7,7 @@ body {
     font-family: 'Play', sans-serif;
     font-style: normal;
     font-weight: 400;
+    padding-bottom: 100px;
 }
 
 #logo {
@@ -298,6 +299,12 @@ ul.tabs li{
 ul.tabs li.current{
     background: #ededed;
     color: #222;
+}
+
+.navbar-fixed-bottom {
+    background-color: #5c4c4c;
+    border-color: #5c4c4c;
+    min-height: 20px;
 }
 
 .uni-tipo {
