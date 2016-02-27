@@ -569,9 +569,9 @@
             "tasas_2015": {
                 "url": "https://sede.asturias.es/bopa/2015/06/13/2015-10350.pdf",
                 "tasas1": "17.26",
-                "tasas2": "29.67",
-                "tasas3": "45.63",
-                "tasas4": "58.46"
+                "tasas2": "28.26",
+                "tasas3": "41.48",
+                "tasas4": "48.72"
             }
         }, {
             "siglas": "uo-gijon",
@@ -613,9 +613,9 @@
             "tasas_2015": {
                 "url": "https://sede.asturias.es/bopa/2015/06/13/2015-10350.pdf",
                 "tasas1": "17.26",
-                "tasas2": "29.67",
-                "tasas3": "45.63",
-                "tasas4": "58.46"
+                "tasas2": "28.26",
+                "tasas3": "41.48",
+                "tasas4": "48.72"
             }
         }, {
             "siglas": "uib",
@@ -863,7 +863,7 @@
                 "uco",
                 "uex-caceres",
                 "umu",
-                "ehu-ss",
+                "epv-ehu",
                 "urjc",
                 "unizar"
             ],
@@ -1170,17 +1170,17 @@
             },
             "tasas_2014": {
                 "url": "http://www.cantabrialiberal.com/noticia.php?id=246282&noticia=Catalu%F1a%20mantendr%E1%20congeladas%20las%20tasas%20universitarias%20%22durante%20un%20tiempo%20largo%22",
-                "tasas1": "15.56",
-                "tasas2": "31.12",
-                "tasas3": "67.42",
-                "tasas4": "93.36"
+                "tasas1": "13.93",
+                "tasas2": "19.3",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
             },
             "tasas_2015": {
                 "url": "http://web.unican.es/admision/Documents/Precios%20y%20tasas/Precios%20Grado%20%202015-2016.pdf",
-                "tasas1": "15.56",
-                "tasas2": "31.12",
-                "tasas3": "67.42",
-                "tasas4": "93.36"
+                "tasas1": "13.93",
+                "tasas2": "19.3",
+                "tasas3": "31.21",
+                "tasas4": "39.79"
             }
         },
         {
@@ -1218,14 +1218,14 @@
                 "tasas1": "18.87",
                 "tasas2": "37.73",
                 "tasas3": "81.76",
-                "tasas4": "113.20"
+                "tasas4": "113.2"
             },
             "tasas_2015": {
                 "url": "http://www.uclm.es/estudiantes/guiamatricula/pdf/ExtractoPreciosPublicos.pdf",
                 "tasas1": "18.87",
                 "tasas2": "37.73",
                 "tasas3": "81.76",
-                "tasas4": "113.20"
+                "tasas4": "113.2"
             }
         }, {
             "siglas": "uclm-ciudadreal",
@@ -1262,14 +1262,14 @@
                 "tasas1": "18.87",
                 "tasas2": "37.73",
                 "tasas3": "81.76",
-                "tasas4": "113.20"
+                "tasas4": "113.2"
             },
             "tasas_2015": {
                 "url": "http://www.uclm.es/estudiantes/guiamatricula/pdf/ExtractoPreciosPublicos.pdf",
                 "tasas1": "18.87",
                 "tasas2": "37.73",
                 "tasas3": "81.76",
-                "tasas4": "113.20"
+                "tasas4": "113.2"
             }
         },
         {
@@ -1481,14 +1481,14 @@
             "tasas_2014": {
                 "url": "http://www.usc.es/export/sites/default/gl/servizos/oiu/descargas/taxc.pdf",
                 "tasas1": "13.93",
-                "tasas2": "19.30",
+                "tasas2": "19.3",
                 "tasas3": "31.21",
                 "tasas4": "39.79"
             },
             "tasas_2015": {
                 "url": "http://www.xunta.es/dog/Publicados/2015/20150702/AnuncioG0164-260615-0004_gl.html",
                 "tasas1": "13.93",
-                "tasas2": "19.30",
+                "tasas2": "19.3",
                 "tasas3": "31.21",
                 "tasas4": "39.79"
             }
@@ -1989,10 +1989,10 @@
             },
             "tasas_2015": {
                 "url": "",
-                "tasas1": "75",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas1": "27.9",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
             },
             "observaciones": ""
         }, {
@@ -2180,17 +2180,17 @@
             },
             "tasas_2014": {
                 "url": "http://www.borm.es/borm/documento?obj=anu&id=710621",
-                "tasas1": "17.77",
-                "tasas2": "35.55",
-                "tasas3": "77.02",
-                "tasas4": "106.64"
+                "tasas1": "16.78",
+                "tasas2": "33.56",
+                "tasas3": "72.71",
+                "tasas4": "100.68"
             },
             "tasas_2015": {
                 "url": "http://www.borm.es/borm/documento?obj=anu&id=734649",
-                "tasas1": "17.77",
-                "tasas2": "35.55",
-                "tasas3": "77.02",
-                "tasas4": "106.64"
+                "tasas1": "16.78",
+                "tasas2": "33.56",
+                "tasas3": "72.71",
+                "tasas4": "100.68"
             }
         }, {
             "siglas": "ucam",
@@ -2326,7 +2326,7 @@
                 "tasas4": "41.59"
             }
         }, {
-            "siglas": "ehu-ss",
+            "siglas": "upv-ehu",
             "nombre": "Universidad del País Vasco",
             "tipo": "Pública",
             "centro": "Facultad de Informática",
@@ -2403,18 +2403,18 @@
                 "url": "http://www.lexnavarra.navarra.es/detalle.asp?r=34077",
                 "tasas1": "22.53",
                 "tasas2": "45.05",
-                "tasas3": "97.60",
+                "tasas3": "97.6",
                 "tasas4": "135.14"
             },
             "tasas_2015": {
                 "url": "http://www.navarra.es/home_es/Actualidad/BON/Boletines/2015/102/Anuncio-9/",
                 "tasas1": "22.53",
                 "tasas2": "45.05",
-                "tasas3": "97.60",
+                "tasas3": "97.6",
                 "tasas4": "135.14"
             }
         }, {
-            "siglas": "unirioja",
+            "siglas": "ur",
             "nombre": "Universidad de La Rioja",
             "tipo": "Pública",
             "centro": "Facultad de Ciencias, Estudios Agroalimentarios e Informática",
@@ -2482,10 +2482,10 @@
             },
             "tasas_2013": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas1": "21.21",
+                "tasas2": "42.43",
+                "tasas3": "91.93",
+                "tasas4": "127.28"
             },
             "tasas_2014": {
                 "url": "http://www.unir.net/como-matricularse.aspx#g3",
@@ -2496,10 +2496,10 @@
             },
             "tasas_2015": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas1": "21.21",
+                "tasas2": "42.43",
+                "tasas3": "91.93",
+                "tasas4": "127.28"
             }
         },
         {
@@ -2892,14 +2892,14 @@
             },
             "tasas_2014": {
                 "url": "http://www.uab.cat/web/estudiar/grau/matricula/resum-dels-preus-1345662202164.html",
-                "tasas1": "27.85",
+                "tasas1": "39.53",
                 "tasas2": "34.39",
                 "tasas3": "74.52",
                 "tasas4": "103.18"
             },
             "tasas_2015": {
-                "url": "",
-                "tasas1": "",
+                "url": "http://www.uab.cat/web/estudiar/grau/matricula/resum-dels-preus-1345662202164.html",
+                "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -2935,14 +2935,14 @@
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "22.80",
+                "tasas1": "39.53",
                 "tasas2": "27.36",
                 "tasas3": "27.36",
                 "tasas4": "27.36"
             },
             "tasas_2015": {
                 "url": "",
-                "tasas1": "",
+                "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -2978,21 +2978,21 @@
             },
             "tasas_2014": {
                 "url": "http://www.ub.edu/acad/es/matricula/precios.html",
-                "tasas1": "27.85",
+                "tasas1": "39.53",
                 "tasas2": "34.39",
                 "tasas3": "74.52",
                 "tasas4": "103.18"
             },
             "tasas_2015": {
-                "url": "",
-                "tasas1": "",
+                "url": "http://www.ub.edu/acad/es/matricula/precios.html",
+                "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
             },
             "observaciones": ""
         }, {
-            "siglas": "deusto",
+            "siglas": "ud",
             "nombre": "Universidad de Deusto",
             "tipo": "Privada",
             "centro": "Facultad de Ingeniería",
@@ -3020,17 +3020,17 @@
             },
             "tasas_2014": {
                 "url": "http://www.ingenieria.deusto.es/cs/Satellite/ingenieria/es/ingenieria-informatica/ingenieria-informatica/programa?idPest=1340018657941",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas1": "19.19",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
             },
             "tasas_2015": {
                 "url": "",
-                "tasas1": "",
-                "tasas2": "",
-                "tasas3": "",
-                "tasas4": ""
+                "tasas1": "19.19",
+                "tasas2": "27.63",
+                "tasas3": "41.59",
+                "tasas4": "41.59"
             }
         }, {
             "siglas": "udg",
@@ -3063,7 +3063,14 @@
                 "tasas4": ""
             },
             "tasas_2014": {
-                "url": "",
+                "url": "39.53",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "39.53",
                 "tasas1": "",
                 "tasas2": "",
                 "tasas3": "",
@@ -3108,7 +3115,14 @@
             },
             "tasas_2014": {
                 "url": "",
-                "tasas1": "",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "",
+                "tasas1": "39.53",
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
@@ -3251,6 +3265,182 @@
                 "tasas2": "",
                 "tasas3": "",
                 "tasas4": ""
+            }
+        },
+        {
+            "siglas": "urv",
+            "nombre": "Universidad Rovira i Virgili",
+            "tipo": "pública",
+            "centro": "",
+            "provincia": "Barcelona",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },
+        {
+            "siglas": "url",
+            "nombre": "Universidad Ramón Llull",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Barcelona",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },
+        {
+            "siglas": "upf",
+            "nombre": "Universidad Pompeu Fabra",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Barcelona",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2015": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "39.53",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            }
+        },
+        {
+            "siglas": "ue-v",
+            "nombre": "Universidad Europea de Valencia",
+            "tipo": "privada",
+            "centro": "",
+            "provincia": "Valencia",
+            "url": "",
+            "convenios": [],
+            "tasas_2011": {
+                "url": "",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                "url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2013": {
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "",
+                "tasas2": "",
+                "tasas3": "",
+                "tasas4": ""
+            },
+            "tasas_2014": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "88.55",
+                "tasas4": "118.07"
+            },
+            "tasas_2015": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "23.85",
+                "tasas2": "41.73",
+                "tasas3": "88.55",
+                "tasas4": "118.07"
             }
         }
     ]
