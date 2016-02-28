@@ -21,7 +21,7 @@ from . import settings
 from tasas.api.urls import urlpatterns as api_urlpatterns
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include('tasas.urls')),
     url(r'^api/', include(api_urlpatterns))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
   + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

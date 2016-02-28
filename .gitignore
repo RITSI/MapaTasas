@@ -69,3 +69,4 @@ target/
 .python-version
 
 db.sqlite3
+global-static

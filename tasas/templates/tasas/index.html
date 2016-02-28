@@ -1,0 +1,88 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block header %}
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'tasas/css/backend.css' %}">
+    {% endblock header %}
+</head>
+<body>
+<div style="z-index:2" class="navbar navbar-default">
+    <div class="navbar-header"><a href="/admin/" class="navbar-brand img-responsive"><img style="max-height:100%;height:100%" src="{% static 'tasas/img/logoritsi-texto.png' %}" class="navbar-logo img-circle"><span class="navbar-brand-label"></span></a></div>
+
+    <div class="navbar-collapse my-navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/about/"><i class="fa fa-question"></i> Acerca de</a></li>
+            <li><a href="/"><i class="fa fa-globe"></i> Ir al mapa</a></li>{% if request.user %}
+            <li><a href="/admin/logout/"><i class="fa fa-sign-out"></i> Salir</a></li>{% endif %}
+        </ul>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="col-md-12">
+        {% for universidad in universidades %}
+        <div class="row uni-row">
+            <div class="panel panel-default">
+                <a href="/admin/universidad/{{universidad.siglas}}/">
+                    <div class="panel-body">
+                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="Foto de la {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
+                        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus}}</span></div>
+                        <div class="col-xs-1 col-sm-1 col col-lg-1"><a href="universidad/{{universidad.siglas}}/editar/"><i class="fa fa-pencil-square"></i></a></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="col-md-4"><a href="nueva/" class="btn btn-default"> <i class="fa fa-plus"></i> Añadir universidad</a></div>
+{% block footer %}
+    <script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+{% endblock footer %}
+</body>
+</html>
+<!--<html>
+  <head>
+    <title></title>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/core.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasas/css/backend.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasas/css/index.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tasas/css/backend.min.css' %}">
+  </head>
+  <body>
+    <div style="z-index:2" class="navbar navbar-default">
+      <div class="navbar-header"><a href="/admin/" class="navbar-brand img-responsive"><img style="max-height:100%;height:100%" src="{% static 'tasas/img/logoritsi-texto.png' %}" class="navbar-logo img-circle"><span class="navbar-brand-label"></span></a></div>
+      <div class="navbar-collapse my-navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/about/"><i class="fa fa-question"></i> Acerca de</a></li>
+          <li><a href="/"><i class="fa fa-globe"></i> Ir al mapa</a></li>{% if request.user %}
+          <li><a href="/admin/logout/"><i class="fa fa-sign-out"></i> Salir</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="page">{% if message %}
+      <div class="status {{message_type}}">
+        <p>{{ message }}</p>
+      </div>{% endif %}
+      <div class="col-md-8">
+        <div class="col-md-12">{% for universidad in universidades %}
+          <div class="row uni-row">
+            <div class="panel panel-default">   <a href="/admin/universidad/{{universidad.siglas}}/">
+                <div class="panel-body">
+                  <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="Foto de la {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
+                  <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus}}</span></div>
+                  <div class="col-xs-1 col-sm-1 col col-lg-1"><a href="universidad/{{universidad.siglas}}/editar/"><i class="fa fa-pencil-square"></i></a></div>
+                </div></a></div>
+          </div>{% endfor %}
+        </div>
+      </div>
+      <div class="col-md-4"><a href="nueva/" class="btn btn-default"> <i class="fa fa-plus"></i> Añadir universidad</a></div>
+    </div>
+    <div class="footer">
+    </div>
+  </body>
+</html>-->
