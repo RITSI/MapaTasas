@@ -2,13 +2,14 @@ from django.utils.translation import gettext as _
 from django.core.management.base import BaseCommand, CommandError
 from django.core.exceptions import ValidationError
 from django.core.files import File
-from django.db import models
 
 import json
 import os
 import warnings
+import sys
 
-from tasas.models import Universidad, Tasa
+from tasas.models import Universidad, Tasa, get_current_curso
+import tasasrest.settings as settings
 
 class Command(BaseCommand):
     help_text = _("Carga en la base de datos el fichero JSON utilizado en el proyecto original")
@@ -33,7 +34,7 @@ class Command(BaseCommand):
             with open(options.get('file', ''), 'r') as f:
                 data = json.load(f)
         except IOError:
-            print(_("Archivo no encontrado"))
+            sys.stderr.write(_("Archivo no encontrado\n"))
             return
 
         self.parse_file(data, options.get('img-dir'), options.get('overwrite', False))
@@ -50,6 +51,13 @@ class Command(BaseCommand):
                 self.add_uni(uni, img_path, overwrite)
             except ValidationError as v:
                 warnings.warn("Error en clave: %s: %s" % (uni.get('siglas'), v), UserWarning)
+
+    def parse_float(self, value):
+        try:
+            return float(value)
+        except (ValueError, TypeError):
+            return 0
+
 
     def add_uni(self, uni, img_path, overwrite=False):
         """
@@ -76,15 +84,19 @@ class Command(BaseCommand):
 
         if self.validate_logo(uni, img_path) is True:
             try:
-                with open(os.path.join(img_path, 'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))), 'rb') as f:
+                with open(os.path.join(img_path,
+                                       'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))), 'rb') as f:
                     logo = File(f)
-                    universidad.logo.save('uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas')), logo, save=True)
+                    universidad.logo.save('uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas')),
+                                          logo, save=True)
             except IOError:
                 warnings.warn("Error al abrir imagen %s" % uni+'.jpg')
 
         # TODO: Añadir convenios?
         universidad.clean_fields()
         universidad.save()
+
+        self.add_tasas(uni, universidad)
 
     def validate_logo(self, uni, img_path):
         if uni.get('siglas', None) is None:
@@ -94,7 +106,8 @@ class Command(BaseCommand):
             warnings.warn("Directorio %s no válido" % img_path, UserWarning)
             return False
 
-        return os.path.isfile(os.path.join(img_path, 'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))))
+        return os.path.isfile(os.path.join(img_path,
+                                           'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))))
 
 
 
@@ -108,3 +121,31 @@ class Command(BaseCommand):
             int
         """
         return next((code for code, value in dict(Universidad.TIPO_UNIVERSIDAD_CHOICES).items() if value == tipo), None)
+
+    def add_tasas(self, data, uni):
+        for year in range(settings.MIN_YEAR, get_current_curso()+settings.YEARS_IN_ADVANCE):
+            tasa_data = data.get('tasas_%d' % year)
+            if tasa_data is not None:
+                tasa = Tasa()
+                tasa.tipo = Tasa.PRECIO_POR_CREDITO
+                tasa.tipo_titulacion = Tasa.GRADO
+                tasa.curso = year
+
+                tasa.tasas1 = self.parse_float(tasa_data.get('tasas1', 0))
+                tasa.tasas2 = self.parse_float(tasa_data.get('tasas2', 0))
+                tasa.tasas3 = self.parse_float(tasa_data.get('tasas3', 0))
+                tasa.tasas4 = self.parse_float(tasa_data.get('tasas4', 0))
+
+                tasa.url = tasa_data.get('url', None)
+
+                tasa.universidad = uni
+
+                try:
+                    tasa.full_clean()
+                    tasa.save()
+                except ValidationError as v:
+                    sys.stderr.write("Tasas de %s no válidas para universidad: %s: %s\n" %
+                                     (year, uni.nombre, v.messages))
+
+            else:
+                sys.stderr.write("Tasas de %s no válidas para universidad: %s\n" % (year, uni.nombre))

@@ -1,6 +1,7 @@
 from django.db import models
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, MinValueValidator, MinLengthValidator
 from django.utils.translation import ugettext as _, ugettext_lazy
+from django.utils.deconstruct import deconstructible
 
 import tasasrest.settings as settings
 from .provincias import PROVINCIAS as provincias
@@ -22,6 +23,7 @@ def get_current_curso():
     else:
         return today.year + 1
 
+@deconstructible
 class CursoValidator(object):
     """
     Valida si el curso introducido se encuentra en el rango <curso mínimo> - <curso máximo>
@@ -45,12 +47,13 @@ class CursoValidator(object):
 
 
 class Universidad(models.Model):
-
+    PUBLICA = 0
+    PRIVADA = 1
     def __init__(self, *args, **kwargs):
         self.get_siglas_no_centro = self._get_siglas_no_centro
         super(Universidad, self).__init__(*args, **kwargs)
 
-    TIPO_UNIVERSIDAD_CHOICES = ((0, 'Pública'), (1, 'Privada'))
+    TIPO_UNIVERSIDAD_CHOICES = ((PUBLICA, 'Pública'), (PRIVADA, 'Privada'))
 
     siglas = models.CharField(max_length=20, unique=True, null=False, blank=False,
                               help_text=ugettext_lazy("Siglas de la universidad"))
@@ -119,15 +122,20 @@ class Tasa(models.Model):
     # El curso se representa con el año en el que da comienzo
     curso = models.IntegerField(validators=[RegexValidator(regex=r'^\d{4}$'), CursoValidator()],
                                 help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
-    url = models.URLField(null=False, blank=False, help_text=ugettext_lazy("URL del documento oficial"))
+    url = models.URLField(null=False, blank=False, validators=[MinLengthValidator(1)],
+                          help_text=ugettext_lazy("URL del documento oficial"))
 
     tasa_global = models.FloatField(null=True, blank=True, help_text=ugettext_lazy("Tasa global"))
     descripcion = models.TextField(null=True, blank=True, max_length=500,
                                    help_text=ugettext_lazy("Texto informativo sobre la tasa"))
-    tasas1 = models.FloatField(null=True, blank=True, help_text=ugettext_lazy("Primera convocatoria"))
-    tasas2 = models.FloatField(null=True, blank=True, help_text=ugettext_lazy("Segunda convocatoria"))
-    tasas3 = models.FloatField(null=True, blank=True, help_text=ugettext_lazy("Tercera convocatoria"))
-    tasas4 = models.FloatField(null=True, blank=True, help_text=ugettext_lazy("Cuarta convocatoria"))
+    tasas1 = models.FloatField(null=True, blank=True, validators=[MinValueValidator(0.01)],
+                               help_text=ugettext_lazy("Primera convocatoria"))
+    tasas2 = models.FloatField(null=True, blank=True, validators=[MinValueValidator(0.01)],
+                               help_text=ugettext_lazy("Segunda convocatoria"))
+    tasas3 = models.FloatField(null=True, blank=True, validators=[MinValueValidator(0.01)],
+                               help_text=ugettext_lazy("Tercera convocatoria"))
+    tasas4 = models.FloatField(null=True, blank=True, validators=[MinValueValidator(0.01)],
+                               help_text=ugettext_lazy("Cuarta convocatoria"))
 
     def __unicode__(self):
         return self.universidad + ", " + self.TIPOS[int(self.tipo)][1] + ", " + self.curso

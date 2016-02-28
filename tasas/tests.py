@@ -3,7 +3,7 @@ from django.core.management.base import CommandError
 from mock import patch, Mock, PropertyMock
 from .management.commands import importar
 from .models import Universidad, Tasa, CursoValidator, get_current_curso
-from django.db.models import URLField
+
 import datetime
 
 from django.core.exceptions import ValidationError
@@ -43,6 +43,52 @@ class TestImportarCommand(TestCase):
         self.assertEqual(0, self.command.get_tipo_uni("Pública"))
         self.assertEqual(1, self.command.get_tipo_uni("Privada"))
         self.assertEqual(None, self.command.get_tipo_uni(""))
+
+    def test_get_importar_uni(self):
+        uni = Universidad()
+        uni.nombre = "Nombre_uni"
+        uni.siglas = "sigla"
+        uni.provincia = "Avila"
+        uni.tipo = Universidad.PUBLICA
+        uni.save()
+        data = {"tasas_2011": {
+                "url": "",
+                "tasas1": "20.29",
+                "tasas2": "26.38",
+                "tasas3": "30.44",
+                "tasas4": ""
+            },
+            "tasas_2012": {
+                #"url": "http://www.boe.es/boe/dias/2012/08/14/pdfs/BOE-A-2012-10852.pdf",
+                "url": "",
+                "tasas1": "20.89",
+                "tasas2": "28.90",
+                "tasas3": "54.32",
+                "tasas4": "75.21"
+            },
+            "tasas_2013": {
+                "url": "http://www.boe.es/boe/dias/2013/08/08/pdfs/BOE-A-2013-8800.pdf",
+                "tasas1": "21.24",
+                "tasas2": "29.74",
+                "tasas3": "55.24",
+                "tasas4": "76.48"
+            },
+            "tasas_2014": {
+                "url": "http://www.boe.es/boe/dias/2014/08/07/pdfs/BOE-A-2014-8552.pdf",
+                "tasas1": "22.00",
+                "tasas2": "30.00",
+                "tasas3": "65.00",
+                "tasas4": "90.00"
+            },
+            "tasas_2015": {
+                "url": "http://www.bocm.es/boletin/CM_Orden_BOCM/2015/08/03/BOCM-20150803-15.PDF",
+                "tasas1": "27.90",
+                "tasas2": "51.42",
+                "tasas3": "96.43",
+                "tasas4": "128.57"
+            }}
+
+        self.command.add_tasas(data,uni)
 
 class TestUniversidadModel(TestCase):
 
@@ -94,7 +140,6 @@ class TestCursoValidator(TestCase):
     def test_get_current_year(self):
         self.FakeDate.today = classmethod(lambda cls: date(2011, 1, 1))
 
-        print(get_current_curso())
 
     @patch('tasas.models.datetime')
     def test_get_current_year(self, current_curso_mock):

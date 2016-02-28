@@ -3,12 +3,14 @@ from rest_framework.response import Response
 
 from django.shortcuts import get_object_or_404, get_list_or_404
 
-from .serializers import UniversidadSerializer
-from ..models import Universidad
+from .serializers import UniversidadSerializer, TasaSerializer
+from ..models import Universidad, Tasa
 
 class UniversidadViewSet(ModelViewSet):
+
     queryset = Universidad.objects.all()
     serializer_class = UniversidadSerializer
+    base_name = "universidades"
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -23,23 +25,38 @@ class UniversidadViewSet(ModelViewSet):
 
         return Response(serializer.data)
 
+
 class ProvinciaViewSet(ModelViewSet):
+
     queryset = Universidad.objects.all()
     serializer_class = UniversidadSerializer
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
 
-        provincia = kwargs.get('provincia')
+        provincia = kwargs.get('provincia', None)
+        if provincia is None:
+            #TODO
+            pass
+
         unis = get_list_or_404(queryset, provincia__iexact=provincia)
         serializer = self.serializer_class(unis, many=True)
 
         return Response(serializer.data)
 
-    # """def get_queryset(self, *args, **kwargs):
-    #     pk = self.request.query_params.get('provincia')
-    #     print(pk)
-    #     unis = get_list_or_404(Universidad.objects.all(), provincia__iexact=pk)
-    #     serializer = self.serializer_class(unis)
-    #
-    #     return Response(serializer.data)"""
+class TasasViewSet(ModelViewSet):
+    queryset = Tasa.objects.all()
+    serializer_class = TasaSerializer
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+
+        universidad = kwargs.get('universidad', None)
+        if universidad is None:
+            #TODO
+            pass
+
+        unis = get_list_or_404(queryset, universidad__siglas=universidad)
+        serializer = self.serializer_class(unis, many=True)
+
+        return Response(serializer.data)
