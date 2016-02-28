@@ -1,0 +1,185 @@
+{% extends 'tasas/base.html' %}
+{% load staticfiles i18n increment widget_tweaks %}
+{% block header %}
+    {{ block.super }}
+    <title>{% trans 'Editando:' %} {{ uni.nombre }}</title>
+{% endblock header %}
+{% block content %}
+    {{ block.super }}
+
+    <form method="post" action="">
+        <div class="col-md-6 lista">
+            <div class="list-tasas">
+                <div id="tasas-grado">
+                    <h1>{% trans "Tasas de grado" %}</h1>
+                    {%  for form in form_tasas_grado %}
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {{ form.non_field_errors }}
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <label class="control-label">
+                                    {% trans "Curso académico" %}
+                                    <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
+                                </label>
+                                <br>{{ form.tipo.errors }}
+                                {{ form.tipo|add_class:"form-control" }}
+                                <br>{{form.url.errors}}
+                                {{ form.url |add_class:"form-control"}}
+                            </div>
+                            <div class="input-group">
+                                <div style="display:{% if form.tipo.value == 0 or form.tipo.value == None %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}
+                                    <div class="input-group">
+                                        {{ form.tasas1|add_class:"form-control" }}<br>
+                                        {{ form.tasas2|add_class:"form-control" }}<br>
+                                        {{ form.tasas3|add_class:"form-control" }}<br>
+                                        {{ form.tasas4|add_class:"form-control" }}<br>
+                                    </div><br>
+                                </div>
+                                <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo">
+                                    <div class="input-group">
+                                        {{ form.tasa_global|add_class:"form-control" }}
+                                    </div>
+                                </div>
+                                <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo">
+                                    <div class="input-group">
+                                        {{ form.descripcion|add_class:"form-control" }}
+                                    </div>
+                                </div><br>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 lista">
+            <div id="tasas-master">
+                    <h1>{% trans "Tasas de máster" %}</h1>
+                    {%  for form in form_tasas_master %}
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {{ form.non_field_errors }}
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <label class="control-label">
+                                    {% trans "Curso académico" %}
+                                    <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
+                                </label>
+                                <br>{{ form.tipo.errors }}
+                                {{ form.tipo|add_class:"form-control" }}
+                                <br>{{form.url.errors}}
+                                {{ form.url |add_class:"form-control"}}
+                            </div>
+                            <div class="input-group">
+                                <div style="display:{% if form.tipo.value == 0 or form.tipo.value == None %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}
+                                    <div class="input-group">
+                                        {{ form.tasas1|add_class:"form-control" }}<br>
+                                        {{ form.tasas2|add_class:"form-control" }}<br>
+                                        {{ form.tasas3|add_class:"form-control" }}<br>
+                                        {{ form.tasas4|add_class:"form-control" }}<br>
+                                    </div><br>
+                                </div>
+                                <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo">
+                                    <div class="input-group">
+                                        {{ form.tasa_global|add_class:"form-control" }}
+                                    </div>
+                                </div>
+                                <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo">
+                                    <div class="input-group">
+                                        {{ form.descripcion|add_class:"form-control" }}
+                                    </div>
+                                </div><br>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+    </form>
+
+
+
+{#                      <br>{{form.tipo.errors}}#}
+{#                      <div class="input-group">#}
+{#                        <select name="{{form.prefix}}-{{form.tipo.name}}" class="form-control tipo-tasa">#}
+{#                          {% for tasa in tipos_tasas %}#}
+{#                          {% if tasa.0 == form.tipo.value|default_if_none:"" %}#}
+{#                          <option value="{{tasa.0}}" selected>{{tasa.1}}</option>{% else %}#}
+{#                          <option value="{{tasa.0}}">{{tasa.1}}</option>{% endif %}#}
+{#                          {% endfor %}#}
+{#                        </select>#}
+
+
+
+
+{#                      <div style="display:{% if form.tipo.value == '1' %}initial{% else %}none{% endif %}" class="global tipo">#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasa_global.name}}" type="text" placeholder="{{form.tasa_global.help_text}}" value="{{form.global.value|default_if_none:''}}" class="form-control">#}
+{#                        </div>#}
+{#                      </div><br>#}
+{#                      <div style="display:{% if form.tipo.value == '2' %}initial{% else %}none{% endif %}" class="miscelaneo">#}
+{#                        <div class="input-group">#}
+{#                          <textarea name="{{form.prefix}}-{{form.descripcion.name}}" placeholder="{{form.descripcion.help_text}}" value="{{form.descripcion.value|default_if_none:''}" class="form-control"></textarea>#}
+{#                        </div>#}
+{#                      </div><br>#}
+{#                    </div>#}
+{#                  </div>{% endfor %}#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="col-md-6 lista">#}
+{#              <div class="list-tasas">#}
+{#                <div id="tasas-master">#}
+{#                  <h1>Tasas de máster</h1>{% for form in form_tasas_master %}#}
+{#                  <div class="panel panel-default">#}
+{#                    <div class="panel-body">#}
+{#                      {{ form.non_field_errors }}#}
+{#                      {% csrf_token %}#}
+{#                      <div class="input-group">#}
+{#                        <label class="control-label">Curso académico <span class="curso">{# {{form.curso.value}}/ {% increment form.curso.value %} </span></label>#}
+{#                      </div><br>{{form.tipo.errors}}#}
+{#                      <div class="input-group">#}
+{#                        <select name="{{form.prefix}}-{{form.tipo.name}}" class="form-control tipo-tasa">#}
+{#                          {% for tasa in tipos_tasas %}#}
+{#                          {% if tasa.0 == form.tipo.value|default_if_none:"" %}#}
+{#                          <option value="{{tasa.0}}" selected>{{tasa.1}}</option>{% else %}#}
+{#                          <option value="{{tasa.0}}">{{tasa.1}}</option>{% endif %}#}
+{#                          {% endfor %}#}
+{#                        </select>#}
+{#                      </div><br>{{form.url.errors}}#}
+{#                      <div class="input-group">#}
+{#                        <input name="{{form.prefix}}-{{form.url.name}}" type="url" placeholder="{{form.url.help_text}}" value="{{form.url.value|default_if_none:''}}" class="form-control">#}
+{#                      </div><br>#}
+{#                      <div style="display:{% if form.tipo.value == '0' or form.tipo.value == None %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasas1.name}}" type="number" placeholder="{{form.tasas1.help_text}}" value="{{form.tasas1.value|default_if_none:''}}" class="form-control">#}
+{#                        </div><br>{{form.tasas2.errors}}#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasas2.name}}" type="number" placeholder="{{form.tasas2.help_text}}" value="{{form.tasas2.value|default_if_none:''}}" class="form-control">#}
+{#                        </div><br>{{form.tasas3.errors}}#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasas3.name}}" type="number" placeholder="{{form.tasas3.help_text}}" value="{{form.tasas3.value|default_if_none:''}}" class="form-control">#}
+{#                        </div><br>{{form.tasas4.errors}}#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasas4.name}}" type="number" placeholder="{{form.tasas4.help_text}}" value="{{form.tasas4.value|default_if_none:''}}" class="form-control">#}
+{#                        </div><br>#}
+{#                      </div>#}
+{#                      <div style="display:{% if form.tipo.value == '1' %}initial{% else %}none{% endif %}" class="global tipo">#}
+{#                        <div class="input-group">#}
+{#                          <input name="{{form.prefix}}-{{form.tasa_global.name}}" type="text" placeholder="{{form.tasa_global.help_text}}" value="{{form.global.value|default_if_none:''}}" class="form-control">#}
+{#                        </div>#}
+{#                      </div><br>#}
+{#                      <div style="display:{% if form.tipo.value == '2' %}initial{% else %}none{% endif %}" class="miscelaneo">#}
+{#                        <div class="input-group">#}
+{#                          <textarea name="{{form.prefix}}-{{form.descripcion.name}}" placeholder="{{form.descripcion.help_text}}" value="{{form.descripcion.value|default_if_none:''}" class="form-control"></textarea>#}
+{#                        </div>#}
+{#                      </div><br>#}
+{#                    </div>#}
+{#                  </div>{% endfor %}#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <input type="submit" value="Actualizar tasas" class="btn btn-success">#}
+{#          </form>#}
+{% endblock content %}
