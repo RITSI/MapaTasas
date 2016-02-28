@@ -1,6 +1,6 @@
 from django.utils.translation import gettext as _
 from django.core.management.base import BaseCommand, CommandError
-from django.core.validators import ValidationError
+from django.core.exceptions import ValidationError
 from django.core.files import File
 from django.db import models
 

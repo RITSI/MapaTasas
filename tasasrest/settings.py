@@ -144,3 +144,6 @@ REST_FRAMEWORK = {
 
 # Tasas
 ESCUDOS_PATH = 'escudos'
+MIN_YEAR = 2011 # Primer año válido para introducir tasas
+YEARS_IN_ADVANCE = 1 # Número de cursos futuros
+CURSO_CHANGE_MONTH = 9 # En septiembre cambia el curso académico

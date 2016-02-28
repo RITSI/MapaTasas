@@ -1,14 +1,12 @@
 from django.test import TestCase
 from django.core.management.base import CommandError
-from django.core.exceptions import ValidationError
-
-from unittest import skip
-from mock import patch
-from django.core.files import File
-from django.db.models import ImageField
+from mock import patch, Mock, PropertyMock
 from .management.commands import importar
-from .models import Universidad
+from .models import Universidad, Tasa, CursoValidator, get_current_curso
+from django.db.models import URLField
+import datetime
 
+from django.core.exceptions import ValidationError
 
 
 class TestImportarCommand(TestCase):
@@ -81,3 +79,164 @@ class TestUniversidadModel(TestCase):
         uni.provincia = 'Avila'
 
         self.assertEqual(uni.get_provincia_unicode(), "Ávila")
+
+class TestCursoValidator(TestCase):
+    from datetime import date
+    class FakeDate(date):
+        """A manipulable date replacement"""
+        def __new__(cls, *args, **kwargs):
+            return date.__new__(date, *args, **kwargs)
+
+    def setUp(self):
+        pass
+
+    @patch('datetime.date', FakeDate)
+    def test_get_current_year(self):
+        self.FakeDate.today = classmethod(lambda cls: date(2011, 1, 1))
+
+        print(get_current_curso())
+
+    @patch('tasas.models.datetime')
+    def test_get_current_year(self, current_curso_mock):
+        current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Sep 1 2011', '%b %d %Y'))
+        self.assertEqual(2012, get_current_curso())
+
+        current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Aug 31 2011', '%b %d %Y'))
+
+        self.assertEqual(2011, get_current_curso())
+
+    @patch('tasas.models.datetime')
+    #@patch('tasas.models.settings.MIN_YEAR')
+    def test_curso_validator(self, current_curso_mock):
+        validator = CursoValidator()
+        current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Sep 1 2011', '%b %d %Y'))
+
+        #type(settings_mock).MIN_YEAR = PropertyMock(return_value=2011)
+        #settings_mock.configure_mock(MIN_YEAR=2011)
+        #settings_mock.YEARS_IN_ADVANCE = 1
+        #settings_mock.CURSO_CHANGE_MONTH = 10
+
+        self.assertRaises(ValidationError, validator.__call__(2011))
+
+        current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Aug 1 2011', '%b %d %Y'))
+        self.assertEqual(None, validator.__call__(2011))
+
+        self.assertEqual(None, validator.__call__(2012))
+        self.assertRaises(ValidationError, validator.__call__, (2013))
+
+class TestTasaModel(TestCase):
+    def setUp(self):
+        pass
+
+    def test_validator_precio_por_credito(self):
+        tasa = Tasa()
+
+
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo = Tasa.PRECIO_POR_CREDITO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo_titulacion = Tasa.GRADO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.url = "http://url.org"
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.universidad = Universidad()
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.curso = 2011
+
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = 10
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas3 = 30
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas4 = 40
+        self.assertEqual(None, tasa.clean())
+
+    def test_validator_precio_por_credito(self):
+        tasa = Tasa()
+
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo = Tasa.PRECIO_POR_CREDITO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo_titulacion = Tasa.GRADO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.url = "http://url.org"
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.universidad = Universidad()
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.curso = 2011
+
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = 10
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas3 = 30
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas4 = 40
+        self.assertEqual(None, tasa.clean())
+        tasa.tasa_global = 40
+        self.assertRaises(ValidationError, tasa.clean)
+
+    def test_validator_precio_global(self):
+        tasa = Tasa()
+
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo = Tasa.PAGO_UNICO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo_titulacion = Tasa.GRADO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.url = "http://url.org"
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.universidad = Universidad()
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.curso = 2011
+
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasa_global = 10
+        self.assertEqual(None, tasa.clean())
+        tasa.tasas1 = 10
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = None
+        self.assertEqual(None, tasa.clean())
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = 10
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+
+    def test_tasa_miscelaneo(self):
+        tasa = Tasa()
+
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo = Tasa.MISCELANEO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.tipo_titulacion = Tasa.GRADO
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.url = "http://url.org"
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.universidad = Universidad()
+        self.assertRaises(ValidationError, tasa.clean_fields)
+        tasa.curso = 2011
+
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.descripcion = "Descripción"
+        self.assertEqual(None, tasa.clean())
+
+        tasa.tasas1 = 10
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = None
+        self.assertEqual(None, tasa.clean())
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+        tasa.tasas1 = 10
+        tasa.tasas2 = 20
+        self.assertRaises(ValidationError, tasa.clean)
+
+        tasa.tasas1 = None
+        tasa.tasas2 = None
+        self.assertEqual(None, tasa.clean())
+
+        tasa.tasa_global = 10
+        self.assertRaises(ValidationError, tasa.clean)
