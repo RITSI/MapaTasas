@@ -177,3 +177,6 @@ class Tasa(models.Model):
             raise ValidationError(_("Opción de tasa inválida"))
 
         super(Tasa, self).clean()
+
+    def get_tipo_titulacion_verbose(self):
+        return dict((tipo, nombre) for tipo, nombre in self.TIPOS_TITULACION).get(self.tipo_titulacion)

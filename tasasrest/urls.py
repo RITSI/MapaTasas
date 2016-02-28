@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 from . import settings
+
 from tasas.api.urls import urlpatterns as api_urlpatterns
 
 urlpatterns = [
