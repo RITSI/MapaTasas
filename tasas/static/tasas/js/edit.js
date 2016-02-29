@@ -1,3 +1,32 @@
+'use strict'
+
+var select_tipo_tasa = document.getElementsByClassName("tipo-tasa-selector");
+
+var PRECIO_POR_CREDITO = 0;
+var PAGO_UNICO = 1;
+var MISCELANEO = 2;
+
+var classes_tipo_tasa = {};
+classes_tipo_tasa[PRECIO_POR_CREDITO] = "porcredito";
+classes_tipo_tasa[PAGO_UNICO] = "global";
+classes_tipo_tasa[MISCELANEO] = "miscelaneo";
+
+Array.prototype.forEach.call(select_tipo_tasa, function(element){
+    element.addEventListener('change', function(e){
+        var tasas_div = this.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
+        var selector = this;
+        var classForSelected = classes_tipo_tasa[selector.selectedIndex];
+        Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function(element){
+            if(element.className.split(' ').indexOf(classForSelected) > -1)
+                element.style.display = "inherit";
+            else
+                element.style.display = "none";
+        }, false);
+
+
+    }, false);
+});
+
 /*
 $(function(){
 	$(".tipo-tasa").on("change", function(){
