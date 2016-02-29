@@ -115,8 +115,9 @@ class Tasa(models.Model):
                                     null=False,
                                     blank=True)
 
-    tipo = models.IntegerField(choices=TIPOS_TASA, help_text=ugettext_lazy("Tipo de tasa"))
-    tipo_titulacion = models.IntegerField(choices=TIPOS_TITULACION,
+    tipo = models.IntegerField(choices=TIPOS_TASA, blank=False, null=False, default=0,
+                               help_text=ugettext_lazy("Tipo de tasa"))
+    tipo_titulacion = models.IntegerField(choices=TIPOS_TITULACION, blank=False, null=False,
                                           help_text=ugettext_lazy("Tipo de titulación (grado/máster)"))
 
     # El curso se representa con el año en el que da comienzo

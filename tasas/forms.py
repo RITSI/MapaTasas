@@ -15,4 +15,3 @@ class TasaForm(ModelForm):
         widgets = {
             'tipo': Select(choices=Tasa.TIPOS_TASA)
         }
-
