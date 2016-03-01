@@ -76,7 +76,7 @@
                                 {{ form.url |add_class:"form-control"}}
                             </div>
                             <div class="input-group">
-                                <div style="display:{% if form.tipo.value == 0 or form.tipo.value == None %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}
+                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}
                                     <div class="input-group">
                                         {{ form.tasas1|add_class:"form-control" }}<br>
                                         {{ form.tasas2|add_class:"form-control" }}<br>
@@ -99,6 +99,11 @@
                     </div>
                     {% endfor %}
                 </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <input class="btn btn-success" style="width:90%; margin-top:10px;margin-bottom:10px;" type="submit" value="{% trans "Actualizar tasas" %}">
+            </div>
         </div>
     </form>
 

@@ -15,13 +15,22 @@ Array.prototype.forEach.call(select_tipo_tasa, function(element){
     element.addEventListener('change', function(e){
         var tasas_div = this.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
         var selector = this;
-        var classForSelected = classes_tipo_tasa[selector.selectedIndex];
-        Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function(element){
-            if(element.className.split(' ').indexOf(classForSelected) > -1)
-                element.style.display = "inherit";
-            else
-                element.style.display = "none";
-        }, false);
+
+		if(selector.options[selector.selectedIndex].value === ""){
+			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+				element.style.display = "none";
+			}, false);
+		}
+		else
+		{
+			var classForSelected = classes_tipo_tasa[parseInt(selector.selectedIndex, 10)];
+			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+				if (element.className.split(' ').indexOf(classForSelected) > -1)
+					element.style.display = "inherit";
+				else
+					element.style.display = "none";
+			}, false);
+		}
 
 
     }, false);

@@ -109,13 +109,18 @@ class Tasa(models.Model):
 		(MASTER, "Máster"),
 	)
 
+    TIPOS_TITULACION_ASCII = (
+		(GRADO, "Grado"),
+		(MASTER, "Master"),
+	)
+
     universidad = models.ForeignKey(Universidad, on_delete=models.CASCADE, related_name='tasas',
                                     related_query_name='tasa',
                                     help_text=ugettext_lazy("Universidad asociada a esta tasa"),
                                     null=False,
                                     blank=True)
 
-    tipo = models.IntegerField(choices=TIPOS_TASA, blank=False, null=False, default=0,
+    tipo = models.IntegerField(choices=TIPOS_TASA, blank=False, #null=False, default=0,
                                help_text=ugettext_lazy("Tipo de tasa"))
     tipo_titulacion = models.IntegerField(choices=TIPOS_TITULACION, blank=False, null=False,
                                           help_text=ugettext_lazy("Tipo de titulación (grado/máster)"))
@@ -179,5 +184,19 @@ class Tasa(models.Model):
 
         super(Tasa, self).clean()
 
-    def get_tipo_titulacion_verbose(self):
+    @property
+    def tipo_titulacion_verbose(self):
         return dict((tipo, nombre) for tipo, nombre in self.TIPOS_TITULACION).get(self.tipo_titulacion)
+
+    @property
+    def tipo_titulacion_verbose_ascii(self):
+        return dict((tipo, nombre) for tipo, nombre in self.TIPOS_TITULACION_ASCII).get(self.tipo_titulacion)
+
+
+    @classmethod
+    def get_tipo_titulacion_verbose(cls, tipo_titulacion):
+        return dict((tipo, nombre) for tipo, nombre in cls.TIPOS_TITULACION).get(tipo_titulacion)
+
+    @classmethod
+    def get_tipo_titulacion_verbose_ascii(cls, tipo_titulacion):
+        return dict((tipo, nombre) for tipo, nombre in cls.TIPOS_TITULACION_ASCII).get(tipo_titulacion)
