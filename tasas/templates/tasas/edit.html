@@ -19,35 +19,50 @@
                     {%  for form in form_tasas_grado %}
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            {{ form.non_field_errors }}
+                            <label class="has-error">{{ form.non_field_errors }}</label>
                             {% csrf_token %}
                             <div class="input-group">
                                 <label class="control-label">
                                     {% trans "Curso académico" %}
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
                                 </label>
-                                <br>{{ form.tipo.errors }}
+                                <br>{# {{ form.tipo.errors }} #}
                                 {{ form.tipo|add_class:"form-control tipo-tasa-selector" }}
-                                <br>{{form.url.errors}}
-                                {{ form.url |add_class:"form-control"}}
+                                <br>
+                                <label class="has-error">{{form.url.errors}}</label>
+                                <label for="{{ form.url.id_for_label }}">{% trans "URL" %}</label>
+                                    {{ form.url|add_class:"form-control"}}
                             </div>
                             <div class="input-group tasas-data">
                                 <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">{{form.tasas1.errors}}
+                                    <label>{% trans "Precios por crédito" %}</label>
                                     <div class="input-group">
-                                        {{ form.tasas1|add_class:"form-control" }}<br>
-                                        {{ form.tasas2|add_class:"form-control" }}<br>
-                                        {{ form.tasas3|add_class:"form-control" }}<br>
-                                        {{ form.tasas4|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas1.id_for_label }}">{% trans "Primera convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas1.errors }}</label>
+                                            {{ form.tasas1|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas2.id_for_label }}">{% trans "Segunda convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas2.errors }}</label>
+                                            {{ form.tasas2|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas1.id_for_label }}">{% trans "Tercera convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas3.errors }}</label>
+                                            {{ form.tasas3|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas1.id_for_label }}">{% trans "Cuarta convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas4.errors }}</label>
+                                            {{ form.tasas4|add_class:"form-control" }}<br>
                                     </div><br>
                                 </div>
                                 <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo-tasa">
                                     <div class="input-group">
-                                        {{ form.tasa_global|add_class:"form-control" }}
+                                        <label for="{{ form.tasa_global.id_for_label }}">{% trans "Tasa global" %}</label>
+                                            <label class="has-error">{{ form.tasa_global.errors }}</label>
+                                            {{ form.tasa_global|add_class:"form-control" }}
                                     </div>
                                 </div>
                                 <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo tipo-tasa">
                                     <div class="input-group">
-                                        {{ form.descripcion|add_class:"form-control" }}
+                                        <label for="{{ form.descripcion.id_for_label }}">{% trans "Descripción" %}</label>
+                                            <label class="has-error">{{ form.description.errors }}</label>
+                                            {{ form.descripcion|add_class:"form-control" }}
                                     </div>
                                 </div><br>
                             </div>
@@ -71,28 +86,42 @@
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
                                 </label>
                                 <br>
-                                {{ form.tipo.errors }}
+{#                                {{ form.tipo.errors }}#}
                                 {{ form.tipo|add_class:"form-control tipo-tasa-selector" }}
-                                <br>{{form.url.errors}}
-                                {{ form.url |add_class:"form-control"}}
+                                <br><label class="has-error">{{ form.url.errors }}</label>
+                                <label for="{{ form.url.id_for_label }}">{% trans "URL" %}</label>
+                                    {{ form.url |add_class:"form-control"}}
                             </div>
                             <div class="input-group tasas-data">
-                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">{{form.tasas1.errors}}
+                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">
+                                    <label>{% trans "Precios por crédito" %}</label>
                                     <div class="input-group">
-                                        {{ form.tasas1|add_class:"form-control" }}<br>
-                                        {{ form.tasas2|add_class:"form-control" }}<br>
-                                        {{ form.tasas3|add_class:"form-control" }}<br>
-                                        {{ form.tasas4|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas1.id_for_label }}">{% trans "Primera convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas1.errors }}</label>
+                                            {{ form.tasas1|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas2.id_for_label }}">{% trans "Segunda convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas2.errors }}</label>
+                                            {{ form.tasas2|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas3.id_for_label }}">{% trans "Tercera convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas3.errors }}</label>
+                                            {{ form.tasas3|add_class:"form-control" }}<br>
+                                        <label for="{{ form.tasas4.id_for_label }}">{% trans "Cuarta convocatoria" %}</label>
+                                            <label class="has-error">{{ form.tasas4.errors }}</label>
+                                            {{ form.tasas4|add_class:"form-control" }}<br>
                                     </div><br>
                                 </div>
                                 <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo-tasa">
                                     <div class="input-group">
-                                        {{ form.tasa_global|add_class:"form-control" }}
+                                        <label for="{{ form.tasa_global.id_for_label }}">{% trans "Tasa global" %}</label>
+                                            <label class="has-error">{{ form.tasa_global.errors }}</label>
+                                            {{ form.tasa_global|add_class:"form-control" }}
                                     </div>
                                 </div>
                                 <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo tipo-tasa">
                                     <div class="input-group">
-                                        {{ form.descripcion|add_class:"form-control" }}
+                                        <label for="{{ form.descripcion.id_for_label }}">{% trans "Descripción" %}</label>
+                                            <label class="has-error">{{ form.descripcion.errors }}</label>
+                                            {{ form.descripcion|add_class:"form-control" }}
                                     </div>
                                 </div><br>
                             </div>
