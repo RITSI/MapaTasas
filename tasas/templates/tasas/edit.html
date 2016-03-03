@@ -11,7 +11,7 @@
 {% block content %}
     {{ block.super }}
 
-    <form method="post" action="">
+    <form id="tasas-form" method="post" action="">
         <div class="col-md-6 lista">
             <div class="list-tasas">
                 <div id="tasas-grado">
@@ -21,7 +21,7 @@
                         <div class="panel-body">
                             <label class="has-error">{{ form.non_field_errors }}</label>
                             {% csrf_token %}
-                            <div class="input-group">
+                            <div class="input-group basics">
                                 <label class="control-label">
                                     {% trans "Curso académico" %}
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
@@ -80,7 +80,7 @@
                         <div class="panel-body">
                             {{ form.non_field_errors }}
                             {% csrf_token %}
-                            <div class="input-group">
+                            <div class="input-group basics">
                                 <label class="control-label">
                                     {% trans "Curso académico" %}
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
@@ -132,7 +132,7 @@
         </div>
         <div class="row">
             <div class="col-md-12" style="text-align: center;">
-                <input class="btn btn-success" style="width:90%; margin-top:10px;margin-bottom:10px;" type="submit" value="{% trans "Actualizar tasas" %}">
+                <input id="submit-tasas" class="btn btn-success" style="width:90%; margin-top:10px;margin-bottom:10px;" type="submit" value="{% trans "Actualizar tasas" %}">
             </div>
         </div>
     </form>
