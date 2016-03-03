@@ -11,7 +11,7 @@ class UniversidadForm(ModelForm):
 class TasaForm(ModelForm):
     class Meta:
         model = Tasa
-        exclude = ('id','universidad', 'tipo_titulacion')
+        exclude = ('id','universidad')
         widgets = {
             'tipo': Select(choices=Tasa.TIPOS_TASA)
         }
@@ -25,6 +25,7 @@ class TasaForm(ModelForm):
 
     ##TODO: Maketests
     def includes_information(self):
+        if not hasattr(self, 'cleaned_data'): return False
         fields = self.cleaned_data
 
-        return (fields.get("curso") is not None) and (fields.get("tipo") is not None)
+        return ((fields.get("tipo") is not None))

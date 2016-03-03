@@ -78,8 +78,13 @@ class UniversidadView(View):
         for curso in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE):
             # TODO: This is a very dirty fix. Change whenever possible
             request_data = request.POST.copy()
-            request_data["master-%s-curso" % curso] = curso
+
             request_data["grado-%s-curso" % curso] = curso
+            request_data["grado-%s-tipo_titulacion"%curso]=Tasa.GRADO
+
+            request_data["master-%s-curso" % curso] = curso
+            request_data["master-%s-tipo_titulacion"%curso]=Tasa.MASTER
+
             try:
                 tasa_instance = tasas_grado.get(curso=curso)
                 form_grado = TasaForm(request_data, prefix="%s-%d" % (self.grado_verbose, curso),
@@ -88,46 +93,45 @@ class UniversidadView(View):
                 form_grado = TasaForm(request_data, prefix="%s-%d" % (self.grado_verbose, curso),
                                   instance=None)
 
-                #form_grado.fields["curso"].initial = curso
-                # form_grado.fields["tipo_titulacion"] = Tasa.GRADO
-                # form_grado.fields["universidad"] = uni
+            has_errors |=  (not form_grado.is_valid()) and ( form_grado.includes_information())
 
-            has_errors |=  (not form_grado.is_valid()) and (not form_grado.includes_information())
+            if form_grado.includes_information():
 
-
-
-
-            forms_tasas_grado.append(form_grado)
+                forms_tasas_grado.append(form_grado)
+            else:
+                f = TasaForm(prefix="%s-%d" % (self.grado_verbose, curso))
+                f.fields["curso"].initial = curso
+                forms_tasas_grado.append(f)
 
             try:
                 tasa_instance = tasas_master.get(curso=curso)
-                form_master = TasaForm(request.POST, prefix="%s-%d" % (self.master_verbose, curso),
+                form_master = TasaForm(request_data, prefix="%s-%d" % (self.master_verbose, curso),
                                    instance=tasa_instance)
             except Tasa.DoesNotExist:
-                form_master = TasaForm(request.POST, prefix="%s-%d" % (self.master_verbose, curso),
+                form_master = TasaForm(request_data, prefix="%s-%d" % (self.master_verbose, curso),
                                    instance=None)
-                form_master.fields["curso"].initial = curso
-                # form_master.fields["tipo_titulacion"] = Tasa.MASTER
-                # form_master.fields["universidad"] = uni
 
             has_errors |= (not form_master.is_valid()) and form_master.includes_information()
-            forms_tasas_master.append(form_master)
+
+            if form_master.includes_information():
+                forms_tasas_master.append(form_master)
+            else:
+                f = TasaForm(prefix="%s-%d" % (self.master_verbose, curso))
+                f.fields["curso"].initial = curso
+                forms_tasas_master.append(f)
 
         if has_errors:
+            print("Here")
             return render(request, self.template_name, {'uni': uni,
                                                             'form_tasas_grado': forms_tasas_grado,
                                                             'form_tasas_master': forms_tasas_master})
 
-        for form in forms_tasas_grado + forms_tasas_master:
+
+        for form in [f for f in forms_tasas_grado + forms_tasas_master if f.includes_information()]:
             tasa = form.save(commit=False)
             tasa.universidad = uni
-
             tasa.save()
 
-
-
-
-
-        return render(request, self.template_confirmation_name, {'back_url': "/universidad/%s" % uni.siglas,
+        return render(request, self.template_confirmation_name, {'back_url': "/admin/universidad/%s" % uni.siglas,
                                                                  'message': _("Datos actualizados correctamente"),
                                                                  'title': _("Datos actualizados")})
