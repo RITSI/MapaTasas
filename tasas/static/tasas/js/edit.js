@@ -11,32 +11,7 @@ classes_tipo_tasa[PRECIO_POR_CREDITO] = "porcredito";
 classes_tipo_tasa[PAGO_UNICO] = "global";
 classes_tipo_tasa[MISCELANEO] = "miscelaneo";
 
-Array.prototype.forEach.call(select_tipo_tasa, function(element){
-    element.addEventListener('change', function(e){
-        var tasas_div = this.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
-        var selector = this;
-
-		if(selector.options[selector.selectedIndex].value === ""){
-			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
-				element.style.display = "none";
-			}, false);
-		}
-		else
-		{
-			var classForSelected = classes_tipo_tasa[parseInt(selector.options[selector.selectedIndex].value, 10)];
-			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
-				if (element.className.split(' ').indexOf(classForSelected) > -1)
-					element.style.display = "inherit";
-				else
-					element.style.display = "none";
-			}, false);
-		}
-
-
-    }, false);
-});
-
-var correct_initial_data = function(){
+var initialize = function(){
     Array.prototype.forEach.call(select_tipo_tasa, function(element){
         var tasas_div = element.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
         var selector = element;
@@ -56,11 +31,36 @@ var correct_initial_data = function(){
 					element.style.display = "none";
 			}, false);
 		}
-    });
+
+        element.addEventListener('change', function(e){
+            var tasas_div = this.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
+            var selector = this;
+
+            if(selector.options[selector.selectedIndex].value === ""){
+                Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+                    element.style.display = "none";
+                }, false);
+            }
+            else
+            {
+                var classForSelected = classes_tipo_tasa[parseInt(selector.options[selector.selectedIndex].value, 10)];
+                Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+                    if (element.className.split(' ').indexOf(classForSelected) > -1)
+                        element.style.display = "inherit";
+                    else
+                        element.style.display = "none";
+                }, false);
+            }
+
+
+        }, false);
+});
+
+
 };
 
 document.addEventListener("DOMContentLoaded", function(e){
-    correct_initial_data();
+    initialize();
 });
 
 
