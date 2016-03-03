@@ -36,6 +36,35 @@ Array.prototype.forEach.call(select_tipo_tasa, function(element){
     }, false);
 });
 
+var correct_initial_data = function(){
+    Array.prototype.forEach.call(select_tipo_tasa, function(element){
+        var tasas_div = element.parentNode.parentNode.getElementsByClassName('tasas-data')[0];
+        var selector = element;
+
+		if(selector.options[selector.selectedIndex].value === ""){
+			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+				element.style.display = "none";
+			}, false);
+		}
+		else
+		{
+			var classForSelected = classes_tipo_tasa[parseInt(selector.options[selector.selectedIndex].value, 10)];
+			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
+				if (element.className.split(' ').indexOf(classForSelected) > -1)
+					element.style.display = "inherit";
+				else
+					element.style.display = "none";
+			}, false);
+		}
+    });
+};
+
+document.addEventListener("DOMContentLoaded", function(e){
+    correct_initial_data();
+});
+
+
+
 /*
 $(function(){
 	$(".tipo-tasa").on("change", function(){
