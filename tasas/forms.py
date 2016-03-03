@@ -16,13 +16,6 @@ class TasaForm(ModelForm):
             'tipo': Select(choices=Tasa.TIPOS_TASA)
         }
 
-    def remove_invalid_fields(self):
-        """
-        Elimina la información de los campos contradictorios con la información dada
-        """
-        # TODO
-        pass
-
     ##TODO: Maketests
     def includes_information(self):
         if not hasattr(self, 'cleaned_data'): return False
