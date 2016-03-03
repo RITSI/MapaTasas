@@ -23,7 +23,7 @@ Array.prototype.forEach.call(select_tipo_tasa, function(element){
 		}
 		else
 		{
-			var classForSelected = classes_tipo_tasa[parseInt(selector.selectedIndex, 10)];
+			var classForSelected = classes_tipo_tasa[parseInt(selector.options[selector.selectedIndex].value, 10)];
 			Array.prototype.forEach.call(tasas_div.querySelectorAll('.tipo-tasa'), function (element) {
 				if (element.className.split(' ').indexOf(classForSelected) > -1)
 					element.style.display = "inherit";

@@ -32,7 +32,7 @@
                                 {{ form.url |add_class:"form-control"}}
                             </div>
                             <div class="input-group tasas-data">
-                                <div style="display:{% if form.tipo.value == 0 or form.tipo.value == None %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">{{form.tasas1.errors}}
+                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">{{form.tasas1.errors}}
                                     <div class="input-group">
                                         {{ form.tasas1|add_class:"form-control" }}<br>
                                         {{ form.tasas2|add_class:"form-control" }}<br>
@@ -70,13 +70,14 @@
                                     {% trans "Curso académico" %}
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
                                 </label>
-                                <br>{{ form.tipo.errors }}
-                                {{ form.tipo|add_class:"form-control" }}
+                                <br>
+                                {{ form.tipo.errors }}
+                                {{ form.tipo|add_class:"form-control tipo-tasa-selector" }}
                                 <br>{{form.url.errors}}
                                 {{ form.url |add_class:"form-control"}}
                             </div>
-                            <div class="input-group">
-                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo">{{form.tasas1.errors}}
+                            <div class="input-group tasas-data">
+                                <div style="display:{% if form.tipo.value == 0 %}initial{% else %}none{% endif %}" class="porcredito tipo-tasa">{{form.tasas1.errors}}
                                     <div class="input-group">
                                         {{ form.tasas1|add_class:"form-control" }}<br>
                                         {{ form.tasas2|add_class:"form-control" }}<br>
@@ -84,12 +85,12 @@
                                         {{ form.tasas4|add_class:"form-control" }}<br>
                                     </div><br>
                                 </div>
-                                <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo">
+                                <div style="display:{% if form.tipo.value == 1 %}initial{% else %}none{% endif %}" class="global tipo-tasa">
                                     <div class="input-group">
                                         {{ form.tasa_global|add_class:"form-control" }}
                                     </div>
                                 </div>
-                                <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo">
+                                <div style="display:{% if form.tipo.value == 2 %}initial{% else %}none{% endif %}" class="miscelaneo tipo-tasa">
                                     <div class="input-group">
                                         {{ form.descripcion|add_class:"form-control" }}
                                     </div>
