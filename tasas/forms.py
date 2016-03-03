@@ -11,7 +11,7 @@ class UniversidadForm(ModelForm):
 class TasaForm(ModelForm):
     class Meta:
         model = Tasa
-        exclude = ('id','universidad', 'tipo', 'tipo_titulacion')
+        exclude = ('id','universidad', 'tipo_titulacion')
         widgets = {
             'tipo': Select(choices=Tasa.TIPOS_TASA)
         }
