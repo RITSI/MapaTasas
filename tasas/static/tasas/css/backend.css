@@ -84,3 +84,7 @@
     color: red;
     list-style: none;
 }
+/*Fix for bootstrap-select*/
+.overlay{
+    z-index:3 !important;
+}

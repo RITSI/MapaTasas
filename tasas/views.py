@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 from django.views.generic import View, TemplateView
 
 from .models import Universidad, Tasa, get_current_curso
-from .forms import TasaForm
+from .forms import TasaForm, UniversidadForm
 from tasasrest import settings
 
 import pdb
@@ -28,6 +28,7 @@ class UniversidadView(View):
 
     def get(self, request, *args, **kwargs):
         uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad', None))
+        universidad_form = UniversidadForm(instance=uni)
         tasa_forms_grado = []
         tasa_forms_master = []
 
@@ -54,15 +55,9 @@ class UniversidadView(View):
 
             tasa_forms_master.append(tasa_form)
 
-        #TODO for tasa in tasas.filter(tipo_titulacion=Tasa.GRADO):
-        #     tasa_forms_grado.append(TasaForm(instance=tasa,
-        #                                      prefix="%s-%d" % (tasa.tipo_titulacion_verbose().lower(), tasa.curso)))
-        #
-        # for tasa in tasas.filter(tipo_titulacion=Tasa.MASTER):
-        #     tasa_forms_master.append(TasaForm(instance=tasa,
-        #                                       prefix="%s-%d" % (tasa.tipo_titulacion_verbose().lower(), tasa.curso)))
 
-        return render(request, self.template_name, {'uni': uni,
+        return render(request, self.template_name, {'nombre_universidad': uni.nombre,
+                                                    'universidad_form': universidad_form,
                                                     'form_tasas_grado': tasa_forms_grado,
                                                     'form_tasas_master': tasa_forms_master})
 
@@ -135,3 +130,8 @@ class UniversidadView(View):
         return render(request, self.template_confirmation_name, {'back_url': "/admin/universidad/%s" % uni.siglas,
                                                                  'message': _("Datos actualizados correctamente"),
                                                                  'title': _("Datos actualizados")})
+"""
+Permite la creación de una nueva universidad
+"""
+class CreateUniversidadView(View):
+    template_name = "tasas/edituni.html"
