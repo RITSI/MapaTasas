@@ -1,0 +1,38 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block header %}
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'tasas/css/backend.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    {% endblock header %}
+</head>
+<body>
+{% block top %}
+<div style="z-index:2" class="navbar navbar-default">
+    <div class="navbar-header">
+        <a href="/admin/" class="navbar-brand img-responsive">
+            <img style="max-height:100%;height:100%" src="{% static 'img/logoritsi-texto.png' %}" class="navbar-logo img-circle">
+            <span class="navbar-brand-label">{% trans "Mapa de tasas" %}</span>
+        </a>
+    </div>
+
+    <div class="navbar-collapse my-navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/about/"><i class="fa fa-question"></i> {% trans "Acerca de" %}</a></li>
+            <li><a href="/"><i class="fa fa-globe"></i> {% trans "Ir al mapa" %}</a></li>{% if request.user %}
+            <li><a href="/admin/logout/"><i class="fa fa-sign-out"></i> {% trans "Salir" %}</a></li>{% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock top %}
+{% block content %}
+{% endblock content %}
+{% block footer %}
+    <script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+{% endblock footer %}
+</body>
+</html>

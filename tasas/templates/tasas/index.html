@@ -1,0 +1,28 @@
+{% extends 'tasas/base.html' %}
+{% load staticfiles i18n %}
+
+{% block content %}
+{{ content.super }}
+<div class="col-md-8">
+    <div class="col-md-12">
+        {% for universidad in universidades %}
+        <div class="row uni-row">
+            <div class="panel panel-default">
+                <a href="universidad/{{universidad.siglas}}/">
+                    <div class="panel-body">
+                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="{% trans "Foto de la" %} {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
+                        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus}}</span></div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="universidad/{{universidad.siglas}}/editar/"><i class="fa fa-pencil-square"></i></a></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="col-md-4">
+    <a href="universidad" class="btn btn-default">
+        <i class="fa fa-plus"></i> {% trans "Añadir universidad" %}
+    </a>
+</div>
+{% endblock content %}
