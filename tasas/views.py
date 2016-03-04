@@ -35,7 +35,7 @@ class UniversidadView(View):
             tasa_forms_grado = []
             tasa_forms_master = []
 
-            for curso in range(settings.MIN_YEAR, get_current_curso()+settings.YEARS_IN_ADVANCE):
+            for curso in range(settings.MIN_YEAR, get_current_curso()+settings.YEARS_IN_ADVANCE+1):
                 tasa_form = TasaForm(prefix="%s-%d" % (self.grado_verbose, curso))
                 tasa_form.fields["curso"].initial = curso
 
