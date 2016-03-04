@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'widget_tweaks',
     'stdimage',
-    'tasas'
+    'tasas',
+    'mapa'
 ]
 
 MIDDLEWARE_CLASSES = [

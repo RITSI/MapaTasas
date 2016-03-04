@@ -19,10 +19,12 @@ from django.contrib import admin
 
 from . import settings
 
+from mapa.views import IndexView
 from tasas.api.urls import urlpatterns as api_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', include('tasas.urls', namespace="admin")),
-    url(r'^api/', include(api_urlpatterns))
+    url(r'^api/', include(api_urlpatterns, namespace="api")),
+    url(r'^$', IndexView.as_view())
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
   + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
