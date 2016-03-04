@@ -7,5 +7,5 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
 
         context["mapa"] = static('mapa/maps/esp.json')
-
+        context["template_universidad_provincia"] = static('mapa/templates/template_universidad_provincia.mst')
         return context

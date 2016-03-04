@@ -1,18 +1,20 @@
+{{#universidades}}
+
 <div class="row user-row">
     <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
-        <img class="img-circle foto-uni" src="img/uni/uni_{{siglas}}.jpg" alt="Foto de la {{nombre}}"></img>
+        <img class="img-circle foto-uni" src="{{logo_thumbnail}}" alt="Foto de la {{nombre}}"></img>
     </div>
     <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
         <strong>{{nombre}}</strong>
-        <span class="uni-tipo {{tipo}}">{{tipo}}</span>
+        <span class="uni-tipo {{tipo_verbose}}">{{tipo_verbose}}</span>
         <br>
         <span class="text-muted">{{campus}}</span>
     </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for=".drop-{{siglas_completas}}">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for="#{{siglas}}" siglas="{{siglas}}">
         <i class="glyphicon glyphicon-chevron-down text-muted"></i>
     </div>
 </div>
-<div class="row user-infos drop-{{siglas_completas}}">
+<div class="row user-infos drop-panel" id="{{siglas}}">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
         <div class="panel panel-primary">
             <div class="panel-heading">
@@ -34,18 +36,20 @@
                             
                             <dt>URL:</dt>
                             <dd><a href="{{url}}">Visitar centro</a></dd>
-                            
-                            <dt>Crédito en primera matrícula</dt>
-                            <dd>{{tasas1}}</dd>
-                            
-                            <dt>Crédito en segunda matrícula</dt>
-                            <dd>{{tasas2}}</dd>
-                            
-                            <dt>Crédito en tercera matrícula</dt>
-                            <dd>{{tasas3}}</dd>
-                            
-                            <dt>Crédito en cuarta matrícula</dt>
-                            <dd>{{tasas4}}</dd>
+                            {{#tasas_curso_actual}}
+                                <!--TODO: http://stackoverflow.com/a/13893250/2628463-->
+                                <dt>Primera matrícula</dt>
+                                <dd>{{tasas1}} €</dd>
+
+                                <dt>Segunda matrícula</dt>
+                                <dd>{{tasas2}} €</dd>
+
+                                <dt>Tercera matrícula</dt>
+                                <dd>{{tasas3}} €</dd>
+
+                                <dt>Cuarta matrícula</dt>
+                                <dd>{{tasas4}} €</dd>
+                            {{/tasas_curso_actual}}
                         </dl>
                     </div>
                     <div class=" col-md-12 col-lg-12 hidden-xs hidden-sm">
@@ -67,6 +71,7 @@
                                     <th>Precio por crédito para el curso 2015-2016</th>
                                     <td></td>
                                 </tr>
+                                {{#tasas_curso_actual}}
                                 <tr>
                                     <td>Primera matrícula</td>
                                     <td>{{tasas1}} €</td>
@@ -83,19 +88,21 @@
                                     <td>Cuarta matrícula</td>
                                     <td>{{tasas4}} €</td>
                                 </tr>
+                                {{/tasas_curso_actual}}
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="row {{clase}}" id="{{clase}}">
+                <div class="row chart-{{siglas}}" id="chart-{{siglas}}">
                 </div>
-                <div class="row" style="word-wrap: break-word;"id="urls">
-                    <strong>Referencias<strong><br/>
-                    {{#urls}}
-                        <a class="referencia" href="{{url}}" title="{{url}}">Datos de {{fecha}}</a><br/>
-                    {{/urls}}
+                <div class="row" style="word-wrap: break-word;" id="urls">
+                    <strong>Referencias</strong><br/>
+                    {{#tasas}}
+                        <a class="referencia" href="{{url}}" title="{{url}}">Datos de {{curso}}</a><br/>
+                    {{/tasas}}
                 </div>
             </div>
         </div>
     </div>
 </div>
+{{/universidades}}
