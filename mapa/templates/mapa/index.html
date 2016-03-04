@@ -49,7 +49,11 @@
         <script type="text/javascript" src="{% static 'mapa/js/jquery.tipsy.js' %}"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
         <script type="text/javascript" src="{% static 'mapa/js/analytics.js' %}"></script>
-        <script type="text/javascript" src="js/mapa.js"></script>
+
+        <script type="text/javascript">
+            var mapa_url = "{{ mapa }}";
+        </script>
+        <script type="text/javascript" src="{% static 'mapa/js/mapa.js' %}"></script>
         <script>
             gaTrack();
         </script>

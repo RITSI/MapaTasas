@@ -39,7 +39,7 @@ $(document).ready(function () {
     /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
      Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
      no ASCII, no funcionaría*/
-    d3.json("maps/esp.json", function (error, esp) {
+    d3.json(mapa_url, function (error, esp) {
         //Se añaden una a una las provincias descritas en el JSON
         svg.selectAll(".subunit")
                 .data(topojson.feature(esp, esp.objects.subunits).features)
