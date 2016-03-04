@@ -28,7 +28,7 @@ class UniversidadViewSet(ModelViewSet):
 
 class ProvinciaViewSet(ModelViewSet):
 
-    queryset = Universidad.objects.all()
+    queryset = Universidad.objects.all().prefetch_related('tasas')
     serializer_class = UniversidadSerializer
 
     def list(self, request, *args, **kwargs):
@@ -39,7 +39,7 @@ class ProvinciaViewSet(ModelViewSet):
             #TODO
             pass
 
-        unis = get_list_or_404(queryset, provincia__iexact=provincia)
+        unis = queryset.filter(provincia__iexact=provincia)#get_list_or_404(queryset, provincia__iexact=provincia)
         serializer = self.serializer_class(unis, many=True)
 
         return Response(serializer.data)
