@@ -8,7 +8,7 @@
         {% for universidad in universidades %}
         <div class="row uni-row">
             <div class="panel panel-default">
-                <a href="/admin/universidad/{{universidad.siglas}}/">
+                <a href="universidad/{{universidad.siglas}}/">
                     <div class="panel-body">
                         <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="{% trans "Foto de la" %} {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
                         <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus}}</span></div>
@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="col-md-4">
-    <a href="nueva/" class="btn btn-default">
+    <a href="universidad" class="btn btn-default">
         <i class="fa fa-plus"></i> {% trans "Añadir universidad" %}
     </a>
 </div>

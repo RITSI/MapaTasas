@@ -2,7 +2,11 @@
 {% load staticfiles i18n increment widget_tweaks %}
 {% block header %}
     {{ block.super }}
+    {% if nombre_universidad %}
     <title>{% trans 'Editando:' %} {{ nombre_universidad }}</title>
+    {% else %}
+    <title>{% trans 'Nueva universidad' %}</title>
+    {% endif %}
     <link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
 {% endblock header %}
 {% block footer %}
@@ -13,7 +17,7 @@
 {% block content %}
     {{ block.super }}
 
-    <form id="tasas-form" method="post" action="">
+    <form id="tasas-form" method="post" action="" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="col-md-12 uni-data">
             <div class="panel panel-default">
@@ -25,33 +29,41 @@
                     <div class="input-group" style="margin: 0 auto; display: block">
                         <div>
                             <label for="{{ universidad_form.siglas.id_for_label }}">{{ universidad_form.siglas.label }}</label>
+                            <label class="has-error">{{ universidad_form.siglas.errors }}</label>
                                 {{ universidad_form.siglas|add_class:"form-control" }}
                         </div>
                         <div>
                             <label for="{{ universidad_form.nombre.id_for_label }}">{{ universidad_form.nombre.label }}</label>
+                            <label class="has-error">{{ universidad_form.nombre.errors }}</label>
                                 {{ universidad_form.nombre|add_class:"form-control" }}
                         </div>
                         <div>
                             <label for="{{ universidad_form.tipo.id_for_label }}">{{ universidad_form.tipo.label }}</label>
+                            <label class="has-error">{{ universidad_form.tipo.errors }}</label>
                                 {{ universidad_form.tipo|add_class:"form-control selectpicker overlay" }}
                         </div>
                         <div>
                             <label for="{{ universidad_form.centro.id_for_label }}">{{ universidad_form.centro.label }}</label>
+                            <label class="has-error">{{ universidad_form.centro.errors }}</label>
                                 {{ universidad_form.centro|add_class:"form-control" }}
                         </div>
                         <div>
                             <label for="{{ universidad_form.provincia.id_for_label }}">{{ universidad_form.provincia.label }}</label>
+                            <label class="has-error">{{ universidad_form.provincia.errors }}</label>
                                 {{ universidad_form.provincia|add_class:"form-control selectpicker overlay"|attr:"data-live-search:'true'" }}
                         </div>
                         <div>
                             <label for="{{ universidad_form.logo.id_for_label }}">{{ universidad_form.logo.label }}</label>
+                            <label class="has-error">{{ universidad_form.logo.errors }}</label>
                                 {{ universidad_form.logo }}
                         </div>
                         <div>
+                            <label class="has-error">{{ universidad_form.centro.errors }}</label>
                             <label for="{{ universidad_form.campus.id_for_label }}">{{ universidad_form.campus.label }}</label>
                                 {{ universidad_form.campus|add_class:"form-control" }}
                         </div>
                         <div>
+                            <label class="has-error">{{ universidad_form.url.errors }}</label>
                             <label for="{{ universidad_form.url.id_for_label }}">{{ universidad_form.url.label }}</label>
                                 {{ universidad_form.url|add_class:"form-control" }}
                         </div>
@@ -61,6 +73,13 @@
                 </div>
             </div>
         </div>
+        {% if form.non_field_errors %}
+        <div class="col-md-12">
+            <div class="panel panel-danger">
+                <label class="has-errors">The errors{{ form.non_field_errors }}</label>
+            </div>
+        </div>
+        {% endif %}
         <div class="col-md-6 lista">
             <div class="list-tasas">
                 <div id="tasas-grado">
@@ -68,14 +87,14 @@
                     {%  for form in form_tasas_grado %}
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <label class="has-error">{{ form.non_field_errors }}</label>
+                            <div class="has-errors">{{ form.non_field_errors }}</div>
                             <div class="input-group basics">
                                 <label class="control-label">
                                     {% trans "Curso académico" %}
                                     <span class="curso"> {{form.curso.value}}/ {% increment form.curso.value %}</span>
                                 </label>
                                 <br>{# {{ form.tipo.errors }} #}
-                                {{ form.tipo|add_class:"form-control tipo-tasa-selector" }}
+                                {{ form.tipo|add_class:"form-control tipo-tasa-selector selectpicker" }}
                                 <br>
                                 <label class="has-error">{{form.url.errors}}</label>
                                 <label for="{{ form.url.id_for_label }}">{% trans "URL" %}</label>
@@ -126,8 +145,7 @@
                     {%  for form in form_tasas_master %}
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            {{ form.non_field_errors }}
-                            {% csrf_token %}
+                            <div class="has-errors">{{ form.non_field_errors }}</div>
                             <div class="input-group basics">
                                 <label class="control-label">
                                     {% trans "Curso académico" %}
@@ -135,7 +153,7 @@
                                 </label>
                                 <br>
 {#                                {{ form.tipo.errors }}#}
-                                {{ form.tipo|add_class:"form-control tipo-tasa-selector" }}
+                                {{ form.tipo|add_class:"form-control tipo-tasa-selector selectpicker" }}
                                 <br><label class="has-error">{{ form.url.errors }}</label>
                                 <label for="{{ form.url.id_for_label }}">{% trans "URL" %}</label>
                                     {{ form.url |add_class:"form-control"}}
@@ -180,7 +198,7 @@
         </div>
         <div class="row">
             <div class="col-md-12" style="text-align: center;">
-                <input id="submit-tasas" class="btn btn-success" style="width:90%; margin-top:10px;margin-bottom:10px;" type="submit" value="{% trans "Actualizar tasas" %}">
+                <input id="submit-tasas" class="btn btn-success" style="width:90%; margin-top:10px;margin-bottom:10px;" type="submit" value="{% trans "Actualizar datos" %}">
             </div>
         </div>
     </form>

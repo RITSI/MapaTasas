@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 from django.views.generic import View, TemplateView
 
@@ -27,46 +29,83 @@ class UniversidadView(View):
     master_verbose = Tasa.get_tipo_titulacion_verbose_ascii(Tasa.MASTER).lower()
 
     def get(self, request, *args, **kwargs):
-        uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad', None))
-        universidad_form = UniversidadForm(instance=uni)
-        tasa_forms_grado = []
-        tasa_forms_master = []
+        siglas = kwargs.get('universidad', None)
+        if siglas is None:
+            universidad_form = UniversidadForm()
+            tasa_forms_grado = []
+            tasa_forms_master = []
 
-        tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
-        tasas_master = uni.tasas.filter(tipo_titulacion=Tasa.MASTER)
-
-        for curso in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE):
-
-            try:
-                tasa = tasas_grado.get(curso=curso)
-                tasa_form = TasaForm(instance=tasa, prefix="%s-%d" % (self.grado_verbose, curso))
-            except Tasa.DoesNotExist:
+            for curso in range(settings.MIN_YEAR, get_current_curso()+settings.YEARS_IN_ADVANCE):
                 tasa_form = TasaForm(prefix="%s-%d" % (self.grado_verbose, curso))
                 tasa_form.fields["curso"].initial = curso
 
-            tasa_forms_grado.append(tasa_form)
+                tasa_forms_grado.append(tasa_form)
 
-            try:
-                tasa = tasas_master.get(curso=curso)
-                tasa_form = TasaForm(instance=tasa, prefix="%s-%d" % (self.master_verbose, curso))
-            except Tasa.DoesNotExist:
                 tasa_form = TasaForm(prefix="%s-%d" % (self.master_verbose, curso))
                 tasa_form.fields["curso"].initial = curso
 
-            tasa_forms_master.append(tasa_form)
+                tasa_forms_master.append(tasa_form)
+            uni_nombre = None
+        else:
+            if any(x.isupper() for x in siglas):
+                kwargs['universidad'] = kwargs['universidad'].lower()
+                return HttpResponseRedirect(redirect_to=reverse('admin:edit', kwargs=kwargs))
+
+            uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad').lower())
+            uni_nombre = uni.nombre
+            universidad_form = UniversidadForm(instance=uni)
+            tasa_forms_grado = []
+            tasa_forms_master = []
+
+            tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
+            tasas_master = uni.tasas.filter(tipo_titulacion=Tasa.MASTER)
+
+            for curso in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE):
+
+                try:
+                    tasa = tasas_grado.get(curso=curso)
+                    tasa_form = TasaForm(instance=tasa, prefix="%s-%d" % (self.grado_verbose, curso))
+                except Tasa.DoesNotExist:
+                    tasa_form = TasaForm(prefix="%s-%d" % (self.grado_verbose, curso))
+                    tasa_form.fields["curso"].initial = curso
+
+                tasa_forms_grado.append(tasa_form)
+
+                try:
+                    tasa = tasas_master.get(curso=curso)
+                    tasa_form = TasaForm(instance=tasa, prefix="%s-%d" % (self.master_verbose, curso))
+                except Tasa.DoesNotExist:
+                    tasa_form = TasaForm(prefix="%s-%d" % (self.master_verbose, curso))
+                    tasa_form.fields["curso"].initial = curso
+
+                tasa_forms_master.append(tasa_form)
 
 
-        return render(request, self.template_name, {'nombre_universidad': uni.nombre,
+        return render(request, self.template_name, {'nombre_universidad': uni_nombre,
                                                     'universidad_form': universidad_form,
                                                     'form_tasas_grado': tasa_forms_grado,
                                                     'form_tasas_master': tasa_forms_master})
 
     def post(self, request, *args, **kwargs):
-        uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad', None))
+        siglas = kwargs.get('universidad', None)
+        has_errors = False
 
         forms_tasas_grado = []
         forms_tasas_master = []
-        has_errors = False
+
+        if siglas is None:
+            uni_form = UniversidadForm(request.POST, request.FILES)
+
+        else:
+            uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad', None))
+            uni_form = UniversidadForm(request.POST, request.FILES, instance=uni)
+
+        if uni_form.is_valid():
+            uni = uni_form.save(commit=False)
+            uni.siglas = uni.siglas.lower()
+        else:
+            has_errors = True
+
         tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
         tasas_master = uni.tasas.filter(tipo_titulacion=Tasa.MASTER)
 
@@ -116,16 +155,22 @@ class UniversidadView(View):
                 forms_tasas_master.append(f)
 
         if has_errors:
-            print("Here")
             return render(request, self.template_name, {'uni': uni,
-                                                            'form_tasas_grado': forms_tasas_grado,
-                                                            'form_tasas_master': forms_tasas_master})
+                                                        'universidad_form': uni_form,
+                                                        'form_tasas_grado': forms_tasas_grado,
+                                                        'form_tasas_master': forms_tasas_master})
 
 
         for form in [f for f in forms_tasas_grado + forms_tasas_master if f.includes_information()]:
             tasa = form.save(commit=False)
             tasa.universidad = uni
             tasa.save()
+        uni.save()
+
+        if siglas is None:
+            message = _("Universidad creada correctamente")
+        else:
+            message = _("Datos actualizados correctamente")
 
         return render(request, self.template_confirmation_name, {'back_url': "/admin/universidad/%s" % uni.siglas,
                                                                  'message': _("Datos actualizados correctamente"),
