@@ -9,7 +9,15 @@ $(document).ready(function () {
         $("#map").attr("class", "well well-lg col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1");
         $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
     }
-
+    var template_universidad_provincia;
+    $.ajax({
+        type:"GET",
+        url:template_universidad_provincia_url,
+        async: false,
+        success: function(data){
+            template_universidad_provincia = data;
+        }
+    });
 
     /*Creación del mapa programáticamente*/
 
@@ -36,9 +44,7 @@ $(document).ready(function () {
             .attr("height", height);
 
 
-    /*El mapa a utilizar es esp-ascii.json . Es igual que esp.json, excepto que todos los caracteres son ASCII
-     Se hace asi dado que los nombres de las provincias son los ids de cada contorno svg. Si se utilizaran caracteres
-     no ASCII, no funcionaría*/
+
     d3.json(mapa_url, function (error, esp) {
         //Se añaden una a una las provincias descritas en el JSON
         svg.selectAll(".subunit")
@@ -64,41 +70,42 @@ $(document).ready(function () {
     /*El diseño responsive del mapa no funciona con propiedades CSS, 
      debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
     d3.select(window).on('resize', sizeChange);
-    sizeChange();
+    sizeChange(); // Redimensionado inicial
 
     // Cómputo de la media nacional con los datos disponibles:
-    var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014', 'tasas_2015'];
-    var average = {},
-            avCount = {};
-
-    indexes.forEach(function (index) {
-        average[index] = 0;
-        avCount[index] = 0;
-    });
-
-    // Si se pone a true, faltan datos de tasas de algún centro
-    var avError = false;
-
-    d3.json("data/uni/unis.json", function (error, file) {
-        file.unis.forEach(function (uni) {
-            // Para cada centro
-            indexes.forEach(function (index) {
-                // Para cada año
-                if (uni[index] && uni[index]['tasas1']) {
-                    average[index] += parseInt(uni[index]['tasas1']);
-                    avCount[index]++;
-                } else
-                    avError = true;
-            });
-        });
-
-        indexes.forEach(function (index) {
-            if (avCount[index])
-                average[index] /= avCount[index];
-            else
-                average[index] = 0;
-        });
-    });
+    //TODO:
+    // var indexes = ['tasas_2011', 'tasas_2012', 'tasas_2013', 'tasas_2014', 'tasas_2015'];
+    //var average = {},
+    //        avCount = {};
+    //
+    //indexes.forEach(function (index) {
+    //    average[index] = 0;
+    //    avCount[index] = 0;
+    //});
+    //
+    //// Si se pone a true, faltan datos de tasas de algún centro
+    //var avError = false;
+    //
+    //d3.json("data/uni/unis.json", function (error, file) {
+    //    file.unis.forEach(function (uni) {
+    //        // Para cada centro
+    //        indexes.forEach(function (index) {
+    //            // Para cada año
+    //            if (uni[index] && uni[index]['tasas1']) {
+    //                average[index] += parseInt(uni[index]['tasas1']);
+    //                avCount[index]++;
+    //            } else
+    //                avError = true;
+    //        });
+    //    });
+    //
+    //    indexes.forEach(function (index) {
+    //        if (avCount[index])
+    //            average[index] /= avCount[index];
+    //        else
+    //            average[index] = 0;
+    //    });
+    //});
 
     function sizeChange() {
         //Intento de diseño para móviles
@@ -135,10 +142,12 @@ $(document).ready(function () {
     }
 
     //Al dispararse este evento, se cargan los valores
-    function provincia_click(d) {        
+    function provincia_click(d) {
+        //TODO
         switch ($('.current').attr('data')) {
             case "master":
-                cargar_master(d);
+                //TODO
+                //cargar_master(d);
                 break;
             default:
             case "grado":
@@ -149,86 +158,77 @@ $(document).ready(function () {
     }
 
     function cargar_grado(d) {
-        var resultados = [];
-        var convenios_filter = [];
+
+        //var resultados = [];
+        //var convenios_filter = [];
 
         //Vaciado de los datos
         $('#bootstrap_lista_units').html('');
 
         //Filtrado de las universidades presentes en la provincia
-        d3.json("data/uni/unis.json", function (error, unis) {
-            var universidades = unis.unis;
-            /*Se recorren todas las universidades presentes, 
-             y si alguna tiene como provincia la seleccionada por el cursor, 
-             se incluye en el array*/
-            $.each(universidades, function (index, value) {
-                if (value.provincia === d.id)
-                    resultados.push(value);
-            });
+        d3.json("/api/provincias/"+ d.id, function (error, unis) {
 
-            var universidades_provincia = [];
-            if (resultados.length > 0) {
-                $.each(resultados, function (index, value) {
-                    universidades_provincia.push(resultados[index]);
-                    for (var i = universidades.length - 1; i >= 0; i--) {
-                        if (resultados[index].convenios.indexOf(universidades[i].siglas) > -1) {
-                            convenios_filter.push(universidades[i]);
-                        }
-                    }
-                    ;
-                });
-                create_dropdown_grado(universidades_provincia, convenios_filter);
-            } else {
-                //Si no hay universidades
+            var universidades = unis;
+
+            if(universidades.length == 0){
                 $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
             }
+            else
+                create_dropdown_grado(universidades);
         });
     }
 
-    function cargar_master(d) {
-        var resultados = [];
-        //Vaciado de los datos
-        $('#bootstrap_lista_units').html('');
+    //function cargar_master(d) {
+    //    var resultados = [];
+    //    //Vaciado de los datos
+    //    $('#bootstrap_lista_units').html('');
+    //
+    //    d3.json("data/uni/unis-master.json", function (error, unis) {
+    //        var universidades = unis.unis;
+    //        $.each(universidades, function (index, value) {
+    //            if (value.provincia === d.id)
+    //                resultados.push(value);
+    //        });
+    //        if (resultados.length < 1) {
+    //            $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
+    //        } else {
+    //
+    //            create_dropdown_grado(resultados, undefined);
+    //        }
+    //    });
+    //}
 
-        d3.json("data/uni/unis-master.json", function (error, unis) {
-            var universidades = unis.unis;
-            $.each(universidades, function (index, value) {
-                if (value.provincia === d.id)
-                    resultados.push(value);
-            });
-            if (resultados.length < 1) {
-                $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
-            } else {
+    function create_graph(universidad) {
 
-                create_dropdown_grado(resultados, undefined);
-            }
+
+        ////TODO
+        //if (universidad.tasas_2011 && universidad.tasas_2012 && universidad.tasas_2013 && universidad.tasas_2014 && universidad.tasas_2015) {
+        //    var averageErrorFlag = "",
+        //            averageErrorText = "";
+        //
+        //    if (avError) {
+        //        averageErrorFlag = "*";
+        //        averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+        //    }
+        //
+        //    averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
+        //TODO: Universidades con pago único/misceláneo
+        var x = ['x'];
+        $.forEach(universidad.tasas, {
+
         });
-    }
-
-    function create_graph(value) {
-        if (value.tasas_2011 && value.tasas_2012 && value.tasas_2013 && value.tasas_2014 && value.tasas_2015) {
-            var averageErrorFlag = "",
-                    averageErrorText = "";
-
-            if (avError) {
-                averageErrorFlag = "*";
-                averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
-            }
-
-            averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
-
             var chart = c3.generate({
-                bindto: "#chart-" + value.siglas,
+                bindto: "#chart-" + universidad.siglas,
                 data: {
                     x: 'x',
                     x_format: '%Y',
                     columns: [
                         ['x', new Date('2011'), new Date('2012'), new Date('2013'), new Date('2014'), new Date('2015')],
-                        ['Primera matrícula', value.tasas_2011.tasas1, value.tasas_2012.tasas1, value.tasas_2013.tasas1, value.tasas_2014.tasas1, value.tasas_2015.tasas1],
-                        ['Segunda matrícula', value.tasas_2011.tasas2, value.tasas_2012.tasas2, value.tasas_2013.tasas2, value.tasas_2014.tasas2, value.tasas_2015.tasas2],
-                        ['Tercera matrícula', value.tasas_2011.tasas3, value.tasas_2012.tasas3, value.tasas_2013.tasas3, value.tasas_2014.tasas3, value.tasas_2015.tasas3],
-                        ['Cuarta matrícula', value.tasas_2011.tasas4, value.tasas_2012.tasas4, value.tasas_2013.tasas4, value.tasas_2014.tasas4, value.tasas_2015.tasas4],
-                        ['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2), average['tasas_2015'].toFixed(2)]
+                        ['Primera matrícula', universidad.tasas_2011.tasas1, universidad.tasas_2012.tasas1, universidad.tasas_2013.tasas1, universidad.tasas_2014.tasas1, universidad.tasas_2015.tasas1],
+                        ['Segunda matrícula', universidad.tasas_2011.tasas2, universidad.tasas_2012.tasas2, universidad.tasas_2013.tasas2, universidad.tasas_2014.tasas2, universidad.tasas_2015.tasas2],
+                        ['Tercera matrícula', universidad.tasas_2011.tasas3, universidad.tasas_2012.tasas3, universidad.tasas_2013.tasas3, universidad.tasas_2014.tasas3, universidad.tasas_2015.tasas3],
+                        ['Cuarta matrícula', universidad.tasas_2011.tasas4, universidad.tasas_2012.tasas4, universidad.tasas_2013.tasas4, universidad.tasas_2014.tasas4, universidad.tasas_2015.tasas4],
+                        //['Media nacional' + averageErrorFlag, average['tasas_2011'].toFixed(2), average['tasas_2012'].toFixed(2), average['tasas_2013'].toFixed(2), average['tasas_2014'].toFixed(2), average['tasas_2015'].toFixed(2)]
                     ]
                 },
                 axis: {
@@ -241,67 +241,93 @@ $(document).ready(function () {
                     }
                 }
             });
-            if (value.observaciones) {
-                $('#chart-' + value.siglas).prepend('<p class="alert alert-info">' + value.observaciones + '</p>');
+            if (universidad.observaciones) {
+                $('#chart-' + universidad.siglas).prepend('<p class="alert alert-info">' + universidad.observaciones + '</p>');
             }
-            $('#chart-' + value.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
+            $('#chart-' + universidad.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
         }
 
     }
 
     //Función de creación del dropdown con los datos. Utiliza la biblioteca mustache.js http://mustache.github.io/
-    function create_dropdown_grado(universidades_provincia, universidades) {
-        var dropdown = [];
-        var graph_data = {};
+    function create_dropdown_grado(universidades_provincia) {
+
+        var rendered_data = Mustache.render(template_universidad_provincia, {"universidades":universidades_provincia});
+
+        $('#bootstrap_lista_units').append(rendered_data);
+        var panelsButton = $('.dropdown-user');
+        var panels = $('.drop-panel');
+        panels.hide();
+
+        panelsButton.off();
+        panelsButton.click(function(){
+           //TODO: Move to general binding using jQuery magic
+            var dataFor = $(this).attr('data-for');
+            var $idFor = $(dataFor);
+            var $currentButton = $(this);
+            $idFor.slideToggle(400, function(){
+               if($idFor.is(':visible')){
+                   $currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+               }else{
+                   $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+               }
+                universidad = universidades_provincia.filter(function(value){
+                    return value.siglas == $idFor.attr('id');
+                })[0];
+                create_graph(universidad);
+
+            });
+
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+
+        return;
+
+
+        //var dropdown = [];
+        //var graph_data = {};
         $.each(universidades_provincia, function (index, value) {
             /*Los campus siguen  la regla {{universidad}}-{{nombre campus}}, 
              * al eliminar todo lo que se encuentra detras del guión podemos utilizar siempre la misma imagen, para distintos campus
              */
-            var siglas = value.siglas.replace(/\-.*/g, '');
-            
+            //var siglas = value.siglas.replace(/\-.*/g, '');
+
             /*
              * creamos la estructura
              */ 
-            var estructura = {
-                nombre: value.nombre,
-                campus: value.campus,
-                centro: value.centro,
-                tipo: value.tipo,
-                url: value.url,
-                siglas: value.siglas.replace(/-.*/, ''),
-                siglas_completas: value.siglas,
-                observaciones: value.observaciones,
-                clase: 'chart-' + value.siglas,
-                tasas1: value.tasas_2015.tasas1,
-                tasas2: value.tasas_2015.tasas2,
-                tasas3: value.tasas_2015.tasas3,
-                tasas4: value.tasas_2015.tasas4,
-                urls: [{
-                        "url": value.tasas_2011.url,
-                        "fecha": 2011
-                    }, {
-                        "url": value.tasas_2012.url,
-                        "fecha": 2012
-                    }, {
-                        "url": value.tasas_2013.url,
-                        "fecha": 2013
-                    }, {
-                        "url": value.tasas_2014.url,
-                        "fecha": 2014
-                    }, {
-                        "url": value.tasas_2015.url,
-                        "fecha": 2015
-                    }]
-            }
+            //var estructura = {
+            //    nombre: value.nombre,
+            //    campus: value.campus,
+            //    centro: value.centro,
+            //    tipo: value.tipo,
+            //    url: value.url,
+            //    siglas: value.siglas.replace(/-.*/, ''),
+            //    siglas_completas: value.siglas,
+            //    observaciones: value.observaciones,
+            //    clase: 'chart-' + value.siglas,
+            //    tasas1: value.tasas_2015.tasas1,
+            //    tasas2: value.tasas_2015.tasas2,
+            //    tasas3: value.tasas_2015.tasas3,
+            //    tasas4: value.tasas_2015.tasas4,
+            //    urls: [{
+            //            "url": value.tasas_2011.url,
+            //            "fecha": 2011
+            //        }, {
+            //            "url": value.tasas_2012.url,
+            //            "fecha": 2012
+            //        }, {
+            //            "url": value.tasas_2013.url,
+            //            "fecha": 2013
+            //        }, {
+            //            "url": value.tasas_2014.url,
+            //            "fecha": 2014
+            //        }, {
+            //            "url": value.tasas_2015.url,
+            //            "fecha": 2015
+            //        }]
+            //}
             
-            //Recorremos todas las urls
-            for (x = 0; x < estructura.urls.length; x++) {
-                if (!estructura.urls[x].url) { //si la url no tiene datos
-                    estructura.urls.splice(x, 1);
-                    x--; //al eliminar un elemento, todos los demas cambian de índice
-                }
-            }
-            
+
             //El archivo .mst contiene la plantilla compatible con Mustache
             $.get('templates/template_universidad_provincia.mst', function (template_universidad_provincia) {
                 //Se añaden los datos del curso actual, y los datos generales
@@ -344,6 +370,7 @@ $(document).ready(function () {
         });
     }
     $('.tab-link').click(function () {
+        //TODO
         $link = $(this);
         if (!($link.hasClass('current'))) {
             $('.current').removeClass('current');

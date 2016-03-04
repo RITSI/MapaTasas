@@ -52,6 +52,10 @@
 
         <script type="text/javascript">
             var mapa_url = "{{ mapa }}";
+            var template_universidad_provincia_url = "{{ template_universidad_provincia }}";
+            var tipos_tasas = {};
+            tipos_tasas.GRADO = 0;
+            tipos_tasas.MASTER = 1;
         </script>
         <script type="text/javascript" src="{% static 'mapa/js/mapa.js' %}"></script>
         <script>
