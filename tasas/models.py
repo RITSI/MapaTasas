@@ -24,9 +24,9 @@ def get_current_curso():
     """
     today = datetime.date.today()
     if today.month < settings.CURSO_CHANGE_MONTH:
-        return today.year
+        return today.year -1
     else:
-        return today.year + 1
+        return today.year
 
 @deconstructible
 class CursoValidator(object):
@@ -94,6 +94,15 @@ class Universidad(models.Model):
 
     def get_provincia_unicode(self):
         return dict(provincias).get(self.provincia)
+
+    @property
+    def tipo_universidad_verbose(self):
+        self.get_tipo_universidad_verbose(self.tipo)
+
+    @classmethod
+    def get_tipo_universidad_verbose(cls, tipo_universidad):
+        #self
+        return str(dict((tipo, nombre) for tipo, nombre in cls.TIPO_UNIVERSIDAD_CHOICES).get(tipo_universidad))
 
     def __str__(self):
         return self.nombre
@@ -192,6 +201,10 @@ class Tasa(models.Model):
 
         super(Tasa, self).clean()
 
+    def validate_curso(self, exclude=None):
+        #TODO: see http://stackoverflow.com/a/14471010/2628463
+        pass
+
     @property
     def tipo_titulacion_verbose(self):
         return dict((tipo, nombre) for tipo, nombre in self.TIPOS_TITULACION).get(self.tipo_titulacion)
@@ -208,3 +221,6 @@ class Tasa(models.Model):
     @classmethod
     def get_tipo_titulacion_verbose_ascii(cls, tipo_titulacion):
         return dict((tipo, nombre) for tipo, nombre in cls.TIPOS_TITULACION_ASCII).get(tipo_titulacion)
+
+    class Meta:
+        ordering = ['curso', 'tipo']
