@@ -2,13 +2,18 @@ from django.db import models
 from django.core.validators import RegexValidator, MinValueValidator, MinLengthValidator
 from django.utils.translation import ugettext as _, ugettext_lazy
 from django.utils.deconstruct import deconstructible
-
-import tasasrest.settings as settings
-from .provincias import PROVINCIAS as provincias
+from django.core.exceptions import ValidationError
 
 import re
 import datetime
-from django.core.exceptions import ValidationError
+
+import tasasrest.settings as settings
+
+from .provincias import PROVINCIAS as provincias
+
+from stdimage.models import StdImageField
+from stdimage.validators import MinSizeValidator
+
 
 def get_current_curso():
     """
@@ -56,6 +61,7 @@ class Universidad(models.Model):
     TIPO_UNIVERSIDAD_CHOICES = ((PUBLICA, 'Pública'), (PRIVADA, 'Privada'))
 
     siglas = models.CharField(max_length=20, unique=True, null=False, blank=False,
+                              validators=[RegexValidator(regex=r'[A-Za-z\-]+', message=ugettext_lazy("Las siglas de la universidad solo pueden contener letras y guiones (-)"))],
                               help_text=ugettext_lazy("Siglas de la universidad"))
     nombre = models.CharField(max_length=200, null=False, blank=False,
                               help_text=ugettext_lazy("Nombre de la universidad"))
@@ -64,8 +70,10 @@ class Universidad(models.Model):
     centro = models.CharField(max_length=200, null=True, blank=True, help_text=ugettext_lazy("Nombre del centro"))
     provincia = models.CharField(max_length=50, choices=provincias, blank=False, null=False,
                                  help_text=ugettext_lazy("Provincia"))
-    logo = models.ImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
-                             help_text=ugettext_lazy("Escudo de la universidad"))
+    logo = StdImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
+                         variations={'thumbnail': (100, 100, True)},
+                         validators=[MinSizeValidator(100,100)],
+                         help_text=ugettext_lazy("Escudo de la universidad"))
 
     campus = models.CharField(max_length=200, null=True, blank=True,
                               help_text=ugettext_lazy("Nombre del campus")) # TODO: Hacer obligatorio?
