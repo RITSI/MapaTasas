@@ -200,23 +200,59 @@ $(document).ready(function () {
 
     function create_graph(universidad) {
 
-
-        ////TODO
-        //if (universidad.tasas_2011 && universidad.tasas_2012 && universidad.tasas_2013 && universidad.tasas_2014 && universidad.tasas_2015) {
-        //    var averageErrorFlag = "",
-        //            averageErrorText = "";
-        //
-        //    if (avError) {
-        //        averageErrorFlag = "*";
-        //        averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
-        //    }
-        //
-        //    averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
-        //TODO: Universidades con pago único/misceláneo
         var x = ['x'];
-        $.forEach(universidad.tasas, {
+        var primera_matricula = ['Primera matrícula'];
+        var segunda_matricula = ['Segunda matrícula'];
+        var tercera_matricula = ['Tercera matrícula'];
+        var cuarta_matricula = ['Cuarta matrícula'];
 
+        console.log(universidad.tasas)
+        $.each(universidad.tasas, function(index,tasa){
+            x.push(new Date(tasa.curso.toString()));
+            primera_matricula.push(tasa.tasas1);
+            segunda_matricula.push(tasa.tasas2);
+            tercera_matricula.push(tasa.tasas3);
+            cuarta_matricula.push(tasa.tasas4);
         });
+        //.parse("%yyyy", tasa.curso)
+
+        var chart = c3.generate({
+           bindto: "#chart-"+universidad.siglas,
+            data:{
+                x:'x',
+                x_format:'%Y',
+                columns:[x,primera_matricula, segunda_matricula, tercera_matricula, cuarta_matricula]
+            },
+            axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            //              format : "%m/%d" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                            format: "%Y" // https://github.com/mbostock/d3/wiki/Time-Formatting#wiki-format
+                        }
+                    }
+                }
+        });
+        /*if (universidad.observaciones) {
+                $('#chart-' + universidad.siglas).prepend('<p class="alert alert-info">' + universidad.observaciones + '</p>');
+            }*/
+
+         //TODO $('#chart-' + universidad.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
+
+        return;
+        ////TODO
+        if (universidad.tasas_2011 && universidad.tasas_2012 && universidad.tasas_2013 && universidad.tasas_2014 && universidad.tasas_2015) {
+            var averageErrorFlag = "",
+                    averageErrorText = "";
+
+            if (avError) {
+                averageErrorFlag = "*";
+                averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+            }
+
+            averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
+        //TODO: Universidades con pago único/misceláneo
+
             var chart = c3.generate({
                 bindto: "#chart-" + universidad.siglas,
                 data: {
