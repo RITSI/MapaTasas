@@ -9,6 +9,7 @@ from ..models import Universidad, Tasa, get_current_curso
 
 from tasasrest import settings
 
+
 class UniversidadViewSet(ModelViewSet):
 
     queryset = Universidad.objects.all()
@@ -17,7 +18,9 @@ class UniversidadViewSet(ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        serializer = self.serializer_class(queryset, many=True)
+
+        fields = request.GET.getlist('fields[]', None)
+        serializer = self.serializer_class(queryset, fields=fields, many=True)
 
         return Response(serializer.data)
 
