@@ -1,21 +1,3 @@
-/*$(function(){
-
-    var $modal = $('#tasa-modal');
-    var $close = $('#close-modal');
-    $close.click(function(){
-        $modal.css('display', 'none');
-    });
-    $modal.css('display', 'block');
-
-
-    $(document).keyup(function(e){
-        if(e.keyCode == 27){
-            $modal.css('display', 'none');
-        }
-    });
-    #t
-});*/
-
 /*
 * Simplifica la creación y el procesado de ventanas modales
 * @param element Identificador CSS del elemento
@@ -23,6 +5,19 @@
 var Modal = function(element){
     this.element = $(element);
     this.element.html('');
+    var self = this;
+    $.ajax({
+        url:"/api/universidad/?fields[]=siglas&fields[]=nombre&fields[]=tasas_curso_actual",
+        async:false,
+        type:"GET",
+        success:function(data){
+            self.universidades = data;
+            if(self.universidades.length > 0) self.curso_actual = self.universidades[0].tasas_curso_actual.curso
+        },
+        error: function(xhr, textStatus){
+            //TODO
+        }
+    })
 };
 
 /**
@@ -52,6 +47,7 @@ Modal.prototype.create = function(){
 
 Modal.prototype.render = function(content){
     this.element.find('.modal-content').html(content);
+    this.element.find('.calculadora');
 };
 
 Modal.prototype.show = function(){
