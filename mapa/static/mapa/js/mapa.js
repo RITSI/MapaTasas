@@ -1,4 +1,3 @@
-
 var template_universidad_provincia;
 var sizeChange = function() {
     //Intento de diseño para móviles
@@ -21,7 +20,7 @@ var sizeChange = function() {
 var createDropdownGrado = function(universidades_provincia){
 
     if(template_universidad_provincia === undefined) return; //TODO: handle error
-    var rendered_data = Mustache.render(template_universidad_provincia, {"universidades":universidades_provincia});
+    var rendered_data = template_universidad_provincia({"universidades":universidades_provincia});
 
     $('#bootstrap_lista_units').append(rendered_data);
 
@@ -147,8 +146,7 @@ $(function(){
         url:template_universidad_provincia_url,
         async: false,
         success: function(data){
-            template_universidad_provincia = data;
-            window.template_universidad_provincia = template_universidad_provincia;
+            template_universidad_provincia = Handlebars.compile(data);
         },
         error: function(xhr, textStatus){
             //TODO
