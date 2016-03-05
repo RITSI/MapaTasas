@@ -156,7 +156,7 @@ var createDetalle = function(universidad){
     $.ajax({
         url: "/api/universidad/"+universidad,
         success: function(data){
-            modal.render(template_universidad_detalle(data));
+            modal.render(template_universidad_detalle(data), data.tasas, true);
             modal.show();
         },
         error: function(xhr, textStatus){
