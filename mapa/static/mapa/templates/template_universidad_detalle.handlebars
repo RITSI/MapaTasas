@@ -46,11 +46,64 @@
                     <tr>
                         <th></th>
                         {{#each tasas}}
-                            <td><a href="{{url}}">Referencia</a></td>
+                            <td><a href="{{url}}" target="_blank">Referencia</a></td>
                         {{/each}}
                     </tr>
                 </table>
             </div>
         </div>
+    </div>
+    <div class="calculadora form-horizontal">
+        <div class="form-group">
+            <label for="#select-universidad" class="col-xs-2 control-label">Universidad</label>
+            <div class="col-xs-10">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <select id="select-universidad" class="form-control">
+                            <option value="0">Opción</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="0">Opción</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="#ects1" class="col-xs-6 control-label">Número de créditos en primera convocatoria</label>
+            <div class="col-xs-6">
+                <input type="number" style="width:50%;" class="pull-right form-control" id="ects1">
+                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="#ects2" class="col-xs-6 control-label">Número de créditos en segunda convocatoria</label>
+            <div class="col-xs-6">
+                <input type="number" style="width:50%;" class="pull-right form-control" id="ects2">
+                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="#ects3" class="col-xs-6 control-label">Número de créditos en tercera convocatoria</label>
+            <div class="col-xs-6">
+                <input type="number" style="width:50%;" class="pull-right form-control" id="ects3">
+                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="#ects4" class="col-xs-6 control-label">Número de créditos en cuarta convocatoria</label>
+            <div class="col-xs-6">
+                <input type="number" style="width:50%;" class="pull-right form-control" id="ects4">
+                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="#total" class="col-xs-6 control-label">Total</label>
+            <div class="col-xs-6">
+                <input type="number" style="width:50%;" class="pull-right form-control" id="total">
+                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
+            </div>
+        </div>
+
     </div>
 </div>

@@ -2,7 +2,7 @@
 
 <div class="row user-row">
     <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
-        <img class="img-circle foto-uni" src="{{logo_thumbnail}}" alt="Foto de la {{nombre}}"></img>
+        <img class="img-circle foto-uni" src="{{logo_thumbnail}}" alt="Foto de la {{nombre}}">
     </div>
     <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
         <strong>{{nombre}}</strong>
@@ -72,7 +72,7 @@
                                     <td><a href="{{url}}" >Visitar sitio</a></td>
                                 </tr>
                                 <tr>
-                                    <th>Precio por crédito para el curso 2015-2016</th>
+                                    <th>Precio por crédito para el curso {{tasas_curso_actual.curso}}-{{increment tasas_curso_actual.curso}}</th>
                                 </tr>
                                 {{#tasas_curso_actual}}
                                 <tr>

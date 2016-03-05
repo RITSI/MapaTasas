@@ -61,7 +61,3 @@ Modal.prototype.show = function(){
 Modal.prototype.hide = function(){
     this.element.css('display', 'none');
 };
-
-/*<div class="modal-content">
-
-        </div>*/

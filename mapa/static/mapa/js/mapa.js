@@ -1,3 +1,12 @@
+/*
+ * Incrementa el número dado. Útil para representar cursos
+ * @param text Valor a aumentar
+ * @param options Opciones de Handlebars
+ */
+Handlebars.registerHelper('increment', function(text, options){
+    return (text+1).toString();
+});
+
 var template_universidad_provincia;
 var template_universidad_detalle;
 var modal;
@@ -19,8 +28,8 @@ var sizeChange = function() {
     $map.find("svg").height($map.width() * 0.618).width($map.width());
 };
 
-var createDropdownGrado = function(universidades_provincia){
-
+var createDropdownGrado = function(universidades_provincia, media){
+    //TODO: print media for current curso
     if(template_universidad_provincia === undefined) return; //TODO: handle error
     var rendered_data = template_universidad_provincia({"universidades":universidades_provincia});
 
@@ -45,7 +54,7 @@ var createDropdownGrado = function(universidades_provincia){
             universidad = universidades_provincia.filter(function(value){
                 return value.siglas == $idFor.attr('id');
             })[0];
-            createGraph(universidad);
+            createGraph(universidad, media);
 
         });
 
@@ -59,11 +68,14 @@ var cargarGrado = function(d){
 
     // Llamada a la API
     d3.json("/api/provincias/"+ d.id, function (error, universidades) {
+        //TODO: Handle error
         if(universidades.length == 0){
             $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
         }
         else {
-            createDropdownGrado(universidades);
+            d3.json("api/average/", function(error, average){
+                createDropdownGrado(universidades, average);
+            });
         }
     });
 };
@@ -97,27 +109,36 @@ var provinciaClick = function(d){
     }
 };
 
-var createGraph = function(universidad){
+var createGraph = function(universidad, media){
     var x = ['x'];
     var primera_matricula = ['Primera matrícula'];
     var segunda_matricula = ['Segunda matrícula'];
     var tercera_matricula = ['Tercera matrícula'];
     var cuarta_matricula = ['Cuarta matrícula'];
+    var media_nacional = ['Media nacional'];
 
     $.each(universidad.tasas, function(index,tasa){
         x.push(new Date(tasa.curso.toString()));
-        primera_matricula.push(tasa.tasas1);
-        segunda_matricula.push(tasa.tasas2);
-        tercera_matricula.push(tasa.tasas3);
-        cuarta_matricula.push(tasa.tasas4);
+        primera_matricula.push(tasa.tasas1.toFixed(2));
+        segunda_matricula.push(tasa.tasas2.toFixed(2));
+        tercera_matricula.push(tasa.tasas3.toFixed(2));
+        cuarta_matricula.push(tasa.tasas4.toFixed(2));
     });
+
+    $.each(media, function(propertyName, propertyValue){
+        media_nacional.push(propertyValue.media_1.data.toFixed(2))
+    });
+
+    //TODO: Compute
+    var averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+    averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
 
     var chart = c3.generate({
         bindto: "#chart-"+universidad.siglas,
         data:{
             x:'x',
             x_format:'%Y',
-            columns:[x,primera_matricula, segunda_matricula, tercera_matricula, cuarta_matricula]
+            columns:[x,primera_matricula, segunda_matricula, tercera_matricula, cuarta_matricula, media_nacional]
         },
         axis: {
             x: {
@@ -128,6 +149,7 @@ var createGraph = function(universidad){
             }
         }
     });
+    $('#chart-' + universidad.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
 };
 
 var createDetalle = function(universidad){
@@ -229,8 +251,6 @@ $(function(){
      debido a la naturaleza del mismo. Se debe redimensionar por JavaScript*/
     d3.select(window).on('resize', sizeChange);
     sizeChange(); // Redimensionado inicial
-
-
 
     //TODO:
     $('.tab-link').click(function () {
