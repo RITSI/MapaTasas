@@ -8,4 +8,5 @@ class IndexView(TemplateView):
 
         context["mapa"] = static('mapa/maps/esp.json')
         context["template_universidad_provincia"] = static('mapa/templates/template_universidad_provincia.mst')
+        context["template_universidad_detalle"] = static('mapa/templates/template_universidad_detalle.handlebars')
         return context

@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
 
     var $modal = $('#tasa-modal');
     var $close = $('#close-modal');
@@ -6,18 +6,15 @@ $(function(){
         $modal.css('display', 'none');
     });
     $modal.css('display', 'block');
-    $(window).click(function(event){
-        if($(event.target).is($modal)){
-            $modal.css('display', 'none');
-        }
-    });
+
 
     $(document).keyup(function(e){
         if(e.keyCode == 27){
             $modal.css('display', 'none');
         }
     });
-});
+    #t
+});*/
 
 /*
 * Simplifica la creación y el procesado de ventanas modales
@@ -25,6 +22,7 @@ $(function(){
 * */
 var Modal = function(element){
     this.element = $(element);
+    this.element.html('');
 };
 
 /**
@@ -32,12 +30,28 @@ var Modal = function(element){
  * @param content Contenido a mostrar
  */
 Modal.prototype.create = function(){
-    this.element.html('<div class="modal-content"><span id="close-modal">x</span><p>Some text in the Modal..</p></div>');
-    //this.element.on('')
+    var self = this;
+    var $element = this.element;
+    this.element.html('<div class="modal-content"></div>');
+    this.element.on('click', '.close-modal', function(){
+        self.hide();
+    });
+
+    $(window).click(function(event){
+        if($(event.target).is($element)){
+            self.hide();
+        }
+    });
+
+    $(document).keyup(function(e){
+        if(e.keyCode == 27){
+            self.hide();
+        }
+    });
 };
 
-Model.prototype.render = function(content){
-
+Modal.prototype.render = function(content){
+    this.element.find('.modal-content').html(content);
 };
 
 Modal.prototype.show = function(){
@@ -46,4 +60,8 @@ Modal.prototype.show = function(){
 
 Modal.prototype.hide = function(){
     this.element.css('display', 'none');
-}
+};
+
+/*<div class="modal-content">
+
+        </div>*/

@@ -1,4 +1,6 @@
 var template_universidad_provincia;
+var template_universidad_detalle;
+var modal;
 var sizeChange = function() {
     //Intento de diseño para móviles
     var $map = $("#map");
@@ -128,6 +130,19 @@ var createGraph = function(universidad){
     });
 };
 
+var createDetalle = function(universidad){
+    $.ajax({
+        url: "/api/universidad/"+universidad,
+        success: function(data){
+            modal.render(template_universidad_detalle(data));
+            modal.show();
+        },
+        error: function(xhr, textStatus){
+            //TODO
+        }
+    })
+};
+
 $(function(){
     //TODO:Intento de diseño responsive
     var $bootstrap_lista_units = $("#bootstrap_lista_units");
@@ -148,6 +163,18 @@ $(function(){
         async: false,
         success: function(data){
             template_universidad_provincia = Handlebars.compile(data);
+        },
+        error: function(xhr, textStatus){
+            //TODO
+        }
+    });
+
+    $.ajax({
+        type:"GET",
+        url:template_universidad_detalle_url,
+        async:false,
+        success: function(data){
+            template_universidad_detalle = Handlebars.compile(data);
         },
         error: function(xhr, textStatus){
             //TODO
@@ -217,8 +244,10 @@ $(function(){
             $bootstrap_lista_units.html('<p>Haz click en una provincia para conocer la oferta de estudios de ' + (datos == "grado" ? datos : "máster") + '.</p>');
         }
     });
-
+    modal = new Modal('#tasa-modal');
+    modal.create();
     $bootstrap_lista_units.on('click', '.tasa-modal', function(e){
-
+        createDetalle($(this).attr('data-for'));
     });
+
 });
