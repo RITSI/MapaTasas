@@ -50,7 +50,11 @@
                                 <dt>Cuarta matrícula</dt>
                                 <dd>{{tasas4}} €</dd>
                             {{/tasas_curso_actual}}
+                            <dt>
+                                <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver más información</a>
+                            </dt>
                         </dl>
+
                     </div>
                     <div class=" col-md-12 col-lg-12 hidden-xs hidden-sm">
                         <table class="table table-user-information">
@@ -69,7 +73,6 @@
                                 </tr>
                                 <tr>
                                     <th>Precio por crédito para el curso 2015-2016</th>
-                                    <td></td>
                                 </tr>
                                 {{#tasas_curso_actual}}
                                 <tr>
@@ -89,6 +92,11 @@
                                     <td>{{tasas4}} €</td>
                                 </tr>
                                 {{/tasas_curso_actual}}
+                                <tr>
+                                    <td>
+                                        <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver más información</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

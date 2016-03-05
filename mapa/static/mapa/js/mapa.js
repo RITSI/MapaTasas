@@ -30,7 +30,7 @@ var createDropdownGrado = function(universidades_provincia){
 
     $panelsButton.off();
     $panelsButton.click(function(){
-       //TODO: Move to general binding using jQuery magic
+       //TODO: Move to general binding using jQuery event delegation
         var dataFor = $(this).attr('data-for');
         var $idFor = $(dataFor);
         var $currentButton = $(this);
@@ -130,14 +130,15 @@ var createGraph = function(universidad){
 
 $(function(){
     //TODO:Intento de diseño responsive
+    var $bootstrap_lista_units = $("#bootstrap_lista_units");
     if ($(window).width() < 480) {
         $("#content").attr('class', "row");
         $("#map").attr("class", "well well-lg");
-        $("#bootstrap_lista_units").attr("class", "well");
+        $bootstrap_lista_units.attr("class", "well");
     } else {
         $("#content").attr('class', "");
         $("#map").attr("class", "well well-lg col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1");
-        $("#bootstrap_lista_units").attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
+        $bootstrap_lista_units.attr("class", "well col-xs-5 col-sm-5 col-md-5 col-lg-5");
     }
 
     // Petición bloqueante que descarga (una vez) la plantilla de Mustache.
@@ -213,7 +214,11 @@ $(function(){
             $link.addClass('current');
             datos = $link.attr('data');
 
-            $('#bootstrap_lista_units').html('<p>Haz click en una provincia para conocer la oferta de estudios de ' + (datos == "grado" ? datos : "máster") + '.</p>');
+            $bootstrap_lista_units.html('<p>Haz click en una provincia para conocer la oferta de estudios de ' + (datos == "grado" ? datos : "máster") + '.</p>');
         }
+    });
+
+    $bootstrap_lista_units.on('click', '.tasa-modal', function(e){
+
     });
 });
