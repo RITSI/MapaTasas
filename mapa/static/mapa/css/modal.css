@@ -24,15 +24,6 @@
 /* The Close Button */
 .close-modal {
     color: white;
-    /*font-size: 28px;
-    font-weight: bold;*/
-    /*z-index: 3;
-    position: absolute;
-    right: 0px;
-    top: -20px;
-    background-color: #da2724;
-    display: block;*/
-
 }
 
 .close-modal:hover,

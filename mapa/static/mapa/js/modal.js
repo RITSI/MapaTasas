@@ -11,6 +11,12 @@ $(function(){
             $modal.css('display', 'none');
         }
     });
+
+    $(document).keyup(function(e){
+        if(e.keyCode == 27){
+            $modal.css('display', 'none');
+        }
+    });
 });
 
 /*
@@ -25,8 +31,13 @@ var Modal = function(element){
  * Crea la ventana modal
  * @param content Contenido a mostrar
  */
-Modal.prototype.create = function(content){
+Modal.prototype.create = function(){
     this.element.html('<div class="modal-content"><span id="close-modal">x</span><p>Some text in the Modal..</p></div>');
+    //this.element.on('')
+};
+
+Model.prototype.render = function(content){
+
 };
 
 Modal.prototype.show = function(){
