@@ -1,4 +1,5 @@
-from rest_framework.serializers import ModelSerializer, SerializerMethodField
+from rest_framework.serializers import ModelSerializer, SerializerMethodField, Serializer
+from rest_framework import serializers
 from ..models import Universidad, Tasa, get_current_curso
 
 import os.path
@@ -38,7 +39,6 @@ class UniversidadSerializer(ModelSerializer):
     def get_tasas_curso_actual(self, obj):
         if obj is not None and obj.tasas is not None:
             current_curso = get_current_curso()
-            print(current_curso)
             try:
                 tasa = obj.tasas.get(curso=current_curso)
                 return TasaSerializer(tasa).data
