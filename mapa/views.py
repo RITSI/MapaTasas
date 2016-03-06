@@ -24,5 +24,9 @@ class ReporteView(FormView):
     success_url = 'success'
 
     def form_valid(self, form):
+        reporte = form.save()
+
         return super(ReporteView, self).form_valid(form)
 
+class ReporteSuccessView(TemplateView):
+    template_name = 'mapa/success.html'

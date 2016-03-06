@@ -1,6 +1,7 @@
 from django.conf.urls import url
-from .views import ReporteView
+from .views import ReporteView, ReporteSuccessView
 
 urlpatterns = [
-    url(r'^(?P<universidad>[A-Za-z\-]*)$', ReporteView.as_view(), name="reporte")
+    url(r'success', ReporteSuccessView.as_view()),
+    url(r'', ReporteView.as_view(), name="reporte")
 ]
