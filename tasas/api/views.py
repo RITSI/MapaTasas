@@ -15,6 +15,7 @@ class UniversidadViewSet(ModelViewSet):
     queryset = Universidad.objects.all()
     serializer_class = UniversidadSerializer
     base_name = "universidades"
+    http_method_names = ['get', 'head', 'options']
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -36,6 +37,7 @@ class ProvinciaViewSet(ModelViewSet):
 
     queryset = Universidad.objects.all().prefetch_related('tasas')
     serializer_class = UniversidadSerializer
+    http_method_names = ['get', 'head', 'options']
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -53,6 +55,7 @@ class ProvinciaViewSet(ModelViewSet):
 class TasasViewSet(ModelViewSet):
     queryset = Tasa.objects.all()
     serializer_class = TasaSerializer
+    http_method_names = ['get', 'head', 'options']
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -71,6 +74,7 @@ class AverageViewSet(ViewSet):
     queryset = Tasa.objects.all()
     #TODO: PAGO ÚNICO
     #serializer_class = AverageDataSerializer
+    http_method_names = ['get', 'head', 'options']
 
     def list(self, request, *args, **kwargs):
         return_data = {}

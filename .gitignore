@@ -72,3 +72,4 @@ target/
 db.sqlite3
 global-static
 media
+static
