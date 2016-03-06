@@ -44,7 +44,7 @@ Modal.prototype.create = function(){
             self.hide();
         }
     });
-    this.element.on('change', '.curso-selector', function(e){
+    this.element.on('change', '#curso-selector', function(e){
         self.recalculate($(this).find("option:selected").attr('value'));
     });
 
@@ -69,7 +69,7 @@ Modal.prototype.hide = function(){
 Modal.prototype.createCalculator = function(data){
     var $calculadora = this.element.find('.calculadora');
     $calculadora.css('display', 'block');
-    var $curso_selector = $calculadora.find('.curso-selector');
+    var $curso_selector = $calculadora.find('#curso-selector');
     this.tasas_data = data;
     var curso_actual = this.curso_actual;
     $.each(this.tasas_data, function(key, value){
@@ -80,6 +80,7 @@ Modal.prototype.createCalculator = function(data){
 };
 
 Modal.prototype.recalculate = function(curso){
+    var self = this;
     var ects = [];
     this.element.find('.input-ects').each(function(index, value){
         var number_ects = parseInt($(value).val(), 10) || 0;
@@ -89,15 +90,16 @@ Modal.prototype.recalculate = function(curso){
         ects.push(number_ects);
     });
 
-    var tasas = tasas_data.find(function(element, index, array){
+    var tasas = this.tasas_data.find(function(element, index, array){
         return element.curso == curso;
     });
-    console.log(tasas)
     if(tasas == undefined){
         return;
     }
-    $.each(tasas, function(index, value){
-        console.log(index, value);
+    $.each(ects, function(index, value){
+        var precio = value * tasas['tasas'+(index+1)];
+        self.element.find('#total-'+(index+1)).text(precio.toFixed(2).toString() + ' €');
+
     });
     /*console.log(this.element.find('#ects1').text())
     console.log(this.element.find('#ects2').text())

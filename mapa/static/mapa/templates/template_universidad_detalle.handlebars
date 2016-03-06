@@ -54,53 +54,256 @@
         </div>
     </div>
     <div class="calculadora form-horizontal">
-        <div class="form-group">
-            <label for="#select-universidad" class="col-xs-2 control-label">Universidad</label>
-            <div class="col-xs-10">
-                <div class="form-inline">
-                    <div class="form-group">
-                        <!--TODO: Consider<select id="select-universidad" class="form-control">
-                        </select>-->
-                        <select class="form-control curso-selector"></select>
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Calcular precio</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="#ects1" class="col-xs-6 control-label">Número de créditos en primera convocatoria</label>
-            <div class="col-xs-6">
-                <input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects1">
-                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="#ects2" class="col-xs-6 control-label">Número de créditos en segunda convocatoria</label>
-            <div class="col-xs-6">
-                <input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects2">
-                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="#ects3" class="col-xs-6 control-label">Número de créditos en tercera convocatoria</label>
-            <div class="col-xs-6">
-                <input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects3">
-                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="#ects4" class="col-xs-6 control-label">Número de créditos en cuarta convocatoria</label>
-            <div class="col-xs-6">
-                <input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects4">
-                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="#total" class="col-xs-6 control-label">Total</label>
-            <div class="col-xs-6">
-                <input type="number" style="width:50%;" class="pull-right form-control" id="total">
-                <input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">
-            </div>
-        </div>
+                    <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label>Curso académico</label>
+                                </div>
+                                <div class="col-xs-5 col-sm-5 col-md-5">
+                                    <div class="form-group">
+                                        <select id="curso-selector"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <label>Precio en primera convocatoria</label>
+                                </div>
+                                <div class="col-xs-5">
+                                    <input type="text" name="ects1" id="ects1" class="input-ects form-control input-sm" placeholder="Créditos en primera convocatoria">
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right" id="total-1">El precio</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <label>Precio en segunda convocatoria</label>
+                                </div>
+                                <div class="col-xs-5">
+                                    <input type="text" name="ects2" id="ects2" class="input-ects form-control input-sm" placeholder="Créditos en segunda convocatoria">
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right" id="total-2">El precio</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <label>Precio en tercera convocatoria</label>
+                                </div>
+                                <div class="col-xs-5">
+                                    <input type="text" name="ects3" id="ects3" class="input-ects form-control input-sm" placeholder="Créditos en tercera convocatoria">
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right" id="total-3">El precio</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <label>Precio en cuarta convocatoria</label>
+                                </div>
+                                <div class="col-xs-5">
+                                    <input type="text" name="ects4" id="ects4" class="input-ects form-control input-sm" placeholder="Créditos en cuarta convocatoria">
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right" id="total-4">El precio</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <label>Total</label>
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right">Total créditos</p>
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <p class="pull-right">Total euros</p>
+                                </div>
+                            </div>
 
+
+                            <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+            <!--<div class="form-group">-->
+                <!--<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">-->
+            <!--</div>-->
+
+            <!--<div class="row">-->
+                <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<input type="submit" value="Register" class="btn btn-info btn-block">-->
+
+        </div>
     </div>
+</div>
+</div>
+<!--<div class="form-group">-->
+<!--<label for="#select-universidad" class="col-xs-2 control-label">Universidad</label>-->
+<!--<div class="col-xs-10">-->
+<!--<div class="form-inline">-->
+<!--<div class="form-group">-->
+<!--&lt;!&ndash;TODO: Consider<select id="select-universidad" class="form-control">-->
+<!--</select>&ndash;&gt;-->
+<!--<select class="form-control curso-selector"></select>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects1" class="col-xs-6 control-label">Número de créditos en primera convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects1">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects2" class="col-xs-6 control-label">Número de créditos en segunda convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects2">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects3" class="col-xs-6 control-label">Número de créditos en tercera convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects3">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects4" class="col-xs-6 control-label">Número de créditos en cuarta convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects4">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#total" class="col-xs-6 control-label">Total</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control" id="total">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
+</div>
+<!--<div class="row centered-form">-->
+<!--<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<h3 class="panel-title">Please sign up for Bootsnipp <small>It's free!</small></h3>-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<form role="form">-->
+<!--<div class="row">-->
+<!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+<!--<div class="form-group">-->
+<!--<input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+<!--<div class="form-group">-->
+<!--<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">-->
+<!--</div>-->
+
+<!--<div class="row">-->
+<!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+<!--<div class="form-group">-->
+<!--<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-xs-6 col-sm-6 col-md-6">-->
+<!--<div class="form-group">-->
+<!--<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<input type="submit" value="Register" class="btn btn-info btn-block">-->
+
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#select-universidad" class="col-xs-2 control-label">Universidad</label>-->
+<!--<div class="col-xs-10">-->
+<!--<div class="form-inline">-->
+<!--<div class="form-group">-->
+<!--&lt;!&ndash;TODO: Consider<select id="select-universidad" class="form-control">-->
+<!--</select>&ndash;&gt;-->
+<!--<select class="form-control curso-selector"></select>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects1" class="col-xs-6 control-label">Número de créditos en primera convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects1">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects2" class="col-xs-6 control-label">Número de créditos en segunda convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects2">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects3" class="col-xs-6 control-label">Número de créditos en tercera convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects3">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#ects4" class="col-xs-6 control-label">Número de créditos en cuarta convocatoria</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control input-ects" id="ects4">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="#total" class="col-xs-6 control-label">Total</label>-->
+<!--<div class="col-xs-6">-->
+<!--<input type="number" style="width:50%;" class="pull-right form-control" id="total">-->
+<!--<input style="width:50%;" class="pull-right form-control" type="text" contenteditable="false" value="€">-->
+<!--</div>-->
+<!--</div>-->
+
 </div>
