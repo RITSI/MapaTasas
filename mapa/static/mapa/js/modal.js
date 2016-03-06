@@ -63,11 +63,13 @@ Modal.prototype.render = function(content, data, include_calculator){
 };
 
 Modal.prototype.show = function(){
-    this.element.css('display', 'block');
+    this.element.fadeIn();
+    //this.element.css('display', 'block');
 };
 
 Modal.prototype.hide = function(){
-    this.element.css('display', 'none');
+    //this.element.css('display', 'none');
+    this.element.fadeOut();
 };
 
 Modal.prototype.createCalculator = function(data){
