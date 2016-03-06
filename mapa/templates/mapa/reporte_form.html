@@ -1,0 +1,8 @@
+{% extends 'mapa/base.html' %}
+{% block content %}
+{{ block.super }}
+    <form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
