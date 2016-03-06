@@ -70,7 +70,7 @@ target/
 .python-version
 
 db.sqlite3
-global-static
+global-static/vendor
 media
 static
 
