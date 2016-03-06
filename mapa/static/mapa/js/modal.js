@@ -22,7 +22,6 @@ var Modal = function(element){
 
 /**
  * Crea la ventana modal
- * @param content Contenido a mostrar
  */
 Modal.prototype.create = function(){
     var self = this;
@@ -48,12 +47,17 @@ Modal.prototype.create = function(){
         self.recalculate($(this).find("option:selected").attr('value'));
     });
 
+    this.element.on('input', '.input-ects', function(e){
+       self.recalculate(self.element.find('#curso-selector').find("option:selected").attr('value'))
+    });
+
 };
 
 Modal.prototype.render = function(content, data, include_calculator){
     this.element.find('.modal-content').html(content);
     if(include_calculator){
         this.createCalculator(data);
+        this.recalculate(this.element.find('#curso-selector').find("option:selected").attr('value'))
     }
 
 };
@@ -83,9 +87,10 @@ Modal.prototype.recalculate = function(curso){
     var self = this;
     var ects = [];
     this.element.find('.input-ects').each(function(index, value){
-        var number_ects = parseInt($(value).val(), 10) || 0;
-        if(number_ects == 0){
-            $(this).val(0);
+        var number_ects = parseInt($(value).val(), 10) || false;
+        if(number_ects == false){
+            number_ects = 0;
+            $(this).val('');
         }
         ects.push(number_ects);
     });
@@ -93,16 +98,23 @@ Modal.prototype.recalculate = function(curso){
     var tasas = this.tasas_data.find(function(element, index, array){
         return element.curso == curso;
     });
+    
     if(tasas == undefined){
         return;
     }
+
+    var total_ects = 0;
+    var total_precio = 0;
+
     $.each(ects, function(index, value){
         var precio = value * tasas['tasas'+(index+1)];
         self.element.find('#total-'+(index+1)).text(precio.toFixed(2).toString() + ' €');
+        total_ects+=value;
+        total_precio+=precio;
 
     });
-    /*console.log(this.element.find('#ects1').text())
-    console.log(this.element.find('#ects2').text())
-    console.log(this.element.find('#ects3').text())
-    console.log(this.element.find('#ects4').text())*/
+
+    self.element.find("#total-ects").text(total_ects.toFixed(2));
+    self.element.find("#total").text(total_precio.toFixed(2).toString() + ' €');
+
 };
