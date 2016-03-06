@@ -40,11 +40,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'widget_tweaks',
+    'django_nose',
     'stdimage',
     'tasas',
     'mapa'
 ]
 
+# Django Nose configuration
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-html',
+    '--cover-package=tasas,mapa'
+]
 # Django Suit configuration example
 SUIT_CONFIG = {
     # header

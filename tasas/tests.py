@@ -144,11 +144,11 @@ class TestCursoValidator(TestCase):
     @patch('tasas.models.datetime')
     def test_get_current_year(self, current_curso_mock):
         current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Sep 1 2011', '%b %d %Y'))
-        self.assertEqual(2012, get_current_curso())
+        self.assertEqual(2011, get_current_curso())
 
         current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Aug 31 2011', '%b %d %Y'))
 
-        self.assertEqual(2011, get_current_curso())
+        self.assertEqual(2010, get_current_curso())
 
     @patch('tasas.models.datetime')
     #@patch('tasas.models.settings.MIN_YEAR')
@@ -161,12 +161,11 @@ class TestCursoValidator(TestCase):
         #settings_mock.YEARS_IN_ADVANCE = 1
         #settings_mock.CURSO_CHANGE_MONTH = 10
 
-        self.assertRaises(ValidationError, validator.__call__(2011))
+        self.assertRaises(ValidationError, validator.__call__,(2010))
 
         current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Aug 1 2011', '%b %d %Y'))
         self.assertEqual(None, validator.__call__(2011))
 
-        self.assertEqual(None, validator.__call__(2012))
         self.assertRaises(ValidationError, validator.__call__, (2013))
 
 class TestTasaModel(TestCase):
