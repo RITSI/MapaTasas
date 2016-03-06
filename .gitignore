@@ -73,3 +73,6 @@ db.sqlite3
 global-static
 media
 static
+
+# Maps
+raw-map/*.json
