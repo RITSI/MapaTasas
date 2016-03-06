@@ -1,7 +1,10 @@
 from django.db import models
 from django.core.validators import RegexValidator, MinValueValidator, MinLengthValidator
+
 from django.utils.translation import ugettext as _, ugettext_lazy
 from django.utils.deconstruct import deconstructible
+from django.utils.functional import lazy
+
 from django.core.exceptions import ValidationError
 
 import re
@@ -27,6 +30,9 @@ def get_current_curso():
         return today.year -1
     else:
         return today.year
+
+def curso_choices():
+    return tuple((year, "%s/%s" % (year, year+1)) for year in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE+1))
 
 @deconstructible
 class CursoValidator(object):
@@ -97,7 +103,7 @@ class Universidad(models.Model):
 
     @property
     def tipo_universidad_verbose(self):
-        self.get_tipo_universidad_verbose(self.tipo)
+        return self.get_tipo_universidad_verbose(self.tipo)
 
     @classmethod
     def get_tipo_universidad_verbose(cls, tipo_universidad):
@@ -143,7 +149,7 @@ class Tasa(models.Model):
                                           help_text=ugettext_lazy("Tipo de titulación (grado/máster)"))
 
     # El curso se representa con el año en el que da comienzo
-    curso = models.IntegerField(validators=[RegexValidator(regex=r'^\d{4}$'), CursoValidator()],
+    curso = models.IntegerField(choices=lazy(curso_choices, tuple)(), validators=[RegexValidator(regex=r'^\d{4}$'), CursoValidator()],
                                 help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
     url = models.URLField(null=False, blank=False, validators=[MinLengthValidator(1)],
                           help_text=ugettext_lazy("URL del documento oficial"))

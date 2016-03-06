@@ -175,7 +175,6 @@ class TestTasaModel(TestCase):
     def test_validator_precio_por_credito(self):
         tasa = Tasa()
 
-
         self.assertRaises(ValidationError, tasa.clean_fields)
         tasa.tipo = Tasa.PRECIO_POR_CREDITO
         self.assertRaises(ValidationError, tasa.clean_fields)
@@ -197,7 +196,7 @@ class TestTasaModel(TestCase):
         tasa.tasas4 = 40
         self.assertEqual(None, tasa.clean())
 
-    def test_validator_precio_por_credito(self):
+    def test_validator_precio_por_credito_2(self):
         tasa = Tasa()
 
         self.assertRaises(ValidationError, tasa.clean_fields)
