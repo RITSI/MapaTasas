@@ -230,3 +230,4 @@ class Tasa(models.Model):
 
     class Meta:
         ordering = ['curso', 'tipo']
+        unique_together = ('universidad', 'curso', 'tipo_titulacion')
