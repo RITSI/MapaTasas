@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext as _
-from tasas.models import Universidad, CursoValidator
+from tasas.models import Universidad
 
 
 class Reporte(models.Model):

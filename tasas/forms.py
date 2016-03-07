@@ -5,7 +5,6 @@ from django.forms.widgets import Select
 class UniversidadForm(ModelForm):
     class Meta:
         model = Universidad
-        #provincia = ChoiceField(choices=Universidad.PROVINCIAS)
         exclude = ('id',)
 
 class TasaForm(ModelForm):

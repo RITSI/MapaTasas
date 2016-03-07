@@ -8,9 +8,7 @@ from .models import Universidad, Tasa, get_current_curso
 from .forms import TasaForm, UniversidadForm
 from tasasrest import settings
 
-import pdb
 
-#TODO: Replace by ListView
 class IndexView(TemplateView):
     template_name = "tasas/index.html"
 
@@ -80,14 +78,13 @@ class UniversidadView(View):
 
                 tasa_forms_master.append(tasa_form)
 
-
         return render(request, self.template_name, {'nombre_universidad': uni_nombre,
                                                     'universidad_form': universidad_form,
                                                     'form_tasas_grado': tasa_forms_grado,
                                                     'form_tasas_master': tasa_forms_master})
 
-    def post(self, request, *args, **kwargs):
-        siglas = kwargs.get('universidad', None)
+    def post(self, request, *args, universidad=None, **kwargs):
+        siglas = universidad
         has_errors = False
 
         nombre_universidad = None
@@ -99,14 +96,13 @@ class UniversidadView(View):
             uni_form = UniversidadForm(request.POST, request.FILES)
 
         else:
-            uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad', None))
+            uni = get_object_or_404(Universidad.objects.all(), siglas=universidad)
             uni_form = UniversidadForm(request.POST, request.FILES, instance=uni)
 
         if uni_form.is_valid():
             uni = uni_form.save(commit=False)
             uni.siglas = uni.siglas.lower()
             nombre_universidad = uni.nombre
-
 
             tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
             tasas_master = uni.tasas.filter(tipo_titulacion=Tasa.MASTER)
@@ -116,10 +112,10 @@ class UniversidadView(View):
                 request_data = request.POST.copy()
 
                 request_data["grado-%s-curso" % curso] = curso
-                request_data["grado-%s-tipo_titulacion"%curso]=Tasa.GRADO
+                request_data["grado-%s-tipo_titulacion" % curso]=Tasa.GRADO
 
                 request_data["master-%s-curso" % curso] = curso
-                request_data["master-%s-tipo_titulacion"%curso]=Tasa.MASTER
+                request_data["master-%s-tipo_titulacion" % curso]=Tasa.MASTER
 
                 try:
                     tasa_instance = tasas_grado.get(curso=curso)

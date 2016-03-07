@@ -23,18 +23,18 @@ class Command(BaseCommand):
         Returns:
             None
         """
-        parser.add_argument('file', type=str, help=_("Archivo json"))
+        parser.add_argument('file', type=str, help="Archivo json")
         parser.add_argument('img-dir', type=str, default='img/uni/',
-                            help=_("Directorio con los logos de la universidad"))
+                            help="Directorio con los logos de la universidad, siguiendo la convención uni_[siglas].jpg")
         parser.add_argument('--overwrite', action='store_true',
-                            help=_("Sobreescribe la información"), dest='overwrite')
-        # TODO: Add help parameter
+                            help="Sobreescribe la información de la base de datos", dest='overwrite')
+
     def handle(self, *args, **options):
         try:
             with open(options.get('file', ''), 'r') as f:
                 data = json.load(f)
         except IOError:
-            sys.stderr.write(_("Archivo no encontrado\n"))
+            sys.stderr.write("Archivo '%s' no encontrado\n" % options.get('file', ''))
             return
 
         self.parse_file(data, options.get('img-dir'), options.get('overwrite', False))
@@ -50,7 +50,7 @@ class Command(BaseCommand):
             try:
                 self.add_uni(uni, img_path, overwrite)
             except ValidationError as v:
-                warnings.warn("Error en clave: %s: %s" % (uni.get('siglas'), v), UserWarning)
+                sys.stderr.write("Error en clave: %s: %s" % (uni.get('siglas'), v))
 
     def parse_float(self, value):
         try:
@@ -100,15 +100,15 @@ class Command(BaseCommand):
 
     def validate_logo(self, uni, img_path):
         if uni.get('siglas', None) is None:
-            raise ValidationError("Siglas no válidas")
+            sys.stderr.write("Siglas '%s' no válidas" % uni.get('siglas', ''))
+            return
 
         if not os.path.isdir(img_path):
-            warnings.warn("Directorio %s no válido" % img_path, UserWarning)
+            sys.stderr.write("Directorio '%s' no válido" % img_path)
             return False
 
         return os.path.isfile(os.path.join(img_path,
                                            'uni_%s.jpg' % Universidad.get_siglas_no_centro(uni.get('siglas'))))
-
 
 
     def get_tipo_uni(self, tipo):

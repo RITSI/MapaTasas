@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.core.management.base import CommandError
 from mock import patch, Mock, PropertyMock
 from .management.commands import importar
-from .models import Universidad, Tasa, CursoValidator, get_current_curso
+from .models import Universidad, Tasa, CursoValidator, get_current_curso, curso_choices
 
 import datetime
 
@@ -168,6 +168,11 @@ class TestCursoValidator(TestCase):
 
         self.assertRaises(ValidationError, validator.__call__, (2013))
 
+    @patch('tasas.models.datetime')
+    def test_curso_choices(self, current_curso_mock):
+        current_curso_mock.date.today = Mock(return_value=datetime.datetime.strptime('Sep 1 2011', '%b %d %Y'))
+        self.assertEqual(((2011, '2011/2012'), (2012, '2012/2013')), curso_choices())
+
 class TestTasaModel(TestCase):
     def setUp(self):
         pass
@@ -283,3 +288,39 @@ class TestTasaModel(TestCase):
 
         tasa.tasa_global = 10
         self.assertRaises(ValidationError, tasa.clean)
+
+from django.template import Context, Template, TemplateSyntaxError
+
+
+class TestIncrementTemplate(TestCase):
+
+    def test_increment_valid(self):
+        context = Context({'12aa': '12aa'})
+
+        self.assertEqual('2', Template(
+            '{% load increment %}'
+            '{% increment 1%}'
+        ).render(context))
+
+        self.assertRaises(TemplateSyntaxError, Template, ('{% load increment %}'
+            '{% increment 1 2 3%}'))
+
+        self.assertRaises(TemplateSyntaxError, Template, ('{% load increment %}''{% increment '' %}'))
+
+        self.assertRaises(TemplateSyntaxError, Template('{% load increment %}''{% increment 12aa %}').render, context)
+
+
+from .forms import UniversidadForm
+
+class TestUniversidadForm(TestCase):
+    # The form is almost entirely managed by Django, so this test makes little sense
+    def test_valid_data(self):
+        form = UniversidadForm({
+
+        })
+
+        self.assertFalse(form.is_valid())
+        #self.assertEqual(form.errors, {
+
+        #})
+
