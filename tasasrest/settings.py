@@ -19,8 +19,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+nsn!5%c@(og79&+7f#op2(v3a)8^lswpsc$v^hf993nqs$6z*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -196,9 +194,8 @@ MIN_YEAR = 2011 # Primer año válido para introducir tasas
 YEARS_IN_ADVANCE = 1 # Número de cursos futuros
 CURSO_CHANGE_MONTH = 9 # En septiembre cambia el curso académico
 
-
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError as exp:
     pass
 
