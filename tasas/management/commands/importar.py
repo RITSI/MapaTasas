@@ -76,7 +76,13 @@ class Command(BaseCommand):
         universidad.siglas = uni.get('siglas')
         universidad.nombre = uni.get('nombre')
 
-        universidad.tipo = self.get_tipo_uni(uni.get('tipo'))
+        tipo = self.get_tipo_uni(uni.get('tipo'))
+        
+        if tipo is None:
+            raise ValidationError("Tipo de universidad '%s' no válido para %s. Omitiendo." % (uni.get('tipo'), uni.get('nombre')))
+            #return
+
+        universidad.tipo = tipo
         universidad.centro = uni.get('centro')
         universidad.provincia = uni.get('provincia')
         universidad.campus = uni.get('campus')
