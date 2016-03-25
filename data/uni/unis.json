@@ -3270,7 +3270,7 @@
         {
             "siglas": "urv",
             "nombre": "Universidad Rovira i Virgili",
-            "tipo": "pública",
+            "tipo": "Pública",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3314,7 +3314,7 @@
         {
             "siglas": "url",
             "nombre": "Universidad Ramón Llull",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3358,7 +3358,7 @@
         {
             "siglas": "upf",
             "nombre": "Universidad Pompeu Fabra",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Barcelona",
             "url": "",
@@ -3402,7 +3402,7 @@
         {
             "siglas": "ue-v",
             "nombre": "Universidad Europea de Valencia",
-            "tipo": "privada",
+            "tipo": "Privada",
             "centro": "",
             "provincia": "Valencia",
             "url": "",
