@@ -16,6 +16,10 @@ Una vez instalados, el comando `virtualenv -p python3 env` genera un directorio 
 Para instalar las dependencias, ejecutar `pip install -r requirements.txt` con el entorno virtual activado.
 
 También puede ser necesario instalar el paquete `python3-dev` que incluye los archivos de cabecera de Python, requeridos por alguna dependencia.
+
+Nota: Pillow (paquete de procesamiento de imágenes) requiere varias bibliotecas nativas. Para instalarlas en Debian:
+
+`sudo apt-get install libtiff5-dev libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk`
 ### Bower
 
 Las dependencias del *frontent* están gestionadas con [Bower](http://bower.io/). Para instalarlo, es necesario instalar el gestor de paquetes de node.js, [npm](https://www.npmjs.com/)
@@ -60,6 +64,7 @@ DATABASES = {
 }
 DEBUG = False # Importante, el modo de depuración incluye información sensible que no debe ser expuesta
 SECRET_KEY = 'mykey'
+ALLOWED_HOSTS = ['midominio.org', 'www.midominio.org']
 ```
 
 **Importante**: la clave secreta se utiliza en [partes sensibles de la aplicación](http://stackoverflow.com/a/15383766/2628463). Debe mantenerse en secreto.
@@ -117,8 +122,8 @@ Ejemplo de archivo `gunicorn_start` de configuración:
 #!/bin/bash
 
 NAME="mapa-tasas-backend"
-DJANGODIR=<ruta>/mapa-tasas-backend # Ruta raíz del proyecto de Django
-SOCKFILE=<ruta>/mapa-tasas-backend/run/gunicorn.sock # Ruta donde el fichero socket será creado
+DJANGODIR=/home/diego/MapaTasas # Ruta raíz del proyecto de Django
+SOCKFILE=/home/diego/MapaTasas/run/gunicorn.sock # Ruta donde el fichero socket será creado
 USER=www-data # Usuario y grupo de nginx
 GROUP=www-data
 NUM_WORKERS=3 # Número de procesos a crear que ejecutarán la aplicación de forma concurrente
@@ -140,11 +145,11 @@ test -d $RUNDIR || mkdir -p $RUNDIR
 exec env/bin/gunicorn tasasrest.wsgi:application \
   --name $NAME \
   --workers $NUM_WORKERS \
-  --user=$USER--group=$GROUP \
+  --user=$USER --group=$GROUP \
   --bind=unix:$SOCKFILE \
-  --log-level=debug 
+  --log-level=debug
   --log-file=
-
+  
 ```
 
 Marcar el archivo como ejecutable con `chmod +x gunicorn_start`
