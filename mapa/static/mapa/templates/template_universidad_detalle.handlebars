@@ -1,0 +1,134 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{nombre}}
+            <a class="close-modal" href="#">
+                <i style="float: right" class="glyphicon glyphicon-remove" title="Cerrar"></i>
+            </a>
+            <a href="/reporte/?universidad={{siglas}}" target="_blank" style="float: right;">
+                <small style="color:white">Reportar problema</small>
+            </a>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <table class="table">
+                    <tr>
+                        <th>Matrícula<br></th>
+                        {{#each tasas}}
+                            <th>{{curso}}</th>
+                        {{/each}}
+                    </tr>
+                    <tr>
+                        <th>Primera<br></th>
+                        {{#each tasas}}
+                            <td>{{tasas1}}</td>
+                        {{/each}}
+                    </tr>
+                    <tr>
+                        <th>Segunda</th>
+                        {{#each tasas}}
+                            <td>{{tasas2}}</td>
+                        {{/each}}
+                    </tr>
+                    <tr>
+                        <th>Tercera<br></th>
+                        {{#each tasas}}
+                            <td>{{tasas3}}</td>
+                        {{/each}}
+                    </tr>
+                    <tr>
+                        <th>Cuarta</th>
+                        {{#each tasas}}
+                            <td>{{tasas4}}</td>
+                        {{/each}}
+                    </tr>
+                    <tr>
+                        <th></th>
+                        {{#each tasas}}
+                            <td><a href="{{url}}" target="_blank">Referencia</a></td>
+                        {{/each}}
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="calculadora form-horizontal">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Calcular precio</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>Curso académico</label>
+                            </div>
+                            <div class="col-xs-5 col-sm-5 col-md-5">
+                                <div class="form-group">
+                                    <select id="curso-selector"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <label>Precio en primera convocatoria</label>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" name="ects1" id="ects1" class="input-ects form-control input-sm" placeholder="Créditos en primera convocatoria">
+                            </div>
+                            <div class="col-xs-3 pull-right">
+                                <p class="pull-right" id="total-1">El precio</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <label>Precio en segunda convocatoria</label>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" name="ects2" id="ects2" class="input-ects form-control input-sm" placeholder="Créditos en segunda convocatoria">
+                            </div>
+                            <div class="col-xs-3 pull-right">
+                                <p class="pull-right" id="total-2">El precio</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <label>Precio en tercera convocatoria</label>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" name="ects3" id="ects3" class="input-ects form-control input-sm" placeholder="Créditos en tercera convocatoria">
+                            </div>
+                            <div class="col-xs-3 pull-right">
+                                <p class="pull-right" id="total-3">El precio</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <label>Precio en cuarta convocatoria</label>
+                            </div>
+                            <div class="col-xs-5">
+                                <input type="text" name="ects4" id="ects4" class="input-ects form-control input-sm" placeholder="Créditos en cuarta convocatoria">
+                            </div>
+                            <div class="col-xs-3 pull-right">
+                                <p class="pull-right" id="total-4">El precio</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4">
+                                <label>Total</label>
+                            </div>
+                            <div class="col-xs-5 text-right">
+                                <p id="total-ects">Total créditos</p>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                <p id="total">Total euros</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
