@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(//fonts.googleapis.com/css?family=Play);
 
 html , body{
     background-color: #5c4c4c;
@@ -196,7 +196,7 @@ body {
     margin-top: 20px;
 }
 
-/*Intento de diseÃ±o responsive*/
+/*Intento de diseño responsive*/
 @media (min-device-width: 480px) {
     #content {
         display: inline;
@@ -242,10 +242,6 @@ body {
     width: 100%;
 }
 
-#map-canarias{
-  border-top: 1px solid #da2724;
-  border-left: 1px solid #da2724;
-}
 #urls{
     margin-right: 3px;
     margin-left: 3px;
