@@ -5,6 +5,12 @@ from ..models import Universidad, Tasa, get_current_curso
 import os.path
 
 class TasaSerializer(ModelSerializer):
+    curso = SerializerMethodField(read_only=True)
+
+    def get_curso(self, obj):
+        if obj:
+            return obj.curso.anno
+
     class Meta:
         model = Tasa
         exclude = ('id',)

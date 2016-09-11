@@ -3,7 +3,6 @@ from django.core.validators import RegexValidator, MinValueValidator, MinLengthV
 
 from django.utils.translation import ugettext as _, ugettext_lazy
 from django.utils.deconstruct import deconstructible
-from django.utils.functional import lazy
 
 from django.core.exceptions import ValidationError
 
@@ -12,7 +11,7 @@ import datetime
 
 import tasasrest.settings as settings
 
-from .provincias import PROVINCIAS as provincias
+from .provincias import PROVINCIAS
 
 from stdimage.models import StdImageField
 from stdimage.validators import MinSizeValidator
@@ -27,12 +26,14 @@ def get_current_curso():
     """
     today = datetime.date.today()
     if today.month < settings.CURSO_CHANGE_MONTH:
-        return today.year -1
+        return today.year - 1
     else:
         return today.year
 
+
 def curso_choices():
-    return tuple((year, "%s/%s" % (year, year+1)) for year in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE+1))
+    return tuple((curso.anno, "%s/%s" % (curso.anno, curso.anno + 1)) for curso in Curso.objects.all())
+
 
 @deconstructible
 class CursoValidator(object):
@@ -40,11 +41,11 @@ class CursoValidator(object):
     Valida si el curso introducido se encuentra en el rango <curso mínimo> - <curso máximo>
     El rango es ajustable en `settings.py`
     """
-    messages={
+    messages = {
         'min_curso': ugettext_lazy('El curso académico es previo a %s, el mínimo admitido',
                                    settings.MIN_YEAR),
         'max_curso': ugettext_lazy('El curso académico es posterior a %s, el máximo admitido',
-                                   get_current_curso()+settings.YEARS_IN_ADVANCE)
+                                   get_current_curso() + settings.YEARS_IN_ADVANCE)
     }
 
     def __init__(self):
@@ -57,32 +58,49 @@ class CursoValidator(object):
             raise ValidationError(self.messages.get('max_curso'))
 
 
+class Curso(models.Model):
+    """
+    Representa un curso académico
+    """
+    anno = models.IntegerField(unique=True, blank=False, null=False, verbose_name='Año',
+                               validators=[RegexValidator(regex=r'^\d{4}$')])
+    activo = models.BooleanField(default=True, null=False, blank=False)
+
+    def __str__(self):
+        return "%s (%s)" % (self.anno, 'Activo' if self.activo else 'Inactivo')
+
+    class Meta:
+        ordering = ['anno']
+
+
 class Universidad(models.Model):
     PUBLICA = 0
     PRIVADA = 1
+
     def __init__(self, *args, **kwargs):
-        self.get_siglas_no_centro = self._get_siglas_no_centro
+        self._get_siglas_no_centro = self.get_siglas_no_centro
         super(Universidad, self).__init__(*args, **kwargs)
 
     TIPO_UNIVERSIDAD_CHOICES = ((PUBLICA, 'Pública'), (PRIVADA, 'Privada'))
 
     siglas = models.CharField(max_length=20, unique=True, null=False, blank=False,
-                              validators=[RegexValidator(regex=r'[A-Za-z\-]+', message=ugettext_lazy("Las siglas de la universidad solo pueden contener letras y guiones (-)"))],
+                              validators=[RegexValidator(regex=r'[A-Za-z\-]+', message=ugettext_lazy(
+                                  "Las siglas de la universidad solo pueden contener letras y guiones (-)"))],
                               help_text=ugettext_lazy("Siglas de la universidad"))
     nombre = models.CharField(max_length=200, null=False, blank=False,
                               help_text=ugettext_lazy("Nombre de la universidad"))
     tipo = models.IntegerField(choices=TIPO_UNIVERSIDAD_CHOICES, null=False, blank=False,
                                help_text=ugettext_lazy("Tipo de centro (público/privado)"))
     centro = models.CharField(max_length=200, null=True, blank=True, help_text=ugettext_lazy("Nombre del centro"))
-    provincia = models.CharField(max_length=50, choices=provincias, blank=False, null=False,
+    provincia = models.CharField(max_length=50, choices=PROVINCIAS, blank=False, null=False,
                                  help_text=ugettext_lazy("Provincia"))
     logo = StdImageField(upload_to=settings.ESCUDOS_PATH, null=True, blank=True,
                          variations={'thumbnail': (100, 100, True)},
-                         validators=[MinSizeValidator(100,100)],
+                         validators=[MinSizeValidator(100, 100)],
                          help_text=ugettext_lazy("Escudo de la universidad"))
 
     campus = models.CharField(max_length=200, null=True, blank=True,
-                              help_text=ugettext_lazy("Nombre del campus")) # TODO: Hacer obligatorio?
+                              help_text=ugettext_lazy("Nombre del campus"))  # TODO: Hacer obligatorio?
     url = models.URLField(max_length=300, null=True, blank=True,
                           help_text=ugettext_lazy("URL del centro"))
 
@@ -96,10 +114,10 @@ class Universidad(models.Model):
         Returns:
 
         """
-        return re.sub(r'\-.*', '', siglas)
+        return re.sub(r'-.*', '', siglas)
 
     def get_provincia_unicode(self):
-        return dict(provincias).get(self.provincia)
+        return dict(PROVINCIAS).get(self.provincia)
 
     @property
     def tipo_universidad_verbose(self):
@@ -107,11 +125,12 @@ class Universidad(models.Model):
 
     @classmethod
     def get_tipo_universidad_verbose(cls, tipo_universidad):
-        #self
+        # self
         return str(dict((tipo, nombre) for tipo, nombre in cls.TIPO_UNIVERSIDAD_CHOICES).get(tipo_universidad))
 
     def __str__(self):
         return self.nombre
+
 
 class Tasa(models.Model):
     PRECIO_POR_CREDITO = 0
@@ -119,23 +138,23 @@ class Tasa(models.Model):
     MISCELANEO = 2
 
     TIPOS_TASA = (
-		(PRECIO_POR_CREDITO, "Precio por crédito"),
-		(PAGO_UNICO, "Pago único"),
-		(MISCELANEO, "Misceláneo"),
-	)
+        (PRECIO_POR_CREDITO, "Precio por crédito"),
+        (PAGO_UNICO, "Pago único"),
+        (MISCELANEO, "Misceláneo"),
+    )
 
     GRADO = 0
     MASTER = 1
 
     TIPOS_TITULACION = (
-		(GRADO, "Grado"),
-		(MASTER, "Máster"),
-	)
+        (GRADO, "Grado"),
+        (MASTER, "Máster"),
+    )
 
     TIPOS_TITULACION_ASCII = (
-		(GRADO, "Grado"),
-		(MASTER, "Master"),
-	)
+        (GRADO, "Grado"),
+        (MASTER, "Master"),
+    )
 
     universidad = models.ForeignKey(Universidad, on_delete=models.CASCADE, related_name='tasas',
                                     related_query_name='tasa',
@@ -143,14 +162,13 @@ class Tasa(models.Model):
                                     null=False,
                                     blank=True)
 
-    tipo = models.IntegerField(choices=TIPOS_TASA, blank=False, #null=False, default=0,
+    tipo = models.IntegerField(choices=TIPOS_TASA, blank=False,  # null=False, default=0,
                                help_text=ugettext_lazy("Tipo de tasa"))
     tipo_titulacion = models.IntegerField(choices=TIPOS_TITULACION, blank=False, null=False,
                                           help_text=ugettext_lazy("Tipo de titulación (grado/máster)"))
 
     # El curso se representa con el año en el que da comienzo
-    curso = models.IntegerField(choices=lazy(curso_choices, tuple)(), validators=[RegexValidator(regex=r'^\d{4}$'), CursoValidator()],
-                                help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
+    curso = models.ForeignKey(Curso, help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
     url = models.URLField(null=False, blank=False, validators=[MinLengthValidator(1)],
                           help_text=ugettext_lazy("URL del documento oficial"))
 
@@ -177,7 +195,7 @@ class Tasa(models.Model):
         Valida los campos de las tasas de forma conjunta
         """
 
-        if self.tipo==self.PRECIO_POR_CREDITO:
+        if self.tipo == self.PRECIO_POR_CREDITO:
             tasas = self.get_lista_tasas()
             for tasa in tasas:
                 if tasa is None:
@@ -186,14 +204,14 @@ class Tasa(models.Model):
             if self.tasa_global is not None:
                 raise ValidationError(_("El campo 'tasa global' no es admitido para precios por crédito"))
 
-        elif self.tipo==self.PAGO_UNICO:
+        elif self.tipo == self.PAGO_UNICO:
             if self.tasa_global is None:
                 raise ValidationError(_("La tasa global es obligatoria"))
 
             if next(iter([tasa for tasa in self.get_lista_tasas() if tasa is not None]), None):
                 raise ValidationError(_("Los campos de tasa por crédito no son admitidos para pagos únicos"))
 
-        elif self.tipo==self.MISCELANEO:
+        elif self.tipo == self.MISCELANEO:
             if self.descripcion is None:
                 raise ValidationError(_("Es necesario introducir una descripción sobre la tasa"))
 
@@ -208,7 +226,7 @@ class Tasa(models.Model):
         super(Tasa, self).clean()
 
     def validate_curso(self, exclude=None):
-        #TODO: see http://stackoverflow.com/a/14471010/2628463
+        # TODO: see http://stackoverflow.com/a/14471010/2628463
         pass
 
     @property
@@ -219,7 +237,6 @@ class Tasa(models.Model):
     def tipo_titulacion_verbose_ascii(self):
         return dict((tipo, nombre) for tipo, nombre in self.TIPOS_TITULACION_ASCII).get(self.tipo_titulacion)
 
-
     @classmethod
     def get_tipo_titulacion_verbose(cls, tipo_titulacion):
         return dict((tipo, nombre) for tipo, nombre in cls.TIPOS_TITULACION).get(tipo_titulacion)
@@ -229,5 +246,5 @@ class Tasa(models.Model):
         return dict((tipo, nombre) for tipo, nombre in cls.TIPOS_TITULACION_ASCII).get(tipo_titulacion)
 
     class Meta:
-        ordering = ['curso', 'tipo']
+        ordering = ['curso__anno', 'tipo']
         unique_together = ('universidad', 'curso', 'tipo_titulacion')

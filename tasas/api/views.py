@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, get_list_or_404
 from django.db.models import Avg
 
 from .serializers import UniversidadSerializer, TasaSerializer
-from ..models import Universidad, Tasa, get_current_curso
+from ..models import Universidad, Tasa, Curso
 
 from tasasrest import settings
 
@@ -78,7 +78,7 @@ class AverageViewSet(ViewSet):
 
     def list(self, request, *args, **kwargs):
         return_data = {}
-        for curso in range(settings.MIN_YEAR, get_current_curso() + settings.YEARS_IN_ADVANCE):
+        for curso in Curso.objects.filter(activo=True):
 
             tasas = self.queryset.filter(curso = curso, tipo=Tasa.PRECIO_POR_CREDITO)
             avg_1 = list(tasas.filter(tasas1__gt=0).aggregate(Avg('tasas1')).values())[0]

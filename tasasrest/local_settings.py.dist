@@ -1,0 +1,1 @@
+# Los ajustes propios de cada instalación, como SECRET_KEY o EMAIL_BACKEND deben definirse en este archivo y renombrarlo a `local_settings.py`

@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 * Simplifica la creación y el procesado de ventanas modales
 * @param element Identificador CSS del elemento
@@ -43,11 +45,11 @@ Modal.prototype.create = function(){
             self.hide();
         }
     });
-    this.element.on('change', '#curso-selector', function(e){
+    this.element.on('change', '#curso-selector', function(){
         self.recalculate($(this).find("option:selected").attr('value'));
     });
 
-    this.element.on('input', '.input-ects', function(e){
+    this.element.on('input', '.input-ects', function(){
        self.recalculate(self.element.find('#curso-selector').find("option:selected").attr('value'))
     });
 
@@ -97,7 +99,7 @@ Modal.prototype.recalculate = function(curso){
         ects.push(number_ects);
     });
 
-    var tasas = this.tasas_data.find(function(element, index, array){
+    var tasas = this.tasas_data.find(function(element){
         return element.curso == curso;
     });
     
@@ -118,5 +120,4 @@ Modal.prototype.recalculate = function(curso){
 
     self.element.find("#total-ects").text(total_ects.toFixed(2));
     self.element.find("#total").text(total_precio.toFixed(2).toString() + ' €');
-
 };
