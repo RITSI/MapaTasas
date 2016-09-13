@@ -21,6 +21,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='curso',
             name='anno',
-            field=models.IntegerField(unique=True, validators=[tasas.models.CursoValidator()], verbose_name='Año'),
+            field=models.IntegerField(unique=True,  verbose_name='Año'),
         ),
     ]

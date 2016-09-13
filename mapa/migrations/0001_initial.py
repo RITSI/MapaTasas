@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             name='Reporte',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('curso', models.IntegerField(blank=True, help_text='Curso académico', null=True, validators=[tasas.models.CursoValidator()])),
+                ('curso', models.IntegerField(blank=True, help_text='Curso académico', null=True)),
                 ('email', models.EmailField(blank=True, help_text='Indica un correo electrónico si deseas que nos pongamos en contacto contigo', max_length=254, null=True)),
                 ('descripcion', models.TextField(help_text='Describe el problema', max_length=100000)),
                 ('universidad', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='reportes', to='tasas.Universidad')),

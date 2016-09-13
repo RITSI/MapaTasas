@@ -10,8 +10,8 @@ Handlebars.registerHelper('increment', function(text){
     return (text+1).toString();
 });
 
-var template_universidad_provincia;
-var template_universidad_detalle;
+var template_universidad_provincia = null;
+var template_universidad_detalle = null;
 var modal;
 
 /**
@@ -41,8 +41,9 @@ function sizeChange() {
  */
 function createDropdownGrado(universidades_provincia, media){
     //TODO: print media for current curso
-    if(template_universidad_provincia === undefined) return; //TODO: handle error
-    var rendered_data = template_universidad_provincia({"universidades":universidades_provincia});
+    if(!template_universidad_provincia) return; //TODO: handle error
+
+    var rendered_data = template_universidad_provincia({universidades: universidades_provincia});
 
     $('#bootstrap_lista_units').append(rendered_data);
 
@@ -62,9 +63,9 @@ function createDropdownGrado(universidades_provincia, media){
            }else{
                $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
            }
-           var universidad = universidades_provincia.filter(function(value){
+           var universidad = universidades_provincia.find(function(value){
                 return value.siglas == $idFor.attr('id');
-            })[0];
+            });
             createGraph(universidad, media);
         });
     });
@@ -84,9 +85,10 @@ var cargarGrado = function(d){
                                              ' que oferten estudios de Ingeniería Informática.</p>');
         }
         else {
-            d3.json("api/average/", function(error, average){
+            //TODO. Reactivar d3.json("api/average/", function(error, average){
+            var average = 0;
                 createDropdownGrado(universidades, average);
-            });
+            //});
         }
     });
 };

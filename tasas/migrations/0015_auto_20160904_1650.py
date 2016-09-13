@@ -25,6 +25,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='tasa',
             name='curso',
-            field=models.IntegerField(choices=[(2011, '2011/2012'), (2012, '2012/2013'), (2013, '2013/2014'), (2014, '2014/2015'), (2015, '2015/2016'), (2016, '2016/2017'), (2017, '2017/2018')], help_text='Curso académico en el que esta tasa se aplica', validators=[django.core.validators.RegexValidator(regex='^\\d{4}$'), tasas.models.CursoValidator()]),
+            field=models.IntegerField(choices=[(2011, '2011/2012'), (2012, '2012/2013'), (2013, '2013/2014'), (2014, '2014/2015'), (2015, '2015/2016'), (2016, '2016/2017'), (2017, '2017/2018')], help_text='Curso académico en el que esta tasa se aplica', validators=[django.core.validators.RegexValidator(regex='^\\d{4}$')]),
         ),
     ]

@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='curso',
             name='anno',
-            field=models.IntegerField(unique=True, validators=[django.core.validators.RegexValidator(regex='^\\d{4}$'), tasas.models.CursoValidator()], verbose_name='Año'),
+            field=models.IntegerField(unique=True, validators=[django.core.validators.RegexValidator(regex='^\\d{4}$')], verbose_name='Año'),
         ),
         migrations.AlterField(
             model_name='tasa',

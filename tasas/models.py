@@ -1,61 +1,14 @@
-from django.db import models
-from django.core.validators import RegexValidator, MinValueValidator, MinLengthValidator
-
-from django.utils.translation import ugettext as _, ugettext_lazy
-from django.utils.deconstruct import deconstructible
+import re
 
 from django.core.exceptions import ValidationError
-
-import re
-import datetime
-
-import tasasrest.settings as settings
-
-from .provincias import PROVINCIAS
-
+from django.core.validators import RegexValidator, MinValueValidator, MinLengthValidator
+from django.db import models
+from django.utils.translation import ugettext as _, ugettext_lazy
 from stdimage.models import StdImageField
 from stdimage.validators import MinSizeValidator
 
-
-def get_current_curso():
-    """
-    Calcula el curso académico actual, considerando el día 1 de un mes definido en settings
-    como fecha de cambio
-    Returns:
-        El curso académico actual
-    """
-    today = datetime.date.today()
-    if today.month < settings.CURSO_CHANGE_MONTH:
-        return today.year - 1
-    else:
-        return today.year
-
-
-def curso_choices():
-    return tuple((curso.anno, "%s/%s" % (curso.anno, curso.anno + 1)) for curso in Curso.objects.all())
-
-
-@deconstructible
-class CursoValidator(object):
-    """
-    Valida si el curso introducido se encuentra en el rango <curso mínimo> - <curso máximo>
-    El rango es ajustable en `settings.py`
-    """
-    messages = {
-        'min_curso': ugettext_lazy('El curso académico es previo a %s, el mínimo admitido',
-                                   settings.MIN_YEAR),
-        'max_curso': ugettext_lazy('El curso académico es posterior a %s, el máximo admitido',
-                                   get_current_curso() + settings.YEARS_IN_ADVANCE)
-    }
-
-    def __init__(self):
-        super(CursoValidator, self).__init__()
-
-    def __call__(self, value):
-        if value < settings.MIN_YEAR:
-            raise ValidationError(self.messages.get('min_curso'))
-        if value > get_current_curso() + settings.YEARS_IN_ADVANCE:
-            raise ValidationError(self.messages.get('max_curso'))
+import tasasrest.settings as settings
+from .provincias import PROVINCIAS
 
 
 class Curso(models.Model):
@@ -65,12 +18,37 @@ class Curso(models.Model):
     anno = models.IntegerField(unique=True, blank=False, null=False, verbose_name='Año',
                                validators=[RegexValidator(regex=r'^\d{4}$')])
     activo = models.BooleanField(default=True, null=False, blank=False)
+    actual = models.BooleanField(default=False, null=False, blank=False)
 
     def __str__(self):
         return "%s (%s)" % (self.anno, 'Activo' if self.activo else 'Inactivo')
 
+    def save(self, *args, **kwargs):
+        """
+        Solo un curso puede ser el actual, por lo que al guardar es necesario desmarcar todos
+        los cursos marcados como activos.
+        """
+        if self.actual:
+            Curso.objects.filter(actual=True).update(actual=False)
+        super(Curso, self).save(*args, **kwargs)
+
     class Meta:
         ordering = ['anno']
+
+
+    @staticmethod
+    def get_current_curso():
+        try:
+            curso = Curso.objects.get(actual=True)
+            return curso
+        except Curso.DoesNotExist:
+            return None
+
+    @staticmethod
+    def curso_choices():
+        return tuple((curso.anno, "%s/%s" % (curso.anno, curso.anno + 1)) for curso in Curso.objects.all())
+
+
 
 
 class Universidad(models.Model):

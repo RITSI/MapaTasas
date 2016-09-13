@@ -11,7 +11,6 @@ from tasasrest import settings
 
 
 class UniversidadViewSet(ModelViewSet):
-
     queryset = Universidad.objects.all()
     serializer_class = UniversidadSerializer
     base_name = "universidades"
@@ -34,7 +33,6 @@ class UniversidadViewSet(ModelViewSet):
 
 
 class ProvinciaViewSet(ModelViewSet):
-
     queryset = Universidad.objects.all().prefetch_related('tasas')
     serializer_class = UniversidadSerializer
     http_method_names = ['get', 'head', 'options']
@@ -44,13 +42,14 @@ class ProvinciaViewSet(ModelViewSet):
 
         provincia = kwargs.get('provincia', None)
         if provincia is None:
-            #TODO
+            # TODO
             pass
 
-        unis = queryset.filter(provincia__iexact=provincia)#get_list_or_404(queryset, provincia__iexact=provincia)
+        unis = queryset.filter(provincia__iexact=provincia)  # get_list_or_404(queryset, provincia__iexact=provincia)
         serializer = self.serializer_class(unis, many=True)
 
         return Response(serializer.data)
+
 
 class TasasViewSet(ModelViewSet):
     queryset = Tasa.objects.all()
@@ -62,7 +61,7 @@ class TasasViewSet(ModelViewSet):
 
         universidad = kwargs.get('universidad', None)
         if universidad is None:
-            #TODO
+            # TODO
             pass
 
         unis = get_list_or_404(queryset, universidad__siglas=universidad)
@@ -70,38 +69,38 @@ class TasasViewSet(ModelViewSet):
 
         return Response(serializer.data)
 
+
 class AverageViewSet(ViewSet):
     queryset = Tasa.objects.all()
-    #TODO: PAGO ÚNICO
-    #serializer_class = AverageDataSerializer
+    # TODO: PAGO ÚNICO
+    # serializer_class = AverageDataSerializer
     http_method_names = ['get', 'head', 'options']
 
     def list(self, request, *args, **kwargs):
         return_data = {}
-        for curso in Curso.objects.filter(activo=True):
-
-            tasas = self.queryset.filter(curso = curso, tipo=Tasa.PRECIO_POR_CREDITO)
+        for curso in [c.anno for c in Curso.objects.filter(activo=True)]:
+            tasas = self.queryset.filter(curso=curso, tipo=Tasa.PRECIO_POR_CREDITO)
             avg_1 = list(tasas.filter(tasas1__gt=0).aggregate(Avg('tasas1')).values())[0]
             avg_2 = list(tasas.filter(tasas2__gt=0).aggregate(Avg('tasas2')).values())[0]
             avg_3 = list(tasas.filter(tasas3__gt=0).aggregate(Avg('tasas3')).values())[0]
             avg_4 = list(tasas.filter(tasas4__gt=0).aggregate(Avg('tasas4')).values())[0]
 
             data = {
-                'media_1': {'complete': False, #TODO: Mark true/false if number of unis satisfies
-                            'data':avg_1
+                'media_1': {'complete': False,  # TODO: Mark true/false if number of unis satisfies
+                            'data': avg_1
                             },
-                'media_2': {'complete':False,
-                            'data':avg_2
+                'media_2': {'complete': False,
+                            'data': avg_2
                             },
-                'media_3': {'complete':False,
-                            'data':avg_3
+                'media_3': {'complete': False,
+                            'data': avg_3
                             },
-                'media_4': {'complete':False,
-                            'data':avg_4
+                'media_4': {'complete': False,
+                            'data': avg_4
                             }
             }
 
-            return_data[curso] = data;
+            return_data[curso] = data
 
         return Response(return_data)
 
@@ -110,6 +109,8 @@ class AverageViewSet(ViewSet):
         if curso is None:
             return Response({})
 
+        curso = get_object_or_404(Curso.objects.all(), anno=curso)
+
         tasas = self.queryset.filter(curso=curso, tipo=Tasa.PRECIO_POR_CREDITO)
         avg_1 = list(tasas.filter(tasas1__gt=0).aggregate(Avg('tasas1')).values())[0]
         avg_2 = list(tasas.filter(tasas2__gt=0).aggregate(Avg('tasas2')).values())[0]
@@ -117,17 +118,17 @@ class AverageViewSet(ViewSet):
         avg_4 = list(tasas.filter(tasas4__gt=0).aggregate(Avg('tasas4')).values())[0]
 
         data = {
-            'media_1': {'complete': False, #TODO: Mark true/false if number of unis satisfies
-                        'data':avg_1
+            'media_1': {'complete': False,  # TODO: Mark true/false if number of unis satisfies
+                        'data': avg_1
                         },
-            'media_2': {'complete':False,
-                        'data':avg_2
+            'media_2': {'complete': False,
+                        'data': avg_2
                         },
-            'media_3': {'complete':False,
-                        'data':avg_3
+            'media_3': {'complete': False,
+                        'data': avg_3
                         },
-            'media_4': {'complete':False,
-                        'data':avg_4
+            'media_4': {'complete': False,
+                        'data': avg_4
                         }
         }
 
