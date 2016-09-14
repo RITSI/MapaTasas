@@ -7,18 +7,6 @@
 var Modal = function(element){
     this.element = $(element);
     this.element.html('');
-    //var self = this;
-    /*$.ajax({
-        url:"/api/universidad/?fields[]=siglas&fields[]=nombre&fields[]=tasas_curso_actual",
-        async:false,
-        type:"GET",
-        success:function(data){
-            self.universidades = data;
-        },
-        error: function(xhr, textStatus){
-            //TODO
-        }
-    })*/
 };
 
 /**

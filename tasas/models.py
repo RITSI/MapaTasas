@@ -21,7 +21,7 @@ class Curso(models.Model):
     actual = models.BooleanField(default=False, null=False, blank=False)
 
     def __str__(self):
-        return "%s (%s)" % (self.anno, 'Activo' if self.activo else 'Inactivo')
+        return "%s (%s)%s" % (self.anno, 'Activo' if self.activo else 'Inactivo', ' (Actual)' if self.actual else "")
 
     def save(self, *args, **kwargs):
         """
@@ -162,8 +162,8 @@ class Tasa(models.Model):
     tasas4 = models.FloatField(null=True, blank=True, validators=[MinValueValidator(0.01)],
                                help_text=ugettext_lazy("Cuarta convocatoria"))
 
-    def __unicode__(self):
-        return self.universidad + ", " + self.TIPOS[int(self.tipo)][1] + ", " + self.curso
+    def __str__(self):
+        return "%s-%s %s" % (self.universidad.siglas, self.curso.anno, self.TIPOS_TASA[self.tipo][1])
 
     def get_lista_tasas(self):
         return [self.tasas1, self.tasas2, self.tasas3, self.tasas4]
