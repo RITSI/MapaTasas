@@ -90,7 +90,7 @@ Modal.prototype.recalculate = function(curso){
         return element.curso == curso;
     });
     
-    if(tasas == undefined){
+    if(tasas == null){
         return;
     }
 

@@ -62,15 +62,16 @@ function createDropdownGrado(universidades, media){
         var $idFor = $(dataFor);
         var $currentButton = $(this);
         $idFor.slideToggle(400, function(){
-           if($idFor.is(':visible')){
-               $currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
-           }else{
-               $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
-           }
-           var universidad = universidades.find(function(value){
-                return value.siglas == $idFor.attr('id');
-            });
-            createGraph(universidad, media);
+            var universidad = universidades.find(function(value){
+                   return value.siglas == $idFor.attr('id');
+                });
+            if($idFor.is(':visible')){
+                $currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+                createGraph(universidad, media);
+            }else{
+                $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+                $("#chart-"+universidad.siglas).html('');
+            }
         });
     });
     $('[data-toggle="tooltip"]').tooltip();
@@ -160,7 +161,6 @@ function createGraph(universidad, media){
     var averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las"
                             + " universidades incluidas en este mapa, este dato es una aproximación. ";
     averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
-
     var chart = c3.generate({
         bindto: "#chart-"+universidad.siglas,
         data:{
