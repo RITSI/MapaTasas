@@ -9,6 +9,6 @@ class ReporteForm(ModelForm):
     class Meta:
         model = Reporte
         exclude = ('id', 'estado')
-        widgets = {
-            'curso': Select(choices=lazy(lambda: ((0, "Curso académico"),) + Curso.curso_choices(), tuple)())
-        }
+        #widgets = {
+            #'curso': Select(choices=lazy(lambda: ((0, "Curso académico"),) + Curso.curso_choices(), tuple)())
+        #}
