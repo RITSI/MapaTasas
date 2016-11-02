@@ -1,10 +1,24 @@
-from rest_framework.serializers import ModelSerializer, SerializerMethodField, Serializer
-from rest_framework import serializers
-from ..models import Universidad, Tasa, get_current_curso
-
 import os.path
 
+from rest_framework.serializers import ModelSerializer, SerializerMethodField
+
+from ..models import Universidad, Tasa
+
+
 class TasaSerializer(ModelSerializer):
+    curso = SerializerMethodField(read_only=True)
+    actual = SerializerMethodField(read_only=True)
+
+    @staticmethod
+    def get_curso(obj):
+        if obj:
+            return obj.curso.anno
+
+    @staticmethod
+    def get_actual(obj):
+        if obj:
+            return obj.curso.actual
+
     class Meta:
         model = Tasa
         exclude = ('id',)
@@ -20,32 +34,33 @@ class DynamicFieldsMixin(object):
             class Meta:
                 model = MyModel
     """
+
     def __init__(self, *args, **kwargs):
 
-        fields = kwargs.pop('fields', None)
+        fields = kwargs.pop('fields', [])
         super(DynamicFieldsMixin, self).__init__(*args, **kwargs)
 
         if fields is not None and len(fields) > 0:
             allowed = set(fields)
             existing = set(self.fields.keys())
-            for field_name in existing-allowed:
+            for field_name in existing - allowed:
                 self.fields.pop(field_name)
+
 
 class UniversidadSerializer(DynamicFieldsMixin, ModelSerializer):
     logo_thumbnail = SerializerMethodField()
     tasas = TasaSerializer(many=True, read_only=True)
     tipo_verbose = SerializerMethodField(read_only=True)
-    tasas_curso_actual = SerializerMethodField(read_only=True)
 
     class Meta:
         model = Universidad
         exclude = ('id',)
         depth = 1
 
-    def get_tasas(self, obj):
+    @staticmethod
+    def get_tasas(obj):
         if obj.tasas:
             return obj.tasas
-
 
     def get_logo_thumbnail(self, obj):
         if obj.logo:
@@ -57,12 +72,3 @@ class UniversidadSerializer(DynamicFieldsMixin, ModelSerializer):
     def get_tipo_verbose(self, obj):
         if obj.tipo is not None:
             return obj.get_tipo_universidad_verbose(obj.tipo)
-
-    def get_tasas_curso_actual(self, obj):
-        if obj is not None and obj.tasas is not None:
-            current_curso = get_current_curso()
-            try:
-                tasa = obj.tasas.get(curso=current_curso)
-                return TasaSerializer(tasa).data
-            except Tasa.DoesNotExist:
-                pass

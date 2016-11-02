@@ -7,6 +7,5 @@ router.register(r'provincias/(?P<provincia>[A-Za-z\ ]+)', ProvinciaViewSet)
 router.register(r'universidad/(?P<universidad>[a-z\-]+)/tasas', TasasViewSet, base_name="universidad")
 router.register(r'universidad', UniversidadViewSet, base_name="universidad")
 router.register(r'average', AverageViewSet, base_name="average_detail")
-#router.register(r'average', AverageViewSet, base_name="average")
 
 urlpatterns = router.urls

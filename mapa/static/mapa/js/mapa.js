@@ -1,17 +1,23 @@
+'use strict';
+
 /*
  * Incrementa el número dado. Útil para representar cursos
  * @param text Valor a aumentar
- * @param options Opciones de Handlebars
+ * return: El número incrementado como cadena de caracteres
  */
-Handlebars.registerHelper('increment', function(text, options){
-    return (text+1).toString();
+//noinspection JSUnresolvedVariable
+Handlebars.registerHelper('increment', function(text){
+    return (parseInt(text)+1).toString();
 });
 
-var template_universidad_provincia;
-var template_universidad_detalle;
+var template_universidad_provincia = null;
+var template_universidad_detalle = null;
 var modal;
-var sizeChange = function() {
-    //Intento de diseño para móviles
+
+/**
+ * Redimensiona los diferentes elementos al cambiar las dimensiones de la pantalla
+ */
+function sizeChange() {
     var $map = $("#map");
     if ($(window).width() < 480) {
         $("#content").attr('class', "row");
@@ -26,12 +32,23 @@ var sizeChange = function() {
 
     d3.select("#map>svg>g").attr("transform", "scale(" + $map.width() / 700 + ")");
     $map.find("svg").height($map.width() * 0.618).width($map.width());
-};
+}
 
-var createDropdownGrado = function(universidades_provincia, media){
+/**
+ * Crea el panel de información sobre la universidad
+ * @param universidades Lista de universidades en la provincia dada
+ * @param media Media nacional
+ */
+function createDropdownGrado(universidades, media){
     //TODO: print media for current curso
-    if(template_universidad_provincia === undefined) return; //TODO: handle error
-    var rendered_data = template_universidad_provincia({"universidades":universidades_provincia});
+    if(!template_universidad_provincia) return; //TODO: handle error
+
+    universidades.forEach(function(uni){
+        uni.tasas_curso_actual = uni.tasas.find(function(tasa){
+            return tasa.actual;
+        });
+    });
+    var rendered_data = template_universidad_provincia({universidades: universidades});
 
     $('#bootstrap_lista_units').append(rendered_data);
 
@@ -41,26 +58,24 @@ var createDropdownGrado = function(universidades_provincia, media){
 
     $panelsButton.off();
     $panelsButton.click(function(){
-       //TODO: Move to general binding using jQuery event delegation
         var dataFor = $(this).attr('data-for');
         var $idFor = $(dataFor);
         var $currentButton = $(this);
         $idFor.slideToggle(400, function(){
-           if($idFor.is(':visible')){
-               $currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
-           }else{
-               $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
-           }
-            universidad = universidades_provincia.filter(function(value){
-                return value.siglas == $idFor.attr('id');
-            })[0];
-            createGraph(universidad, media);
-
+            var universidad = universidades.find(function(value){
+                   return value.siglas == $idFor.attr('id');
+                });
+            if($idFor.is(':visible')){
+                $currentButton.html('<i class="glyphicon glyphicon-chevron-up text-muted"></i>');
+                createGraph(universidad, media);
+            }else{
+                $currentButton.html('<i class="glyphicon glyphicon-chevron-down text-muted"></i>');
+                $("#chart-"+universidad.siglas).html('');
+            }
         });
-
     });
     $('[data-toggle="tooltip"]').tooltip();
-};
+}
 
 var cargarGrado = function(d){
     //Vaciado de los datos
@@ -70,7 +85,9 @@ var cargarGrado = function(d){
     d3.json("/api/provincias/"+ d.id, function (error, universidades) {
         //TODO: Handle error
         if(universidades.length == 0){
-            $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de ' + d.properties.name + ' que oferten estudios de Ingeniería Informática.</p>');
+            $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de '
+                                             + d.properties.name +
+                                             ' que oferten estudios de Ingeniería Informática.</p>');
         }
         else {
             d3.json("api/average/", function(error, average){
@@ -82,8 +99,10 @@ var cargarGrado = function(d){
 
 //TODO: var cargarMaster
 
-var provinciaHover = function(d){
-    //Se crea el marcador con el nombre
+/**
+ * Crea el marcador con el nombre de la provincia
+ */
+function provinciaHover(){
     $('.subunit').tipsy({
         gravity: 's',
         html: true,
@@ -93,10 +112,12 @@ var provinciaHover = function(d){
             return m.properties.name;
         }
     });
-};
+}
 
-var provinciaClick = function(d){
-    //TODO
+/**
+ * Carga la información sobre la provincia
+ */
+function provinciaClick(d){
     switch ($('.current').attr('data')) {
         case "master":
             //TODO
@@ -107,32 +128,39 @@ var provinciaClick = function(d){
             cargarGrado(d);
             break;
     }
-};
+}
 
-var createGraph = function(universidad, media){
+/**
+ * Crea y muestra el gráfico con la información de tasas
+ * @param universidad Datos
+ * @param media Media nacional
+ */
+function createGraph(universidad, media){
     var x = ['x'];
     var primera_matricula = ['Primera matrícula'];
     var segunda_matricula = ['Segunda matrícula'];
     var tercera_matricula = ['Tercera matrícula'];
     var cuarta_matricula = ['Cuarta matrícula'];
     var media_nacional = ['Media nacional'];
-
-    $.each(universidad.tasas, function(index,tasa){
+    var cursos = new Set();
+    universidad.tasas.forEach(function(tasa){
         x.push(new Date(tasa.curso.toString()));
+        cursos.add(tasa.curso.toString());
         primera_matricula.push(tasa.tasas1.toFixed(2));
         segunda_matricula.push(tasa.tasas2.toFixed(2));
         tercera_matricula.push(tasa.tasas3.toFixed(2));
         cuarta_matricula.push(tasa.tasas4.toFixed(2));
     });
 
-    $.each(media, function(propertyName, propertyValue){
-        media_nacional.push(propertyValue.media_1.data.toFixed(2))
+    Object.keys(media).sort().forEach(function(curso){
+        if(cursos.has(curso))
+            media_nacional.push(media[curso].media_1.data.toFixed(2));
     });
 
     //TODO: Compute
-    var averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las universidades incluídas en este mapa, este dato es una aproximación. ";
+    var averageErrorText = "La media nacional se computa con los datos disponibles sobre las tasas de las"
+                            + " universidades incluidas en este mapa, este dato es una aproximación. ";
     averageErrorText += "La media nacional sólo tiene en cuenta las tasas de <strong>primera matrícula</strong>.";
-
     var chart = c3.generate({
         bindto: "#chart-"+universidad.siglas,
         data:{
@@ -150,7 +178,7 @@ var createGraph = function(universidad, media){
         }
     });
     $('#chart-' + universidad.siglas).append('<p class="alert alert-warning">' + averageErrorText + '</p>');
-};
+}
 
 var createDetalle = function(universidad){
     $.ajax({
@@ -255,11 +283,11 @@ $(function(){
     //TODO:
     $('.tab-link').click(function () {
         //TODO
-        $link = $(this);
+        var $link = $(this);
         if (!($link.hasClass('current'))) {
             $('.current').removeClass('current');
             $link.addClass('current');
-            datos = $link.attr('data');
+            var datos = $link.attr('data');
 
             $bootstrap_lista_units.html('<p>Haz click en una provincia para conocer la oferta de estudios de ' + (datos == "grado" ? datos : "máster") + '.</p>');
         }
@@ -269,5 +297,4 @@ $(function(){
     $bootstrap_lista_units.on('click', '.tasa-modal', function(e){
         createDetalle($(this).attr('data-for'));
     });
-
 });

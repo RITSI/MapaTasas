@@ -12,7 +12,8 @@ class Reporte(models.Model):
     curso = models.IntegerField(verbose_name="Curso académico", help_text=_("Curso académico"),
                                 default=0, blank=True, null=True)
     email = models.EmailField(verbose_name="Correo electrónico",
-                              help_text=_("Indica un correo electrónico si deseas que nos pongamos en contacto contigo"),
+                              help_text=_("Indica un correo electrónico si deseas que nos "
+                                          "pongamos en contacto contigo"),
                               blank=True, null=True)
     descripcion = models.TextField(verbose_name="Descripción", help_text=_("Describe el problema"), max_length=100000,
                                    blank=False, null=False)

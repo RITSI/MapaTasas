@@ -1,67 +1,64 @@
 {{#universidades}}
 
-<div class="row user-row">
-    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
-        <img class="img-circle foto-uni" src="{{logo_thumbnail}}" alt="Foto de la {{nombre}}">
+    <div class="row user-row">
+        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">
+            <img class="img-circle foto-uni" src="{{logo_thumbnail}}" alt="Foto de la {{nombre}}">
+        </div>
+        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
+            <strong>{{nombre}}</strong>
+            <span class="uni-tipo {{tipo_verbose}}">{{tipo_verbose}}</span>
+            <br>
+            <span class="text-muted">{{campus}}</span>
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for="#{{siglas}}" siglas="{{siglas}}">
+            <i class="glyphicon glyphicon-chevron-down text-muted"></i>
+        </div>
     </div>
-    <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
-        <strong>{{nombre}}</strong>
-        <span class="uni-tipo {{tipo_verbose}}">{{tipo_verbose}}</span>
-        <br>
-        <span class="text-muted">{{campus}}</span>
-    </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 dropdown-user" data-for="#{{siglas}}" siglas="{{siglas}}">
-        <i class="glyphicon glyphicon-chevron-down text-muted"></i>
-    </div>
-</div>
-<div class="row user-infos drop-panel" id="{{siglas}}">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{nombre}}
-                    <a class="close-modal" href="#">
-                        <i style="float: right" class="glyphicon glyphicon-remove" title="Cerrar"></i>
-                    </a>
-                    <a href="/reporte/?universidad={{siglas}}" target="_blank" style="float: right;">
-                        <small style="color:white">Reportar problema</small>
-                    </a>
-                </h3>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                        <dl>
-                            <dt>Campus:</dt>
-                            <dd>{{campus}}</dd>
-                            
-                            <dt>Centro:</dt>
-                            <dd>{{centro}}</dd>
-                            
-                            <dt>URL:</dt>
-                            <dd><a href="{{url}}">Visitar centro</a></dd>
-                            {{#tasas_curso_actual}}
-                                <!--TODO: http://stackoverflow.com/a/13893250/2628463-->
-                                <dt>Primera matrícula</dt>
-                                <dd>{{tasas1}} €</dd>
+    <div class="row user-infos drop-panel" id="{{siglas}}">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{nombre}}
+                        <a href="/reporte/?universidad={{siglas}}" target="_blank" style="float: right;">
+                            <small style="color:white">Reportar problema</small>
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                            <dl>
+                                <dt>Campus:</dt>
+                                <dd>{{campus}}</dd>
 
-                                <dt>Segunda matrícula</dt>
-                                <dd>{{tasas2}} €</dd>
+                                <dt>Centro:</dt>
+                                <dd>{{centro}}</dd>
 
-                                <dt>Tercera matrícula</dt>
-                                <dd>{{tasas3}} €</dd>
+                                <dt>URL:</dt>
+                                <dd><a href="{{url}}">Visitar centro</a></dd>
+                                {{#tasas_curso_actual}}
+                                    <!--TODO: http://stackoverflow.com/a/13893250/2628463-->
+                                    <dt>Primera matrícula</dt>
+                                    <dd>{{tasas1}} €</dd>
 
-                                <dt>Cuarta matrícula</dt>
-                                <dd>{{tasas4}} €</dd>
-                            {{/tasas_curso_actual}}
-                            <dt>
-                                <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver más información</a>
-                            </dt>
-                        </dl>
+                                    <dt>Segunda matrícula</dt>
+                                    <dd>{{tasas2}} €</dd>
 
-                    </div>
-                    <div class=" col-md-12 col-lg-12 hidden-xs hidden-sm">
-                        <table class="table table-user-information">
-                            <tbody>
+                                    <dt>Tercera matrícula</dt>
+                                    <dd>{{tasas3}} €</dd>
+
+                                    <dt>Cuarta matrícula</dt>
+                                    <dd>{{tasas4}} €</dd>
+                                {{/tasas_curso_actual}}
+                                <dt>
+                                    <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver más información</a>
+                                </dt>
+                            </dl>
+
+                        </div>
+                        <div class=" col-md-12 col-lg-12 hidden-xs hidden-sm">
+                            <table class="table table-user-information">
+                                <tbody>
                                 <tr>
                                     <td>Campus:</td>
                                     <td>{{campus}}</td>
@@ -74,46 +71,51 @@
                                     <td>URL:</td>
                                     <td><a href="{{url}}" >Visitar sitio</a></td>
                                 </tr>
-                                <tr>
-                                    <th>Precio por crédito para el curso {{tasas_curso_actual.curso}}-{{increment tasas_curso_actual.curso}}</th>
-                                </tr>
                                 {{#tasas_curso_actual}}
                                 <tr>
-                                    <td>Primera matrícula</td>
-                                    <td>{{tasas1}} €</td>
+                                    <th>Precio por crédito para el curso {{curso}}-{{increment curso}}</th>
                                 </tr>
-                                <tr>
-                                    <td>Segunda matrícula</td>
-                                    <td>{{tasas2}} €</td>
-                                </tr>
-                                <tr>
-                                    <td>Tercera matrícula</td>
-                                    <td>{{tasas3}} €</td>
-                                </tr>
-                                <tr>
-                                    <td>Cuarta matrícula</td>
-                                    <td>{{tasas4}} €</td>
-                                </tr>
+
+                                    <tr>
+                                        <td>Primera matrícula</td>
+                                        <td>{{tasas1}} €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Segunda matrícula</td>
+                                        <td>{{tasas2}} €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tercera matrícula</td>
+                                        <td>{{tasas3}} €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cuarta matrícula</td>
+                                        <td>{{tasas4}} €</td>
+                                    </tr>
+                                {{else}}
+                                    <tr>
+                                        <td colspan="2" class="alert alert-warning">No se han encontrado información para el presente curso académico</td>
+                                    </tr>
                                 {{/tasas_curso_actual}}
                                 <tr>
                                     <td>
-                                        <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver más información</a>
+                                        <a href="#" class="tasa-modal" data-for="{{siglas}}">Ver detalle</a>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <div class="row chart-{{siglas}}" id="chart-{{siglas}}">
-                </div>
-                <div class="row" style="word-wrap: break-word;" id="urls">
-                    <strong>Referencias</strong><br/>
-                    {{#tasas}}
-                        <a class="referencia" href="{{url}}" title="{{url}}">Datos de {{curso}}</a><br/>
-                    {{/tasas}}
+                    <div class="row chart-{{siglas}}" id="chart-{{siglas}}">
+                    </div>
+                    <div class="row" style="word-wrap: break-word;" id="urls">
+                        <strong>Referencias</strong><br/>
+                        {{#tasas}}
+                            <a class="referencia" href="{{url}}" title="{{url}}">Datos de {{curso}}</a><br/>
+                        {{/tasas}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {{/universidades}}

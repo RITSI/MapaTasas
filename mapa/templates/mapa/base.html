@@ -3,6 +3,9 @@
 <html>
 <head>
     {% block header %}
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'tasas/css/backend.css' %}">
@@ -18,14 +21,6 @@
             <span class="navbar-brand-label">{% trans "Mapa de tasas" %}</span>
         </a>
     </div>
-
-    {% comment %}<div class="navbar-collapse my-navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li><a href="/about/"><i class="fa fa-question"></i> {% trans "Acerca de" %}</a></li>
-            <li><a href="/"><i class="fa fa-globe"></i> {% trans "Ir al mapa" %}</a></li>{% if request.user %}
-            <li><a href="/admin/logout/"><i class="fa fa-sign-out"></i> {% trans "Salir" %}</a></li>{% endif %}
-        </ul>
-    </div>{% endcomment %}
 </div>
 {% endblock top %}
 {% block content %}
