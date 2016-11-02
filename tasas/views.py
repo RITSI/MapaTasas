@@ -82,7 +82,6 @@ class UniversidadView(View):
 
         forms_tasas_grado = []
         forms_tasas_master = []
-
         if siglas is None:
             uni_form = UniversidadForm(request.POST, request.FILES)
         else:
@@ -100,11 +99,11 @@ class UniversidadView(View):
             for curso in Curso.objects.filter(activo=True):
                 request_data = request.POST.copy()
 
-                request_data["grado-%s-curso" % curso] = curso.anno
-                request_data["grado-%s-tipo_titulacion" % curso] = Tasa.GRADO
+                request_data["grado-%s-curso" % curso.anno] = curso.anno
+                request_data["grado-%s-tipo_titulacion" % curso.anno] = Tasa.GRADO
 
-                request_data["master-%s-curso" % curso] = curso.anno
-                request_data["master-%s-tipo_titulacion" % curso] = Tasa.MASTER
+                request_data["master-%s-curso" % curso.anno] = curso.anno
+                request_data["master-%s-tipo_titulacion" % curso.anno] = Tasa.MASTER
 
                 try:
                     tasa_instance = tasas_grado.get(curso=curso)

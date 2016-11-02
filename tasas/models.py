@@ -16,7 +16,7 @@ class Curso(models.Model):
     Representa un curso académico
     """
     anno = models.IntegerField(unique=True, blank=False, null=False, verbose_name='Año',
-                               validators=[RegexValidator(regex=r'^\d{4}$')])
+                               validators=[RegexValidator(regex=r'^\d{4}$')], primary_key=True)
     activo = models.BooleanField(default=True, null=False, blank=False)
     actual = models.BooleanField(default=False, null=False, blank=False)
 
