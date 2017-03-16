@@ -22,7 +22,7 @@ RUN pip3 install -r requirements.txt && \
 RUN python3 manage.py migrate # Creación de la base de datos y definición de tablas
 RUN python3 manage.py collectstatic --noinput # Copia los ficheros estáticos de todas las aplicaciones a un directorio común
 #RUN python3 manage.py test # Ejecuta los tests unitarios
-RUN python3 manage.py createsuperuser # Crea un superusuario
+RUN echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'password')" | python3 manage.py shell # Crea un superusuario
 RUN python3 manage.py check --deploy # Comprueba que los ajustes definidos son apropiados para una configuración de despliegue
 
 EXPOSE 8000
