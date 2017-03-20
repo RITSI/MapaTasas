@@ -30,13 +30,13 @@ También se puede hacer con Docker mediante dos comandos.
 
 ```bash
 $ git clone https://github.com/RITSI/MapaTasas && cd MapaTasas
-$ docker build -t mapa-tasas .
+$ docker build -t ritsi/mapa-tasas .
 ```
 
 Si queremos poner en marcha el servidor web, lo hacemos con:
 
 ```
-docker run -it -d --rm -p 8000:8000 mapa-tasas python3 manage.py runserver 0.0.0.0:8000
+docker run -it -d -p 8000:8000 ritsi/mapa-tasas
 ```
 
 ## Scripts

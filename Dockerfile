@@ -10,7 +10,7 @@ ENV HOME /root
 ENV SECRET_KEY no-secret-key #Set a secure Django secret key for production!
 
 WORKDIR $HOME
-COPY requirements.txt bower.json $HOME/
+COPY requirements.txt bower.json .bowerrc $HOME/
 
 
 ## ENVRIOMENT DEPENDENCIES
@@ -26,8 +26,6 @@ RUN apt-get update && \
 ## COPY PROJECT
 COPY . $HOME
 
-
-
 ## DEPLOY Django
 
 RUN python3 manage.py migrate && \
@@ -42,4 +40,4 @@ RUN python3 manage.py rendervariations 'tasas.universidad.logo'
 
 EXPOSE 8000
 
-#CMD ["python3", "manage.py runserver 0.0.0.0:8000"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
