@@ -36,7 +36,7 @@ $ docker build -t ritsi/mapa-tasas .
 Si queremos poner en marcha el servidor web, lo hacemos con:
 
 ```
-docker run -it -d -p 8000:8000 ritsi/mapa-tasas
+docker run -d -p 8000:8000 ritsi/mapa-tasas
 ```
 
 ## Scripts
