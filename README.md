@@ -26,6 +26,19 @@ python manage.py collectstatic
 python manage.py createsuperuser
 ```
 
+También se puede hacer con Docker mediante dos comandos.
+
+```bash
+$ git clone https://github.com/RITSI/MapaTasas && cd MapaTasas
+$ docker build -t ritsi/mapa-tasas .
+```
+
+Si queremos poner en marcha el servidor web, lo hacemos con:
+
+```
+docker run -d -p 8000:8000 ritsi/mapa-tasas
+```
+
 ## Scripts
 
 El paquete incluye varios scripts de interés:
