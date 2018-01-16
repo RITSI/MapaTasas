@@ -49,8 +49,6 @@ class Curso(models.Model):
         return tuple((curso.anno, "%s/%s" % (curso.anno, curso.anno + 1)) for curso in Curso.objects.all())
 
 
-
-
 class Universidad(models.Model):
     PUBLICA = 0
     PRIVADA = 1
@@ -62,8 +60,8 @@ class Universidad(models.Model):
     TIPO_UNIVERSIDAD_CHOICES = ((PUBLICA, 'Pública'), (PRIVADA, 'Privada'))
 
     siglas = models.CharField(max_length=20, unique=True, null=False, blank=False,
-                              validators=[RegexValidator(regex=r'[A-Za-z\-]+', message=ugettext_lazy(
-                                  "Las siglas de la universidad solo pueden contener letras y guiones (-)"))],
+                              validators=[RegexValidator(regex=r'[A-Za-z0-9\-]+', message=ugettext_lazy(
+                                  "Las siglas de la universidad solo pueden contener letras, números y guiones (-)"))],
                               help_text=ugettext_lazy("Siglas de la universidad"))
     nombre = models.CharField(max_length=200, null=False, blank=False,
                               help_text=ugettext_lazy("Nombre de la universidad"))
