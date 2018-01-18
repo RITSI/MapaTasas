@@ -144,12 +144,16 @@ function createGraph(universidad, media){
     var media_nacional = ['Media nacional'];
     var cursos = new Set();
     universidad.tasas.forEach(function(tasa){
-        x.push(new Date(tasa.curso.toString()));
-        cursos.add(tasa.curso.toString());
-        primera_matricula.push(tasa.tasas1.toFixed(2));
-        segunda_matricula.push(tasa.tasas2.toFixed(2));
-        tercera_matricula.push(tasa.tasas3.toFixed(2));
-        cuarta_matricula.push(tasa.tasas4.toFixed(2));
+        // TODO: Se incluye una condición para así poder mostrar sólo las tasas de grado.
+        // NOTE: Retocarlo cuando se haga la parte de máster
+        if (tasa.tipo_titulacion === 0){
+            x.push(new Date(tasa.curso.toString()));
+            cursos.add(tasa.curso.toString());
+            primera_matricula.push(tasa.tasas1.toFixed(2));
+            segunda_matricula.push(tasa.tasas2.toFixed(2));
+            tercera_matricula.push(tasa.tasas3.toFixed(2));
+            cuarta_matricula.push(tasa.tasas4.toFixed(2));
+        }
     });
 
     Object.keys(media).sort().forEach(function(curso){
