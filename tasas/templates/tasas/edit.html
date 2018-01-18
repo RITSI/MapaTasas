@@ -37,6 +37,11 @@
                                 {{ universidad_form.nombre|add_class:"form-control" }}
                         </div>
                         <div>
+                            <label for="{{ universidad_form.activa.id_for_label }}">{{ universidad_form.activa.label }}</label>
+                            <label class="has-error">{{ universidad_form.activa.errors }}</label>
+                                {{ universidad_form.activa|add_class:"form-control" }}
+                        </div>
+                        <div>
                             <label for="{{ universidad_form.tipo.id_for_label }}">{{ universidad_form.tipo.label }}</label>
                             <label class="has-error">{{ universidad_form.tipo.errors }}</label>
                                 {{ universidad_form.tipo|add_class:"form-control selectpicker overlay" }}

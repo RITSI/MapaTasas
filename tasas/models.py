@@ -67,6 +67,7 @@ class Universidad(models.Model):
                               help_text=ugettext_lazy("Siglas de la universidad"))
     nombre = models.CharField(max_length=200, null=False, blank=False,
                               help_text=ugettext_lazy("Nombre de la universidad"))
+    activa = models.BooleanField(default=True, null=False)
     tipo = models.IntegerField(choices=TIPO_UNIVERSIDAD_CHOICES, null=False, blank=False,
                                help_text=ugettext_lazy("Tipo de centro (público/privado)"))
     centro = models.CharField(max_length=200, null=True, blank=True, help_text=ugettext_lazy("Nombre del centro"))
