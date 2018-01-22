@@ -82,22 +82,21 @@ class AverageViewSet(ViewSet):
         for curso in Curso.objects.filter(activo=True).order_by('anno'):
             tasas = self.queryset.filter(curso=curso, tipo=Tasa.PRECIO_POR_CREDITO)
 
-            tasas1_filter = tasas.filter(tasas1__gt=0)
+            tasas1_filter = tasas.filter(tasas1__gt=0, universidad__tipo=Universidad.PUBLICA)
             avg_1 = tasas1_filter.aggregate(Avg('tasas1'))['tasas1__avg']
             avg_1_complete = tasas1_filter.count() == tasas.count()
 
-            tasas2_filter = tasas.filter(tasas2__gt=0)
+            tasas2_filter = tasas.filter(tasas2__gt=0, universidad__tipo=Universidad.PUBLICA)
             avg_2 = tasas2_filter.aggregate(Avg('tasas2'))['tasas2__avg']
             avg_2_complete = tasas2_filter.count() == tasas.count()
 
-            tasas3_filter = tasas.filter(tasas3__gt=0)
+            tasas3_filter = tasas.filter(tasas3__gt=0, universidad__tipo=Universidad.PUBLICA)
             avg_3 = tasas1_filter.aggregate(Avg('tasas3'))['tasas3__avg']
             avg_3_complete = tasas3_filter.count() == tasas.count()
 
-            tasas4_filter = tasas.filter(tasas4__gt=0)
+            tasas4_filter = tasas.filter(tasas4__gt=0, universidad__tipo=Universidad.PUBLICA)
             avg_4 = tasas4_filter.aggregate(Avg('tasas4'))['tasas4__avg']
             avg_4_complete = tasas4_filter.count() == tasas.count()
-
 
             data = {
                 'media_1': {'complete': avg_1_complete,  # TODO: Mark true/false if number of unis satisfies
