@@ -1,28 +1,25 @@
-FROM ubuntu
-
-# Set the locale
-RUN apt-get clean && apt-get update && apt-get install -y locales
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8
+FROM mhart/alpine-node
 
 ENV HOME /root
 ENV SECRET_KEY no-secret-key #Set a secure Django secret key for production!
+ENV LIBRARY_PATH=/lib:/usr/lib
 
 WORKDIR $HOME
-COPY requirements.txt bower.json .bowerrc $HOME/
 
+RUN apk add --update \
+            build-base \
+            git \
+            python3 \
+            python3-dev py3-pip jpeg-dev zlib-dev \
+ && npm install -g bower@1.7.8 topojson ogr2ogr \
+ && pip3 install --upgrade pip \
+ && rm /var/cache/apk/*
 
-## ENVRIOMENT DEPENDENCIES
-RUN apt-get update && \
-    apt-get install -y -q libtiff5-dev libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk python3-pip python3-dev nodejs-legacy npm git && \
-    pip3 install --upgrade pip  && \
-    npm install -g topojson ogr2ogr && \
-    npm install -g bower@1.7.8 && \
-    pip3 install -r requirements.txt && \
-    bower install --allow-root
+COPY requirements.txt $HOME/
+RUN pip3 install -r requirements.txt
 
+COPY bower.json .bowerrc $HOME/
+RUN bower install --allow-root
 
 ## COPY PROJECT
 COPY . $HOME
