@@ -3,7 +3,6 @@
 }
 
 @keyframes faint {
-
     0% {
         background-color: rgba(35, 210, 0, 0.86);
         opacity: 1;
@@ -38,14 +37,13 @@
     opacity: 1;
     animation: faint ease-in 5s forwards;
     -moz-animation: faint ease-in 5s forwards;
-
-    p {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
+}
+.status p {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .success {
@@ -69,22 +67,25 @@
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 30px;
-
-    form{
-        display: inline-block;
-        #submit {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
+}
+.form-container form{
+    display: inline-block;
+}
+.form-container form #submit {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .errorlist{
     color: red;
     list-style: none;
 }
+
 /*Fix for bootstrap-select*/
 .overlay{
     z-index:3 !important;
+}
+
+.panel-inactive{
+    background-color: rgb(174, 182, 180);
 }
