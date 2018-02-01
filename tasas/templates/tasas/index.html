@@ -5,19 +5,34 @@
 {{ content.super }}
 <div class="col-md-8">
     <div class="col-md-12">
-        {% for universidad in universidades %}
+        {% for universidad in universidades_activas %}
         <div class="row uni-row">
             <div class="panel panel-default">
                 <a href="universidad/{{universidad.siglas}}/">
                     <div class="panel-body">
                         <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="{% trans "Foto de la" %} {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
-                        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus}}</span></div>
+                        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10"><strong>{{universidad.nombre}}</strong><br><span class="text-muted">{{universidad.campus|default_if_none:''}}</span></div>
                         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="universidad/{{universidad.siglas}}/editar/"><i class="fa fa-pencil-square"></i></a></div>
                     </div>
                 </a>
             </div>
         </div>
         {% endfor %}
+        <h3>Universidades inactivas</h3>
+        {% for universidad in universidades_inactivas %}
+        <div class="row uni-row">
+            <div class="panel panel-default panel-inactive">
+                <a href="universidad/{{universidad.siglas}}/">
+                    <div class="panel-body">
+                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-1">{% if universidad.logo %}<img src="{{universidad.logo.url}}" alt="{% trans "Foto de la" %} {{universidad.nombre}}" class="img-circle foto-uni">{% endif %}</div>
+                        <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">{{universidad.nombre}}<br><span class="text-muted">{{universidad.campus|default_if_none:''}}</span></div>
+                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="universidad/{{universidad.siglas}}/editar/"><i class="fa fa-pencil-square"></i></a></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+
     </div>
 </div>
 <div class="col-md-4">

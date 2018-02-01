@@ -2,16 +2,14 @@ from rest_framework.viewsets import ModelViewSet, ViewSet
 from rest_framework.response import Response
 
 from django.shortcuts import get_object_or_404, get_list_or_404
-from django.db.models import Avg, Q
+from django.db.models import Avg
 
 from .serializers import UniversidadSerializer, TasaSerializer
 from ..models import Universidad, Tasa, Curso
 
-from tasasrest import settings
-
 
 class UniversidadViewSet(ModelViewSet):
-    queryset = Universidad.objects.all()
+    queryset = Universidad.objects.all().filter(activa=True)
     serializer_class = UniversidadSerializer
     base_name = "universidades"
     http_method_names = ['get', 'head', 'options']
@@ -33,7 +31,7 @@ class UniversidadViewSet(ModelViewSet):
 
 
 class ProvinciaViewSet(ModelViewSet):
-    queryset = Universidad.objects.all().prefetch_related('tasas')
+    queryset = Universidad.objects.all().prefetch_related('tasas').filter(activa=True)
     serializer_class = UniversidadSerializer
     http_method_names = ['get', 'head', 'options']
 

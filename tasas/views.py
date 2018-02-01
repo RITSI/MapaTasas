@@ -13,7 +13,8 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['universidades'] = Universidad.objects.all()
+        context['universidades_activas'] = Universidad.objects.filter(activa=True)
+        context['universidades_inactivas'] = Universidad.objects.filter(activa=False)
 
         return context
 
