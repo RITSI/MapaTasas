@@ -82,7 +82,7 @@ var cargarGrado = function(d){
     $('#bootstrap_lista_units').html('');
 
     // Llamada a la API
-    d3.json("/api/provincias/"+ d.id, function (error, universidades) {
+    d3.json("/api/provincias/"+ d.id + '?tipo_titulacion=0', function (error, universidades) {
         //TODO: Handle error
         if(universidades.length == 0){
             $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de '
