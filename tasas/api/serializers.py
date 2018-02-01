@@ -49,18 +49,20 @@ class DynamicFieldsMixin(object):
 
 class UniversidadSerializer(DynamicFieldsMixin, ModelSerializer):
     logo_thumbnail = SerializerMethodField()
-    tasas = TasaSerializer(many=True, read_only=True)
+    #tasas = TasaSerializer(many=True, read_only=True)
+    tasas = SerializerMethodField()
     tipo_verbose = SerializerMethodField(read_only=True)
 
-    class Meta:
-        model = Universidad
-        exclude = ('id',)
-        depth = 1
+    def __init__(self, *args, **kwargs):
+        self.filtro_tipo_tasas = kwargs.pop("filtro_tipo_tasas", None)
+        super().__init__(*args, **kwargs)
 
-    @staticmethod
-    def get_tasas(obj):
-        if obj.tasas:
-            return obj.tasas
+    def get_tasas(self, obj):
+        if self.filtro_tipo_tasas is not None:
+            tasas = obj.tasas.filter(tipo_titulacion=self.filtro_tipo_tasas)
+        else:
+            tasas = obj.tasas
+        return TasaSerializer(tasas, many=True).data
 
     def get_logo_thumbnail(self, obj):
         if obj.logo:
@@ -72,3 +74,8 @@ class UniversidadSerializer(DynamicFieldsMixin, ModelSerializer):
     def get_tipo_verbose(self, obj):
         if obj.tipo is not None:
             return obj.get_tipo_universidad_verbose(obj.tipo)
+
+    class Meta:
+        model = Universidad
+        exclude = ('id',)
+        depth = 1

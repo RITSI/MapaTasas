@@ -45,8 +45,10 @@ class ProvinciaViewSet(ModelViewSet):
             # TODO
             pass
 
+        tipo_titulacion = request.query_params.get('tipo_titulacion', None)
+
         unis = queryset.filter(provincia__iexact=provincia)  # get_list_or_404(queryset, provincia__iexact=provincia)
-        serializer = self.serializer_class(unis, many=True)
+        serializer = self.serializer_class(unis, filtro_tipo_tasas=tipo_titulacion, many=True)
 
         return Response(serializer.data)
 
