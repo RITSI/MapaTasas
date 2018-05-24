@@ -26,8 +26,8 @@ class UniversidadView(View):
     grado_verbose = Tasa.get_tipo_titulacion_verbose_ascii(Tasa.GRADO).lower()
     master_verbose = Tasa.get_tipo_titulacion_verbose_ascii(Tasa.MASTER).lower()
 
-    def get(self, request, *args, **kwargs):
-        siglas = kwargs.get('universidad', None)
+    def get(self, request, *args, universidad=None, **kwargs):
+        siglas = universidad
         if siglas is None:
             universidad_form = UniversidadForm()
             tasa_forms_grado = []
@@ -45,11 +45,12 @@ class UniversidadView(View):
                 tasa_forms_master.append(tasa_form)
             uni_nombre = None
         else:
-            if any(x.isupper() for x in siglas):
-                kwargs['universidad'] = kwargs['universidad'].lower()
-                return HttpResponseRedirect(redirect_to=reverse('admin:edit', kwargs=kwargs))
+            # BUG: reverse function does not work -@ismael at 2018-5-24 15:57:37
+            # 
+            # if any(x.isupper() for x in siglas):
+            #     # return HttpResponseRedirect(redirect_to=reverse('admin:edit', {'universidad': siglas.lowercase()}))
 
-            uni = get_object_or_404(Universidad.objects.all(), siglas=kwargs.get('universidad').lower())
+            uni = get_object_or_404(Universidad.objects.all(), siglas=siglas.lower())
             uni_nombre = uni.nombre
             universidad_form = UniversidadForm(instance=uni)
             tasa_forms_grado = []
@@ -101,7 +102,7 @@ class UniversidadView(View):
 
         if uni_form.is_valid():
             uni = uni_form.save(commit=False)
-            uni.siglas = uni.siglas.lower()
+            # uni.siglas = uni.siglas.lower()
             nombre_universidad = uni.nombre
 
             tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
@@ -168,6 +169,8 @@ class UniversidadView(View):
             tasa.save()
         uni.save()
 
+        # WTF: message variable unused -@ismael at 2018-5-24 16:01:28
+        # 
         if siglas is None:
             message = _("Universidad creada correctamente")
         else:
@@ -179,5 +182,7 @@ class UniversidadView(View):
 """
 Permite la creación de una nueva universidad
 """
+# BUG: Unused view -@ismael at 2018-5-24 14:55:51
+# 
 class CreateUniversidadView(View):
     template_name = "tasas/edituni.html"
