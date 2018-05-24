@@ -102,7 +102,6 @@ class UniversidadView(View):
 
         if uni_form.is_valid():
             uni = uni_form.save(commit=False)
-            # uni.siglas = uni.siglas.lower()
             nombre_universidad = uni.nombre
 
             tasas_grado = uni.tasas.filter(tipo_titulacion=Tasa.GRADO)
