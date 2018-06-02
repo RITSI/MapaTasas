@@ -28,6 +28,7 @@ COPY . $HOME
 
 RUN python3 manage.py migrate && \
     python3 manage.py collectstatic --noinput && \
+    python3 manage.py compilemessages && \
     echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'password')" | python3 manage.py shell  && \
     python3 manage.py check --deploy # Comprueba que los ajustes definidos son apropiados para una configuración de despliegue
 
