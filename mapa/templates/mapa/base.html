@@ -28,6 +28,8 @@
 {% block footer %}
     <script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
     <script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    {% load tasas_tags %}
+    {% cookielaw_alert %}
 {% endblock footer %}
 </body>
 </html>
