@@ -110,7 +110,8 @@ TEMPLATES = [
                 'django.template.context_processors.i18n'
             ],
             'libraries': {
-                'cookie_tags': 'cookielaw.templatetags.cookielaw_tags'
+                'cookie_tags': 'cookielaw.templatetags.cookielaw_tags',
+                'tasas_tags': 'tasas.templatetags.cookielaw_alert'
             }
         },
     },

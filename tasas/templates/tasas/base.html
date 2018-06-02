@@ -34,19 +34,8 @@
 {% block footer %}
     <script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
     <script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
-    {% load cookie_tags %}
-    <style>
-        #CookielawBanner {
-            background: inherit;
-            padding: 15px 0;
-        }
-    </style>
-    <footer class="footer navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            {% cookielaw_banner %}
-        </div>
-    </footer>
+    {% load tasas_tags %}
+    {% cookielaw_alert %}
 {% endblock footer %}
 </body>
 </html>
