@@ -18,7 +18,8 @@
     {% cookielaw_banner %}
 </div>
 <script>
-    $('#CookielawBanner').visibilityChanged({
+    $("#CookielawBanner>div>p").html( '<p><div class="pull-right" style="margin-bottom: 15px;"><div><a class="btn btn-success btn-block" href="javascript:Cookielaw.createCookielawCookie();" style="min-width: 130px; margin-bottom:5px;">{% trans "COOKIE_INFO_OK" %}</a></div><div><a class="btn btn-primary btn-block" href="https://ritsi.org/politica-de-cookies" target="_blank">{% trans "COOKIE_INFO_KNOW_MORE" %}</a></div></div>{% trans "COOKIE_INFO_PARA" %}</p>' );
+    $("#CookielawBanner").visibilityChanged({
         callback: function(element, visible, initialLoad) {
             document.getElementById('CookielawAlert').style.display = 'none';
         },

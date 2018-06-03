@@ -255,3 +255,6 @@ msgstr ""
 "mejor contenido y para finalidades estadísticas. Usted puede desactivar el uso de cookies modificando la "
 "configuración de su navegador. Navegar por nuestro sitio web sin cambiar la configuración del navegador hace que "
 "usted nos esté autorizando a guardar esta información en su dispositivo."
+
+msgid "COOKIE_INFO_KNOW_MORE"
+msgstr "Saber más"
