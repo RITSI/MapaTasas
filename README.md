@@ -23,6 +23,7 @@ bower install
 ## Crear base de datos:
 python manage.py migrate
 python manage.py collectstatic
+python manage.py compilemessages
 python manage.py createsuperuser
 ```
 

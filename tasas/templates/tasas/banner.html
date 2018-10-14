@@ -1,0 +1,29 @@
+{% load staticfiles i18n %}
+<script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+<script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+<script type="application/javascript" src="{% static 'vendor/visibilityChanged/visibilityChanged.js' %}"></script>
+{% load cookie_tags %}
+<style>
+    #CookielawBanner {
+        background: inherit;
+        padding: 0;
+    }
+    #CookielawAlert {
+        padding: 0;
+        margin-bottom: {{ margin|default:0 }}px;
+    }
+</style>
+<div class="alert alert-info navbar-fixed-bottom" id="CookielawAlert">
+    {% cookielaw_banner %}
+</div>
+<script>
+    $("#CookielawBanner>div>p").html( '<p><div class="pull-right" style="margin-bottom: 15px;"><div><a class="btn btn-success btn-block" href="javascript:Cookielaw.createCookielawCookie();" style="min-width: 130px; margin-bottom:5px;">{% trans "COOKIE_INFO_OK" %}</a></div><div><a class="btn btn-primary btn-block" href="https://ritsi.org/politica-de-cookies" target="_blank">{% trans "COOKIE_INFO_KNOW_MORE" %}</a></div></div>{% trans "COOKIE_INFO_PARA" %}</p>' );
+    $("#CookielawBanner").visibilityChanged({
+        callback: function(element, visible, initialLoad) {
+            document.getElementById('CookielawAlert').style.display = 'none';
+        },
+        runOnLoad: false,
+        frequency: 100
+    });
+</script>

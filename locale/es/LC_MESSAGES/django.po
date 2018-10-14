@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-28 16:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: mapa/models.py:12 tasas/templates/tasas/edit.html.py:97
+#: tasas/templates/tasas/edit.html:155
+msgid "Curso académico"
+msgstr ""
+
+#: mapa/models.py:15
+msgid ""
+"Indica un correo electrónico si deseas que nos pongamos en contacto contigo"
+msgstr ""
+
+#: mapa/models.py:18
+msgid "Describe el problema"
+msgstr ""
+
+#: mapa/templates/mapa/base.html:21 mapa/templates/mapa/index.html.py:13
+#: tasas/templates/tasas/base.html:19
+msgid "Mapa de tasas"
+msgstr ""
+
+#: mapa/templates/mapa/index.html:18
+msgid "Logo de RITSI"
+msgstr ""
+
+#: tasas/management/commands/importar.py:19
+msgid ""
+"Carga en la base de datos el fichero JSON utilizado en el proyecto original"
+msgstr ""
+
+#: tasas/management/commands/importar.py:50
+msgid "Formato de archivo incorrecto"
+msgstr ""
+
+#: tasas/models.py:64
+msgid ""
+"Las siglas de la universidad solo pueden contener letras, números y guiones "
+"(-)"
+msgstr ""
+
+#: tasas/models.py:65
+msgid "Siglas de la universidad"
+msgstr ""
+
+#: tasas/models.py:67
+msgid "Nombre de la universidad"
+msgstr ""
+
+#: tasas/models.py:70
+msgid "Tipo de centro (público/privado)"
+msgstr ""
+
+#: tasas/models.py:71
+msgid "Nombre del centro"
+msgstr ""
+
+#: tasas/models.py:73
+msgid "Provincia"
+msgstr ""
+
+#: tasas/models.py:77
+msgid "Escudo de la universidad"
+msgstr ""
+
+#: tasas/models.py:80
+msgid "Nombre del campus"
+msgstr ""
+
+#: tasas/models.py:82
+msgid "URL del centro"
+msgstr ""
+
+#: tasas/models.py:138
+msgid "Universidad asociada a esta tasa"
+msgstr ""
+
+#: tasas/models.py:143
+msgid "Tipo de tasa"
+msgstr ""
+
+#: tasas/models.py:145
+msgid "Tipo de titulación (grado/máster)"
+msgstr ""
+
+#: tasas/models.py:148
+msgid "Curso académico en el que esta tasa se aplica"
+msgstr ""
+
+#: tasas/models.py:150
+msgid "URL del documento oficial"
+msgstr ""
+
+#: tasas/models.py:152 tasas/templates/tasas/edit.html.py:127
+#: tasas/templates/tasas/edit.html:184
+msgid "Tasa global"
+msgstr ""
+
+#: tasas/models.py:154
+msgid "Texto informativo sobre la tasa"
+msgstr ""
+
+#: tasas/models.py:156 tasas/templates/tasas/edit.html.py:111
+#: tasas/templates/tasas/edit.html:168
+msgid "Primera convocatoria"
+msgstr ""
+
+#: tasas/models.py:158 tasas/templates/tasas/edit.html.py:114
+#: tasas/templates/tasas/edit.html:171
+msgid "Segunda convocatoria"
+msgstr ""
+
+#: tasas/models.py:160 tasas/templates/tasas/edit.html.py:117
+#: tasas/templates/tasas/edit.html:174
+msgid "Tercera convocatoria"
+msgstr ""
+
+#: tasas/models.py:162 tasas/templates/tasas/edit.html.py:120
+#: tasas/templates/tasas/edit.html:177
+msgid "Cuarta convocatoria"
+msgstr ""
+
+#: tasas/models.py:179
+#, python-format
+msgid "Los %d campos de tasa deben ser rellenados"
+msgstr ""
+
+#: tasas/models.py:182
+msgid "El campo 'tasa global' no es admitido para precios por crédito"
+msgstr ""
+
+#: tasas/models.py:186
+msgid "La tasa global es obligatoria"
+msgstr ""
+
+#: tasas/models.py:189
+msgid "Los campos de tasa por crédito no son admitidos para pagos únicos"
+msgstr ""
+
+#: tasas/models.py:193
+msgid "Es necesario introducir una descripción sobre la tasa"
+msgstr ""
+
+#: tasas/models.py:196
+msgid "Los campos de tasa por crédito no son admitidos para tasas misceláneas"
+msgstr ""
+
+#: tasas/models.py:199
+msgid "El campo 'tasa global' no es admitido para tasas misceláneas"
+msgstr ""
+
+#: tasas/models.py:201
+msgid "Opción de tasa inválida"
+msgstr ""
+
+#: tasas/templates/tasas/base.html:25
+msgid "Acerca de"
+msgstr ""
+
+#: tasas/templates/tasas/base.html:26
+msgid "Ir al mapa"
+msgstr ""
+
+#: tasas/templates/tasas/base.html:27
+msgid "Salir"
+msgstr ""
+
+#: tasas/templates/tasas/confirmation.html:14
+msgid "Volver"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:6
+msgid "Editando:"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:8
+msgid "Nueva universidad"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:24
+msgid "Información general"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:90
+msgid "Tasas de grado"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:104 tasas/templates/tasas/edit.html:161
+msgid "URL"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:109 tasas/templates/tasas/edit.html:166
+msgid "Precios por crédito"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:134 tasas/templates/tasas/edit.html:191
+msgid "Descripción"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:148
+msgid "Tasas de máster"
+msgstr ""
+
+#: tasas/templates/tasas/edit.html:204
+msgid "Actualizar datos"
+msgstr ""
+
+#: tasas/templates/tasas/index.html:13 tasas/templates/tasas/index.html:27
+msgid "Foto de la"
+msgstr ""
+
+#: tasas/templates/tasas/index.html:40
+msgid "Añadir universidad"
+msgstr ""
+
+#: tasas/views.py:158
+msgid "Universidad creada correctamente"
+msgstr ""
+
+#: tasas/views.py:160
+msgid "Datos actualizados correctamente"
+msgstr ""
+
+#: tasas/views.py:164
+msgid "Datos actualizados"
+msgstr ""
+
+# Strings for cookielaw banner
+msgid "COOKIE_INFO_HEADER"
+msgstr "Aviso de cookie"
+
+msgid "COOKIE_INFO_OK"
+msgstr "Estoy de acuerdo"
+
+msgid "COOKIE_INFO_PARA"
+msgstr ""
+"Este sitio web guarda pequeños fragmentos de información (cookies) en su dispositivo con la finalidad de ofrecer un "
+"mejor contenido y para finalidades estadísticas. Usted puede desactivar el uso de cookies modificando la "
+"configuración de su navegador. Navegar por nuestro sitio web sin cambiar la configuración del navegador hace que "
+"usted nos esté autorizando a guardar esta información en su dispositivo."
+
+msgid "COOKIE_INFO_KNOW_MORE"
+msgstr "Saber más"

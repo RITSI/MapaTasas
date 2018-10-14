@@ -38,6 +38,10 @@
     </div>
     <div id="tasa-modal" class="modal">
     </div>
+    {% load tasas_tags %}
+    {% with 20 as margin%}
+        {% cookielaw_alert %}
+    {% endwith %}
 </div>
 
 <div id="footer" class="navbar navbar-default navbar-fixed-bottom" >

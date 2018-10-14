@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'tasas/css/backend.css' %}">
         <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+        <link rel="stylesheet" href="{% static 'cookielaw/css/cookielaw.css' %}">
     {% endblock header %}
 </head>
 <body>
@@ -33,6 +34,8 @@
 {% block footer %}
     <script type="application/javascript" src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
     <script type="application/javascript" src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    {% load tasas_tags %}
+    {% cookielaw_alert %}
 {% endblock footer %}
 </body>
 </html>

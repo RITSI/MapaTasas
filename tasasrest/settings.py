@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cookielaw',
     'rest_framework',
     'widget_tweaks',
     'django_nose',
@@ -106,7 +107,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n'
             ],
+            'libraries': {
+                'cookie_tags': 'cookielaw.templatetags.cookielaw_tags',
+                'tasas_tags': 'tasas.templatetags.cookielaw_alert'
+            }
         },
     },
 ]
@@ -156,6 +162,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 LOGIN_URL = '/users/login/'
 # Static files (CSS, JavaScript, Images)
