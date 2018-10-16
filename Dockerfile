@@ -9,9 +9,10 @@ WORKDIR $HOME
 RUN apk add --update \
             build-base \
             git \
+	    gettext \
             python3 \
             python3-dev py3-pip jpeg-dev zlib-dev \
- && npm install -g bower@1.7.8 topojson ogr2ogr \
+ && npm install -g bower topojson ogr2ogr \
  && pip3 install --upgrade pip \
  && rm /var/cache/apk/*
 
