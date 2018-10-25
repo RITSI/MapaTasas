@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include, patterns
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
@@ -24,7 +24,7 @@ from tasas.api.urls import urlpatterns as api_urlpatterns
 
 urlpatterns = [
     url(r'^reporte/', include('mapa.urls')),
-    url(r'^users/', include(admin.site.urls)),
+    url(r'^users/', admin.site.urls),
     url(r'^admin/', include('tasas.urls', namespace="admin")), #TODO: Change namespace name
     url(r'^api/', include(api_urlpatterns, namespace="api")),
     url(r'^$', IndexView.as_view())

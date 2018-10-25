@@ -7,7 +7,7 @@ class Reporte(models.Model):
     """
     Permite reportar errores en los datos mostrados
     """
-    universidad = models.ForeignKey(Universidad, verbose_name="Universidad",
+    universidad = models.ForeignKey(Universidad, on_delete=models.CASCADE, verbose_name="Universidad",
                                     related_name="reportes", blank=True, null=True)
     curso = models.IntegerField(verbose_name="Curso académico", help_text=_("Curso académico"),
                                 default=0, blank=True, null=True)

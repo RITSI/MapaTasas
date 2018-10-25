@@ -145,7 +145,7 @@ class Tasa(models.Model):
                                           help_text=ugettext_lazy("Tipo de titulación (grado/máster)"))
 
     # El curso se representa con el año en el que da comienzo
-    curso = models.ForeignKey(Curso, help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
+    curso = models.ForeignKey(Curso,on_delete=models.CASCADE, help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
     url = models.URLField(null=False, blank=False, validators=[MinLengthValidator(1)],
                           help_text=ugettext_lazy("URL del documento oficial"))
 

@@ -1,0 +1,40 @@
+Paso a actualizar todas las librerías del archivo requerimentes a su última versión estable.
+Esto me da algunos errores que paso a mencionar y conforme menciono voy solucionando:
+
+1) 
+
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+
+Concretamente, dicho error me da en el archivo tasas/model.py, en la línea:
+
+curso = models.ForeignKey(Curso, help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
+
+A partir de la versión 1.8 de Django la función ForeignKey tiene un parámetro más tal que queda así:
+
+ForeignKey(to, on_delete, options**)
+
+Por tanto, el error se soluciona con:
+
+curso = models.ForeignKey(Curso, on_delete=models.CASCADE, help_text=ugettext_lazy("Curso académico en el que esta tasa se aplica"))
+
+2)
+
+Mismo error anterior pero ahora en el archivo mapa/models.py. En la línea:
+
+universidad = models.ForeignKey(Universidad, verbose_name="Universidad",
+                                    related_name="reportes", blank=True, null=True)
+
+El error se soluciona de la siguiente manera:
+
+universidad = models.ForeignKey(Universidad, on_delete=models.CASCADE, verbose_name="Universidad",
+                                    related_name="reportes", blank=True, null=True)
+
+
+3) 
+
+El siguiente error es:
+```
+  File "/root/tasasrest/urls.py", line 16, in <module>
+    from django.conf.urls import url, include, patterns
+ImportError: cannot import name 'patterns'
+```
