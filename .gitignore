@@ -82,3 +82,6 @@ cover
 
 node_modules
 .idea
+
+#VSCode files
+.vscode
