@@ -34,7 +34,7 @@ RUN python3 manage.py migrate && \
     python3 manage.py check --deploy # Comprueba que los ajustes definidos son apropiados para una configuración de despliegue
 
 ## DEPLOY MapaTasas
-RUN python3 manage.py importar mapa/data/uni/unis.json mapa/img/uni
+#RUN python3 manage.py importar mapa/data/uni/unis.json mapa/img/uni
 RUN python3 manage.py rendervariations 'tasas.universidad.logo'
 
 
