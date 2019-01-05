@@ -24,9 +24,9 @@ from tasas.api.urls import urlpatterns as api_urlpatterns
 
 urlpatterns = [
     url(r'^reporte/', include('mapa.urls')),
-    url(r'^users/', include('admin.site.urls')),
-    url(r'^admin/', include('tasas.urls', namespace="admin")), #TODO: Change namespace name
-    url(r'^api/', include(api_urlpatterns, namespace="api")),
-    url(r'^$', IndexView.as_view())
+    url(r'^users/', admin.site.urls),
+    url(r'^admin/', include('tasas.urls')), #TODO: Change namespace name
+    url(r'^api/', include(api_urlpatterns)),
+    url(r'^$', IndexView.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
   + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
