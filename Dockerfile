@@ -22,6 +22,8 @@ RUN apk add --update \
 COPY requirements.txt $HOME/
 RUN pip3 install -r requirements.txt
 RUN pip3 install mysqlclient
+RUN pip3 install whitenoise
+RUN pip3 install dj-static
 
 COPY bower.json .bowerrc $HOME/
 RUN bower install --allow-root
