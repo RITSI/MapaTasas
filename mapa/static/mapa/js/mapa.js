@@ -79,7 +79,7 @@ function createDropdownGrado(universidades, media){
 
 var cargarGrado = function(d){
     //Vaciado de los datos
-    $('#bootstrap_lista_units').html('');
+    $('#bootstrap_lista_units').html('<div class="loader">Loading...</div>');
 
     // Llamada a la API
     d3.json("/api/provincias/"+ d.id + '?tipo_titulacion=0', function (error, universidades) {
