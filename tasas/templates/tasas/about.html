@@ -1,0 +1,43 @@
+{% extends 'tasas/base.html' %}
+{% load staticfiles i18n %}
+
+
+{% block content %}
+<div class="row">
+	<div class="col-md-4">
+		<img class="center-block" src="{% static "mapa/img/logoritsi-texto.png" %}" alt="Logotipo de RITSI">
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Mapa de Tasas de Grados Universitarios</h2>
+			</div>
+			<div class="col-md-12">
+				<h4>Acerca del Mapa de Tasas</h4>
+				<p class="text-justify">Información sobre el precio de titulaciones en Informática en España.</p>
+				<h4>Licencia del proyecto</h4>
+				<p class="text-justify">Licenciado bajo GPL 3.0</p>
+			</div>
+			<div class="col-md-12">
+				<h4>Menciones</h4>
+				<p class="text-justify">Proyecto creado por <a href="https://github.com/martinarroyo">Diego Martín Arroyo</a> para Asociación RITSI. Los citados a continuación han colaborado en el desarrollo y/o mantenimiento del proyecto:</p>
+				<ul>
+					<li><a href="https://github.com/vk496">Valentín Kivachuk</a></li>
+					<li><a href="https://github.com/jcabala14">Jorge Cabal</a></li>
+					<li><a href="https://github.com/Varnez">Álvaro Martínez</a></li>
+					<li><a href="https://github.com/Ryckes">Kevin Montalvá</a></li>
+					<li><a href="https://github.com/zoraidams">Zoraida Mediavilla</a></li>
+				</ul>
+			</div>
+			<div class="col-md-12">
+				<h4>Redes sociales</h4>
+				<p class="text-justify">Puedes seguirnos en las siguientes redes sociales para mantenerte a la última:</p>
+				<ul>
+					<li>Twitter: <a href="http://twitter.com/ritsi">@ritsi</a></li>
+					<li>Instagram: <a href="http://instagram.com/asociacion.ritsi/">asociacion.ritsi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

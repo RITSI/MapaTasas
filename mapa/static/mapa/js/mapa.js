@@ -50,6 +50,7 @@ function createDropdownGrado(universidades, media){
     });
     var rendered_data = template_universidad_provincia({universidades: universidades});
 
+    $('#bootstrap_lista_units').html('');
     $('#bootstrap_lista_units').append(rendered_data);
 
     var $panelsButton = $('.dropdown-user');
@@ -79,12 +80,13 @@ function createDropdownGrado(universidades, media){
 
 var cargarGrado = function(d){
     //Vaciado de los datos
-    $('#bootstrap_lista_units').html('');
+    $('#bootstrap_lista_units').html('<div class="loader">Loading...</div>');
 
     // Llamada a la API
     d3.json("/api/provincias/"+ d.id + '?tipo_titulacion=0', function (error, universidades) {
         //TODO: Handle error
         if(universidades.length == 0){
+            $('#bootstrap_lista_units').html('');
             $('#bootstrap_lista_units').html('<p>No se han encontrado universidades en la provincia de '
                                              + d.properties.name +
                                              ' que oferten estudios de Ingeniería Informática.</p>');

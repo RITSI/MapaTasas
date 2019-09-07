@@ -169,3 +169,10 @@ class CreateUniversidadView(View):
     Permite la creación de una nueva universidad
     """
     template_name = "tasas/edituni.html"
+
+class AboutView(TemplateView):
+    template_name = 'tasas/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutView, self).get_context_data(**kwargs)
+        return context
