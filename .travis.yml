@@ -3,8 +3,24 @@ sudo: required
 services:
   - docker
 
+matrix:
+  fast_finish: true
+  include:
+    - name: "python-3.8"
+      env: BASE_IMAGE=python:3.8-alpine
+    - name: "python-3.7"
+      env: BASE_IMAGE=python:3.7-alpine
+    - name: "python-3.6"
+      env: BASE_IMAGE=python:3.6-alpine
+    - name: "python-3.5"
+      env: BASE_IMAGE=python:3.5-alpine
+    - name: "python-2.7"
+      env: BASE_IMAGE=python:2.7-alpine
+  allow_failures:
+    - env: BASE_IMAGE=python:2.7-alpine
+
 before_install:
-  - docker build -t ritsi/mapa-tasas .
+  - docker build -t ritsi/mapa-tasas --build-arg BASE_IMAGE=$BASE_IMAGE .
 
 script:
   - docker run -it -p 8000:8000 ritsi/mapa-tasas python3 manage.py test
