@@ -1,5 +1,6 @@
 #FROM mhart/alpine-node
-FROM python:3.6-alpine
+ARG BASE_IMAGE=python:3.6-alpine
+FROM $BASE_IMAGE
 
 ENV HOME /root
 ENV SECRET_KEY no-secret-key #Set a secure Django secret key for production!
