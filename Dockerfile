@@ -7,7 +7,7 @@ ENV LIBRARY_PATH=/lib:/usr/lib
 
 WORKDIR $HOME
 
-RUN apk add --update \
+RUN apk add --no-cache --update \
 	mariadb-connector-c-dev \
             build-base \
 	mariadb-dev \
@@ -16,16 +16,10 @@ RUN apk add --update \
 	    gettext \
 	    jpeg-dev zlib-dev \
  && npm install -g bower topojson ogr2ogr \
- && pip3 install --upgrade pip \
- && rm /var/cache/apk/*
+ && pip3 install --upgrade pip
 
-COPY requirements.txt $HOME/
+COPY bower.json .bowerrc requirements.txt $HOME/
 RUN pip3 install -r requirements.txt
-RUN pip3 install mysqlclient
-RUN pip3 install whitenoise
-RUN pip3 install dj-static
-
-COPY bower.json .bowerrc $HOME/
 RUN bower install --allow-root
 
 ## COPY PROJECT
