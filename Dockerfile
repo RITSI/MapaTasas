@@ -15,7 +15,7 @@ RUN apk add --update \
 	    nodejs yarn \
 	    gettext \
 	    jpeg-dev zlib-dev \
- && yarn global add topojson ogr2ogr \
+ && yarn global add topojson-client ogr2ogr \
  && pip3 install --upgrade pip \
  && rm /var/cache/apk/*
 
