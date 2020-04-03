@@ -11,7 +11,6 @@
     <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <title>{% trans 'Mapa de tasas' %}</title>
-
 </head>
 
 <body>
@@ -19,14 +18,14 @@
     <a href="http://ritsi.org"><img id="logo" class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" alt="{% trans 'Logo de RITSI' %}" src="{% static 'mapa/img/logoritsi-texto.png' %}">
     </a>
 
-    <img id="texto" class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" alt="Logo de RITSI" src="{% static 'mapa/img/tasas_ritsi.png' %}">
+    <img id="texto" class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" alt="Logo de RITSI" src="{% static 'mapa/img/tasas_ritsi.png' %}" style="filter:invert(100)">
 </div>
 
 
 <div id="content">
     <div class="tabs-content">
         <ul class="tabs">
-            <li class="tab-link current" data="grado">Tasas de Grado</li>
+            <li class="tab-link" data="grado">TASAS DE GRADO</li>
         </ul>
     </div>
     <div id="maps">
@@ -39,10 +38,14 @@
     </div>
     <div id="tasa-modal" class="modal">
     </div>
+    {% load tasas_tags %}
+    {% with 20 as margin%}
+        {% cookielaw_alert %}
+    {% endwith %}
 </div>
 
-<div id="footer" class="navbar navbar-default navbar-fixed-bottom" >
-    <center>Copyright 2016. Creado por @alternhuman para RITSI y mantenido por la Comisión de Infraestructuras.</center>
+<div id="footer" class="navbar navbar-default navbar-fixed-bottom">
+    <center>Copyright 2019. Creado por @alternhuman para RITSI y mantenido por la Comisión de Infraestructuras.</center>
 </div>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -68,6 +71,67 @@
 <script>
     gaTrack();
 </script>
+<style type="text/css">
+    /* https://projects.lukehaas.me/css-loaders/ */
+    .loader,
+    .loader:before,
+    .loader:after {
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation: load7 1.8s infinite ease-in-out;
+      animation: load7 1.8s infinite ease-in-out;
+    }
+    .loader {
+      color: #392c2c;
+      font-size: 8px;
+      margin: 0px auto;
+      position: relative;
+      margin-bottom: 20px;
+      text-indent: -9999em;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+    .loader:before,
+    .loader:after {
+      content: '';
+      position: absolute;
+      top: 0;
+    }
+    .loader:before {
+      left: -3.5em;
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    .loader:after {
+      left: 3.5em;
+    }
+    @-webkit-keyframes load7 {
+      0%,
+      80%,
+      100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+        box-shadow: 0 2.5em 0 0;
+      }
+    }
+    @keyframes load7 {
+      0%,
+      80%,
+      100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+      }
+      40% {
+        box-shadow: 0 2.5em 0 0;
+      }
+    }
+</style>
 </body>
 
 </html>

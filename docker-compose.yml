@@ -1,0 +1,4 @@
+mapatasas:
+        image: 'ritsi/mapa-tasas'
+        ports:
+            - 8000:8000

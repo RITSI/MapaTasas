@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <form action="" method="post">{% csrf_token %}
+                    <form action="" method="post" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Por favor, para enviar el reporte, indique que ha leído el Aviso Legal y acepta la Política de Privacidad.'); return false; }" >{% csrf_token %}
                         <br style="clear:both">
                         <h3 style="margin-bottom: 25px; text-align: center;">Reportar un problema</h3>
 
@@ -46,6 +46,10 @@
                             <label for="{{ form.descripcion.id_for_label }}">{{ form.descripcion.label }}</label>
                             <label class="has-error">{{ form.tipo.errors }}</label>
                                 {{ form.descripcion|add_class:"form-control"}}
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="checkbox" value="check" id="agree"/>
+                            <label class="form-check-label" for="agree">Acepto el <a href="https://ritsi.org/aviso-legal/">Aviso Legal</a> y la <a href="https://ritsi.org/politica-de-privacidad/">Política de Privacidad</a>.</label>
                         </div>
                         <input id="submit-tasas" class="btn btn-success" type="submit" value="Enviar">
                     </form>

@@ -15,6 +15,7 @@ class IncrementVariable(template.Node):
         except ValueError:
             raise template.TemplateSyntaxError("'increment tag requires a base 10 integer as parameter")
 
+
 def increment(parser, token):
     parts = token.split_contents()
     if len(parts) != 2:

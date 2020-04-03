@@ -1,7 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Play);
 
 html , body{
-    background-color: #5c4c4c;
+    background-color: white;
 }
 body {
     font-family: 'Play', sans-serif;
@@ -275,9 +275,8 @@ body {
 }
 
 ul{
-    border: 2px solid;
-    border-color: white;
-    border-radius: 5px;
+    border: 2px solid #da2724;
+    border-radius: 30px;
 }
 
 ul.tabs{
@@ -286,21 +285,18 @@ ul.tabs{
 }
 ul.tabs li{
     background: none;
-    color: white;
+    color: black;
     display: inline-block;
     padding: 10px 15px;
     cursor: pointer;
 }
 
-ul.tabs li.current{
-    background: #ededed;
-    color: #222;
-}
 
-.navbar-fixed-bottom {
-    background-color: #5c4c4c;
-    border-color: #5c4c4c;
+#footer {
+    background-color: white;
+    border-color: #da2724;
     min-height: 20px;
+    color:black;
 }
 
 .uni-tipo {

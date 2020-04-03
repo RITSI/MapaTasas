@@ -6,7 +6,7 @@ PROVINCIAS = (
     ("Asturias", "Asturias"),
     ("Avila", "Ávila"),
     ("Badajoz", "Badajoz"),
-    ("Balearas", "Baleares"),
+    ("Baleares", "Baleares"),
     ("Barcelona", "Barcelona"),
     ("Burgos", "Burgos"),
     ("Caceres", "Cáceres"),

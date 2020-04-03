@@ -1,0 +1,31 @@
+#!/bin/bash
+
+NAME="mapa-tasas-backend"
+DJANGODIR=/home/diego/MapaTasas # Ruta raíz del proyecto de Django
+SOCKFILE=/home/diego/MapaTasas/run/gunicorn.sock # Ruta donde el fichero socket será creado
+#USER=diego
+USER=www-data # Usuario y grupo de nginx
+GROUP=www-data
+NUM_WORKERS=3 # Número de procesos a crear que ejecutarán la aplicación de forma concurrente
+DJANGO_SETTINGS_MODULE=tasasrest.settings # Módulo de ajustes
+DJANGO_WSGI_MODULE=tasasrest.wgsi # Módulo de  la interfaz WGSI
+
+echo "Arrancando $NAME as `whoami`"
+
+cd $DJANGODIR
+source env/bin/activate
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+# Creación del directorio de ejecución
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR
+
+exec env/bin/gunicorn tasasrest.wsgi:application \
+  --name $NAME \
+  --workers $NUM_WORKERS \
+  --user=$USER --group=$GROUP \
+  --bind=unix:$SOCKFILE \
+  --log-level=debug 
+  --log-file=/home/diego/MapaTasas/logs/gunicorn.log

@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('tipo', models.IntegerField(choices=[(0, 'Precio por crédito'), (1, 'Pago único'), (2, 'Misceláneo')], help_text='Tipo de tasa')),
                 ('tipo_titulacion', models.IntegerField(choices=[(0, 'Grado'), (0, 'Máster')], help_text='Tipo de titulación (grado/máster)')),
-                ('curso', models.IntegerField(help_text='Curso académico en el que esta tasa se aplica', validators=django.core.validators.RegexValidator(regex='^\\d{4}$'))),
+                ('curso', models.IntegerField(help_text='Curso académico en el que esta tasa se aplica', validators=[django.core.validators.RegexValidator(regex='^\\d{4}$')])),
                 ('url', models.URLField(blank=True, help_text='URL del documento oficial')),
                 ('tasa_global', models.FloatField(blank=True, help_text='Tasa global', null=True)),
                 ('descripcion', models.TextField(blank=True, help_text='Texto informativo sobre la tasa', max_length=500, null=True)),
