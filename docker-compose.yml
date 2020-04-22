@@ -1,4 +1,25 @@
-mapatasas:
-        image: 'ritsi/mapa-tasas'
-        ports:
-            - 8000:8000
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    image: 'ritsi/mapa-tasas'
+    ports:
+      - 8000:8000
+    volumes:
+      - ./static:/root/static
+      - ./global-static:/root/global-static
+      - ./media:/root/media
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - rendervariations
+  rendervariations:
+    build:
+      context: .
+    image: 'ritsi/mapa-tasas'
+    volumes:
+      - ./media:/root/media
+    command: sh -c "python3 manage.py rendervariations 'tasas.universidad.logo' && python3 manage.py collectstatic --noinput"
+    environment:
+      - PYTHONUNBUFFERED=1
