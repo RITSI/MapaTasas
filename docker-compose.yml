@@ -16,6 +16,7 @@ services:
       context: .
     volumes:
       - ./media:/root/media
+      - ./static:/root/static
     command: sh -c "python3 manage.py rendervariations 'tasas.universidad.logo' && python3 manage.py collectstatic --noinput"
     environment:
       - PYTHONUNBUFFERED=1
