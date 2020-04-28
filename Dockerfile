@@ -12,20 +12,18 @@ RUN apk add --update \
             build-base \
 	mariadb-dev \
             git \
-	    nodejs yarn \
+	    nodejs nodejs-npm \
 	    gettext \
 	    jpeg-dev zlib-dev \
- && yarn global add topojson-client ogr2ogr \
+ && npm install -g bower topojson-client ogr2ogr \
  && pip3 install --upgrade pip \
  && rm /var/cache/apk/*
 
 COPY requirements.txt $HOME/
 RUN pip3 install -r requirements.txt
-RUN pip3 install mysqlclient
-RUN pip3 install whitenoise
-RUN pip3 install dj-static
 
-RUN yarn install
+COPY bower.json .bowerrc $HOME/
+RUN bower install --allow-root
 
 ## COPY PROJECT
 COPY . $HOME
