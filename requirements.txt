@@ -1,4 +1,4 @@
-Django==1.9.2
+Django==2.2.24
 djangorestframework==3.3.2
 Pillow==3.1.1
 django-widget-tweaks==1.4.1
